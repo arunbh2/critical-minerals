@@ -8,7 +8,7 @@
     "published": "2025-05",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-gcmo-2026",
@@ -19,7 +19,7 @@
     "published": "2026-07",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-policy-indonesia-nickel",
@@ -30,7 +30,7 @@
     "published": null,
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "usgs-mcs-2025",
@@ -41,7 +41,7 @@
     "published": "2025-01",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json.",
     "locator": "Chapters: Cobalt, Nickel, Lithium, Graphite"
   },
   {
@@ -53,7 +53,7 @@
     "published": "2023-06",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json.",
     "locator": "Report released June 2023; locate via the Ministry website"
   },
   {
@@ -65,7 +65,7 @@
     "published": "2025-01-29",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "prs-mmdr-2023",
@@ -76,7 +76,7 @@
     "published": "2023-07",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-policy-mmdr-2023",
@@ -87,7 +87,7 @@
     "published": null,
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "pib-auction-tranche-2023",
@@ -98,7 +98,7 @@
     "published": "2023-12",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "rs-dmf-2024",
@@ -109,7 +109,7 @@
     "published": "2024-12-16",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iwp-dmf-2025",
@@ -120,7 +120,7 @@
     "published": "2025",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-policy-india-bwmr",
@@ -131,7 +131,7 @@
     "published": null,
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "pib-bwmr-2022",
@@ -142,7 +142,7 @@
     "published": "2022-08",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "jakpost-morowali-2023-12-24",
@@ -153,7 +153,7 @@
     "published": "2023-12-24",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "jakpost-morowali-2023-12-27",
@@ -164,7 +164,7 @@
     "published": "2023-12-27",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "bhrrc-morowali-2023",
@@ -175,7 +175,7 @@
     "published": "2023-12",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-policy-drc-cobalt",
@@ -186,7 +186,7 @@
     "published": "2025",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "csis-ree-2025",
@@ -197,7 +197,7 @@
     "published": "2025-04",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "orf-china-controls",
@@ -208,7 +208,7 @@
     "published": null,
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "council-crma",
@@ -219,7 +219,7 @@
     "published": null,
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "mw-eu-47-projects",
@@ -230,7 +230,7 @@
     "published": "2025-03-26",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "spg-eu-13-projects",
@@ -241,7 +241,7 @@
     "published": "2025-06-04",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "eurlex-batteries",
@@ -252,7 +252,7 @@
     "published": null,
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "un-panel-cetm",
@@ -263,7 +263,7 @@
     "published": "2024-09-11",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json.",
     "locator": "Report: Resourcing the Energy Transition"
   },
   {
@@ -275,7 +275,7 @@
     "published": "2024-09",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "eeas-jetp-cipp",
@@ -286,7 +286,7 @@
     "published": "2023-11",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "chn-jetp-2022",
@@ -297,7 +297,7 @@
     "published": "2022-11-15",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "wb-csm",
@@ -308,7 +308,7 @@
     "published": null,
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "miningcom-csm-2019",
@@ -319,7 +319,7 @@
     "published": "2019-05",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-gcmo-2025-es",
@@ -330,7 +330,7 @@
     "published": "2025-05",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-gcmo-2025-overview",
@@ -341,7 +341,7 @@
     "published": "2025-05",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-gcmo-2026-es",
@@ -352,7 +352,7 @@
     "published": "2026-07",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iea-news-2026",
@@ -363,7 +363,7 @@
     "published": "2026-07",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "iep-cm-2023",
@@ -374,7 +374,7 @@
     "published": "2023-06",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "invezz-cm-2023",
@@ -385,7 +385,7 @@
     "published": "2023-07-04",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "tribune-ncmm-2025",
@@ -396,7 +396,7 @@
     "published": "2025-01-29",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "usgs-mcs-2025-nickel",
@@ -407,7 +407,7 @@
     "published": "2025-01",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "usgs-mcs-2025-cobalt",
@@ -418,7 +418,7 @@
     "published": "2025-01",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "spg-indonesia-2024",
@@ -429,7 +429,7 @@
     "published": "2025-11",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   },
   {
     "id": "spg-drc-quotas-2025",
@@ -440,6 +440,171 @@
     "published": "2025-10",
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
-    "note": "Fetched and term-checked by the source verification workflow; see research/2026-11-initial/gate.json."
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "miningcom-gcmo-2025",
+    "title": "Critical minerals still dominated by few despite diversification efforts: IEA",
+    "publisher": "MINING.COM",
+    "url": "https://www.mining.com/?p=1179474",
+    "type": "media",
+    "published": "2025-05",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "northernminer-gcmo-2025",
+    "title": "China still controls critical minerals despite efforts: IEA",
+    "publisher": "The Northern Miner",
+    "url": "https://www.northernminer.com/commodities-markets/china-still-controls-critical-minerals-despite-efforts-iea/1003878837/",
+    "type": "media",
+    "published": "2025-05",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "gmr-gcmo-2026",
+    "title": "Supply concentration, export restrictions and declining investment put critical mineral security at risk",
+    "publisher": "Global Mining Review",
+    "url": "https://www.globalminingreview.com/mining/17072026/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk/",
+    "type": "media",
+    "published": "2026-07-17",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "aljazeera-nickel-2019",
+    "title": "World's biggest nickel ore maker bans exports from January 2020",
+    "publisher": "Al Jazeera",
+    "url": "https://www.aljazeera.com/economy/2019/9/2/worlds-biggest-nickel-ore-maker-bans-exports-from-january-2020",
+    "type": "media",
+    "published": "2019-09-02",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "nrf-nickel-regulation",
+    "title": "Indonesia amends regulation on nickel export to boost production of value-added products",
+    "publisher": "Norton Rose Fulbright",
+    "url": "https://www.nortonrosefulbright.com/en/knowledge/publications/b571b094/indonesia-amends-regulation-on-nickel-export-to-boost-production-of-value-added-products",
+    "type": "research",
+    "published": null,
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "nasdaq-nickel-producers",
+    "title": "Top 9 nickel-producing countries",
+    "publisher": "Nasdaq",
+    "url": "https://www.nasdaq.com/articles/top-9-nickel-producing-countries",
+    "type": "media",
+    "published": null,
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "kitco-drc-quotas-2025",
+    "title": "Congo to permanently ban cobalt exporters that breach quotas",
+    "publisher": "Kitco News",
+    "url": "https://www.kitco.com/news/off-the-wire/2025-10-06/congo-permanently-ban-cobalt-exporters-breach-quotas",
+    "type": "media",
+    "published": "2025-10-06",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "mw-drc-quotas-2025",
+    "title": "Congo weighs cobalt export quotas to revive prices amid supply glut",
+    "publisher": "Mining Weekly",
+    "url": "https://www.miningweekly.com/article/congo-weighs-cobalt-export-quotas-to-revive-prices-amid-supply-glut-2025-02-26",
+    "type": "media",
+    "published": "2025-02-26",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "nrf-crma-2024",
+    "title": "The Critical Raw Materials Act has been formally adopted: what do you need to know?",
+    "publisher": "Norton Rose Fulbright",
+    "url": "https://connections.nortonrosefulbright.com/post/102j3ah/the-critical-raw-materials-act-has-been-formally-adopted-what-do-you-need-to-kno",
+    "type": "research",
+    "published": "2024",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "te-crma-2024",
+    "title": "CRMA implementation briefing",
+    "publisher": "Transport & Environment",
+    "url": "https://www.transportenvironment.org/uploads/files/2024_09_CRMA_implementation_briefing.pdf",
+    "type": "civil-society",
+    "published": "2024-09",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "nsenergy-eu-13-2025",
+    "title": "EU endorses 13 overseas strategic projects for raw material access",
+    "publisher": "NS Energy",
+    "url": "https://www.nsenergybusiness.com/news/eu-endorses-13-overseas-strategic-projects-for-raw-material-access",
+    "type": "media",
+    "published": "2025-06",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "erp-batteries-2023",
+    "title": "EU Batteries Regulation published",
+    "publisher": "ERP Recycling",
+    "url": "https://erp-recycling.org/uk/news-and-events/2023/09/batteries-regulations/",
+    "type": "industry",
+    "published": "2023-09",
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "fieldfisher-batteries",
+    "title": "EU regulation on sustainable batteries: key highlights and how to prepare for compliance",
+    "publisher": "Fieldfisher",
+    "url": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
+    "type": "research",
+    "published": null,
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "lawrbit-bwmr-2022",
+    "title": "Batteries Waste Management Rules, 2022",
+    "publisher": "Lawrbit",
+    "url": "https://www.lawrbit.com/article/batteries-waste-management-rules/",
+    "type": "research",
+    "published": null,
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "mondaq-bwmr-2022",
+    "title": "Navigating India's battery waste regulation",
+    "publisher": "Mondaq",
+    "url": "https://www.mondaq.com/india/waste-management/1547088/navigating-indias-battery-waste-regulation",
+    "type": "research",
+    "published": null,
+    "retrieved": "2026-11-17",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
   }
 ]

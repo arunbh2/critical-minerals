@@ -3,9 +3,11 @@
     "id": "c-refining-top3-2024",
     "text": "Across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from about 82% in 2020 to about 86% in 2024.",
     "sources": [
-      "iea-gcmo-2025",
       "iea-gcmo-2025-es",
-      "iea-gcmo-2025-overview"
+      "miningcom-gcmo-2025",
+      "northernminer-gcmo-2025",
+      "iea-gcmo-2025-overview",
+      "iea-gcmo-2025"
     ],
     "verification": "not-verified",
     "asOf": "2024",
@@ -17,9 +19,11 @@
     "id": "c-mining-top3-2024",
     "text": "Mining is less concentrated than refining: the average share of the three largest mining countries for the same minerals rose from about 73% in 2020 to about 77% in 2024.",
     "sources": [
-      "iea-gcmo-2025",
       "iea-gcmo-2025-es",
-      "iea-gcmo-2025-overview"
+      "miningcom-gcmo-2025",
+      "northernminer-gcmo-2025",
+      "iea-gcmo-2025-overview",
+      "iea-gcmo-2025"
     ],
     "verification": "not-verified",
     "asOf": "2024",
@@ -31,9 +35,11 @@
     "id": "c-growth-single-supplier",
     "text": "Around 90% of recent refined supply growth came from the single largest supplier of each mineral, for example Indonesia for nickel and China for cobalt and graphite.",
     "sources": [
-      "iea-gcmo-2025",
       "iea-gcmo-2025-es",
-      "iea-gcmo-2025-overview"
+      "miningcom-gcmo-2025",
+      "northernminer-gcmo-2025",
+      "iea-gcmo-2025-overview",
+      "iea-gcmo-2025"
     ],
     "verification": "not-verified",
     "asOf": "2020–2024",
@@ -45,9 +51,10 @@
     "id": "c-gcmo-2026-growth",
     "text": "The IEA's 2026 outlook reported that China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals, and that expanding export restrictions had turned concentration into an immediate economic-security concern.",
     "sources": [
+      "iea-news-2026",
+      "gmr-gcmo-2026",
       "iea-gcmo-2026",
-      "iea-gcmo-2026-es",
-      "iea-news-2026"
+      "iea-gcmo-2026-es"
     ],
     "verification": "not-verified",
     "asOf": "2026",
@@ -162,7 +169,9 @@
     "text": "India's Battery Waste Management Rules, notified in August 2022, replaced earlier battery rules and introduced extended producer responsibility: producers, including importers, must register with the Central Pollution Control Board and meet collection and recycling obligations, with environmental compensation for non-fulfilment. The rules have since been amended.",
     "sources": [
       "pib-bwmr-2022",
-      "iea-policy-india-bwmr"
+      "iea-policy-india-bwmr",
+      "lawrbit-bwmr-2022",
+      "mondaq-bwmr-2022"
     ],
     "verification": "not-verified",
     "asOf": "2022; amended since",
@@ -174,7 +183,9 @@
     "id": "c-indonesia-ore-ban",
     "text": "Indonesia has prohibited exports of nickel ore since 1 January 2020, two years earlier than previously planned. An earlier ban from 2014 had been partly relaxed between 2017 and 2019.",
     "sources": [
-      "iea-policy-indonesia-nickel"
+      "iea-policy-indonesia-nickel",
+      "aljazeera-nickel-2019",
+      "nrf-nickel-regulation"
     ],
     "verification": "not-verified",
     "asOf": "2020",
@@ -187,6 +198,7 @@
     "text": "Indonesia produced around 60% of the world's mined nickel in 2024, by far the largest share of any country.",
     "sources": [
       "usgs-mcs-2025-nickel",
+      "nasdaq-nickel-producers",
       "spg-indonesia-2024",
       "usgs-mcs-2025",
       "iea-gcmo-2025"
@@ -238,6 +250,8 @@
     "text": "The Democratic Republic of the Congo suspended cobalt exports in February 2025 and replaced the suspension with an export quota system in October 2025.",
     "sources": [
       "iea-policy-drc-cobalt",
+      "kitco-drc-quotas-2025",
+      "mw-drc-quotas-2025",
       "spg-drc-quotas-2025"
     ],
     "verification": "not-verified",
@@ -279,7 +293,9 @@
     "id": "c-eu-crma",
     "text": "The EU Critical Raw Materials Act entered into force on 23 May 2024. It sets non-binding 2030 benchmarks for EU extraction (10%), processing (40%) and recycling (25%) of annual consumption of strategic raw materials, and aims for no more than 65% of any strategic raw material to come from a single third country.",
     "sources": [
-      "council-crma"
+      "council-crma",
+      "nrf-crma-2024",
+      "te-crma-2024"
     ],
     "verification": "not-verified",
     "asOf": "May 2024",
@@ -292,6 +308,7 @@
     "text": "Under the Act, the European Commission designated 47 strategic projects in EU member states in March 2025 and 13 outside the EU in June 2025.",
     "sources": [
       "mw-eu-47-projects",
+      "nsenergy-eu-13-2025",
       "spg-eu-13-projects"
     ],
     "verification": "not-verified",
@@ -304,7 +321,9 @@
     "id": "c-eu-batteries",
     "text": "The EU Batteries Regulation sets lithium recovery targets of 50% by the end of 2027 and 80% by the end of 2031, and 90% and 95% for cobalt, copper, lead and nickel. Minimum recycled content for new batteries starts in August 2031 at 16% cobalt, 6% lithium, 6% nickel and 85% lead. Electric-vehicle, light-transport and larger industrial batteries require a digital battery passport from February 2027.",
     "sources": [
-      "eurlex-batteries"
+      "eurlex-batteries",
+      "erp-batteries-2023",
+      "fieldfisher-batteries"
     ],
     "verification": "not-verified",
     "asOf": "Regulation (EU) 2023/1542, as summarised",

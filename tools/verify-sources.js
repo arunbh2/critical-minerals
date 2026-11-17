@@ -48,6 +48,20 @@ async function fetchText(url) {
   } finally { clearTimeout(timer); }
 }
 
+// Terms match as whole words, so "60" never matches inside "46300". "a | b" accepts
+// either spelling; a trailing * marks a deliberate prefix match ("suspen*").
+function findTerm(text, term) {
+  for (const alt of term.split('|').map((x) => x.trim()).filter(Boolean)) {
+    const prefix = alt.endsWith('*');
+    const nt = normalise(prefix ? alt.slice(0, -1) : alt);
+    const esc = nt.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(`(?<![a-z0-9])${esc}${prefix ? '' : '(?![a-z0-9])'}`);
+    const m = re.exec(text);
+    if (m) return { at: m.index, matched: m[0] };
+  }
+  return null;
+}
+
 const results = [];
 const excerpts = [];
 for (const s of sources) {
@@ -58,11 +72,10 @@ for (const s of sources) {
     const found = [];
     const missing = [];
     for (const t of row.terms) {
-      const nt = normalise(t);
-      const at = norm.indexOf(nt);
-      if (at >= 0) {
+      const hit = findTerm(norm, t);
+      if (hit) {
         found.push(t);
-        excerpts.push({ source: s.id, claim: row.claim, term: t, excerpt: norm.slice(Math.max(0, at - 90), at + nt.length + 90).trim() });
+        excerpts.push({ source: s.id, claim: row.claim, term: t, matched: hit.matched, excerpt: norm.slice(Math.max(0, hit.at - 90), hit.at + hit.matched.length + 90).trim() });
       } else missing.push(t);
     }
     return { claim: row.claim, found, missing };
