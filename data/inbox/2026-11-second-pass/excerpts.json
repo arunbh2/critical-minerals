@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-second-pass",
-  "checkedAt": "2026-11-17T05:56:17.273Z",
+  "checkedAt": "2026-11-17T05:59:20.664Z",
   "note": "Short excerpts (about 180 characters) around each found term, kept as evidence. Not for republication.",
   "excerpts": [
     {
@@ -240,6 +240,20 @@
       "term": "passport",
       "matched": "passport",
       "excerpt": "re life cycle of batteries, from design to end-of-life. key features include the “battery passport” and the carbon footprint declaration which will lead to greater levels of transparency."
+    },
+    {
+      "source": "lawrbit-bwmr-2022",
+      "claim": "c-india-bwmr-2022",
+      "term": "battery waste management rules",
+      "matched": "battery waste management rules",
+      "excerpt": "he government of india, ministry of environment, forest and climate change introduced the battery waste management rules, 2022 (hereinafter referred to as rules of 2022) replacing the batteries (management and"
+    },
+    {
+      "source": "lawrbit-bwmr-2022",
+      "claim": "c-india-bwmr-2022",
+      "term": "extended producer responsibility",
+      "matched": "extended producer responsibility",
+      "excerpt": "has widened the jurisdiction of these rules by introducing the following fresh provisions extended producer responsibility (epr) : the battery manufacturers (producers), including importers, are responsible for c"
     },
     {
       "source": "mondaq-bwmr-2022",

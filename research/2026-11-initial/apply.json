@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-initial",
-  "appliedAt": "2026-11-17T05:55:20.767Z",
+  "appliedAt": "2026-11-17T05:58:20.498Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
@@ -66,7 +66,7 @@
     },
     {
       "claim": "c-india-dmf-collections",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "not-verified",
       "evidenceSources": [
         "iwp-dmf-2025"
@@ -140,7 +140,7 @@
     },
     {
       "claim": "c-eu-crma",
-      "from": "secondary",
+      "from": "not-verified",
       "to": "not-verified",
       "evidenceSources": []
     },
@@ -168,7 +168,7 @@
     },
     {
       "claim": "c-jetp-indonesia",
-      "from": "secondary",
+      "from": "original-checked",
       "to": "secondary",
       "evidenceSources": [
         "chn-jetp-2022",
