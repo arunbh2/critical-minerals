@@ -12,7 +12,7 @@
     "verification": "secondary",
     "asOf": "2024",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-2-second-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "miningcom-gcmo-2025"
     ]
@@ -64,7 +64,7 @@
     "verification": "secondary",
     "asOf": "2026",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-2-second-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "gmr-gcmo-2026"
     ]
@@ -80,7 +80,7 @@
     "verification": "secondary",
     "asOf": "June 2023",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "iep-cm-2023"
     ]
@@ -95,7 +95,7 @@
     "verification": "secondary",
     "asOf": "January 2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "tribune-ncmm-2025"
     ]
@@ -110,7 +110,7 @@
     "verification": "secondary",
     "asOf": "January 2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "tribune-ncmm-2025"
     ]
@@ -125,7 +125,7 @@
     "verification": "secondary",
     "asOf": "August 2023",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "prs-mmdr-2023"
     ]
@@ -152,7 +152,7 @@
     "verification": "secondary",
     "asOf": "as reported in 2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-3-third-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "iwp-dmf-2025"
     ]
@@ -181,9 +181,8 @@
     "verification": "secondary",
     "asOf": "2022; amended since",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-2-second-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
-      "lawrbit-bwmr-2022",
       "mondaq-bwmr-2022"
     ]
   },
@@ -198,7 +197,7 @@
     "verification": "secondary",
     "asOf": "2020",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-2-second-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "aljazeera-nickel-2019"
     ]
@@ -232,7 +231,7 @@
     "verification": "secondary",
     "asOf": "December 2023",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "jakpost-morowali-2023-12-24",
       "jakpost-morowali-2023-12-27",
@@ -249,9 +248,10 @@
     "verification": "original-checked",
     "asOf": "2024 estimate",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
-      "usgs-mcs-2025-cobalt"
+      "usgs-mcs-2025-cobalt",
+      "usgs-mcs-2025"
     ]
   },
   {
@@ -266,7 +266,7 @@
     "verification": "secondary",
     "asOf": "2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-2-second-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "kitco-drc-quotas-2025"
     ]
@@ -280,7 +280,7 @@
     "verification": "secondary",
     "asOf": "December 2023",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "orf-china-controls"
     ]
@@ -295,9 +295,10 @@
     "verification": "secondary",
     "asOf": "April 2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
-      "csis-ree-2025"
+      "csis-ree-2025",
+      "orf-china-controls"
     ]
   },
   {
@@ -308,10 +309,10 @@
       "nrf-crma-2024",
       "te-crma-2024"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "May 2024",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-2-second-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "nrf-crma-2024"
     ]
@@ -327,8 +328,9 @@
     "verification": "secondary",
     "asOf": "2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-3-third-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
+      "mw-eu-47-projects",
       "nsenergy-eu-13-2025"
     ]
   },
@@ -343,7 +345,7 @@
     "verification": "original-checked",
     "asOf": "Regulation (EU) 2023/1542, as summarised",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-2-second-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "eurlex-batteries",
       "erp-batteries-2023"
@@ -359,7 +361,7 @@
     "verification": "original-checked",
     "asOf": "September 2024",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "un-panel-cetm"
     ]
@@ -371,10 +373,10 @@
       "chn-jetp-2022",
       "eeas-jetp-cipp"
     ],
-    "verification": "secondary",
+    "verification": "original-checked",
     "asOf": "2022–2023",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-1-initial",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "chn-jetp-2022",
       "eeas-jetp-cipp"
@@ -390,7 +392,7 @@
     "verification": "secondary",
     "asOf": "May 2019",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-2-second-pass",
+    "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "miningcom-csm-2019",
       "wb-csm"

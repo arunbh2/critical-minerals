@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-2-second-pass",
-  "appliedAt": "2026-11-17T05:59:20.721Z",
+  "appliedAt": "2026-11-17T06:03:17.577Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
@@ -88,7 +88,6 @@
       "from": "not-verified",
       "to": "secondary",
       "evidenceSources": [
-        "lawrbit-bwmr-2022",
         "mondaq-bwmr-2022"
       ]
     },

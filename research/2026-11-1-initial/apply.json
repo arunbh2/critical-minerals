@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-1-initial",
-  "appliedAt": "2026-11-17T05:58:20.498Z",
+  "appliedAt": "2026-11-17T06:02:15.099Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
@@ -168,7 +168,7 @@
     },
     {
       "claim": "c-jetp-indonesia",
-      "from": "original-checked",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "chn-jetp-2022",
