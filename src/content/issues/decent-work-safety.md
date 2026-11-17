@@ -1,5 +1,6 @@
 ---
 title: Decent work, safety and informal livelihoods
+shortTitle: "Decent work and safety"
 order: 2
 editorialQuestion: "When a contractor's worker is hurt in a park shared by many companies, whose safety system failed?"
 summary: "Occupational safety, fair conditions and the right to organise across mines, processing plants, factories and recycling, including the informal workers who are easiest to overlook."

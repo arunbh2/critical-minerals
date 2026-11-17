@@ -18,14 +18,56 @@ A public-interest guide to critical minerals. It connects mineral development wi
 |---|---|
 | `npm ci` | Install exact dependencies from `package-lock.json` |
 | `npm run dev` | Local development server at `http://localhost:4321/critical-minerals/` |
-| `npm run validate` | Content integrity: schemas, cross-references, duplicate IDs, vocabularies, finance rules |
-| `npm test` | Unit tests: status and expiry logic, worksheet export, colour contrast |
-| `npm run build` | Production build to `dist/` plus the Pagefind search index |
-| `npm run check:dist` | Scans the **built** site: internal links and assets under the base path, canonical URLs and sitemap, and no private material or restricted references |
-| `npm run test:e2e` | Browser journeys against `dist/`, served the way GitHub Pages serves a project site, plus an axe accessibility scan |
-| `npm run ci` | `validate` + `test` + `build` + `check:dist` |
+| `npm run build` | Counts → Astro build → `.well-known/` → Markdown twins, `llms-full.txt` and sitemaps → Pagefind index |
+| `npm run check` | **Every check**, including the browser ones (build first) |
+| `npm run check:fast` | The subset CI runs on every push: counts, data, claims, voice, unit tests, build output, AI files, structured data, page weight |
+| `npm run check:ui` | Touch targets ≥ 24px, reflow at 320px with 200% text, reduced motion |
+| `npm run test:e2e` | Browser journeys and an axe accessibility scan, served the way GitHub Pages serves a project site |
 
-Run `npm run build` before `npm run test:e2e`. The first time, install a browser with `npx playwright install chromium`.
+Every check names the file and the fix when it fails. The first time, install a browser with `npx playwright install chromium`.
+
+### Checks and what they enforce
+
+| Check (`tools/`) | Enforces |
+|---|---|
+| `build-counts.js --check` | Headline counts are computed, never typed (`src/data/site/counts.json`) |
+| `check-data.js` | Schemas, references, controlled vocabularies, finance rules |
+| `check-claims.js` | Every number in a published claim was a checked term; page figures trace to published claims |
+| `check-voice.js` | No blame, ranking or hype words; no em dashes or exclamation marks; missing evidence is never "failed" |
+| `check-output.js` | Built links and assets resolve under the base path; no private material or restricted terms |
+| `check-ai-files.js` | Twins and their head links, every advertised endpoint exists, packs, `security.txt` expiry, titles (2-4 words), descriptions (50-170 characters), OG/Twitter, one h1, alt text, footer link for AI |
+| `check-structured-data.js` | JSON-LD parses, required fields, breadcrumb markup matches the visible trail, headline matches the h1 |
+| `check-weight.js` | HTML ≤ 30 KB gzipped and first load ≤ 400 KB per page |
+| `check-ui.js` | WCAG 2.2 target size, reflow with 200% text, reduced motion |
+| `tests/unit/contrast.test.mjs` | WCAG contrast for every colour pair in use |
+
+## Evidence: the source verification pipeline
+
+A claim reaches a page only when an automated check finds every term it rests on in a cited source.
+
+1. **Stage**: write candidate claims with their sources and exact terms in `research/<batch>/claims.json`. Batch names are `YYYY-MM-N-label`, so alphabetical order is date order.
+2. **Verify**: the **Verify sources** workflow fetches each page or PDF and records found terms and short excerpts in `data/inbox/<batch>/link-check.json` and `excerpts.json`. Terms match as whole words; `a | b` accepts either spelling; a trailing `*` marks a deliberate prefix match.
+3. **Gate**: `research/<batch>/gate.json` labels each claim **Checked against an original** (all terms found in official, intergovernmental or legal sources), **Reported by secondary sources** (all found, using reporting) or **Not verified** (a term was missing; never "failed").
+4. **Apply**: labels are written into `src/data/claims.json` (`research/<batch>/apply.json` records the changes). Not-verified claims never render.
+5. **Ledger**: `research/<batch>/ledger.md` lists what was used, what was held back and why.
+
+The workflow runs on any working branch whenever a batch's `claims.json` changes, and commits the results back to that branch. It runs monthly on `main` to report only. The **Link check** workflow checks every external link weekly. Both need open internet access, so they run on GitHub, not locally.
+
+## AI and agent access
+
+| File | Purpose |
+|---|---|
+| `/for-ai/`, `/for-ai.json`, `/for-ai.txt`, `/agents.txt` | What the site offers, endpoints, how to cite, do and please-avoid lines restated from the editorial standards |
+| `/llms.txt`, `/llms-full.txt` | Short index; every indexable page as text |
+| `<page>/index.md` | Markdown twin of every page, linked from its head |
+| `/use-with-ai/`, `/packs/*.txt` | Evidence packs per topic, with starter questions and a warning that assistants can be wrong |
+| `/openapi.json`, `/.well-known/api-catalog` | Description of every data endpoint (JSON, CSV, schemas). The build fails if a listed endpoint is missing |
+| `/robots.txt` | Names the sitemap; `Content-Signal: search=yes, ai-input=yes, ai-train=yes` |
+| `/sitemap.xml`, `/sitemap.json`, `/feed.xml`, `/changes.json` | Discovery and the dated change log (`src/data/changelog.json`) |
+| `/.well-known/security.txt`, `tdmrep.json`, `ard.json` | Security contact (expiry kept fresh by the monthly rebuild), no TDM reservation, resource inventory |
+| `/auth.md`, `/terms-of-use.md` | No authentication; terms of use |
+
+The words shared by pages and AI files live in one module, `tools/site-text.js`. GitHub Pages cannot set headers or negotiate `Accept: text/markdown`, and the site says so. On a project site, crawlers read `robots.txt` and `/.well-known/` only at the domain root, so those files take full effect once `criticalminerals.org` serves the site at the root.
 
 ### Base path and origin
 
@@ -45,7 +87,7 @@ In CI the deploy build reads both values from `actions/configure-pages`, so it f
 - **Workflow:** `.github/workflows/deploy.yml`
 - **Deployment branch:** `main`
 - **On pull requests:** validate, unit tests, production build, build-output scan and browser journeys. Nothing is deployed.
-- **On push to `main`:** the same checks, then a build for the served address, an output check, an artifact upload and a deploy through the `github-pages` environment. Only the deploy job has `pages: write` and `id-token: write`.
+- **On push to `main`, and monthly:** the same checks, then a build for the served address, the fast checks again, an artifact upload (with `include-hidden-files: true`, so `/.well-known/` is published) and a deploy through the `github-pages` environment. Only the deploy job has `pages: write` and `id-token: write`. `_config.yml` covers the case where the site is ever published by Jekyll from a branch.
 
 ### One-time GitHub settings
 
@@ -82,17 +124,22 @@ See [`docs/editorial-workflow.md`](docs/editorial-workflow.md) and the templates
 ## Project structure
 
 ```text
-src/pages/        routes (including JSON data endpoints under data/)
-src/layouts/      page templates
+src/pages/        routes, data endpoints (JSON, CSV, schemas) and AI files
+src/layouts/      page templates (head: SEO, canonical, OG/Twitter, JSON-LD, Markdown twin link)
 src/components/   presentation components
 src/content/      Markdown records
-src/data/         JSON records, vocabularies, sources and claims
-src/lib/          URL, status, worksheet, content and export utilities
+src/data/         JSON records, vocabularies, sources, claims, change log, site/counts.json
+src/lib/          URL, status, worksheet, content, export and AI helpers
 src/styles/       design tokens and global styles
 public/brand/     logo kit and icons
-scripts/          validation and build-output checks
+tools/            build-*.js (counts, twins, .well-known), *-text.js (shared words),
+                  research-*.js and verify-sources.js (evidence pipeline), check-*.js and check-all.js
+research/<batch>/ claims, stage, gate, apply, notes and ledger for each research batch
+data/inbox/<batch>/ sources to fetch, link check results and excerpts
 tests/            unit tests, fixtures and browser journeys
 docs/             architecture, editorial workflow, templates, screenshots
 ```
+
+The spec's `/data` and `/tools` map here as follows: page data lives in `src/data` and `src/content` (Astro's content layer validates it); builders and checks live in `tools/`; the research trail lives in `research/` and `data/inbox/`. The built site is published from CI as an artifact rather than committed, so generated HTML can never drift from its source.
 
 See [`docs/architecture.md`](docs/architecture.md) for design decisions.

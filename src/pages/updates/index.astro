@@ -6,7 +6,7 @@ import { hrefFor } from '../../lib/content';
 import { formatDate } from '../../lib/status.js';
 const items = (await getCollection('updates')).sort((a, b) => b.data.eventDate.localeCompare(a.data.eventDate));
 ---
-<Base title="Updates" description="Selected consequential developments in critical minerals, each dated and linked to its sources.">
+<Base title="Updates" shortTitle="Selected developments" description="Selected consequential developments in critical minerals, each dated and linked to its sources.">
   <div class="wrap">
     <Breadcrumbs items={[{ label: 'Updates' }]} />
     <header class="reading"><p class="kicker red-rule">Updates</p><h1>Selected developments</h1>

@@ -1,5 +1,6 @@
 ---
 title: Value sharing and public services
+shortTitle: "Value sharing"
 order: 4
 editorialQuestion: "If a district collects billions for mining-affected people and spends half, who answers for the other half?"
 summary: "How taxes, royalties, local procurement, processing and earmarked funds distribute the value of minerals, and whether it reaches the people and places that host extraction."
@@ -9,7 +10,7 @@ reviewDue: 2027-05-17
 countries: [india, indonesia]
 minerals: [nickel, copper, cobalt]
 lifecycle: [exploration-extraction, processing-refining]
-claims: [c-india-dmf-collections, c-india-dmf-unspent, c-indonesia-ore-ban, c-india-mmdr-2023]
+claims: [c-india-dmf-collections, c-indonesia-ore-ban, c-india-mmdr-2023]
 sources: [rs-dmf-2024, iwp-dmf-2025, iea-policy-indonesia-nickel, prs-mmdr-2023]
 responsibilities:
   direct:

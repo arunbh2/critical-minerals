@@ -1,0 +1,215 @@
+{
+  "batch": "2026-11-2-second-pass",
+  "sources": [
+    {
+      "id": "iea-gcmo-2025-es",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Global Critical Minerals Outlook 2025: Executive summary"
+    },
+    {
+      "id": "miningcom-gcmo-2025",
+      "url": "https://www.mining.com/?p=1179474",
+      "type": "media",
+      "publisher": "MINING.COM",
+      "title": "Critical minerals still dominated by few despite diversification efforts: IEA"
+    },
+    {
+      "id": "northernminer-gcmo-2025",
+      "url": "https://www.northernminer.com/commodities-markets/china-still-controls-critical-minerals-despite-efforts-iea/1003878837/",
+      "type": "media",
+      "publisher": "The Northern Miner",
+      "title": "China still controls critical minerals despite efforts: IEA"
+    },
+    {
+      "id": "iea-news-2026",
+      "url": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Supply concentration, export restrictions and declining investment put critical mineral security at risk"
+    },
+    {
+      "id": "gmr-gcmo-2026",
+      "url": "https://www.globalminingreview.com/mining/17072026/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk/",
+      "type": "media",
+      "publisher": "Global Mining Review",
+      "title": "Supply concentration, export restrictions and declining investment put critical mineral security at risk"
+    },
+    {
+      "id": "iea-policy-indonesia-nickel",
+      "url": "https://www.iea.org/policies/16084-prohibition-of-the-export-of-nickel-ore",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Prohibition of the export of nickel ore (policy database entry)"
+    },
+    {
+      "id": "aljazeera-nickel-2019",
+      "url": "https://www.aljazeera.com/economy/2019/9/2/worlds-biggest-nickel-ore-maker-bans-exports-from-january-2020",
+      "type": "media",
+      "publisher": "Al Jazeera",
+      "title": "World's biggest nickel ore maker bans exports from January 2020"
+    },
+    {
+      "id": "nrf-nickel-regulation",
+      "url": "https://www.nortonrosefulbright.com/en/knowledge/publications/b571b094/indonesia-amends-regulation-on-nickel-export-to-boost-production-of-value-added-products",
+      "type": "research",
+      "publisher": "Norton Rose Fulbright",
+      "title": "Indonesia amends regulation on nickel export to boost production of value-added products"
+    },
+    {
+      "id": "usgs-mcs-2025-nickel",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-nickel.pdf",
+      "type": "official",
+      "publisher": "U.S. Geological Survey",
+      "title": "Mineral Commodity Summaries 2025: Nickel"
+    },
+    {
+      "id": "nasdaq-nickel-producers",
+      "url": "https://www.nasdaq.com/articles/top-9-nickel-producing-countries",
+      "type": "media",
+      "publisher": "Nasdaq",
+      "title": "Top 9 nickel-producing countries"
+    },
+    {
+      "id": "spg-indonesia-2024",
+      "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/11/indonesia-mining-by-the-numbers-2024",
+      "type": "research",
+      "publisher": "S&P Global Market Intelligence",
+      "title": "Indonesia mining by the numbers, 2024"
+    },
+    {
+      "id": "iea-policy-drc-cobalt",
+      "url": "https://www.iea.org/policies/28969-temporary-suspension-of-cobalt-export-from-the-democratic-republic-of-congo",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Temporary suspension of cobalt export from the Democratic Republic of Congo (policy database entry)"
+    },
+    {
+      "id": "kitco-drc-quotas-2025",
+      "url": "https://www.kitco.com/news/off-the-wire/2025-10-06/congo-permanently-ban-cobalt-exporters-breach-quotas",
+      "type": "media",
+      "publisher": "Kitco News",
+      "title": "Congo to permanently ban cobalt exporters that breach quotas"
+    },
+    {
+      "id": "mw-drc-quotas-2025",
+      "url": "https://www.miningweekly.com/article/congo-weighs-cobalt-export-quotas-to-revive-prices-amid-supply-glut-2025-02-26",
+      "type": "media",
+      "publisher": "Mining Weekly",
+      "title": "Congo weighs cobalt export quotas to revive prices amid supply glut"
+    },
+    {
+      "id": "spg-drc-quotas-2025",
+      "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/10/drc-cobalt-export-quotas-to-support-cobalt-prices-though-challenges-loom",
+      "type": "research",
+      "publisher": "S&P Global Market Intelligence",
+      "title": "DRC cobalt export quotas to support cobalt prices, though challenges loom"
+    },
+    {
+      "id": "council-crma",
+      "url": "https://www.consilium.europa.eu/en/policies/the-critical-raw-materials-act/",
+      "type": "official",
+      "publisher": "Council of the European Union",
+      "title": "The Critical Raw Materials Act"
+    },
+    {
+      "id": "nrf-crma-2024",
+      "url": "https://connections.nortonrosefulbright.com/post/102j3ah/the-critical-raw-materials-act-has-been-formally-adopted-what-do-you-need-to-kno",
+      "type": "research",
+      "publisher": "Norton Rose Fulbright",
+      "title": "The Critical Raw Materials Act has been formally adopted: what do you need to know?"
+    },
+    {
+      "id": "te-crma-2024",
+      "url": "https://www.transportenvironment.org/uploads/files/2024_09_CRMA_implementation_briefing.pdf",
+      "type": "civil-society",
+      "publisher": "Transport & Environment",
+      "title": "CRMA implementation briefing"
+    },
+    {
+      "id": "mw-eu-47-projects",
+      "url": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
+      "type": "media",
+      "publisher": "Mining Weekly",
+      "title": "EU designates 47 strategic raw materials projects to strengthen supply chain"
+    },
+    {
+      "id": "nsenergy-eu-13-2025",
+      "url": "https://www.nsenergybusiness.com/news/eu-endorses-13-overseas-strategic-projects-for-raw-material-access",
+      "type": "media",
+      "publisher": "NS Energy",
+      "title": "EU endorses 13 overseas strategic projects for raw material access"
+    },
+    {
+      "id": "spg-eu-13-projects",
+      "url": "https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc",
+      "type": "media",
+      "publisher": "S&P Global Commodity Insights",
+      "title": "EU identifies 13 new strategic critical mineral projects located outside bloc"
+    },
+    {
+      "id": "eurlex-batteries",
+      "url": "https://eur-lex.europa.eu/EN/legal-content/summary/sustainability-rules-for-batteries-and-waste-batteries.html",
+      "type": "legal",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "title": "Sustainability rules for batteries and waste batteries (summary of Regulation (EU) 2023/1542)"
+    },
+    {
+      "id": "erp-batteries-2023",
+      "url": "https://erp-recycling.org/uk/news-and-events/2023/09/batteries-regulations/",
+      "type": "industry",
+      "publisher": "ERP Recycling",
+      "title": "EU Batteries Regulation published"
+    },
+    {
+      "id": "fieldfisher-batteries",
+      "url": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
+      "type": "research",
+      "publisher": "Fieldfisher",
+      "title": "EU regulation on sustainable batteries: key highlights and how to prepare for compliance"
+    },
+    {
+      "id": "pib-bwmr-2022",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1854433",
+      "type": "official",
+      "publisher": "Press Information Bureau, Ministry of Environment, Forest and Climate Change",
+      "title": "Battery Waste Management Rules, 2022 notified (press release)"
+    },
+    {
+      "id": "iea-policy-india-bwmr",
+      "url": "https://www.iea.org/policies/25166-battery-waste-management-rules-2022",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Battery Waste Management Rules 2022 (policy database entry)"
+    },
+    {
+      "id": "lawrbit-bwmr-2022",
+      "url": "https://www.lawrbit.com/article/batteries-waste-management-rules/",
+      "type": "research",
+      "publisher": "Lawrbit",
+      "title": "Batteries Waste Management Rules, 2022"
+    },
+    {
+      "id": "mondaq-bwmr-2022",
+      "url": "https://www.mondaq.com/india/waste-management/1547088/navigating-indias-battery-waste-regulation",
+      "type": "research",
+      "publisher": "Mondaq",
+      "title": "Navigating India's battery waste regulation"
+    },
+    {
+      "id": "miningcom-csm-2019",
+      "url": "https://www.mining.com/world-bank-germany-rio-anglo-set-climate-smart-mining-fund/",
+      "type": "media",
+      "publisher": "MINING.COM",
+      "title": "World Bank, Germany, Rio and Anglo set up 'climate smart' mining fund"
+    },
+    {
+      "id": "wb-csm",
+      "url": "https://www.worldbank.org/en/topic/extractiveindustries/brief/climate-smart-mining-minerals-for-climate-action",
+      "type": "intergovernmental",
+      "publisher": "World Bank",
+      "title": "Climate-Smart Mining: Minerals for Climate Action"
+    }
+  ]
+}

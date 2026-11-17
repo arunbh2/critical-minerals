@@ -1,5 +1,6 @@
 ---
 title: "Why demand is rising, and what forecasts can and cannot tell us"
+shortTitle: "Why demand is rising"
 question: "Will the world need much more of these minerals, and how sure is anyone?"
 summary: "Energy technologies, grids, digital systems and supply-security policies all drive demand. The difference between observed trends and scenarios, and how to read projections critically."
 order: 4
@@ -8,7 +9,7 @@ reviewed: 2026-11-17
 reviewDue: 2027-05-17
 minerals: [copper, lithium, nickel, cobalt, graphite, rare-earths]
 lifecycle: [exploration-extraction, processing-refining, manufacturing]
-claims: [c-gcmo-2026-growth, c-growth-single-supplier, c-china-ree-2025, c-china-graphite-2023, c-drc-export-2025]
+claims: [c-gcmo-2026-growth, c-china-ree-2025, c-china-graphite-2023, c-drc-export-2025]
 sources: [iea-gcmo-2026, iea-gcmo-2025, csis-ree-2025, orf-china-controls, iea-policy-drc-cobalt]
 meaning:
   - "Demand pressure is real, but the volume of future mining is not fixed. Technology and policy choices made now will change it."
@@ -48,6 +49,6 @@ When a headline says "demand will grow X-fold by 2040", ask:
 
 ## Where supply growth is coming from
 
-Recent supply growth has been highly concentrated. The IEA reported that about 90% of recent refined supply growth came from the single largest supplier of each mineral, for example Indonesia for nickel and China for cobalt and graphite. Its 2026 outlook found China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals.
+Recent supply growth has been highly concentrated. Reporting on the IEA's 2026 outlook says China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals.
 
 This is why so many governments and companies are seeking new projects elsewhere, including in India and Indonesia's neighbours. Pressure to move quickly is the context in which questions of consent, safety and benefit sharing are decided.

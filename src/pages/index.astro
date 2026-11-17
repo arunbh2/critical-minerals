@@ -6,6 +6,14 @@ import { url } from '../lib/url';
 import { hrefFor } from '../lib/content';
 import { formatDate } from '../lib/status.js';
 import { SITE } from '../site.config';
+import { OWNERSHIP } from '../../tools/site-text.js';
+import { absoluteUrl } from '../lib/url';
+const home = absoluteUrl('', Astro.site);
+const jsonld = [
+  { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${home}#website`, name: SITE.name, description: SITE.description, url: home, inLanguage: SITE.language, publisher: { '@id': `${home}#project` } },
+  // An editorial project, described exactly as the About page does: no founding date, members or address.
+  { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${home}#project`, name: SITE.name, url: home, description: OWNERSHIP, logo: absoluteUrl('brand/avatar-512.png', Astro.site) },
+];
 const countries = await getCollection('countries');
 const updates = (await getCollection('updates')).sort((a, b) => b.data.eventDate.localeCompare(a.data.eventDate)).slice(0, 3);
 const counts = {
@@ -18,7 +26,7 @@ const counts = {
   cases: (await getCollection('cases')).length,
 };
 ---
-<Base title={SITE.name}>
+<Base title={SITE.name} shortTitle="People, value, fair transition" jsonld={jsonld}>
   <div class="wrap">
     <section class="hero" aria-labelledby="hero-h">
       <div class="reading">
@@ -107,7 +115,7 @@ const counts = {
   .hero h1.red-rule::before { margin-bottom: 18px; }
   .hero-actions { display: flex; flex-wrap: wrap; gap: var(--gap); margin-top: 1.5rem; }
   .why-grid p { margin: 0; padding-top: 0.75rem; border-top: 2px solid var(--london-20); }
-  .entrance { display: flex; flex-direction: column; gap: 8px; padding: 1rem 1.1rem 1.1rem; background: var(--color-surface); border: 1px solid var(--color-rule); border-top: 3px solid var(--chicago-30); text-decoration: none; color: var(--color-text); }
+  .entrance { min-width: 0; overflow-wrap: anywhere; display: flex; flex-direction: column; gap: 8px; padding: 1rem 1.1rem 1.1rem; background: var(--color-surface); border: 1px solid var(--color-rule); border-top: 3px solid var(--chicago-30); text-decoration: none; color: var(--color-text); }
   .entrance:hover { border-color: var(--chicago-45); background: var(--color-select-surface); color: var(--color-text); }
   .entrance-q { font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.35; color: var(--color-heading); flex: 1; }
   .entrance .link-arrow { color: var(--color-link); }

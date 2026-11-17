@@ -1,0 +1,48 @@
+import type { APIRoute, GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { PACKS, SITE, ASSISTANT_WARNING, EVIDENCE_LABELS } from '../../../tools/site-text.js';
+import { graph } from '../../lib/content';
+import { publishedClaims } from '../../lib/published';
+
+export const getStaticPaths: GetStaticPaths = () => PACKS.map((p) => ({ params: { topic: p.id } }));
+
+export const GET: APIRoute = async ({ params, site }) => {
+  const pack = PACKS.find((p) => p.id === params.topic)!;
+  const nodes = await graph();
+  const claims = await publishedClaims();
+  const sources = new Map((await getCollection('sources')).map((s) => [s.id, s.data]));
+  const md = new Map<string, any>();
+  for (const t of ['learn', 'minerals', 'countries', 'issues', 'cases', 'updates'] as const) for (const e of await getCollection(t)) md.set(`${t}:${e.id}`, e.data);
+  const picked = nodes.filter((n) => {
+    const f = pack.filter as { countries?: string[]; types?: string[] };
+    if (f.types) return f.types.includes(n.type);
+    if (f.countries) return f.countries.some((c) => n.countries.includes(c) || (n.type === 'countries' && n.id === c));
+    return false;
+  });
+  const label = (v: string) => EVIDENCE_LABELS.find((l) => l.id === v)?.label ?? v;
+  const out: string[] = [
+    `${SITE.name} evidence pack: ${pack.title}`,
+    `Generated from the published site. Source: ${new URL('use-with-ai/', new URL(import.meta.env.BASE_URL, site)).toString()}`,
+    '',
+    `WARNING: ${ASSISTANT_WARNING}`,
+    'Only claims that passed the automated source check are included. Each carries its evidence label and dated sources.',
+    '',
+    'Starter questions:',
+    ...pack.questions.map((q, i) => `${i + 1}. ${q}`),
+    '',
+  ];
+  for (const n of picked) {
+    const d = md.get(`${n.type}:${n.id}`) ?? {};
+    out.push('-'.repeat(60), n.title, new URL(n.href, site).toString(), '', n.summary);
+    const cs = claims.filter((c) => (d.claims ?? []).includes(c.id));
+    if (cs.length) {
+      out.push('', 'What we know:');
+      for (const c of cs) out.push(`- ${c.data.text} [${label(c.data.verification)}; as of ${c.data.asOf}; sources: ${c.data.sources.map((s) => `${sources.get(s)?.publisher}, ${sources.get(s)?.url}`).join(' | ')}]`);
+    }
+    if (d.meaning?.length) out.push('', 'What this may mean (interpretation):', ...d.meaning.map((m: string) => `- ${m}`));
+    if (d.unclear?.length) out.push('', 'What remains unclear:', ...d.unclear.map((m: string) => `- ${m}`));
+    if (d.reviewed) out.push('', `Reviewed: ${d.reviewed}`);
+    out.push('');
+  }
+  return new Response(out.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+};

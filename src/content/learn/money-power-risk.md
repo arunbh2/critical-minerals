@@ -1,5 +1,6 @@
 ---
 title: "Where money, power and risk sit"
+shortTitle: "Money, power and risk"
 question: "Who decides, who captures value, who bears costs, and who pays?"
 summary: "A practical map of the actors in a mineral value chain and the questions to ask about any project, policy or financing announcement."
 order: 5

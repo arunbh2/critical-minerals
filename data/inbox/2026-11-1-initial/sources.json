@@ -1,0 +1,285 @@
+{
+  "batch": "2026-11-1-initial",
+  "sources": [
+    {
+      "id": "iea-gcmo-2025",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Global Critical Minerals Outlook 2025"
+    },
+    {
+      "id": "iea-gcmo-2025-es",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Global Critical Minerals Outlook 2025: Executive summary"
+    },
+    {
+      "id": "iea-gcmo-2025-overview",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/overview-of-outlook-for-key-minerals",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Global Critical Minerals Outlook 2025: Overview of outlook for key minerals"
+    },
+    {
+      "id": "iea-gcmo-2026",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Global Critical Minerals Outlook 2026"
+    },
+    {
+      "id": "iea-gcmo-2026-es",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Global Critical Minerals Outlook 2026: Executive summary"
+    },
+    {
+      "id": "iea-news-2026",
+      "url": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Supply concentration, export restrictions and declining investment put critical mineral security at risk"
+    },
+    {
+      "id": "mines-india-cm-2023",
+      "url": "https://mines.gov.in/",
+      "type": "official",
+      "publisher": "Ministry of Mines, Government of India",
+      "title": "Critical Minerals for India: Report of the Committee on Identification of Critical Minerals"
+    },
+    {
+      "id": "iep-cm-2023",
+      "url": "https://indiaenvironmentportal.org.in/reports-and-documents/critical-minerals-for-india",
+      "type": "civil-society",
+      "publisher": "India Environment Portal",
+      "title": "Critical minerals for India (document page)"
+    },
+    {
+      "id": "invezz-cm-2023",
+      "url": "https://invezz.com/news/2023/07/04/government-of-india-releases-first-list-of-30-critical-minerals/",
+      "type": "media",
+      "publisher": "Invezz",
+      "title": "Government of India releases first list of 30 critical minerals"
+    },
+    {
+      "id": "pmindia-ncmm-2025",
+      "url": "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-national-critical-mineral-mission-to-build-a-resilient-value-chain-for-critical-mineral-resources-vital-to-green-technologies-with-an-outlay-of-rs-34300-crore-over-seven-years",
+      "type": "official",
+      "publisher": "Prime Minister's Office, Government of India",
+      "title": "Cabinet approves National Critical Mineral Mission with an outlay of Rs 34,300 crore over seven years"
+    },
+    {
+      "id": "tribune-ncmm-2025",
+      "url": "https://www.tribuneindia.com/news/business/cabinet-approves-national-critical-mineral-mission-to-build-a-resilient-value-chain-with-an-outlay-of-rs-34300-cr-over-seven-years",
+      "type": "media",
+      "publisher": "The Tribune",
+      "title": "Cabinet approves National Critical Mineral Mission to build a resilient value chain with an outlay of Rs 34,300 cr over seven years"
+    },
+    {
+      "id": "prs-mmdr-2023",
+      "url": "https://prsindia.org/billtrack/the-mines-and-minerals-development-and-regulation-amendment-bill-2023",
+      "type": "research",
+      "publisher": "PRS Legislative Research",
+      "title": "The Mines and Minerals (Development and Regulation) Amendment Bill, 2023"
+    },
+    {
+      "id": "iea-policy-mmdr-2023",
+      "url": "https://www.iea.org/policies/17968-mines-and-minerals-development-regulation-amendment-act-2023",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Mines and Minerals (Development & Regulation) Amendment Act, 2023 (policy database entry)"
+    },
+    {
+      "id": "pib-auction-tranche-2023",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1985837",
+      "type": "official",
+      "publisher": "Press Information Bureau, Ministry of Mines",
+      "title": "First tranche of critical mineral block auctions (press release)"
+    },
+    {
+      "id": "rs-dmf-2024",
+      "url": "https://rsdebate.nic.in/bitstream/123456789/752721/1/PQ_266_16122024_U2348_p513_p513.pdf",
+      "type": "official",
+      "publisher": "Rajya Sabha, Parliament of India",
+      "title": "Rajya Sabha unstarred question on District Mineral Foundation funds"
+    },
+    {
+      "id": "iwp-dmf-2025",
+      "url": "https://www.indiawaterportal.org/governance-and-policy/minings-promise-communities-plight-unearthing-the-truth-about-indias-district-mineral-foundations",
+      "type": "media",
+      "publisher": "India Water Portal",
+      "title": "Mining's promise, communities' plight: unearthing the truth about India's District Mineral Foundations"
+    },
+    {
+      "id": "pib-bwmr-2022",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1854433",
+      "type": "official",
+      "publisher": "Press Information Bureau, Ministry of Environment, Forest and Climate Change",
+      "title": "Battery Waste Management Rules, 2022 notified (press release)"
+    },
+    {
+      "id": "iea-policy-india-bwmr",
+      "url": "https://www.iea.org/policies/25166-battery-waste-management-rules-2022",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Battery Waste Management Rules 2022 (policy database entry)"
+    },
+    {
+      "id": "iea-policy-indonesia-nickel",
+      "url": "https://www.iea.org/policies/16084-prohibition-of-the-export-of-nickel-ore",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Prohibition of the export of nickel ore (policy database entry)"
+    },
+    {
+      "id": "usgs-mcs-2025-nickel",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-nickel.pdf",
+      "type": "official",
+      "publisher": "U.S. Geological Survey",
+      "title": "Mineral Commodity Summaries 2025: Nickel"
+    },
+    {
+      "id": "spg-indonesia-2024",
+      "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/11/indonesia-mining-by-the-numbers-2024",
+      "type": "research",
+      "publisher": "S&P Global Market Intelligence",
+      "title": "Indonesia mining by the numbers, 2024"
+    },
+    {
+      "id": "usgs-mcs-2025",
+      "url": "https://pubs.usgs.gov/publication/mcs2025",
+      "type": "official",
+      "publisher": "U.S. Geological Survey",
+      "title": "Mineral Commodity Summaries 2025"
+    },
+    {
+      "id": "jakpost-morowali-2023-12-24",
+      "url": "https://www.thejakartapost.com/indonesia/2023/12/24/indonesia-nickel-smelter-furnace-blast-kills-13-workers-wounds-38",
+      "type": "media",
+      "publisher": "The Jakarta Post",
+      "title": "Indonesia nickel smelter furnace blast kills 13 workers, wounds 38"
+    },
+    {
+      "id": "jakpost-morowali-2023-12-27",
+      "url": "https://www.thejakartapost.com/business/2023/12/27/as-death-toll-rises-morowali-blast-brings-work-safety-squarely-into-focus.html",
+      "type": "media",
+      "publisher": "The Jakarta Post",
+      "title": "As death toll rises, Morowali blast brings work safety squarely into focus"
+    },
+    {
+      "id": "bhrrc-morowali-2023",
+      "url": "https://business-humanrights.org/en/latest-news/indonesia-nickel-smelter-furnace-fire-kills-13-workers-injures-46",
+      "type": "civil-society",
+      "publisher": "Business & Human Rights Resource Centre",
+      "title": "Indonesia: Nickel smelter furnace fire kills 13 workers, injures 46"
+    },
+    {
+      "id": "usgs-mcs-2025-cobalt",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-cobalt.pdf",
+      "type": "official",
+      "publisher": "U.S. Geological Survey",
+      "title": "Mineral Commodity Summaries 2025: Cobalt"
+    },
+    {
+      "id": "iea-policy-drc-cobalt",
+      "url": "https://www.iea.org/policies/28969-temporary-suspension-of-cobalt-export-from-the-democratic-republic-of-congo",
+      "type": "intergovernmental",
+      "publisher": "International Energy Agency",
+      "title": "Temporary suspension of cobalt export from the Democratic Republic of Congo (policy database entry)"
+    },
+    {
+      "id": "spg-drc-quotas-2025",
+      "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/10/drc-cobalt-export-quotas-to-support-cobalt-prices-though-challenges-loom",
+      "type": "research",
+      "publisher": "S&P Global Market Intelligence",
+      "title": "DRC cobalt export quotas to support cobalt prices, though challenges loom"
+    },
+    {
+      "id": "orf-china-controls",
+      "url": "https://orfamerica.org/newresearch/chinas-critical-mineral-export-controls",
+      "type": "research",
+      "publisher": "ORF America",
+      "title": "China's Critical Mineral Export Controls: Background and Chokepoints"
+    },
+    {
+      "id": "csis-ree-2025",
+      "url": "https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions",
+      "type": "research",
+      "publisher": "Center for Strategic and International Studies",
+      "title": "The Consequences of China's New Rare Earths Export Restrictions"
+    },
+    {
+      "id": "council-crma",
+      "url": "https://www.consilium.europa.eu/en/policies/the-critical-raw-materials-act/",
+      "type": "official",
+      "publisher": "Council of the European Union",
+      "title": "The Critical Raw Materials Act"
+    },
+    {
+      "id": "mw-eu-47-projects",
+      "url": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
+      "type": "media",
+      "publisher": "Mining Weekly",
+      "title": "EU designates 47 strategic raw materials projects to strengthen supply chain"
+    },
+    {
+      "id": "spg-eu-13-projects",
+      "url": "https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc",
+      "type": "media",
+      "publisher": "S&P Global Commodity Insights",
+      "title": "EU identifies 13 new strategic critical mineral projects located outside bloc"
+    },
+    {
+      "id": "eurlex-batteries",
+      "url": "https://eur-lex.europa.eu/EN/legal-content/summary/sustainability-rules-for-batteries-and-waste-batteries.html",
+      "type": "legal",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "title": "Sustainability rules for batteries and waste batteries (summary of Regulation (EU) 2023/1542)"
+    },
+    {
+      "id": "un-panel-cetm",
+      "url": "https://un.org/en/node/216623",
+      "type": "intergovernmental",
+      "publisher": "United Nations",
+      "title": "The UN Secretary-General's Panel on Critical Energy Transition Minerals"
+    },
+    {
+      "id": "iisd-un-panel-2024",
+      "url": "https://sdg.iisd.org/news/panel-guides-critical-energy-transition-minerals-towards-equity-justice/",
+      "type": "media",
+      "publisher": "IISD SDG Knowledge Hub",
+      "title": "Panel guides critical energy transition minerals towards equity, justice"
+    },
+    {
+      "id": "chn-jetp-2022",
+      "url": "https://climatechangenews.com/2022/11/15/rich-nations-banks-pledge-20bn-for-indonesias-coal-to-clean-switch/",
+      "type": "media",
+      "publisher": "Climate Home News",
+      "title": "Rich nations, banks pledge $20bn for Indonesia's coal-to-clean switch"
+    },
+    {
+      "id": "eeas-jetp-cipp",
+      "url": "https://www.eeas.europa.eu/delegations/indonesia/indonesia-just-energy-transition-comprehensive-investment-and-policy-plan-launched_en",
+      "type": "official",
+      "publisher": "European External Action Service",
+      "title": "Indonesia Just Energy Transition Comprehensive Investment and Policy Plan launched"
+    },
+    {
+      "id": "miningcom-csm-2019",
+      "url": "https://www.mining.com/world-bank-germany-rio-anglo-set-climate-smart-mining-fund/",
+      "type": "media",
+      "publisher": "MINING.COM",
+      "title": "World Bank, Germany, Rio and Anglo set up 'climate smart' mining fund"
+    },
+    {
+      "id": "wb-csm",
+      "url": "https://www.worldbank.org/en/topic/extractiveindustries/brief/climate-smart-mining-minerals-for-climate-action",
+      "type": "intergovernmental",
+      "publisher": "World Bank",
+      "title": "Climate-Smart Mining: Minerals for Climate Action"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+name: Link check
+
+# Weekly check that every external link the site cites still answers. Reports only;
+# a dead source is a prompt for editorial review, not an automatic change.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 4 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: node tools/check-external-links.js

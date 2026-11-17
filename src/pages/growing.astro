@@ -1,0 +1,21 @@
+---
+import Page from '../layouts/Page.astro';
+import { CHANGES } from '../lib/changelog';
+import { formatDate } from '../lib/status.js';
+import { url } from '../lib/url';
+---
+<Page title="How this guide is growing" shortTitle="Change log" kicker="Change log" description="A dated log of substantive changes to Critical Minerals, also available as JSON and as an Atom feed for readers and agents."
+  standfirst="Every substantive change, dated. Also available as JSON and as an Atom feed.">
+  <p class="sans"><a href={url('changes.json')}>changes.json</a> · <a href={url('feed.xml')}>Atom feed</a> · <a href={url('corrections/')}>Corrections</a></p>
+  <ol class="record-list">
+    {CHANGES.map((c) => (
+      <li id={c.id}>
+        <p class="kicker"><time datetime={c.date}>{formatDate(c.date)}</time></p>
+        <h2 class="change-h">{c.title}</h2>
+        <p>{c.summary}</p>
+        <p class="sans">{c.paths.map((p, i) => <>{i > 0 && ' · '}<a href={url(p)}>{p === '' ? 'Home' : p.replace(/\/$/, '')}</a></>)}</p>
+      </li>
+    ))}
+  </ol>
+</Page>
+<style>.change-h { font-size: 1.2rem; margin: 0 0 0.3rem; }</style>

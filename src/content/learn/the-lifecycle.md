@@ -1,5 +1,6 @@
 ---
 title: "The lifecycle: from exploration to recovery"
+shortTitle: "The mineral lifecycle"
 question: "What happens between a deposit in the ground and a battery in a recycling plant?"
 summary: "Seven stages, each with different decision-makers, workers and risks. Why the loop never fully closes, and where losses happen."
 order: 3
@@ -38,7 +39,7 @@ It is tempting to picture minerals moving in a tidy circle, from mine to product
 
 ## Why the loop leaks
 
-Even well-run recycling recovers less than 100% of a material, and some uses disperse materials so thinly that recovery is impractical. Products last a long time, so today's recycling reflects yesterday's smaller sales. Growing demand cannot yet be met from recycled material alone.
+Even well-run recycling never recovers all of a material, and some uses disperse materials so thinly that recovery is impractical. Products last a long time, so today's recycling reflects yesterday's smaller sales. Growing demand cannot yet be met from recycled material alone.
 
 Policy is trying to raise recovery. The European Union's Batteries Regulation sets lithium recovery targets of 50% by the end of 2027 and 80% by the end of 2031, and minimum recycled content in new batteries from 2031. India's Battery Waste Management Rules, notified in 2022, introduced extended producer responsibility for collection and recycling.
 

@@ -1,5 +1,6 @@
 ---
 title: Cobalt
+shortTitle: "Cobalt mineral profile"
 summary: "Mostly a by-product of copper and nickel mining, highly concentrated in the Democratic Republic of the Congo, and closely tied to questions of artisanal mining and labour rights."
 uses: ["Battery cathodes (some chemistries)", "Superalloys for jet engines and turbines", "Hard metals and tools", "Catalysts"]
 published: 2026-11-17
@@ -8,7 +9,7 @@ reviewDue: 2027-02-17
 countries: [indonesia]
 issues: [decent-work-safety, accountability-remedy, value-sharing]
 lifecycle: [exploration-extraction, processing-refining, manufacturing, collection-recycling]
-claims: [c-drc-cobalt-share, c-drc-export-2025, c-growth-single-supplier, c-eu-batteries]
+claims: [c-drc-cobalt-share, c-drc-export-2025, c-refining-top3-2024, c-eu-batteries]
 sources: [usgs-mcs-2025, iea-policy-drc-cobalt, iea-gcmo-2025, eurlex-batteries]
 limitations: "This release does not include a DRC country dossier. Coverage of artisanal mining conditions relies on referenced specialist sources rather than original assessment."
 meaning:

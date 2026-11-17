@@ -47,9 +47,10 @@
       "pmindia-ncmm-2025"
     ],
     "lastVerified": "2026-11-17",
-    "verification": "corroborated",
+    "verification": "secondary",
     "uncertainties": "No open application route for civil-society or community organisations has been identified. Component-level budgets, implementing agencies and disbursement have not been verified.",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "India mineral mission finance"
   },
   {
     "id": "india-district-mineral-foundations",
@@ -83,7 +84,7 @@
       "currency": "INR",
       "basis": "unknown",
       "stage": "unknown",
-      "note": "More than ₹1 lakh crore had been collected cumulatively by early 2025. Collections are not the same as spending, and roughly half was reported unspent."
+      "note": "More than ₹1 lakh crore had been collected cumulatively by early 2025. Collections are not the same as spending; spending levels need separate verification."
     },
     "applicationRoute": null,
     "opens": null,
@@ -93,7 +94,7 @@
       "iwp-dmf-2025"
     ],
     "lastVerified": "2026-11-17",
-    "verification": "corroborated",
+    "verification": "secondary",
     "uncertainties": "Current national rules, state-level variation and up-to-date collection and spending figures need primary verification.",
     "reviewDue": "2027-02-17"
   },
@@ -139,9 +140,10 @@
       "eeas-jetp-cipp"
     ],
     "lastVerified": "2026-11-17",
-    "verification": "corroborated",
+    "verification": "secondary",
     "uncertainties": "This is an energy-sector programme, included because power supply for nickel processing affects emissions and local exposure. How captive power for industrial parks is treated, what share of the package is grant or loan, and how much has been disbursed have not been verified.",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "Indonesia JETP finance"
   },
   {
     "id": "world-bank-climate-smart-mining",
@@ -185,7 +187,7 @@
       "wb-csm"
     ],
     "lastVerified": "2026-11-17",
-    "verification": "corroborated",
+    "verification": "secondary",
     "uncertainties": "Facility status after its initial five-year horizon, current donors and any application route have not been verified.",
     "reviewDue": "2026-12-17"
   },
@@ -236,8 +238,9 @@
       "council-crma"
     ],
     "lastVerified": "2026-11-17",
-    "verification": "corroborated",
+    "verification": "secondary",
     "uncertainties": "Timing of any further selection rounds and the finance actually mobilised for designated projects have not been verified.",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "EU strategic projects finance"
   }
 ]

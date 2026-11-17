@@ -1,5 +1,6 @@
 ---
 title: "EU designates strategic projects inside and outside the bloc"
+shortTitle: "EU strategic projects designated"
 eventDate: 2025-06-04
 summary: "Under its Critical Raw Materials Act, the European Commission designated 47 strategic projects in member states in March 2025 and 13 in third countries in June 2025."
 whyItMatters: "Strategic designation speeds permitting and helps projects access finance. Producing-country communities affected by designated projects should be able to see the terms and safeguards."

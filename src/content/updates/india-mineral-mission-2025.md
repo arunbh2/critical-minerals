@@ -1,5 +1,6 @@
 ---
 title: "India approves a National Critical Mineral Mission"
+shortTitle: "India mineral mission approved"
 eventDate: 2025-01-29
 summary: "India's Cabinet approved a seven-year mission with ₹16,300 crore of government outlay and a further ₹18,000 crore expected from public sector undertakings and others."
 whyItMatters: "A national push on exploration and processing will reach mineral-rich districts. Its guidelines will show how far worker protection, consent and benefit sharing are built in."

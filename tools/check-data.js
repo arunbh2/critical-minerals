@@ -91,7 +91,7 @@ for (const f of js.finance) {
   if (!vset('recordStates').has(d.recordState)) err(`finance/${f.id}: unknown recordState`);
   for (const i of d.instruments) if (!vset('instruments').has(i)) err(`finance/${f.id}: unknown instrument "${i}"`);
   for (const s of d.supports) if (!vset('financeSupports').has(s)) err(`finance/${f.id}: unknown supports "${s}"`);
-  if (d.recordState === 'open' && (!d.applicationRoute || d.verification !== 'primary-checked'))
+  if (d.recordState === 'open' && (!d.applicationRoute || d.verification !== 'original-checked'))
     err(`finance/${f.id}: open records need an application route checked against the primary source`);
   if (d.amount?.value != null && (!d.amount.currency || d.amount.stage === 'unknown'))
     err(`finance/${f.id}: a stated amount needs a currency and stage`);
@@ -99,7 +99,7 @@ for (const f of js.finance) {
 
 // Every claim used somewhere; every source used somewhere (orphans are a smell).
 const usedClaims = new Set(Object.values(md).flat().flatMap((e) => e.data.claims ?? []));
-for (const c of js.claims) if (!usedClaims.has(c.id)) err(`claims/${c.id}: not used on any page`);
+for (const c of js.claims) if (c.data.verification !== 'not-verified' && !usedClaims.has(c.id)) err(`claims/${c.id}: published claim not used on any page. Fix: cite it in a page's claims list, or remove it.`);
 const usedSources = new Set([
   ...Object.values(md).flat().flatMap((e) => e.data.sources ?? []),
   ...js.claims.flatMap((c) => c.data.sources),

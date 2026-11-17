@@ -1,0 +1,332 @@
+{
+  "batch": "2026-11-2-second-pass",
+  "staged": "2026-11-17",
+  "rows": [
+    {
+      "claim": "c-refining-top3-2024",
+      "source": "iea-gcmo-2025-es",
+      "terms": [
+        "86%",
+        "82%"
+      ]
+    },
+    {
+      "claim": "c-refining-top3-2024",
+      "source": "miningcom-gcmo-2025",
+      "terms": [
+        "86%",
+        "82%"
+      ]
+    },
+    {
+      "claim": "c-refining-top3-2024",
+      "source": "northernminer-gcmo-2025",
+      "terms": [
+        "86%",
+        "82%"
+      ]
+    },
+    {
+      "claim": "c-mining-top3-2024",
+      "source": "iea-gcmo-2025-es",
+      "terms": [
+        "77%",
+        "73%"
+      ]
+    },
+    {
+      "claim": "c-mining-top3-2024",
+      "source": "miningcom-gcmo-2025",
+      "terms": [
+        "77%",
+        "73%"
+      ]
+    },
+    {
+      "claim": "c-mining-top3-2024",
+      "source": "northernminer-gcmo-2025",
+      "terms": [
+        "77%",
+        "73%"
+      ]
+    },
+    {
+      "claim": "c-growth-single-supplier",
+      "source": "iea-gcmo-2025-es",
+      "terms": [
+        "90%",
+        "indonesia",
+        "nickel",
+        "cobalt",
+        "graphite"
+      ]
+    },
+    {
+      "claim": "c-growth-single-supplier",
+      "source": "miningcom-gcmo-2025",
+      "terms": [
+        "90%",
+        "indonesia",
+        "nickel",
+        "cobalt",
+        "graphite"
+      ]
+    },
+    {
+      "claim": "c-growth-single-supplier",
+      "source": "northernminer-gcmo-2025",
+      "terms": [
+        "90%",
+        "indonesia",
+        "nickel",
+        "cobalt",
+        "graphite"
+      ]
+    },
+    {
+      "claim": "c-gcmo-2026-growth",
+      "source": "iea-news-2026",
+      "terms": [
+        "three-quarters | three quarters",
+        "export restrictions"
+      ]
+    },
+    {
+      "claim": "c-gcmo-2026-growth",
+      "source": "gmr-gcmo-2026",
+      "terms": [
+        "three-quarters | three quarters",
+        "export restrictions"
+      ]
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "source": "iea-policy-indonesia-nickel",
+      "terms": [
+        "nickel ore",
+        "january 2020 | 1 january 2020"
+      ]
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "source": "aljazeera-nickel-2019",
+      "terms": [
+        "nickel ore",
+        "january 2020 | 1 january 2020"
+      ]
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "source": "nrf-nickel-regulation",
+      "terms": [
+        "nickel ore",
+        "january 2020 | 1 january 2020"
+      ]
+    },
+    {
+      "claim": "c-indonesia-nickel-share",
+      "source": "usgs-mcs-2025-nickel",
+      "terms": [
+        "indonesia",
+        "60% | 62% | 61.6% | 60.2%"
+      ]
+    },
+    {
+      "claim": "c-indonesia-nickel-share",
+      "source": "nasdaq-nickel-producers",
+      "terms": [
+        "indonesia",
+        "60% | 62% | 61.6% | 60.2%"
+      ]
+    },
+    {
+      "claim": "c-indonesia-nickel-share",
+      "source": "spg-indonesia-2024",
+      "terms": [
+        "indonesia",
+        "60% | 62% | 61.6% | 60.2%"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "source": "iea-policy-drc-cobalt",
+      "terms": [
+        "cobalt",
+        "suspen* | ban",
+        "quota*"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "source": "kitco-drc-quotas-2025",
+      "terms": [
+        "cobalt",
+        "suspen* | ban",
+        "quota*"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "source": "mw-drc-quotas-2025",
+      "terms": [
+        "cobalt",
+        "suspen* | ban",
+        "quota*"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "source": "spg-drc-quotas-2025",
+      "terms": [
+        "cobalt",
+        "suspen* | ban",
+        "quota*"
+      ]
+    },
+    {
+      "claim": "c-eu-crma",
+      "source": "council-crma",
+      "terms": [
+        "10%",
+        "40%",
+        "25%",
+        "65%"
+      ]
+    },
+    {
+      "claim": "c-eu-crma",
+      "source": "nrf-crma-2024",
+      "terms": [
+        "10%",
+        "40%",
+        "25%",
+        "65%"
+      ]
+    },
+    {
+      "claim": "c-eu-crma",
+      "source": "te-crma-2024",
+      "terms": [
+        "10%",
+        "40%",
+        "25%",
+        "65%"
+      ]
+    },
+    {
+      "claim": "c-eu-strategic-projects",
+      "source": "mw-eu-47-projects",
+      "terms": [
+        "47",
+        "13",
+        "strategic projects"
+      ]
+    },
+    {
+      "claim": "c-eu-strategic-projects",
+      "source": "nsenergy-eu-13-2025",
+      "terms": [
+        "47",
+        "13",
+        "strategic projects"
+      ]
+    },
+    {
+      "claim": "c-eu-strategic-projects",
+      "source": "spg-eu-13-projects",
+      "terms": [
+        "47",
+        "13",
+        "strategic projects"
+      ]
+    },
+    {
+      "claim": "c-eu-batteries",
+      "source": "eurlex-batteries",
+      "terms": [
+        "50%",
+        "80%",
+        "16%",
+        "6%",
+        "85%",
+        "passport"
+      ]
+    },
+    {
+      "claim": "c-eu-batteries",
+      "source": "erp-batteries-2023",
+      "terms": [
+        "50%",
+        "80%",
+        "16%",
+        "6%",
+        "85%",
+        "passport"
+      ]
+    },
+    {
+      "claim": "c-eu-batteries",
+      "source": "fieldfisher-batteries",
+      "terms": [
+        "50%",
+        "80%",
+        "16%",
+        "6%",
+        "85%",
+        "passport"
+      ]
+    },
+    {
+      "claim": "c-india-bwmr-2022",
+      "source": "pib-bwmr-2022",
+      "terms": [
+        "battery waste management rules",
+        "extended producer responsibility"
+      ]
+    },
+    {
+      "claim": "c-india-bwmr-2022",
+      "source": "iea-policy-india-bwmr",
+      "terms": [
+        "battery waste management rules",
+        "extended producer responsibility"
+      ]
+    },
+    {
+      "claim": "c-india-bwmr-2022",
+      "source": "lawrbit-bwmr-2022",
+      "terms": [
+        "battery waste management rules",
+        "extended producer responsibility"
+      ]
+    },
+    {
+      "claim": "c-india-bwmr-2022",
+      "source": "mondaq-bwmr-2022",
+      "terms": [
+        "battery waste management rules",
+        "extended producer responsibility"
+      ]
+    },
+    {
+      "claim": "c-wb-csm-2019",
+      "source": "miningcom-csm-2019",
+      "terms": [
+        "climate-smart mining",
+        "rio tinto",
+        "anglo american",
+        "50m | 50 million"
+      ]
+    },
+    {
+      "claim": "c-wb-csm-2019",
+      "source": "wb-csm",
+      "terms": [
+        "climate-smart mining",
+        "rio tinto",
+        "anglo american",
+        "50m | 50 million"
+      ]
+    }
+  ]
+}

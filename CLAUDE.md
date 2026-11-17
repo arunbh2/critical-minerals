@@ -40,9 +40,14 @@ Run the repository's production build and relevant checks. Preview the productio
 - **Origin and base path:** set only in `astro.config.mjs` from `SITE_URL` and `BASE_PATH` (default `https://arunbh2.github.io` + `/critical-minerals`). CI passes the values from `actions/configure-pages`. Build every internal URL with `url()` from `src/lib/url.ts`.
 - **Deployment branch:** `main`. Workflow: `.github/workflows/deploy.yml`.
 - **Content model:** Markdown in `src/content/*`, structured records in `src/data/*.json`, controlled vocabularies in `src/data/vocab.json`, schemas in `src/content.config.ts`. Claims live in `src/data/claims.json` and cite `src/data/sources.json`.
-- **Verification levels:** `primary-checked` or `corroborated` (independent reporting; primary check pending). Unverifiable claims are not published; they go to the private queue. A finance record may be `open` only with an application route checked against its primary source; `npm run validate` enforces this.
+- **Evidence gate:** a claim reaches a page only when the Verify sources workflow finds every term it rests on in a cited source. Labels: `original-checked`, `secondary`, `not-verified` (never "failed"). Stage new claims in a new `research/YYYY-MM-N-label/claims.json`; never hand-edit `verification` in `src/data/claims.json`. Every number in a claim must be one of its terms. A finance record may be `open` only if `original-checked` with an application route.
+- **Shared words:** anything said both on a page and in an AI file comes from `tools/site-text.js`. Counts come from `src/data/site/counts.json` (built by `tools/build-counts.js`), never typed.
+- **AI access:** Markdown twins, llms.txt, llms-full.txt, for-ai, packs, OpenAPI, .well-known and discovery files are generated at build. The deploy uploads with `include-hidden-files: true`; keep it, or `/.well-known/` disappears. Content signals: search, ai-input and ai-train all yes.
+- **Titles and descriptions:** every page needs a 2-4 word `shortTitle` (if its title is longer or shorter) and a summary that yields a 50-170 character description.
+- **Voice:** no blame, ranking or hype; no individuals named; no em dashes or exclamation marks. `tools/check-voice.js` enforces it.
+- **Privacy:** no third-party calls. Add any new one to /privacy/ in the same change.
 - **Design tokens:** foundation hex values and semantic tokens in `src/styles/tokens.css`. Components use semantic tokens only. `tests/unit/contrast.test.mjs` checks every foreground/background pair in use.
-- **Checks:** `npm run ci` (validate, unit tests, build, output scan) and `npm run test:e2e` (browser journeys and an axe scan under the base path). The output scan fails on restricted institutional references, personal names and private material in `dist/`.
+- **Checks:** `npm run build` then `npm run check` (everything) or `npm run check:fast` (CI subset). The output scan reads private restricted terms from the `RESTRICTED_TERMS` secret (CI) or `private/restricted-terms.txt` (local, git-ignored); never write those terms in a tracked file.
 - **Corrections route:** public GitHub issues (`src/site.config.ts`). Change it there if a dedicated channel is set up.
 - **Editor attribution:** not yet confirmed; do not add a personal byline until it is.
 

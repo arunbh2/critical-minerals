@@ -18,6 +18,14 @@
 | `src/scripts/filters.ts` | URL-synced filters with history support, reset and an empty state. |
 | `src/pages/data/*` | JSON exports of approved public fields, and JSON Schemas. |
 
+## Evidence gate
+
+Claims live in `src/data/claims.json`. Their labels come only from the research pipeline (`tools/research-*.js`, `tools/verify-sources.js`), which runs in GitHub Actions because it needs open internet access. `Evidence.astro`, the packs and `llms-full.txt` all exclude `not-verified` claims, and `tools/check-claims.js` stops page prose from restating a figure that only a held-back claim supports.
+
+## AI and agent layer
+
+Astro endpoints in `src/pages/` build the AI files from `tools/site-text.js` and the same collections as the pages. Two post-build steps finish the job: `tools/build-well-known.js` writes `/.well-known/` for the served address, and `tools/build-twins.js` writes a Markdown twin beside every page (from its `<main>`), then `llms-full.txt`, `sitemap.xml` and `sitemap.json`. Re-run both after anything rebuilds `dist/`. Speculation rules prefetch (never prerender) same-site pages on press.
+
 ## Search
 
 Pagefind indexes `dist/` after the Astro build. Only `<main data-pagefind-body>` is indexed. A `type` filter comes from a meta tag on each page. Result URLs get the deployment base through `pagefind.options({ baseUrl })`.

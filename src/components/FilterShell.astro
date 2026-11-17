@@ -29,7 +29,7 @@ const { filters, noun = 'records' } = Astro.props;
 <script>import '../scripts/filters.ts';</script>
 <style>
   .filter-form { margin: 1rem 0 1.25rem; }
-  .filter-grid { display: grid; gap: 0 var(--gutter); grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
+  .filter-grid { display: grid; gap: 0 var(--gutter); grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr)); }
   .filter-status { margin: 0; font-size: 0.95rem; }
   .filter-status a { margin-left: 12px; font-weight: 600; }
   [hidden] { display: none !important; }

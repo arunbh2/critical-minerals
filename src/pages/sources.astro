@@ -4,12 +4,13 @@ import Page from '../layouts/Page.astro';
 import { formatDate } from '../lib/status.js';
 import { vocabLabel } from '../lib/content';
 import { url } from '../lib/url';
+import { sourceCheck } from '../lib/source-checks';
 const sources = (await getCollection('sources')).sort((a, b) => a.data.publisher.localeCompare(b.data.publisher) || a.data.title.localeCompare(b.data.title));
 const claims = await getCollection('claims');
 const usedBy = (id: string) => claims.filter((c) => c.data.sources.includes(id)).length;
 ---
-<Page title="Sources" kicker="Source register" description="Every source cited on Critical Minerals, with publisher, publication date, retrieval date and verification notes."
-  standfirst="Every source cited on this site, with its publication and retrieval dates. Follow the links to read the originals.">
+<Page title="Sources" shortTitle="Source register" kicker="Source register" description="Every source cited on Critical Minerals, with publisher, publication date, retrieval date and verification notes."
+  standfirst="Every source cited on this site, with its publication and retrieval dates and the result of the latest automated check. Follow the links to read the originals.">
   <p class="sans"><a href={url('data/sources.json')}>Download the source register (JSON)</a> · <a href={url('data/claims.json')}>Download claims (JSON)</a></p>
   <ol class="register">
     {sources.map((s) => (
@@ -23,6 +24,7 @@ const usedBy = (id: string) => claims.filter((c) => c.data.sources.includes(id))
           {s.data.locator && <><dt>Locator</dt><dd>{s.data.locator}</dd></>}
           <dt>Reuse</dt><dd>{s.data.reuse}</dd>
           <dt>Cited in claims</dt><dd>{usedBy(s.id)}</dd>
+          <dt>Automated check</dt><dd>{(() => { const c = sourceCheck(s.id); if (!c) return 'Not yet fetched by the source check.'; return c.read ? `Read on ${formatDate(c.checkedAt)}; ${c.termsFound} claim term${c.termsFound === 1 ? '' : 's'} found.` : `Could not be read on ${formatDate(c.checkedAt)} (${c.status ? `HTTP ${c.status}` : 'no response'}). Claims cannot rest on this source alone until it can be read.`; })()}</dd>
           {s.data.note && <><dt>Verification note</dt><dd>{s.data.note}</dd></>}
         </dl>
       </li>

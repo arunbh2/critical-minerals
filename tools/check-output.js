@@ -24,7 +24,7 @@ const files = [];
 })(dist);
 
 // 1. Files that must never be published.
-const banned = [/(^|\/)CLAUDE(-LOGO)?\.md$/i, /\.env/, /(^|\/)private\//, /brief/i, /\.private\./, /verification-queue/i, /\.md$/];
+const banned = [/(^|\/)CLAUDE(-LOGO)?\.md$/i, /(^|\/)\.env/, /(^|\/)private\//, /brief/i, /\.private\./, /verification-queue/i, /(?<!index|auth|terms-of-use)\.md$/];
 for (const f of files) {
   const rel = relative(dist, f);
   for (const re of banned) if (re.test(rel)) err(`Forbidden file in artifact: ${rel}`);
@@ -56,7 +56,7 @@ const restricted = [
   // Test fixtures carry this marker; it must never reach public output.
   { re: /__TEST_FIXTURE__/, why: 'development fixture leaked into public output' },
 ];
-const textExt = /\.(html|json|xml|txt|js|css|webmanifest|svg)$/;
+const textExt = /\.(html|json|xml|txt|js|css|webmanifest|svg|md|csv)$|security\.txt$|api-catalog$/;
 for (const f of files) {
   const rel = relative(dist, f);
   let text = null;
@@ -101,7 +101,7 @@ for (const f of htmlFiles) {
 }
 
 // 4. Required artefacts.
-for (const req of ['index.html', '404.html', 'sitemap-index.xml', 'pagefind/pagefind.js', 'brand/favicon.ico', 'brand/favicon.svg', 'brand/apple-touch-icon.png', 'site.webmanifest', 'data/finance.json']) {
+for (const req of ['index.html', '404.html', 'sitemap.xml', '.well-known/security.txt', 'llms.txt', 'for-ai.json', 'pagefind/pagefind.js', 'brand/favicon.ico', 'brand/favicon.svg', 'brand/apple-touch-icon.png', 'site.webmanifest', 'data/finance.json']) {
   if (!existsSync(join(dist, req))) err(`Missing required output: ${req}`);
 }
 // 5. Exports are valid JSON and contain records.
@@ -114,7 +114,7 @@ const site = (process.env.SITE_URL || 'https://arunbh2.github.io').replace(/\/$/
 const home = readFileSync(join(dist, 'index.html'), 'utf8');
 const canon = /<link rel="canonical" href="([^"]+)"/.exec(home)?.[1];
 if (canon !== `${site}${base}`) err(`Home canonical is ${canon}, expected ${site}${base}`);
-const sm = readFileSync(join(dist, 'sitemap-0.xml'), 'utf8');
+const sm = readFileSync(join(dist, 'sitemap.xml'), 'utf8');
 if (!sm.includes(`<loc>${site}${base}countries/india/</loc>`)) err('Sitemap does not contain the India dossier at the served address');
 
 if (errors.length) {

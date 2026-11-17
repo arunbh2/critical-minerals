@@ -1,0 +1,65 @@
+name: Verify sources
+
+# Fetches every staged source (HTML or PDF), records which claim terms it contains,
+# gates claims, applies the labels and writes the ledger. Run manually on a branch to
+# commit the results there; the monthly run on main only reports, so evidence that
+# has gone missing (link rot, changed pages) is noticed without changing the site.
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: Research batch folder under research/ (blank = latest)
+        required: false
+        default: ''
+  # Also runs on working branches whenever a batch's claims change, so new claims
+  # are checked before they can reach main. Pushes made by this workflow's own
+  # token do not trigger workflows, so it cannot loop.
+  push:
+    branches-ignore: [main]
+    paths:
+      - 'research/*/claims.json'
+      - 'tools/verify-sources.js'
+      - 'tools/research-*.js'
+      - '.github/workflows/verify-sources.yml'
+  schedule:
+    - cron: '17 3 7 * *'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Stage, fetch, gate, apply and write the ledger for each batch, oldest first
+        # Later batches re-judge claims from earlier ones, so apply runs in date order.
+        run: |
+          if [ -n "${{ inputs.batch }}" ]; then batches="${{ inputs.batch }}"; else batches=$(ls -d research/*/ | xargs -n1 basename | sort -V); fi
+          for b in $batches; do
+            echo "::group::Batch $b"
+            node tools/research-stage.js "$b"
+            node tools/verify-sources.js "$b"
+            node tools/research-gate.js "$b"
+            node tools/research-apply.js "$b"
+            node tools/research-ledger.js "$b"
+            echo "::endgroup::"
+          done
+      - name: Summary
+        run: cat research/*/ledger.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit results to this branch (never on main)
+        if: github.event_name != 'schedule' && github.ref != 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/inbox research src/data/claims.json
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -m "Record source verification results"
+          git push

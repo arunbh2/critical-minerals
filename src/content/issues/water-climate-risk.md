@@ -1,5 +1,6 @@
 ---
 title: Water, ecosystems, climate and disaster risk
+shortTitle: "Water, climate and risk"
 order: 3
 editorialQuestion: "When the flood warning sounds in an industrial zone, who tells the contract workers living next to the tailings?"
 summary: "How heat, floods, drought and water stress affect mineral operations and nearby people, and how mineral development changes local exposure and vulnerability."

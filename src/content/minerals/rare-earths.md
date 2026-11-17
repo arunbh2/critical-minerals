@@ -1,5 +1,6 @@
 ---
 title: Rare earth elements
+shortTitle: "Rare earth elements"
 group: true
 summary: "A family of 17 elements, not a single mineral. Some are essential for the strong permanent magnets in motors and wind turbines, and their separation is complex and concentrated."
 uses: ["Permanent magnets for electric motors, wind turbines and electronics", "Catalysts", "Phosphors and lighting", "Glass polishing", "Defence and specialised uses"]

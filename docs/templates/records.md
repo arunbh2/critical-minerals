@@ -16,7 +16,7 @@ Copy into the matching file in `src/data/`. Unknown values are `null`.
   "applicationRoute": null,
   "opens": null, "closes": null,
   "sources": ["source-id"],
-  "lastVerified": "2026-01-01", "verification": "corroborated",
+  "lastVerified": "2026-01-01", "verification": "secondary",
   "uncertainties": "",
   "reviewDue": "2026-02-01"
 }
@@ -33,7 +33,7 @@ Copy into the matching file in `src/data/`. Unknown values are `null`.
   "affectedActors": [], "mechanism": "", "funding": null,
   "summary": "", "implications": "",
   "countries": [], "minerals": [], "issues": [],
-  "sources": ["source-id"], "verification": "corroborated",
+  "sources": ["source-id"], "verification": "secondary",
   "reviewed": "2026-01-01", "reviewDue": "2026-02-01"
 }
 ```

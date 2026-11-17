@@ -20,11 +20,11 @@ interface Props {
 }
 const { type, id, kicker, data, crumbs, minutes, lead } = Astro.props;
 // Sources shown = sources named on the record plus sources behind its claims.
-const claimSources = (await claimsById(data.claims ?? [])).flatMap((c) => c.data.sources);
+const claimSources = (await claimsById(data.claims ?? [])).filter((c) => c.data.verification !== 'not-verified').flatMap((c) => c.data.evidenceSources.length ? c.data.evidenceSources : c.data.sources);
 const allSources = [...new Set([...(data.sources ?? []), ...claimSources])];
 const jsonld = [{
   '@context': 'https://schema.org',
-  '@type': type === 'updates' ? 'NewsArticle' : 'Article',
+  '@type': type === 'countries' || type === 'cases' ? 'Report' : 'Article',
   headline: data.title,
   description: data.summary,
   datePublished: data.published,
@@ -32,9 +32,11 @@ const jsonld = [{
   inLanguage: 'en',
   url: absoluteUrl(Astro.url.pathname.replace(import.meta.env.BASE_URL, ''), Astro.site),
   isPartOf: { '@type': 'WebSite', name: 'Critical Minerals' },
+  publisher: { '@type': 'Organization', name: 'Critical Minerals' },
+  inLanguage: 'en',
 }];
 ---
-<Base title={data.title} description={data.summary} type="article" jsonld={jsonld} searchType={TYPE_LABEL[type]}>
+<Base title={data.title} shortTitle={data.shortTitle} description={data.summary} type="article" jsonld={jsonld} searchType={TYPE_LABEL[type]}>
   <div class="wrap">
     <Breadcrumbs items={crumbs} />
     <article class="entry" data-record-type={type} data-record-id={id}>

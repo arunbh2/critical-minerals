@@ -1,5 +1,6 @@
 ---
 title: "IEA's 2026 outlook: refining concentration and export controls"
+shortTitle: "IEA 2026 outlook"
 eventDate: 2026-07-16
 summary: "The International Energy Agency's 2026 Global Critical Minerals Outlook found refining concentration continuing to rise and export restrictions turning it into an immediate economic-security concern."
 whyItMatters: "Pressure to diversify supply will drive new processing projects in new places, where safeguards for workers and communities need to be in place from the start."

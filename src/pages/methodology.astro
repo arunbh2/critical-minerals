@@ -2,8 +2,10 @@
 import Page from '../layouts/Page.astro';
 import { url } from '../lib/url';
 import vocab from '../data/vocab.json';
+import { EVIDENCE_LABELS, AI_USE } from '../../tools/site-text.js';
+import counts from '../data/site/counts.json';
 ---
-<Page title="Methodology" kicker="How we work" description="How Critical Minerals selects, verifies, labels and reviews evidence, and how it keeps facts, interpretation and open questions apart."
+<Page title="Methodology" shortTitle="Editorial methodology" kicker="How we work" description="How Critical Minerals selects, verifies, labels and reviews evidence, and how it keeps facts, interpretation and open questions apart."
   standfirst="How we decide what to publish, how we label what we know, and how we keep records current.">
   <h2>Three visible distinctions</h2>
   <p>Every substantive page separates:</p>
@@ -13,9 +15,10 @@ import vocab from '../data/vocab.json';
     <li><strong>What remains unclear:</strong> open questions, contested points and gaps in the evidence.</li>
   </ul>
   <p>We do not give a single confidence score to every kind of claim. A production statistic, a legal date and an alleged harm need different kinds of evidence.</p>
-  <h2>Verification levels</h2>
-  <dl class="facts">{vocab.verification.map((v) => <><dt>{v.id === 'primary-checked' ? 'Primary-checked' : 'Corroborated'}</dt><dd>{v.label}.</dd></>)}</dl>
-  <p>In this first release, sources were checked through independent reporting of the primary documents. Direct checks of every primary document are in progress, and each claim says which level applies. Claims we could not corroborate are not published. They sit in a private verification queue.</p>
+  <h2>Evidence labels and the automated source check</h2>
+  <p>Each claim is staged with the exact terms it rests on. A workflow fetches every cited page or PDF and records which terms it found. A claim reaches a page only when every term was found. Opening a page is not evidence.</p>
+  <dl class="facts">{EVIDENCE_LABELS.map((l) => <><dt>{l.label}</dt><dd>{l.explain}</dd></>)}</dl>
+  <p class="sans">Currently: {counts.claimsOriginalChecked} checked against an original, {counts.claimsSecondary} reported by secondary sources, and {counts.claimsHeldBack} not verified and held back. Each research batch keeps a public ledger of what was used, what was held back and why, in the <a href="https://github.com/arunbh2/critical-minerals/tree/main/research">research folder</a> of the site&rsquo;s repository.</p>
   <h2>Sources</h2>
   <p>Each source records its title, publisher, URL, publication date where available, retrieval date, a locator where relevant, and reuse terms. Retrieval date is not publication date. We link to and summarise sources rather than republishing them. We use primary sources for policy, deadlines, eligibility and finance where possible, and triangulate contested or consequential claims.</p>
   <h2>Allegations, responses and findings</h2>
@@ -27,6 +30,7 @@ import vocab from '../data/vocab.json';
   <h2>Review intervals</h2>
   <ul>
     <li>Open opportunities: weekly.</li>
+    <li>Source evidence: re-checked automatically each month; anything that stops passing is reported for review.</li>
     <li>Active programmes and fast-moving policy: monthly.</li>
     <li>Country, organisation and mineral records: quarterly.</li>
     <li>Explainers: at least annually.</li>
@@ -35,6 +39,6 @@ import vocab from '../data/vocab.json';
   <h2>Editorial workflow</h2>
   <p>Research → draft → source check → substantive review → publish → scheduled review → correction or archive. Substantive changes are recorded in the public version history of the site's repository.</p>
   <h2>AI and automation</h2>
-  <p>AI tools may assist research and drafting. Content does not gain authority because a tool produced it. Every published claim must meet the same sourcing standard, and nothing about allegations, eligibility, funding amounts or legal interpretation is published without editorial review. There is no chatbot on this site.</p>
+  <ul>{AI_USE.map((x) => <li>{x}</li>)}</ul>
   <p><a href={url('corrections/')}>How to request a correction</a></p>
 </Page>

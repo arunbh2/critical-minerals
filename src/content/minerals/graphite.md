@@ -1,5 +1,6 @@
 ---
 title: Graphite
+shortTitle: "Graphite mineral profile"
 summary: "The largest component by weight in most lithium-ion battery anodes. Graphite can be natural or synthetic, and its processing is highly concentrated."
 uses: ["Lithium-ion battery anodes", "Refractories and steelmaking electrodes", "Lubricants", "Specialised industrial uses"]
 published: 2026-11-17
@@ -8,7 +9,7 @@ reviewDue: 2027-02-17
 countries: [india]
 issues: [water-climate-risk, value-sharing, circularity-recovery]
 lifecycle: [exploration-extraction, processing-refining, manufacturing, collection-recycling]
-claims: [c-growth-single-supplier, c-china-graphite-2023, c-india-cm-list-2023]
+claims: [c-refining-top3-2024, c-china-graphite-2023, c-india-cm-list-2023]
 sources: [iea-gcmo-2025, orf-china-controls, mines-india-cm-2023]
 meaning:
   - "Export controls in the dominant processing country push investment towards new graphite projects elsewhere. Communities near those projects will face the same questions of dust, water and benefit sharing."
@@ -26,7 +27,7 @@ Most lithium-ion battery anodes use graphite, natural, synthetic or blended. Gra
 
 ## Lifecycle and geography
 
-Battery-grade graphite requires purification and shaping into spheres, followed by coating. This processing is highly concentrated: the IEA identifies China as the dominant source of recent supply growth. China introduced export permits for certain graphite products from December 2023. Graphite is on India's 2023 critical minerals list.
+Battery-grade graphite requires purification and shaping into spheres, followed by coating. This processing is highly concentrated. China introduced export permits for certain graphite products from December 2023. Graphite is on India's 2023 critical minerals list.
 
 ## Development questions
 

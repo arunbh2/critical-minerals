@@ -1,0 +1,16 @@
+[
+  {
+    "id": "2026-11-17-ai-access",
+    "date": "2026-11-17",
+    "title": "AI and agent access, evidence gate and change log",
+    "summary": "Added Markdown twins of every page, llms.txt and llms-full.txt, a page and files for AI systems, evidence packs, open data descriptions (OpenAPI and CSV), discovery files and a citation page. Claims now reach pages only after an automated check finds every term they rest on in a cited source; each claim carries one of three evidence labels.",
+    "paths": ["for-ai/", "use-with-ai/", "cite/", "growing/", "sources/"]
+  },
+  {
+    "id": "2026-11-17-first-release",
+    "date": "2026-11-17",
+    "title": "First release",
+    "summary": "A six-part learning journey, six mineral profiles, India and Indonesia dossiers, six issue explainers, policy, finance and organisation records, three case studies, selected updates, search, filters and the community-benefit worksheet.",
+    "paths": ["", "start-here/", "countries/india/", "countries/indonesia/", "tools/community-benefit/"]
+  }
+]

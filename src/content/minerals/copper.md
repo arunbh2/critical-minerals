@@ -1,5 +1,6 @@
 ---
 title: Copper
+shortTitle: "Copper mineral profile"
 summary: "The workhorse of electrification. Copper carries electricity through grids, buildings, vehicles and electronics, and is one of the most recycled metals."
 uses: ["Electricity grids, cables and transformers", "Building wiring", "Electric motors and vehicles", "Electronics", "Industrial machinery"]
 published: 2026-11-17

@@ -1,5 +1,6 @@
 ---
 title: "India's battery producer-responsibility rules: building formal recycling"
+shortTitle: "India battery recycling rules"
 summary: "Rules notified in 2022 made battery producers responsible for collection and recycling. Effects on recovery rates and on informal workers are not yet evidenced."
 location: India
 period: "2022 to present"
