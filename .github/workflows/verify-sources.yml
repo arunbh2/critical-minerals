@@ -20,6 +20,7 @@ on:
       - 'research/*/claims.json'
       - 'tools/verify-sources.js'
       - 'tools/research-*.js'
+      - '.github/workflows/verify-sources.yml'
   schedule:
     - cron: '17 3 7 * *'
 
