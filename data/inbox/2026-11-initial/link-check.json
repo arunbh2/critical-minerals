@@ -1,15 +1,15 @@
 {
   "batch": "2026-11-initial",
-  "checkedAt": "2026-11-17T05:45:04.109Z",
+  "checkedAt": "2026-11-17T05:46:42.154Z",
   "results": [
     {
       "source": "iea-gcmo-2025",
       "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025",
       "finalUrl": "https://www.iea.org/reports/global-critical-minerals-outlook-2025",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-refining-top3-2024",
@@ -52,10 +52,10 @@
       "source": "iea-gcmo-2025-es",
       "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
       "finalUrl": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-refining-top3-2024",
@@ -90,10 +90,10 @@
       "source": "iea-gcmo-2025-overview",
       "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/overview-of-outlook-for-key-minerals",
       "finalUrl": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/overview-of-outlook-for-key-minerals",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-refining-top3-2024",
@@ -128,10 +128,10 @@
       "source": "iea-gcmo-2026",
       "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
       "finalUrl": "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-gcmo-2026-growth",
@@ -147,10 +147,10 @@
       "source": "iea-gcmo-2026-es",
       "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
       "finalUrl": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-gcmo-2026-growth",
@@ -166,10 +166,10 @@
       "source": "iea-news-2026",
       "url": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
       "finalUrl": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-gcmo-2026-growth",
@@ -185,10 +185,10 @@
       "source": "mines-india-cm-2023",
       "url": "https://mines.gov.in/",
       "finalUrl": "https://mines.gov.in/",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 50,
+      "error": null,
       "checks": [
         {
           "claim": "c-india-cm-list-2023",
@@ -202,18 +202,18 @@
     {
       "source": "iep-cm-2023",
       "url": "https://indiaenvironmentportal.org.in/reports-and-documents/critical-minerals-for-india",
-      "finalUrl": "https://indiaenvironmentportal.org.in/reports-and-documents/critical-minerals-for-india",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "finalUrl": "https://indiaenvironmentportal.org.in/reports-and-documents/critical-minerals-for-india/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 1447,
+      "error": null,
       "checks": [
         {
           "claim": "c-india-cm-list-2023",
-          "found": [],
-          "missing": [
+          "found": [
             "30 critical minerals"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -221,10 +221,10 @@
       "source": "invezz-cm-2023",
       "url": "https://invezz.com/news/2023/07/04/government-of-india-releases-first-list-of-30-critical-minerals/",
       "finalUrl": "https://invezz.com/news/2023/07/04/government-of-india-releases-first-list-of-30-critical-minerals/",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-india-cm-list-2023",
@@ -239,10 +239,10 @@
       "source": "pmindia-ncmm-2025",
       "url": "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-national-critical-mineral-mission-to-build-a-resilient-value-chain-for-critical-mineral-resources-vital-to-green-technologies-with-an-outlay-of-rs-34300-crore-over-seven-years",
       "finalUrl": "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-national-critical-mineral-mission-to-build-a-resilient-value-chain-for-critical-mineral-resources-vital-to-green-technologies-with-an-outlay-of-rs-34300-crore-over-seven-years",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-india-ncmm-2025",
@@ -269,29 +269,29 @@
       "source": "tribune-ncmm-2025",
       "url": "https://www.tribuneindia.com/news/business/cabinet-approves-national-critical-mineral-mission-to-build-a-resilient-value-chain-with-an-outlay-of-rs-34300-cr-over-seven-years",
       "finalUrl": "https://www.tribuneindia.com/news/business/cabinet-approves-national-critical-mineral-mission-to-build-a-resilient-value-chain-with-an-outlay-of-rs-34300-cr-over-seven-years",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 9818,
+      "error": null,
       "checks": [
         {
           "claim": "c-india-ncmm-2025",
-          "found": [],
-          "missing": [
+          "found": [
             "16,300",
             "18,000",
             "34,300"
-          ]
+          ],
+          "missing": []
         },
         {
           "claim": "c-india-ncmm-scope",
-          "found": [],
-          "missing": [
+          "found": [
             "exploration",
             "beneficiation",
             "stockpile",
             "end-of-life"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -299,19 +299,19 @@
       "source": "prs-mmdr-2023",
       "url": "https://prsindia.org/billtrack/the-mines-and-minerals-development-and-regulation-amendment-bill-2023",
       "finalUrl": "https://prsindia.org/billtrack/the-mines-and-minerals-development-and-regulation-amendment-bill-2023",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 7503,
+      "error": null,
       "checks": [
         {
           "claim": "c-india-mmdr-2023",
-          "found": [],
-          "missing": [
+          "found": [
             "exploration licence",
             "critical",
             "state government"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -319,10 +319,10 @@
       "source": "iea-policy-mmdr-2023",
       "url": "https://www.iea.org/policies/17968-mines-and-minerals-development-regulation-amendment-act-2023",
       "finalUrl": "https://www.iea.org/policies/17968-mines-and-minerals-development-regulation-amendment-act-2023",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-india-mmdr-2023",
@@ -338,11 +338,11 @@
     {
       "source": "pib-auction-tranche-2023",
       "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1985837",
-      "finalUrl": "https://pib.gov.in/PressReleasePage.aspx?PRID=1985837",
-      "status": 0,
-      "contentType": "",
+      "finalUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1985837",
+      "status": 403,
+      "contentType": "text/html",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-india-first-tranche",
@@ -380,27 +380,28 @@
       "source": "iwp-dmf-2025",
       "url": "https://www.indiawaterportal.org/governance-and-policy/minings-promise-communities-plight-unearthing-the-truth-about-indias-district-mineral-foundations",
       "finalUrl": "https://www.indiawaterportal.org/governance-and-policy/minings-promise-communities-plight-unearthing-the-truth-about-indias-district-mineral-foundations",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 10558,
+      "error": null,
       "checks": [
         {
           "claim": "c-india-dmf-collections",
-          "found": [],
-          "missing": [
+          "found": [
             "district mineral foundation",
             "lakh crore",
             "odisha",
             "chhattisgarh",
             "jharkhand"
-          ]
+          ],
+          "missing": []
         },
         {
           "claim": "c-india-dmf-unspent",
-          "found": [],
+          "found": [
+            "district mineral foundation"
+          ],
           "missing": [
-            "district mineral foundation",
             "spent"
           ]
         }
@@ -409,11 +410,11 @@
     {
       "source": "pib-bwmr-2022",
       "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1854433",
-      "finalUrl": "https://pib.gov.in/PressReleasePage.aspx?PRID=1854433",
-      "status": 0,
-      "contentType": "",
+      "finalUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1854433",
+      "status": 403,
+      "contentType": "text/html",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-india-bwmr-2022",
@@ -429,10 +430,10 @@
       "source": "iea-policy-india-bwmr",
       "url": "https://www.iea.org/policies/25166-battery-waste-management-rules-2022",
       "finalUrl": "https://www.iea.org/policies/25166-battery-waste-management-rules-2022",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-india-bwmr-2022",
@@ -448,10 +449,10 @@
       "source": "iea-policy-indonesia-nickel",
       "url": "https://www.iea.org/policies/16084-prohibition-of-the-export-of-nickel-ore",
       "finalUrl": "https://www.iea.org/policies/16084-prohibition-of-the-export-of-nickel-ore",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-indonesia-ore-ban",
@@ -467,18 +468,18 @@
       "source": "usgs-mcs-2025-nickel",
       "url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-nickel.pdf",
       "finalUrl": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-nickel.pdf",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "application/pdf",
+      "textLength": 6877,
+      "error": null,
       "checks": [
         {
           "claim": "c-indonesia-nickel-share",
-          "found": [],
-          "missing": [
+          "found": [
             "indonesia",
             "60"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -486,10 +487,10 @@
       "source": "spg-indonesia-2024",
       "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/11/indonesia-mining-by-the-numbers-2024",
       "finalUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/11/indonesia-mining-by-the-numbers-2024",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-indonesia-nickel-share",
@@ -505,17 +506,18 @@
       "source": "usgs-mcs-2025",
       "url": "https://pubs.usgs.gov/publication/mcs2025",
       "finalUrl": "https://pubs.usgs.gov/publication/mcs2025",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 5748,
+      "error": null,
       "checks": [
         {
           "claim": "c-indonesia-nickel-share",
-          "found": [],
-          "missing": [
-            "indonesia",
+          "found": [
             "60"
+          ],
+          "missing": [
+            "indonesia"
           ]
         },
         {
@@ -533,59 +535,59 @@
       "source": "jakpost-morowali-2023-12-24",
       "url": "https://www.thejakartapost.com/indonesia/2023/12/24/indonesia-nickel-smelter-furnace-blast-kills-13-workers-wounds-38",
       "finalUrl": "https://www.thejakartapost.com/indonesia/2023/12/24/indonesia-nickel-smelter-furnace-blast-kills-13-workers-wounds-38",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 9764,
+      "error": null,
       "checks": [
         {
           "claim": "c-morowali-2023",
-          "found": [],
-          "missing": [
+          "found": [
             "morowali",
             "furnace",
             "13"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
     {
       "source": "jakpost-morowali-2023-12-27",
       "url": "https://www.thejakartapost.com/business/2023/12/27/as-death-toll-rises-morowali-blast-brings-work-safety-squarely-into-focus.html",
-      "finalUrl": "https://www.thejakartapost.com/business/2023/12/27/as-death-toll-rises-morowali-blast-brings-work-safety-squarely-into-focus.html",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "finalUrl": "https://www.thejakartapost.com/business/2023/12/27/as-death-toll-rises-morowali-blast-brings-work-safety-squarely-into-focus",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 9653,
+      "error": null,
       "checks": [
         {
           "claim": "c-morowali-2023",
-          "found": [],
-          "missing": [
+          "found": [
             "morowali",
             "furnace",
             "13"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
     {
       "source": "bhrrc-morowali-2023",
       "url": "https://business-humanrights.org/en/latest-news/indonesia-nickel-smelter-furnace-fire-kills-13-workers-injures-46",
-      "finalUrl": "https://business-humanrights.org/en/latest-news/indonesia-nickel-smelter-furnace-fire-kills-13-workers-injures-46",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "finalUrl": "https://www.business-humanrights.org/en/latest-news/indonesia-nickel-smelter-furnace-fire-kills-13-workers-injures-46/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 14302,
+      "error": null,
       "checks": [
         {
           "claim": "c-morowali-2023",
-          "found": [],
-          "missing": [
+          "found": [
             "morowali",
             "furnace",
             "13"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -593,19 +595,19 @@
       "source": "usgs-mcs-2025-cobalt",
       "url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-cobalt.pdf",
       "finalUrl": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-cobalt.pdf",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "application/pdf",
+      "textLength": 7132,
+      "error": null,
       "checks": [
         {
           "claim": "c-drc-cobalt-share",
-          "found": [],
-          "missing": [
+          "found": [
             "congo",
             "220,000",
             "290,000"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -613,10 +615,10 @@
       "source": "iea-policy-drc-cobalt",
       "url": "https://www.iea.org/policies/28969-temporary-suspension-of-cobalt-export-from-the-democratic-republic-of-congo",
       "finalUrl": "https://www.iea.org/policies/28969-temporary-suspension-of-cobalt-export-from-the-democratic-republic-of-congo",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-drc-export-2025",
@@ -633,10 +635,10 @@
       "source": "spg-drc-quotas-2025",
       "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/10/drc-cobalt-export-quotas-to-support-cobalt-prices-though-challenges-loom",
       "finalUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/10/drc-cobalt-export-quotas-to-support-cobalt-prices-though-challenges-loom",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-drc-export-2025",
@@ -653,18 +655,18 @@
       "source": "orf-china-controls",
       "url": "https://orfamerica.org/newresearch/chinas-critical-mineral-export-controls",
       "finalUrl": "https://orfamerica.org/newresearch/chinas-critical-mineral-export-controls",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "textLength": 32198,
+      "error": null,
       "checks": [
         {
           "claim": "c-china-graphite-2023",
-          "found": [],
-          "missing": [
+          "found": [
             "graphite",
             "december 2023"
-          ]
+          ],
+          "missing": []
         },
         {
           "claim": "c-china-ree-2025",
@@ -685,15 +687,14 @@
       "source": "csis-ree-2025",
       "url": "https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions",
       "finalUrl": "https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 16508,
+      "error": null,
       "checks": [
         {
           "claim": "c-china-ree-2025",
-          "found": [],
-          "missing": [
+          "found": [
             "samarium",
             "gadolinium",
             "terbium",
@@ -701,7 +702,8 @@
             "lutetium",
             "scandium",
             "yttrium"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -709,10 +711,10 @@
       "source": "council-crma",
       "url": "https://www.consilium.europa.eu/en/policies/the-critical-raw-materials-act/",
       "finalUrl": "https://www.consilium.europa.eu/en/policies/the-critical-raw-materials-act/",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-eu-crma",
@@ -730,10 +732,10 @@
       "source": "mw-eu-47-projects",
       "url": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
       "finalUrl": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-eu-strategic-projects",
@@ -750,10 +752,10 @@
       "source": "spg-eu-13-projects",
       "url": "https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc",
       "finalUrl": "https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-eu-strategic-projects",
@@ -770,10 +772,10 @@
       "source": "eurlex-batteries",
       "url": "https://eur-lex.europa.eu/EN/legal-content/summary/sustainability-rules-for-batteries-and-waste-batteries.html",
       "finalUrl": "https://eur-lex.europa.eu/EN/legal-content/summary/sustainability-rules-for-batteries-and-waste-batteries.html",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 5678,
+      "error": null,
       "checks": [
         {
           "claim": "c-eu-batteries",
@@ -792,20 +794,20 @@
     {
       "source": "un-panel-cetm",
       "url": "https://un.org/en/node/216623",
-      "finalUrl": "https://un.org/en/node/216623",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "finalUrl": "https://www.un.org/en/node/216623",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 7527,
+      "error": null,
       "checks": [
         {
           "claim": "c-un-panel-2024",
-          "found": [],
-          "missing": [
+          "found": [
             "seven",
             "guiding principles",
             "human rights"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -813,10 +815,10 @@
       "source": "iisd-un-panel-2024",
       "url": "https://sdg.iisd.org/news/panel-guides-critical-energy-transition-minerals-towards-equity-justice/",
       "finalUrl": "https://sdg.iisd.org/news/panel-guides-critical-energy-transition-minerals-towards-equity-justice/",
-      "status": 0,
-      "contentType": "",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-un-panel-2024",
@@ -832,18 +834,19 @@
     {
       "source": "chn-jetp-2022",
       "url": "https://climatechangenews.com/2022/11/15/rich-nations-banks-pledge-20bn-for-indonesias-coal-to-clean-switch/",
-      "finalUrl": "https://climatechangenews.com/2022/11/15/rich-nations-banks-pledge-20bn-for-indonesias-coal-to-clean-switch/",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "finalUrl": "https://www.climatechangenews.com/2022/11/15/rich-nations-banks-pledge-20bn-for-indonesias-coal-to-clean-switch/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 12564,
+      "error": null,
       "checks": [
         {
           "claim": "c-jetp-indonesia",
-          "found": [],
-          "missing": [
+          "found": [
             "just energy transition partnership",
-            "20bn",
+            "20bn"
+          ],
+          "missing": [
             "comprehensive investment and policy plan"
           ]
         }
@@ -853,18 +856,19 @@
       "source": "eeas-jetp-cipp",
       "url": "https://www.eeas.europa.eu/delegations/indonesia/indonesia-just-energy-transition-comprehensive-investment-and-policy-plan-launched_en",
       "finalUrl": "https://www.eeas.europa.eu/delegations/indonesia/indonesia-just-energy-transition-comprehensive-investment-and-policy-plan-launched_en",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 10223,
+      "error": null,
       "checks": [
         {
           "claim": "c-jetp-indonesia",
-          "found": [],
-          "missing": [
+          "found": [
             "just energy transition partnership",
-            "20bn",
             "comprehensive investment and policy plan"
+          ],
+          "missing": [
+            "20bn"
           ]
         }
       ]
@@ -873,20 +877,20 @@
       "source": "miningcom-csm-2019",
       "url": "https://www.mining.com/world-bank-germany-rio-anglo-set-climate-smart-mining-fund/",
       "finalUrl": "https://www.mining.com/world-bank-germany-rio-anglo-set-climate-smart-mining-fund/",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 6010,
+      "error": null,
       "checks": [
         {
           "claim": "c-wb-csm-2019",
-          "found": [],
-          "missing": [
+          "found": [
             "climate-smart mining",
             "rio tinto",
             "anglo american",
             "50"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -894,19 +898,20 @@
       "source": "wb-csm",
       "url": "https://www.worldbank.org/en/topic/extractiveindustries/brief/climate-smart-mining-minerals-for-climate-action",
       "finalUrl": "https://www.worldbank.org/en/topic/extractiveindustries/brief/climate-smart-mining-minerals-for-climate-action",
-      "status": 0,
-      "contentType": "",
-      "textLength": 0,
-      "error": "fetch failed",
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "textLength": 5232,
+      "error": null,
       "checks": [
         {
           "claim": "c-wb-csm-2019",
-          "found": [],
-          "missing": [
+          "found": [
             "climate-smart mining",
-            "rio tinto",
-            "anglo american",
             "50"
+          ],
+          "missing": [
+            "rio tinto",
+            "anglo american"
           ]
         }
       ]

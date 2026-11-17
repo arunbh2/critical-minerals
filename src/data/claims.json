@@ -63,11 +63,13 @@
       "iep-cm-2023",
       "invezz-cm-2023"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "June 2023",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "iep-cm-2023"
+    ]
   },
   {
     "id": "c-india-ncmm-2025",
@@ -76,11 +78,13 @@
       "pmindia-ncmm-2025",
       "tribune-ncmm-2025"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "January 2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "tribune-ncmm-2025"
+    ]
   },
   {
     "id": "c-india-ncmm-scope",
@@ -89,11 +93,13 @@
       "pmindia-ncmm-2025",
       "tribune-ncmm-2025"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "January 2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "tribune-ncmm-2025"
+    ]
   },
   {
     "id": "c-india-mmdr-2023",
@@ -102,11 +108,13 @@
       "prs-mmdr-2023",
       "iea-policy-mmdr-2023"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "August 2023",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "prs-mmdr-2023"
+    ]
   },
   {
     "id": "c-india-first-tranche",
@@ -127,11 +135,13 @@
       "rs-dmf-2024",
       "iwp-dmf-2025"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "early 2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "iwp-dmf-2025"
+    ]
   },
   {
     "id": "c-india-dmf-unspent",
@@ -143,7 +153,9 @@
     "asOf": "2024–2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "iwp-dmf-2025"
+    ]
   },
   {
     "id": "c-india-bwmr-2022",
@@ -179,11 +191,14 @@
       "usgs-mcs-2025",
       "iea-gcmo-2025"
     ],
-    "verification": "not-verified",
+    "verification": "original-checked",
     "asOf": "2024 estimate",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "usgs-mcs-2025-nickel",
+      "usgs-mcs-2025"
+    ]
   },
   {
     "id": "c-morowali-2023",
@@ -193,11 +208,15 @@
       "jakpost-morowali-2023-12-27",
       "bhrrc-morowali-2023"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "December 2023",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "jakpost-morowali-2023-12-24",
+      "jakpost-morowali-2023-12-27",
+      "bhrrc-morowali-2023"
+    ]
   },
   {
     "id": "c-drc-cobalt-share",
@@ -206,11 +225,13 @@
       "usgs-mcs-2025-cobalt",
       "usgs-mcs-2025"
     ],
-    "verification": "not-verified",
+    "verification": "original-checked",
     "asOf": "2024 estimate",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "usgs-mcs-2025-cobalt"
+    ]
   },
   {
     "id": "c-drc-export-2025",
@@ -231,11 +252,13 @@
     "sources": [
       "orf-china-controls"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "December 2023",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "orf-china-controls"
+    ]
   },
   {
     "id": "c-china-ree-2025",
@@ -244,11 +267,13 @@
       "csis-ree-2025",
       "orf-china-controls"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "April 2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "csis-ree-2025"
+    ]
   },
   {
     "id": "c-eu-crma",
@@ -294,11 +319,13 @@
       "un-panel-cetm",
       "iisd-un-panel-2024"
     ],
-    "verification": "not-verified",
+    "verification": "original-checked",
     "asOf": "September 2024",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "un-panel-cetm"
+    ]
   },
   {
     "id": "c-jetp-indonesia",
@@ -307,11 +334,14 @@
       "chn-jetp-2022",
       "eeas-jetp-cipp"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "2022–2023",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "chn-jetp-2022",
+      "eeas-jetp-cipp"
+    ]
   },
   {
     "id": "c-wb-csm-2019",
@@ -320,10 +350,13 @@
       "miningcom-csm-2019",
       "wb-csm"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "May 2019",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": []
+    "evidenceSources": [
+      "miningcom-csm-2019",
+      "wb-csm"
+    ]
   }
 ]
