@@ -91,7 +91,7 @@ for (const f of js.finance) {
   if (!vset('recordStates').has(d.recordState)) err(`finance/${f.id}: unknown recordState`);
   for (const i of d.instruments) if (!vset('instruments').has(i)) err(`finance/${f.id}: unknown instrument "${i}"`);
   for (const s of d.supports) if (!vset('financeSupports').has(s)) err(`finance/${f.id}: unknown supports "${s}"`);
-  if (d.recordState === 'open' && (!d.applicationRoute || d.verification !== 'primary-checked'))
+  if (d.recordState === 'open' && (!d.applicationRoute || d.verification !== 'original-checked'))
     err(`finance/${f.id}: open records need an application route checked against the primary source`);
   if (d.amount?.value != null && (!d.amount.currency || d.amount.stage === 'unknown'))
     err(`finance/${f.id}: a stated amount needs a currency and stage`);

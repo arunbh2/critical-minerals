@@ -2,6 +2,18 @@
 import { url } from '../lib/url';
 interface Props { items: { label: string; href?: string }[] }
 const { items } = Astro.props;
+// BreadcrumbList structured data built from exactly the visible trail.
+const trail = [{ label: 'Home', href: url('') }, ...items];
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: trail.map((it, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: it.label,
+    item: new URL(i === trail.length - 1 ? Astro.url.pathname : it.href ?? Astro.url.pathname, Astro.site).toString(),
+  })),
+};
 ---
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol>
@@ -10,4 +22,5 @@ const { items } = Astro.props;
       <li>{it.href && i < items.length - 1 ? <a href={it.href}>{it.label}</a> : <span aria-current={i === items.length - 1 ? 'page' : undefined}>{it.label}</span>}</li>
     ))}
   </ol>
+  <script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
 </nav>

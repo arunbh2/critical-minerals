@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
 
 // The served origin and base path are set centrally here.
 // CI passes the values GitHub Pages reports (actions/configure-pages),
@@ -16,5 +15,4 @@ export default defineConfig({
   trailingSlash: 'always',
   // Inline CSS so the first render is not blocked by a stylesheet request.
   build: { format: 'directory', inlineStylesheets: 'always' },
-  integrations: [sitemap()],
 });

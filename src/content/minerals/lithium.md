@@ -1,5 +1,6 @@
 ---
 title: Lithium
+shortTitle: "Lithium mineral profile"
 summary: "The lightest metal and the core of lithium-ion batteries. Lithium comes from hard-rock mines and from brines, and each route raises different water and land questions."
 uses: ["Lithium-ion batteries for vehicles, storage and electronics", "Glass and ceramics", "Lubricating greases"]
 published: 2026-11-17

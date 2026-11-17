@@ -16,6 +16,8 @@ const dateTimeTz = z.string().regex(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?([+-
 
 const shared = {
   title: z.string(),
+  /** 2-4 words for <title>; required when title is not already 2-4 words. */
+  shortTitle: z.string().optional(),
   summary: z.string().max(320),
   published: date,
   updated: date.optional(),
@@ -91,6 +93,7 @@ const organisations = defineCollection({
   loader: file('./src/data/organisations.json'),
   schema: z.object({
     name: z.string(),
+    shortTitle: z.string().optional(),
     type: ids('orgTypes'),
     role: z.string(),
     geography: z.string(),
@@ -119,6 +122,7 @@ const finance = defineCollection({
   loader: file('./src/data/finance.json'),
   schema: z.object({
     title: z.string(),
+    shortTitle: z.string().optional(),
     provider: z.string(),
     programme: z.string(),
     purpose: z.string(),
@@ -148,6 +152,7 @@ const policies = defineCollection({
   loader: file('./src/data/policies.json'),
   schema: z.object({
     title: z.string(),
+    shortTitle: z.string().optional(),
     jurisdiction: z.string(),
     issuingBody: z.string(),
     state: ids('policyStates'),
@@ -196,6 +201,9 @@ const claims = defineCollection({
     verification: ids('verification'),
     asOf: z.string(),
     note: z.string().optional(),
+    checkedAt: date.optional(),
+    batch: z.string().optional(),
+    evidenceSources: z.array(z.string()).default([]),
   }),
 });
 

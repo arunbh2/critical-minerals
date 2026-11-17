@@ -19,7 +19,7 @@ const [primary] = await sourcesById([d.primaryDocument]);
 const vlabel = vocab.verification.find((v) => v.id === d.verification)?.label;
 const dates = Object.entries(d.dates).filter(([, v]) => v) as [string, string][];
 ---
-<Base title={d.title} description={d.summary} searchType="Policy record">
+<Base title={d.title} shortTitle={d.shortTitle} description={d.summary} searchType="Policy record">
   <div class="wrap">
     <Breadcrumbs items={[{ label: 'Policies', href: url('policies/') }, { label: d.title }]} />
     <article class="reading">

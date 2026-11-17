@@ -9,6 +9,7 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { SITE } from '../site.config';
 import { url, absoluteUrl } from '../lib/url';
+import { metaDescription } from '../lib/seo';
 
 interface Props {
   title: string;
@@ -22,20 +23,20 @@ interface Props {
   reviewed?: string;
   /** Search result type label for the Pagefind type filter. */
   searchType?: string;
+  /** 2-4 word title for <title>; defaults to title. Checked by tools/check-ai-files.js. */
+  shortTitle?: string;
+  /** Link the Markdown twin (index.md). False only for pages without one, such as 404. */
+  twin?: boolean;
 }
-const { title, description = SITE.description, type = 'website', noindex = false, jsonld = [], searchable = true, searchType = 'Page' } = Astro.props;
-const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.descriptor}` : `${title} | ${SITE.name}`;
+const { title, description: rawDescription = SITE.description, type = 'website', noindex = false, jsonld = [], searchable = true, searchType = 'Page', shortTitle, twin = true } = Astro.props;
+const description = metaDescription(rawDescription);
+const fullTitle = `${shortTitle ?? title} | ${SITE.name}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const ogImage = absoluteUrl('brand/avatar-512.png', Astro.site);
-const baseLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: SITE.name,
-  description: SITE.description,
-  url: absoluteUrl('', Astro.site),
-  inLanguage: SITE.language,
-};
-const ld = [baseLd, ...jsonld];
+const ld = jsonld;
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+// Prefetch (never prerender) same-site pages when a link is pressed, so visit counts stay true.
+const speculation = { prefetch: [{ where: { and: [{ href_matches: `${base}*` }, { not: { href_matches: `${base}*.json` } }] }, eagerness: 'conservative' }] };
 ---
 <!doctype html>
 <html lang="en">
@@ -53,16 +54,26 @@ const ld = [baseLd, ...jsonld];
     <link rel="icon" type="image/svg+xml" href={url('brand/favicon.svg')} sizes="any" />
     <link rel="apple-touch-icon" href={url('brand/apple-touch-icon.png')} />
     <link rel="manifest" href={url('site.webmanifest')} />
-    <link rel="sitemap" href={url('sitemap-index.xml')} />
+    <link rel="sitemap" type="application/xml" href={url('sitemap.xml')} />
+    {twin && <link rel="alternate" type="text/markdown" href="index.md" title="Markdown version of this page" />}
+    <link rel="alternate" type="application/atom+xml" href={url('feed.xml')} title="Critical Minerals changes" />
+    <link rel="help" href={url('for-ai/')} title="Information for AI systems and agents" />
     <meta property="og:type" content={type} />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="Critical Minerals logo: three folded bands under a red surface line" />
+    <meta property="og:locale" content="en_GB" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={shortTitle ?? title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Critical Minerals logo: three folded bands under a red surface line" />
     <meta data-pagefind-filter="type[content]" content={searchType} />
-    <script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
+    {ld.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(ld.length === 1 ? ld[0] : ld).replace(/</g, '\\u003c')} />}
+    <script type="speculationrules" set:html={JSON.stringify(speculation)} />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>

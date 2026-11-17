@@ -1,5 +1,6 @@
 ---
 title: "What makes a mineral 'critical'?"
+shortTitle: "What makes minerals critical"
 question: "Is a critical mineral simply a rare one?"
 summary: "Criticality combines how important a material is with how vulnerable its supply is. It differs by country, purpose and time, and it is not the same as geological rarity."
 order: 2

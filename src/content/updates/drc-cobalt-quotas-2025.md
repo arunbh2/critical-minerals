@@ -1,5 +1,6 @@
 ---
 title: "DRC replaces cobalt export suspension with quotas"
+shortTitle: "DRC cobalt export quotas"
 eventDate: 2025-10-16
 summary: "The Democratic Republic of the Congo, which produces roughly three-quarters of mined cobalt, moved from a temporary export suspension begun in February 2025 to an export quota system in October 2025."
 whyItMatters: "A dominant producer managing supply changes prices and bargaining power along the chain. The effects on artisanal miners' incomes deserve as much attention as the effects on markets."

@@ -1,5 +1,6 @@
 ---
 title: Indonesia
+shortTitle: "Indonesia country dossier"
 region: Southeast Asia
 leadQuestion: "Indonesia has turned nickel ore into an industrial boom. Are the workers and communities around its processing parks sharing the gains, or mainly carrying the risks?"
 summary: "The world's largest nickel producer, which has used an ore export ban to build domestic processing. A defining test of whether industrial value capture translates into safe work and local benefit."

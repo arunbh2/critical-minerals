@@ -1,5 +1,6 @@
 ---
 title: "From rock to phone: minerals, metals and materials"
+shortTitle: "Minerals, metals, materials"
 question: "What is actually inside the things we use every day?"
 summary: "A plain-language starting point: how minerals, ores, metals and materials differ, using a phone, a cable and a battery as examples."
 order: 1

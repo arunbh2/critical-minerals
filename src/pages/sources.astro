@@ -8,7 +8,7 @@ const sources = (await getCollection('sources')).sort((a, b) => a.data.publisher
 const claims = await getCollection('claims');
 const usedBy = (id: string) => claims.filter((c) => c.data.sources.includes(id)).length;
 ---
-<Page title="Sources" kicker="Source register" description="Every source cited on Critical Minerals, with publisher, publication date, retrieval date and verification notes."
+<Page title="Sources" shortTitle="Source register" kicker="Source register" description="Every source cited on Critical Minerals, with publisher, publication date, retrieval date and verification notes."
   standfirst="Every source cited on this site, with its publication and retrieval dates. Follow the links to read the originals.">
   <p class="sans"><a href={url('data/sources.json')}>Download the source register (JSON)</a> · <a href={url('data/claims.json')}>Download claims (JSON)</a></p>
   <ol class="register">

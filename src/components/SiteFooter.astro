@@ -20,9 +20,13 @@ import { url } from '../lib/url';
         <li><a href={url('privacy/')}>Privacy</a></li>
         <li><a href={url('data/')}>Open data</a></li>
         <li><a href={url('updates/')}>Updates</a></li>
+        <li><a href={url('cite/')}>How to cite</a></li>
+        <li><a href={url('growing/')}>Change log</a></li>
+        <li><a href={url('use-with-ai/')}>Use with AI</a></li>
       </ul>
     </nav>
   </div>
+  <p class="wrap ai-strip"><a href={url('for-ai/')}>Not a human? Here&rsquo;s a page for you</a></p>
 </footer>
 <style>
   .site-footer { background: var(--chicago-20); color: var(--london-100); padding: 2.5rem 0 3rem; margin-top: 2rem; }
@@ -32,9 +36,13 @@ import { url } from '../lib/url';
   .footer-logo img { width: 240px; height: auto; }
   .footer-note { font-family: var(--font-sans); font-size: 0.95rem; color: var(--losangeles-90); max-width: 46ch; }
   .site-footer ul { list-style: none; padding: 0; margin: 0; columns: 2; font-family: var(--font-sans); }
+  @media print { .ai-strip { display: none; } }
   .site-footer li { margin: 0 0 8px; break-inside: avoid; }
   .site-footer a { color: var(--london-100); }
   .site-footer a:focus-visible { outline-color: var(--london-100); }
+  .site-footer li a { display: inline-flex; align-items: center; min-height: 28px; }
+  .ai-strip { margin: 1.75rem auto 0; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.25); font-family: var(--font-sans); font-size: 0.95rem; }
+  .ai-strip a { display: inline-flex; align-items: center; min-height: 28px; }
   @media print {
     .site-footer { background: #fff; color: #000; padding: 1rem 0 0; border-top: 1px solid #000; }
     .footer-logo { display: none; }

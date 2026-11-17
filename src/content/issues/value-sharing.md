@@ -1,5 +1,6 @@
 ---
 title: Value sharing and public services
+shortTitle: "Value sharing"
 order: 4
 editorialQuestion: "If a district collects billions for mining-affected people and spends half, who answers for the other half?"
 summary: "How taxes, royalties, local procurement, processing and earmarked funds distribute the value of minerals, and whether it reaches the people and places that host extraction."

@@ -1,5 +1,6 @@
 ---
 title: "The lifecycle: from exploration to recovery"
+shortTitle: "The mineral lifecycle"
 question: "What happens between a deposit in the ground and a battery in a recycling plant?"
 summary: "Seven stages, each with different decision-makers, workers and risks. Why the loop never fully closes, and where losses happen."
 order: 3

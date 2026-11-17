@@ -38,7 +38,8 @@
     ],
     "sources": [],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "UN Trade and Development"
   },
   {
     "id": "eiti",
@@ -105,7 +106,8 @@
       "bhrrc-morowali-2023"
     ],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "Business and Human Rights"
   },
   {
     "id": "oecd",
@@ -124,7 +126,8 @@
     ],
     "sources": [],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "OECD due diligence"
   },
   {
     "id": "ilo",
@@ -164,7 +167,8 @@
     ],
     "sources": [],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "Responsible Mining Assurance"
   },
   {
     "id": "world-bank",
@@ -207,7 +211,8 @@
     ],
     "sources": [],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "UN Industrial Development"
   },
   {
     "id": "icmm",
@@ -227,7 +232,8 @@
     ],
     "sources": [],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "Mining and Metals Council"
   },
   {
     "id": "global-battery-alliance",
@@ -273,7 +279,8 @@
     ],
     "sources": [],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "Centre for Science (CSE)"
   },
   {
     "id": "ceew",
@@ -295,7 +302,8 @@
     ],
     "sources": [],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "CEEW research institute"
   },
   {
     "id": "jatam",
@@ -351,7 +359,8 @@
       "pmindia-ncmm-2025"
     ],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "India Ministry of Mines"
   },
   {
     "id": "esdm-indonesia",
@@ -376,6 +385,7 @@
       "iea-policy-indonesia-nickel"
     ],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "Indonesia energy ministry"
   }
 ]

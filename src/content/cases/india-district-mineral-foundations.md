@@ -1,5 +1,6 @@
 ---
 title: "India's District Mineral Foundations: raising money for mining-affected areas"
+shortTitle: "District Mineral Foundations"
 summary: "A statutory levy on mining leaseholders funds district trusts for affected people and places. Collection has been large; spending, participation and outcomes are the open questions."
 location: "Mining districts across India"
 period: "2015 to present; figures reported to early 2025"

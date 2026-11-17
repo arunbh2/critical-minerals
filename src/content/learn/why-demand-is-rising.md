@@ -1,5 +1,6 @@
 ---
 title: "Why demand is rising, and what forecasts can and cannot tell us"
+shortTitle: "Why demand is rising"
 question: "Will the world need much more of these minerals, and how sure is anyone?"
 summary: "Energy technologies, grids, digital systems and supply-security policies all drive demand. The difference between observed trends and scenarios, and how to read projections critically."
 order: 4

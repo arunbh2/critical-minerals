@@ -6,7 +6,7 @@ import { url } from '../lib/url';
 const nodes = (await graph()).sort((a, b) => a.title.localeCompare(b.title));
 const types = [...new Set(nodes.map((n) => TYPE_LABEL[n.type]))].sort();
 ---
-<Base title="Search" description="Search every explainer, profile, dossier, record and source on Critical Minerals." searchable={false}>
+<Base title="Search" shortTitle="Search the guide" description="Search every explainer, profile, dossier, record and source on Critical Minerals." searchable={false}>
   <div class="wrap">
     <Breadcrumbs items={[{ label: 'Search' }]} />
     <div class="reading">

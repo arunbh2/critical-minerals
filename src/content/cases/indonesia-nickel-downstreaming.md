@@ -1,5 +1,6 @@
 ---
 title: "Indonesia's nickel downstreaming: capturing processing, distributing its costs"
+shortTitle: "Indonesia nickel downstreaming"
 summary: "An ore export ban drew large investment into domestic nickel processing. Industrial value capture is evident; distribution of benefits and risks to workers and communities is the unresolved test."
 location: "Indonesia, especially industrial parks in Central Sulawesi and North Maluku"
 period: "2020 to present"

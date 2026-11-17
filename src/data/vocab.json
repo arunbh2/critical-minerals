@@ -1,71 +1,228 @@
 {
   "lifecycle": [
-    { "id": "exploration-extraction", "label": "Exploration and extraction" },
-    { "id": "processing-refining", "label": "Processing and refining" },
-    { "id": "manufacturing", "label": "Manufacturing" },
-    { "id": "use-repair-reuse", "label": "Use, repair and reuse" },
-    { "id": "collection-recycling", "label": "Collection and recycling" }
+    {
+      "id": "exploration-extraction",
+      "label": "Exploration and extraction"
+    },
+    {
+      "id": "processing-refining",
+      "label": "Processing and refining"
+    },
+    {
+      "id": "manufacturing",
+      "label": "Manufacturing"
+    },
+    {
+      "id": "use-repair-reuse",
+      "label": "Use, repair and reuse"
+    },
+    {
+      "id": "collection-recycling",
+      "label": "Collection and recycling"
+    }
   ],
   "financeSupports": [
-    { "id": "technology-demonstration", "label": "Technology demonstration" },
-    { "id": "industrial-infrastructure", "label": "Industrial infrastructure" },
-    { "id": "circularity", "label": "Circularity" },
-    { "id": "governance", "label": "Governance" },
-    { "id": "worker-protection", "label": "Worker protection" },
-    { "id": "community-development", "label": "Community development" },
-    { "id": "adaptation-drr", "label": "Adaptation and disaster risk reduction" }
+    {
+      "id": "technology-demonstration",
+      "label": "Technology demonstration"
+    },
+    {
+      "id": "industrial-infrastructure",
+      "label": "Industrial infrastructure"
+    },
+    {
+      "id": "circularity",
+      "label": "Circularity"
+    },
+    {
+      "id": "governance",
+      "label": "Governance"
+    },
+    {
+      "id": "worker-protection",
+      "label": "Worker protection"
+    },
+    {
+      "id": "community-development",
+      "label": "Community development"
+    },
+    {
+      "id": "adaptation-drr",
+      "label": "Adaptation and disaster risk reduction"
+    }
   ],
   "instruments": [
-    { "id": "grant", "label": "Grant" },
-    { "id": "contract", "label": "Contract" },
-    { "id": "loan", "label": "Loan" },
-    { "id": "equity", "label": "Equity" },
-    { "id": "guarantee", "label": "Guarantee" },
-    { "id": "technical-assistance", "label": "Technical assistance" },
-    { "id": "public-budget", "label": "Public budget allocation" },
-    { "id": "mixed", "label": "Mixed mechanism" },
-    { "id": "unknown", "label": "Not established" }
+    {
+      "id": "grant",
+      "label": "Grant"
+    },
+    {
+      "id": "contract",
+      "label": "Contract"
+    },
+    {
+      "id": "loan",
+      "label": "Loan"
+    },
+    {
+      "id": "equity",
+      "label": "Equity"
+    },
+    {
+      "id": "guarantee",
+      "label": "Guarantee"
+    },
+    {
+      "id": "technical-assistance",
+      "label": "Technical assistance"
+    },
+    {
+      "id": "public-budget",
+      "label": "Public budget allocation"
+    },
+    {
+      "id": "mixed",
+      "label": "Mixed mechanism"
+    },
+    {
+      "id": "unknown",
+      "label": "Not established"
+    }
   ],
   "recordStates": [
-    { "id": "strategy", "label": "Strategy or stated interest" },
-    { "id": "precedent", "label": "Historical funding precedent" },
-    { "id": "programme", "label": "Defined programme" },
-    { "id": "open", "label": "Open opportunity" },
-    { "id": "award", "label": "Award or deployment" }
+    {
+      "id": "strategy",
+      "label": "Strategy or stated interest"
+    },
+    {
+      "id": "precedent",
+      "label": "Historical funding precedent"
+    },
+    {
+      "id": "programme",
+      "label": "Defined programme"
+    },
+    {
+      "id": "open",
+      "label": "Open opportunity"
+    },
+    {
+      "id": "award",
+      "label": "Award or deployment"
+    }
   ],
   "policyStates": [
-    { "id": "announced", "label": "Announced" },
-    { "id": "proposed", "label": "Proposed" },
-    { "id": "adopted", "label": "Adopted" },
-    { "id": "effective", "label": "In effect" },
-    { "id": "amended", "label": "Amended" },
-    { "id": "repealed", "label": "Repealed" }
+    {
+      "id": "announced",
+      "label": "Announced"
+    },
+    {
+      "id": "proposed",
+      "label": "Proposed"
+    },
+    {
+      "id": "adopted",
+      "label": "Adopted"
+    },
+    {
+      "id": "effective",
+      "label": "In effect"
+    },
+    {
+      "id": "amended",
+      "label": "Amended"
+    },
+    {
+      "id": "repealed",
+      "label": "Repealed"
+    }
   ],
   "verification": [
-    { "id": "primary-checked", "label": "Checked against the primary source" },
-    { "id": "corroborated", "label": "Corroborated by independent reporting; primary document check pending" }
+    {
+      "id": "original-checked",
+      "label": "Checked against an original"
+    },
+    {
+      "id": "secondary",
+      "label": "Reported by secondary sources"
+    },
+    {
+      "id": "not-verified",
+      "label": "Not verified"
+    }
   ],
   "orgTypes": [
-    { "id": "intergovernmental", "label": "Intergovernmental or UN body" },
-    { "id": "public-authority", "label": "Public authority" },
-    { "id": "multi-stakeholder", "label": "Multi-stakeholder initiative" },
-    { "id": "industry-initiative", "label": "Industry initiative" },
-    { "id": "research", "label": "Research or policy institute" },
-    { "id": "civil-society", "label": "Civil society or community organisation" },
-    { "id": "financier", "label": "Financier" }
+    {
+      "id": "intergovernmental",
+      "label": "Intergovernmental or UN body"
+    },
+    {
+      "id": "public-authority",
+      "label": "Public authority"
+    },
+    {
+      "id": "multi-stakeholder",
+      "label": "Multi-stakeholder initiative"
+    },
+    {
+      "id": "industry-initiative",
+      "label": "Industry initiative"
+    },
+    {
+      "id": "research",
+      "label": "Research or policy institute"
+    },
+    {
+      "id": "civil-society",
+      "label": "Civil society or community organisation"
+    },
+    {
+      "id": "financier",
+      "label": "Financier"
+    }
   ],
   "sourceTypes": [
-    { "id": "official", "label": "Government or official record" },
-    { "id": "intergovernmental", "label": "Intergovernmental body" },
-    { "id": "legal", "label": "Legal text" },
-    { "id": "research", "label": "Research or analysis" },
-    { "id": "civil-society", "label": "Civil society" },
-    { "id": "industry", "label": "Industry" },
-    { "id": "media", "label": "News reporting" }
+    {
+      "id": "official",
+      "label": "Government or official record"
+    },
+    {
+      "id": "intergovernmental",
+      "label": "Intergovernmental body"
+    },
+    {
+      "id": "legal",
+      "label": "Legal text"
+    },
+    {
+      "id": "research",
+      "label": "Research or analysis"
+    },
+    {
+      "id": "civil-society",
+      "label": "Civil society"
+    },
+    {
+      "id": "industry",
+      "label": "Industry"
+    },
+    {
+      "id": "media",
+      "label": "News reporting"
+    }
   ],
   "relationship": [
-    { "id": "documented", "label": "Documented in this case" },
-    { "id": "plausible", "label": "Plausible mechanism" },
-    { "id": "hypothesis", "label": "Untested hypothesis" }
+    {
+      "id": "documented",
+      "label": "Documented in this case"
+    },
+    {
+      "id": "plausible",
+      "label": "Plausible mechanism"
+    },
+    {
+      "id": "hypothesis",
+      "label": "Untested hypothesis"
+    }
   ]
 }

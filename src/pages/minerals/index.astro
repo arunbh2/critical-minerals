@@ -6,7 +6,7 @@ import { hrefFor } from '../../lib/content';
 import { url } from '../../lib/url';
 const items = (await getCollection('minerals')).sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
-<Base title="Minerals" description="Profiles of copper, lithium, nickel, cobalt, graphite and rare earth elements: uses, lifecycle, development questions and recovery options.">
+<Base title="Minerals" shortTitle="Mineral profiles" description="Profiles of copper, lithium, nickel, cobalt, graphite and rare earth elements: uses, lifecycle, development questions and recovery options.">
   <div class="wrap">
     <Breadcrumbs items={[{ label: 'Explore', href: url('explore/') }, { label: 'Minerals' }]} />
     <header class="reading"><p class="kicker red-rule">Mineral profiles</p><h1>Minerals and material groups</h1>

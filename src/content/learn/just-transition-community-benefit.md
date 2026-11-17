@@ -1,5 +1,6 @@
 ---
 title: "What a just transition and real community benefit require"
+shortTitle: "Just transition requirements"
 question: "How would we know if mineral development was fair to the people closest to it?"
 summary: "Rights first, then benefits. The ingredients of meaningful community benefit, and how to test claims about it."
 order: 6

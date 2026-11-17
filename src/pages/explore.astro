@@ -8,7 +8,7 @@ import { hrefFor } from '../lib/content';
 const countries = await getCollection('countries');
 const minerals = (await getCollection('minerals')).sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
-<Base title="Explore" description="Browse countries, minerals and lifecycle stages, and follow the connections between them.">
+<Base title="Explore" shortTitle="Explore the landscape" description="Browse countries, minerals and lifecycle stages, and follow the connections between them.">
   <div class="wrap">
     <Breadcrumbs items={[{ label: 'Explore' }]} />
     <header class="reading">

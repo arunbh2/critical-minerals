@@ -18,7 +18,7 @@ const d = entry.data;
 const nf = (v: string | null) => v ?? 'Not established';
 const vlabel = vocab.verification.find((v) => v.id === d.verification)?.label;
 ---
-<Base title={d.title} description={d.purpose} searchType="Finance record">
+<Base title={d.title} shortTitle={d.shortTitle} description={d.purpose} searchType="Finance record">
   <div class="wrap">
     <Breadcrumbs items={[{ label: 'Finance', href: url('finance/') }, { label: d.title }]} />
     <article class="reading">

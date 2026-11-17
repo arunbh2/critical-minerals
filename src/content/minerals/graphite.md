@@ -1,5 +1,6 @@
 ---
 title: Graphite
+shortTitle: "Graphite mineral profile"
 summary: "The largest component by weight in most lithium-ion battery anodes. Graphite can be natural or synthetic, and its processing is highly concentrated."
 uses: ["Lithium-ion battery anodes", "Refractories and steelmaking electrodes", "Lubricants", "Specialised industrial uses"]
 published: 2026-11-17

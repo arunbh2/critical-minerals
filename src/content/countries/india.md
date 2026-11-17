@@ -1,5 +1,6 @@
 ---
 title: India
+shortTitle: "India country dossier"
 region: South Asia
 leadQuestion: "As India builds critical-mineral supply chains, who will decide on new mines and plants, and will the people of mineral-rich districts share in what they create?"
 summary: "India is moving from importer to aspiring producer, processor and recycler of critical minerals. The decisive questions lie in its mineral-rich, often Adivasi-majority districts and its large informal recycling economy."

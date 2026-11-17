@@ -33,9 +33,10 @@
     "sources": [
       "mines-india-cm-2023"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "shortTitle": "India critical minerals list"
   },
   {
     "id": "india-mmdr-amendment-2023",
@@ -77,9 +78,10 @@
       "iea-policy-mmdr-2023",
       "pib-auction-tranche-2023"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "India mining law amendment"
   },
   {
     "id": "india-national-critical-mineral-mission-2025",
@@ -119,9 +121,10 @@
     "sources": [
       "pmindia-ncmm-2025"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "India mineral mission policy"
   },
   {
     "id": "india-battery-waste-rules-2022",
@@ -158,9 +161,10 @@
       "pib-bwmr-2022",
       "iea-policy-india-bwmr"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "India battery waste rules"
   },
   {
     "id": "indonesia-nickel-ore-export-ban",
@@ -197,9 +201,10 @@
     "sources": [
       "iea-policy-indonesia-nickel"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "Indonesia nickel ore ban"
   },
   {
     "id": "eu-critical-raw-materials-act",
@@ -240,7 +245,7 @@
       "mw-eu-47-projects",
       "spg-eu-13-projects"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
     "reviewDue": "2027-02-17"
   },
@@ -275,7 +280,7 @@
     "sources": [
       "eurlex-batteries"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
     "reviewDue": "2027-02-17"
   },
@@ -308,9 +313,10 @@
       "csis-ree-2025",
       "orf-china-controls"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "China rare earth licensing"
   },
   {
     "id": "china-graphite-export-permits-2023",
@@ -338,9 +344,10 @@
     "sources": [
       "orf-china-controls"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "China graphite export permits"
   },
   {
     "id": "drc-cobalt-export-measures-2025",
@@ -372,8 +379,9 @@
     "sources": [
       "iea-policy-drc-cobalt"
     ],
-    "verification": "corroborated",
+    "verification": "secondary",
     "reviewed": "2026-11-17",
-    "reviewDue": "2026-12-17"
+    "reviewDue": "2026-12-17",
+    "shortTitle": "DRC cobalt export measures"
   }
 ]

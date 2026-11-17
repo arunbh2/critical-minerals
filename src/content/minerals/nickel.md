@@ -1,5 +1,6 @@
 ---
 title: Nickel
+shortTitle: "Nickel mineral profile"
 summary: "Long a stainless-steel metal, now also a battery metal. Indonesia's rapid expansion of nickel processing makes it a defining case for who benefits from industrial growth."
 uses: ["Stainless steel and alloys", "Battery cathodes (nickel-rich chemistries)", "Plating", "Specialised alloys for aerospace and energy"]
 published: 2026-11-17

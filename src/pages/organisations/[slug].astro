@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const d = entry.data;
 ---
-<Base title={d.name} description={d.role} searchType="Organisation">
+<Base title={d.name} shortTitle={d.shortTitle} description={d.role} searchType="Organisation">
   <div class="wrap">
     <Breadcrumbs items={[{ label: 'Organisations', href: url('landscape/') }, { label: d.name }]} />
     <article class="reading">

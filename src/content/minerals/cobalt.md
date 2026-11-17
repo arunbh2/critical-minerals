@@ -1,5 +1,6 @@
 ---
 title: Cobalt
+shortTitle: "Cobalt mineral profile"
 summary: "Mostly a by-product of copper and nickel mining, highly concentrated in the Democratic Republic of the Congo, and closely tied to questions of artisanal mining and labour rights."
 uses: ["Battery cathodes (some chemistries)", "Superalloys for jet engines and turbines", "Hard metals and tools", "Catalysts"]
 published: 2026-11-17
