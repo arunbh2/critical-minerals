@@ -37,6 +37,9 @@ import { url } from '../lib/url';
   .footer-note { font-family: var(--font-sans); font-size: 0.95rem; color: var(--losangeles-90); max-width: 46ch; }
   .site-footer ul { list-style: none; padding: 0; margin: 0; columns: 2; font-family: var(--font-sans); }
   @media print { .ai-strip { display: none; } }
+  @media (max-width: 420px) { .site-footer ul { columns: 1; } }
+  .site-footer { overflow-wrap: anywhere; }
+  .footer-logo img { max-width: 100%; }
   .site-footer li { margin: 0 0 8px; break-inside: avoid; }
   .site-footer a { color: var(--london-100); }
   .site-footer a:focus-visible { outline-color: var(--london-100); }

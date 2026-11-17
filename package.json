@@ -11,7 +11,10 @@
     "check:dist": "node tools/check-output.js",
     "test": "node --test \"tests/unit/*.test.mjs\"",
     "test:e2e": "node tests/e2e/journeys.mjs",
-    "ci": "npm run validate && npm test && npm run build && npm run check:dist"
+    "ci": "npm run build && npm run check:fast",
+    "check": "node tools/check-all.js",
+    "check:fast": "node tools/check-all.js --fast",
+    "check:ui": "node tools/check-ui.js"
   },
   "dependencies": {
     "@fontsource-variable/source-sans-3": "5.3.1",

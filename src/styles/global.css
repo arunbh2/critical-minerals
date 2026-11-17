@@ -15,6 +15,8 @@ body {
   font-size: var(--text-body);
   line-height: var(--leading-body);
   font-variant-numeric: lining-nums;
+  /* Long words and URLs wrap instead of forcing sideways scrolling (WCAG 1.4.10). */
+  overflow-wrap: break-word;
 }
 @media (min-width: 601px) { body { font-size: var(--text-body-lg); } }
 
@@ -36,7 +38,8 @@ h4 { font-size: 1.05rem; }
 p, ul, ol, dl, table, blockquote, figure { margin: 0 0 1em; }
 li + li { margin-top: 0.3em; }
 
-a { color: var(--color-link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+/* Vertical padding enlarges every link's tap target to 24px+ (WCAG 2.5.8) without moving text. */
+a { padding-block: 0.16em; color: var(--color-link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { color: var(--color-link-hover); text-decoration-thickness: 2px; }
 
 :focus-visible {
@@ -51,6 +54,7 @@ img, svg { max-width: 100%; height: auto; }
   font-family: var(--font-sans);
 }
 
+:where(code, .claim-cite, .source-list, dt, dd, .panel, h1, h2, h3) { overflow-wrap: anywhere; }
 .tabular { font-variant-numeric: tabular-nums lining-nums; }
 
 .visually-hidden {
@@ -101,6 +105,7 @@ main:focus { outline: none; }
 
 /* Breadcrumbs */
 .breadcrumbs { font-family: var(--font-sans); font-size: 0.9rem; margin: 1.25rem 0 0.75rem; }
+.breadcrumbs a { display: inline-flex; align-items: center; min-height: 24px; }
 .breadcrumbs ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px; }
 .breadcrumbs li + li { margin-top: 0; }
 .breadcrumbs li + li::before { content: '/'; margin-right: 4px; color: var(--color-text-muted); }
@@ -135,7 +140,7 @@ main:focus { outline: none; }
   display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px;
   border: 1px solid var(--color-status-neutral-edge); border-radius: var(--radius);
   background: var(--color-status-neutral-bg); color: var(--color-status-neutral-text);
-  font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; white-space: nowrap;
+  font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; white-space: normal; max-width: 100%;
 }
 .status::before { content: ''; width: 8px; height: 8px; border: 1px solid currentColor; display: inline-block; }
 .status-open { background: var(--color-status-open-bg); color: var(--color-status-open-text); border-color: var(--color-status-open-edge); }
@@ -177,10 +182,10 @@ thead th { font-weight: 700; color: var(--london-20); border-bottom: 2px solid v
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums lining-nums; }
 
 /* Definition lists for record facts */
-.facts { display: grid; grid-template-columns: minmax(8rem, 12rem) 1fr; gap: 6px 16px; font-family: var(--font-sans); font-size: 0.95rem; }
+.facts { display: grid; grid-template-columns: minmax(min(100%, 8rem), 12rem) 1fr; gap: 6px 16px; font-family: var(--font-sans); font-size: 0.95rem; }
 .facts dt { font-weight: 700; color: var(--london-20); }
 .facts dd { margin: 0; }
-@media (max-width: 600px) { .facts { grid-template-columns: 1fr; } .facts dd { margin-bottom: 8px; } }
+@media (max-width: 600px) { .facts { grid-template-columns: minmax(0, 1fr); } .facts dd { margin-bottom: 8px; } }
 
 /* Lists of records */
 .record-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--color-rule); }

@@ -74,7 +74,7 @@ const isHome = pathname === url('');
 <style>
   .site-header { background: var(--color-canvas); }
   .masthead {
-    display: flex; align-items: center; gap: var(--gutter);
+    display: flex; flex-wrap: wrap; align-items: center; gap: var(--gutter);
     padding-top: 18px; padding-bottom: 16px;
   }
   .logo-link { display: block; flex: none; line-height: 0; padding: 4px 0; }
@@ -83,7 +83,7 @@ const isHome = pathname === url('');
     margin: 0; padding-left: var(--gutter); border-left: 1px solid var(--color-rule-strong);
     font-family: var(--font-serif); color: var(--london-20); font-size: 1rem; line-height: 1.3;
   }
-  .masthead-actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+  .masthead-actions { margin-left: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
   .header-search, .nav-toggle {
     display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px;
     font-family: var(--font-sans); font-size: 1rem; font-weight: 600; color: var(--color-action);
@@ -103,7 +103,7 @@ const isHome = pathname === url('');
   .site-nav ul { list-style: none; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0 4px; }
   .site-nav li { margin: 0; }
   .site-nav a {
-    display: block; padding: 12px 12px 10px; color: var(--color-nav-text);
+    display: block; padding: 12px 12px 10px; overflow-wrap: anywhere; color: var(--color-nav-text);
     font-family: var(--font-sans); font-weight: 600; font-size: 0.98rem; text-decoration: none;
     border-bottom: 3px solid transparent;
   }

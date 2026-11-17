@@ -182,7 +182,7 @@ await step('Print uses the monochrome logo', async () => {
 });
 
 await step('Open data exports and schema load under the base path', async () => {
-  for (const p of ['data/finance.json', 'data/schema/finance.schema.json', 'sitemap-index.xml', 'llms.txt', 'site.webmanifest']) {
+  for (const p of ['data/finance.json', 'data/schema/finance.schema.json', 'sitemap.xml', 'for-ai.json', '.well-known/security.txt', 'countries/india/index.md', 'packs/india.txt', 'llms.txt', 'site.webmanifest']) {
     const r = await page.request.get(U(p));
     assert.equal(r.status(), 200, p);
   }

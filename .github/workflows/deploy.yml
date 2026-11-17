@@ -32,20 +32,18 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - name: Content and reference validation
-        run: npm run validate
-      - name: Unit tests (status logic, worksheet export, contrast)
-        run: npm test
-      - name: Production build and search index
+      - name: Production build (pages, Markdown twins, AI files, .well-known, search index)
         run: npm run build
-      - name: Check build output (links, assets, private material)
+      - name: Fast checks (data, claims, voice, unit, output, AI files, structured data, weight)
         env:
           # Private list of restricted phrases (one per line), kept out of the public repo.
           RESTRICTED_TERMS: ${{ secrets.RESTRICTED_TERMS }}
-        run: npm run check:dist
-      - name: Install browser for journey tests
+        run: npm run check:fast
+      - name: Install browser
         run: npx playwright install --with-deps chromium
-      - name: Browser journeys under the repository path
+      - name: Touch targets, reflow at 320px with 200% text, reduced motion
+        run: npm run check:ui
+      - name: Browser journeys and accessibility scan under the repository path
         run: npm run test:e2e
 
   build:
@@ -68,14 +66,14 @@ jobs:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: npm run build
-      - name: Check build output for the served address
+      - name: Fast checks for the served address
         env:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
           RESTRICTED_TERMS: ${{ secrets.RESTRICTED_TERMS }}
           # Refuse to deploy if the private restricted-term list is missing.
           REQUIRE_RESTRICTED_TERMS: '1'
-        run: npm run check:dist
+        run: npm run check:fast
       - name: Upload static output
         uses: actions/upload-pages-artifact@v5
         with:
