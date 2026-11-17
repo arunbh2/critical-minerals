@@ -1,8 +1,8 @@
 # Research ledger: 2026-11-4-fourth-pass
 
-Sources fetched: 2026-11-17T05:58:04.051Z. Gate run: 2026-11-17T05:58:04.081Z.
+Sources fetched: 2026-11-17T06:03:46.080Z. Gate run: 2026-11-17T06:03:46.118Z.
 
-## Used (19)
+## Used (20)
 
 - **c-refining-top3-2024** (Reported by secondary sources): Reporting on the International Energy Agency's 2025 outlook says that across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from 82% in 2020 to 86% in 2024.
   - Evidence: "86%" in miningcom-gcmo-2025; "82%" in miningcom-gcmo-2025; "2020" in miningcom-gcmo-2025; "2024" in miningcom-gcmo-2025
@@ -19,7 +19,7 @@ Sources fetched: 2026-11-17T05:58:04.051Z. Gate run: 2026-11-17T05:58:04.081Z.
 - **c-india-dmf-collections** (Reported by secondary sources): District Mineral Foundations, funded by levies on mining leaseholders, have collected more than ₹1 lakh crore. Odisha, Chhattisgarh and Jharkhand account for a large share of the total.
   - Evidence: "district mineral foundation*" in iwp-dmf-2025; "1 lakh crore" in iwp-dmf-2025; "odisha" in iwp-dmf-2025; "chhattisgarh" in iwp-dmf-2025; "jharkhand" in iwp-dmf-2025
 - **c-india-bwmr-2022** (Reported by secondary sources): India's Battery Waste Management Rules of 2022 introduced extended producer responsibility, making producers, including importers, responsible for collecting and recycling waste batteries.
-  - Evidence: "battery waste management rules" in lawrbit-bwmr-2022, mondaq-bwmr-2022; "extended producer responsibility" in lawrbit-bwmr-2022, mondaq-bwmr-2022; "2022" in lawrbit-bwmr-2022, mondaq-bwmr-2022
+  - Evidence: "battery waste management rules" in mondaq-bwmr-2022; "extended producer responsibility" in mondaq-bwmr-2022; "2022" in mondaq-bwmr-2022
 - **c-indonesia-ore-ban** (Reported by secondary sources): Indonesia has prohibited exports of nickel ore since January 2020.
   - Evidence: "nickel ore" in aljazeera-nickel-2019; "january 2020 | 1 january 2020" in aljazeera-nickel-2019
 - **c-morowali-2023** (Reported by secondary sources): In December 2023 a furnace accident at a nickel smelter in the Indonesia Morowali Industrial Park killed workers and injured dozens. Initial reports gave 13 deaths; police later revised the death toll up from 13 to 18, and the park operator's account of the cause was disputed.
@@ -32,6 +32,8 @@ Sources fetched: 2026-11-17T05:58:04.051Z. Gate run: 2026-11-17T05:58:04.081Z.
   - Evidence: "graphite" in orf-china-controls; "december 2023" in orf-china-controls
 - **c-china-ree-2025** (Reported by secondary sources): In April 2025 China placed seven medium and heavy rare earth elements (samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium) and related products under export licensing.
   - Evidence: "samarium" in csis-ree-2025; "gadolinium" in csis-ree-2025; "terbium" in csis-ree-2025; "dysprosium" in csis-ree-2025; "lutetium" in csis-ree-2025; "scandium" in csis-ree-2025; "yttrium" in csis-ree-2025; "april" in orf-china-controls, csis-ree-2025; "2025" in orf-china-controls, csis-ree-2025
+- **c-eu-crma** (Reported by secondary sources): The EU Critical Raw Materials Act, adopted in 2024, sets non-binding 2030 benchmarks for EU extraction (10%), processing (40%) and recycling (25%) of annual consumption of strategic raw materials.
+  - Evidence: "10%" in nrf-crma-2024; "40%" in nrf-crma-2024; "25%" in nrf-crma-2024; "2030" in nrf-crma-2024; "2024" in nrf-crma-2024
 - **c-eu-strategic-projects** (Reported by secondary sources): In 2025 the European Commission designated 47 strategic projects in EU member states and 13 outside the EU under the Critical Raw Materials Act.
   - Evidence: "47 strategic projects | 47 projects" in mw-eu-47-projects, nsenergy-eu-13-2025; "13 strategic projects | 13 overseas | 13 projects | 13 new" in nsenergy-eu-13-2025; "strategic projects" in mw-eu-47-projects, nsenergy-eu-13-2025; "2025" in mw-eu-47-projects, nsenergy-eu-13-2025
 - **c-eu-batteries** (Checked against an original): The EU Batteries Regulation sets lithium recovery targets of 50% by the end of 2027 and 80% by the end of 2031, and 90% and 95% for cobalt, copper, lead and nickel. Minimum recycled content for new batteries starts in 2031 at 16% cobalt, 6% lithium, 6% nickel and 85% lead. Larger batteries require a digital battery passport.
@@ -43,10 +45,8 @@ Sources fetched: 2026-11-17T05:58:04.051Z. Gate run: 2026-11-17T05:58:04.081Z.
 - **c-wb-csm-2019** (Reported by secondary sources): The World Bank launched its Climate-Smart Mining Facility in 2019, with partners including the German government, Rio Tinto and Anglo American.
   - Evidence: "climate-smart mining" in miningcom-csm-2019, wb-csm; "rio tinto" in miningcom-csm-2019; "anglo american" in miningcom-csm-2019; "german government" in miningcom-csm-2019; "2019" in miningcom-csm-2019, wb-csm
 
-## Held back from pages (1)
+## Held back from pages (0)
 
-- **c-eu-crma** (not verified): terms not found: "65%".
-  - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
 
 ## Sources that could not be read
 
@@ -63,6 +63,7 @@ Sources fetched: 2026-11-17T05:58:04.051Z. Gate run: 2026-11-17T05:58:04.081Z.
 - rs-dmf-2024: HTTP 0 (fetch failed), 0 characters extracted. https://rsdebate.nic.in/bitstream/123456789/752721/1/PQ_266_16122024_U2348_p513_p513.pdf
 - pib-bwmr-2022: HTTP 403, 0 characters extracted. https://pib.gov.in/PressReleasePage.aspx?PRID=1854433
 - iea-policy-india-bwmr: HTTP 403, 0 characters extracted. https://www.iea.org/policies/25166-battery-waste-management-rules-2022
+- lawrbit-bwmr-2022: HTTP 403, 0 characters extracted. https://www.lawrbit.com/article/batteries-waste-management-rules/
 - iea-policy-indonesia-nickel: HTTP 403, 0 characters extracted. https://www.iea.org/policies/16084-prohibition-of-the-export-of-nickel-ore
 - iea-policy-drc-cobalt: HTTP 403, 0 characters extracted. https://www.iea.org/policies/28969-temporary-suspension-of-cobalt-export-from-the-democratic-republic-of-congo
 - mw-drc-quotas-2025: HTTP 403, 0 characters extracted. https://www.miningweekly.com/article/congo-weighs-cobalt-export-quotas-to-revive-prices-amid-supply-glut-2025-02-26
@@ -70,9 +71,10 @@ Sources fetched: 2026-11-17T05:58:04.051Z. Gate run: 2026-11-17T05:58:04.081Z.
 - council-crma: HTTP 403, 0 characters extracted. https://www.consilium.europa.eu/en/policies/the-critical-raw-materials-act/
 - te-crma-2024: HTTP 403, 0 characters extracted. https://www.transportenvironment.org/uploads/files/2024_09_CRMA_implementation_briefing.pdf
 - spg-eu-13-projects: HTTP 403, 0 characters extracted. https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc
-- fieldfisher-batteries: HTTP 403, 0 characters extracted. https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance
+- fieldfisher-batteries: HTTP 0 (fetch failed), 0 characters extracted. https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance
 - iisd-un-panel-2024: HTTP 403, 0 characters extracted. https://sdg.iisd.org/news/panel-guides-critical-energy-transition-minerals-towards-equity-justice/
 
 ## Editorial holds
 
 - c-mining-top3-2024, c-growth-single-supplier, c-indonesia-nickel-share, c-india-first-tranche and c-india-dmf-unspent remain not verified from earlier batches; no reachable source with every term has been found.
+- c-eu-crma: the 65% single-country diversification aim was removed from the claim because no fetched source contained '65%' reliably (one source answered once, then refused automated requests).

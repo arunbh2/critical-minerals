@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-4-fourth-pass",
-  "appliedAt": "2026-11-17T05:58:04.105Z",
+  "appliedAt": "2026-11-17T06:03:46.145Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
@@ -52,7 +52,7 @@
     },
     {
       "claim": "c-india-dmf-collections",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "iwp-dmf-2025"
@@ -63,7 +63,6 @@
       "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
-        "lawrbit-bwmr-2022",
         "mondaq-bwmr-2022"
       ]
     },
@@ -121,8 +120,8 @@
     },
     {
       "claim": "c-eu-crma",
-      "from": "secondary",
-      "to": "not-verified",
+      "from": "not-verified",
+      "to": "secondary",
       "evidenceSources": [
         "nrf-crma-2024"
       ]
