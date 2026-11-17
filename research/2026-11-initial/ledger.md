@@ -1,6 +1,6 @@
 # Research ledger: 2026-11-initial
 
-Sources fetched: 2026-11-17T05:51:50.576Z. Gate run: 2026-11-17T05:51:50.608Z.
+Sources fetched: 2026-11-17T05:55:20.703Z. Gate run: 2026-11-17T05:55:20.739Z.
 
 ## Used (13)
 

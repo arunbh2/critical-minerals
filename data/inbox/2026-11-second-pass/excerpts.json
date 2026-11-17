@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-second-pass",
-  "checkedAt": "2026-11-17T05:52:51.304Z",
+  "checkedAt": "2026-11-17T05:56:17.273Z",
   "note": "Short excerpts (about 180 characters) around each found term, kept as evidence. Not for republication.",
   "excerpts": [
     {
@@ -137,34 +137,6 @@
       "excerpt": "hese raw materials; 10% derived from local extraction; 40% to be processed in the eu; and 25% derived from recycled materials. one central aim of these benchmarks is to increase and d"
     },
     {
-      "source": "te-crma-2024",
-      "claim": "c-eu-crma",
-      "term": "10%",
-      "matched": "10%",
-      "excerpt": "criteria: ● prioritise in line with crma's benchmarks: 40% processing, 25% recycling and 10% mining. metals processing and material recovery (recycling) bring the biggest value added"
-    },
-    {
-      "source": "te-crma-2024",
-      "claim": "c-eu-crma",
-      "term": "40%",
-      "matched": "40%",
-      "excerpt": "nd. ● on recycling, the recovered lithium, nickel, cobalt and manganese could cover up to 40% of the demand by 2030 if all batteries are collected and production scrap included, risin"
-    },
-    {
-      "source": "te-crma-2024",
-      "claim": "c-eu-crma",
-      "term": "25%",
-      "matched": "25%",
-      "excerpt": "t&e's recommended criteria: ● prioritise in line with crma's benchmarks: 40% processing, 25% recycling and 10% mining. metals processing and material recovery (recycling) bring the b"
-    },
-    {
-      "source": "te-crma-2024",
-      "claim": "c-eu-crma",
-      "term": "65%",
-      "matched": "65%",
-      "excerpt": "3 | brie fi ng minerals demand by 2030, alongside a diversi fi cation goal of no moe that 65% of any critical mineral originating from any single third country. - the 2030 objectives"
-    },
-    {
       "source": "mw-eu-47-projects",
       "claim": "c-eu-strategic-projects",
       "term": "47",
@@ -268,20 +240,6 @@
       "term": "passport",
       "matched": "passport",
       "excerpt": "re life cycle of batteries, from design to end-of-life. key features include the “battery passport” and the carbon footprint declaration which will lead to greater levels of transparency."
-    },
-    {
-      "source": "lawrbit-bwmr-2022",
-      "claim": "c-india-bwmr-2022",
-      "term": "battery waste management rules",
-      "matched": "battery waste management rules",
-      "excerpt": "he government of india, ministry of environment, forest and climate change introduced the battery waste management rules, 2022 (hereinafter referred to as rules of 2022) replacing the batteries (management and"
-    },
-    {
-      "source": "lawrbit-bwmr-2022",
-      "claim": "c-india-bwmr-2022",
-      "term": "extended producer responsibility",
-      "matched": "extended producer responsibility",
-      "excerpt": "has widened the jurisdiction of these rules by introducing the following fresh provisions extended producer responsibility (epr) : the battery manufacturers (producers), including importers, are responsible for c"
     },
     {
       "source": "mondaq-bwmr-2022",

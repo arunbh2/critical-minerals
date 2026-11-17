@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-second-pass",
-  "checkedAt": "2026-11-17T05:52:51.304Z",
+  "checkedAt": "2026-11-17T05:56:17.273Z",
   "results": [
     {
       "source": "iea-gcmo-2025-es",
@@ -297,7 +297,7 @@
       "finalUrl": "https://www.kitco.com/news/off-the-wire/2025-10-06/congo-permanently-ban-cobalt-exporters-breach-quotas",
       "status": 200,
       "contentType": "text/html; charset=utf-8",
-      "textLength": 4500,
+      "textLength": 4456,
       "error": null,
       "checks": [
         {
@@ -397,21 +397,21 @@
     {
       "source": "te-crma-2024",
       "url": "https://www.transportenvironment.org/uploads/files/2024_09_CRMA_implementation_briefing.pdf",
-      "finalUrl": "https://uploads.transportenvironment.org/production/files/2024_09_CRMA_implementation_briefing.pdf",
-      "status": 200,
-      "contentType": "application/pdf",
-      "textLength": 25123,
+      "finalUrl": "https://www.transportenvironment.org/uploads/files/2024_09_CRMA_implementation_briefing.pdf",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
       "error": null,
       "checks": [
         {
           "claim": "c-eu-crma",
-          "found": [
+          "found": [],
+          "missing": [
             "10%",
             "40%",
             "25%",
             "65%"
-          ],
-          "missing": []
+          ]
         }
       ]
     },
@@ -421,7 +421,7 @@
       "finalUrl": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 17403,
+      "textLength": 17344,
       "error": null,
       "checks": [
         {
@@ -525,11 +525,11 @@
     {
       "source": "fieldfisher-batteries",
       "url": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
-      "finalUrl": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
-      "status": 0,
-      "contentType": "",
+      "finalUrl": "https://www.fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-eu-batteries",
@@ -587,18 +587,18 @@
       "source": "lawrbit-bwmr-2022",
       "url": "https://www.lawrbit.com/article/batteries-waste-management-rules/",
       "finalUrl": "https://www.lawrbit.com/article/batteries-waste-management-rules/",
-      "status": 200,
-      "contentType": "text/html; charset=UTF-8",
-      "textLength": 13191,
+      "status": 403,
+      "contentType": "text/html",
+      "textLength": 0,
       "error": null,
       "checks": [
         {
           "claim": "c-india-bwmr-2022",
-          "found": [
+          "found": [],
+          "missing": [
             "battery waste management rules",
             "extended producer responsibility"
-          ],
-          "missing": []
+          ]
         }
       ]
     },

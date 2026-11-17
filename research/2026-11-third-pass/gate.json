@@ -1,0 +1,69 @@
+{
+  "batch": "2026-11-third-pass",
+  "gatedAt": "2026-11-17T05:56:19.907Z",
+  "checkedAt": "2026-11-17T05:56:19.874Z",
+  "results": [
+    {
+      "claim": "c-india-dmf-collections",
+      "status": "secondary",
+      "terms": [
+        {
+          "term": "district mineral foundation*",
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
+        },
+        {
+          "term": "lakh crore",
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
+        },
+        {
+          "term": "odisha",
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
+        },
+        {
+          "term": "chhattisgarh",
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
+        },
+        {
+          "term": "jharkhand",
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
+        }
+      ],
+      "missing": []
+    },
+    {
+      "claim": "c-eu-strategic-projects",
+      "status": "secondary",
+      "terms": [
+        {
+          "term": "47 strategic projects | 47 projects",
+          "foundIn": [
+            "nsenergy-eu-13-2025"
+          ]
+        },
+        {
+          "term": "13 strategic projects | 13 overseas | 13 projects | 13 new",
+          "foundIn": [
+            "nsenergy-eu-13-2025"
+          ]
+        },
+        {
+          "term": "strategic projects",
+          "foundIn": [
+            "nsenergy-eu-13-2025"
+          ]
+        }
+      ],
+      "missing": []
+    }
+  ]
+}
