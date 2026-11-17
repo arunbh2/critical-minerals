@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-2-second-pass",
-  "checkedAt": "2026-11-17T06:03:17.512Z",
+  "checkedAt": "2026-11-17T06:06:08.001Z",
   "results": [
     {
       "source": "iea-gcmo-2025-es",
@@ -421,7 +421,7 @@
       "finalUrl": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 17306,
+      "textLength": 17352,
       "error": null,
       "checks": [
         {

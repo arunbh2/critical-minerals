@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-4-fourth-pass",
-  "checkedAt": "2026-11-17T06:03:46.080Z",
+  "checkedAt": "2026-11-17T06:06:44.116Z",
   "results": [
     {
       "source": "iea-gcmo-2025-es",
@@ -861,7 +861,7 @@
       "finalUrl": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 17333,
+      "textLength": 17343,
       "error": null,
       "checks": [
         {
@@ -977,11 +977,11 @@
     {
       "source": "fieldfisher-batteries",
       "url": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
-      "finalUrl": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
-      "status": 0,
-      "contentType": "",
+      "finalUrl": "https://www.fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-eu-batteries",

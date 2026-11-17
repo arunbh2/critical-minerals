@@ -1,10 +1,10 @@
 # Research ledger: 2026-11-4-fourth-pass
 
-Sources fetched: 2026-11-17T06:03:46.080Z. Gate run: 2026-11-17T06:03:46.118Z.
+Sources fetched: 2026-11-17T06:06:44.116Z. Gate run: 2026-11-17T06:06:44.149Z.
 
 ## Used (20)
 
-- **c-refining-top3-2024** (Reported by secondary sources): Reporting on the International Energy Agency's 2025 outlook says that across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from 82% in 2020 to 86% in 2024.
+- **c-refining-top3-2024** (Reported by secondary sources): Reporting on the International Energy Agency's critical minerals outlook says that across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from 82% in 2020 to 86% in 2024.
   - Evidence: "86%" in miningcom-gcmo-2025; "82%" in miningcom-gcmo-2025; "2020" in miningcom-gcmo-2025; "2024" in miningcom-gcmo-2025
 - **c-gcmo-2026-growth** (Reported by secondary sources): Reporting on the IEA's 2026 outlook says China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals, and that export restrictions have turned concentration into an economic-security concern.
   - Evidence: "three-quarters | three quarters" in gmr-gcmo-2026; "export restrictions" in gmr-gcmo-2026; "2026" in gmr-gcmo-2026
@@ -71,7 +71,7 @@ Sources fetched: 2026-11-17T06:03:46.080Z. Gate run: 2026-11-17T06:03:46.118Z.
 - council-crma: HTTP 403, 0 characters extracted. https://www.consilium.europa.eu/en/policies/the-critical-raw-materials-act/
 - te-crma-2024: HTTP 403, 0 characters extracted. https://www.transportenvironment.org/uploads/files/2024_09_CRMA_implementation_briefing.pdf
 - spg-eu-13-projects: HTTP 403, 0 characters extracted. https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc
-- fieldfisher-batteries: HTTP 0 (fetch failed), 0 characters extracted. https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance
+- fieldfisher-batteries: HTTP 403, 0 characters extracted. https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance
 - iisd-un-panel-2024: HTTP 403, 0 characters extracted. https://sdg.iisd.org/news/panel-guides-critical-energy-transition-minerals-towards-equity-justice/
 
 ## Editorial holds
