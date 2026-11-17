@@ -9,7 +9,7 @@ reviewDue: 2027-02-17
 countries: [indonesia]
 issues: [decent-work-safety, accountability-remedy, value-sharing]
 lifecycle: [exploration-extraction, processing-refining, manufacturing, collection-recycling]
-claims: [c-drc-cobalt-share, c-drc-export-2025, c-growth-single-supplier, c-eu-batteries]
+claims: [c-drc-cobalt-share, c-drc-export-2025, c-refining-top3-2024, c-eu-batteries]
 sources: [usgs-mcs-2025, iea-policy-drc-cobalt, iea-gcmo-2025, eurlex-batteries]
 limitations: "This release does not include a DRC country dossier. Coverage of artisanal mining conditions relies on referenced specialist sources rather than original assessment."
 meaning:

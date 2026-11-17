@@ -10,12 +10,12 @@ reviewDue: 2027-02-17
 minerals: [lithium, cobalt, graphite, rare-earths, copper, nickel]
 issues: [community-consent, value-sharing, circularity-recovery, decent-work-safety, accountability-remedy, water-climate-risk]
 lifecycle: [exploration-extraction, processing-refining, manufacturing, collection-recycling]
-claims: [c-india-cm-list-2023, c-india-mmdr-2023, c-india-first-tranche, c-india-ncmm-2025, c-india-ncmm-scope, c-india-dmf-collections, c-india-dmf-unspent, c-india-bwmr-2022]
+claims: [c-india-cm-list-2023, c-india-mmdr-2023, c-india-ncmm-2025, c-india-ncmm-scope, c-india-dmf-collections, c-india-bwmr-2022]
 sources: [mines-india-cm-2023, prs-mmdr-2023, iea-policy-mmdr-2023, pib-auction-tranche-2023, pmindia-ncmm-2025, rs-dmf-2024, iwp-dmf-2025, pib-bwmr-2022]
 limitations: "This dossier draws on national policy records. It does not yet cover individual auctioned blocks, state-level rules, or first-hand community perspectives. Data on import dependence and domestic resources is not yet verified and is omitted."
 meaning:
   - "Centralised auctions and a well-funded national mission can speed up exploration. Without equally strong attention to consent, safety and benefit sharing in the districts concerned, speed could widen long-standing grievances in mining regions."
-  - "District Mineral Foundations show that money for affected areas can be raised at scale. Their record on spending and participation shows that raising money is the easier part."
+  - "District Mineral Foundations show that money for affected areas can be raised at scale. Whether it is spent well, and with the participation of affected people, is the harder test."
   - "A formal recycling system built through producer responsibility will interact with, and may displace, the informal workers who currently collect and dismantle much of India's waste."
 unclear:
   - "Which specific critical mineral blocks have been auctioned, where, and with what community engagement before auction."
@@ -30,7 +30,7 @@ India uses large and growing quantities of critical minerals in electronics, veh
 ## Major policy drivers
 
 - **A national list.** India published its first list of 30 critical minerals in June 2023.
-- **New auction powers.** A 2023 amendment to the national mining law lets the central government auction concessions for listed critical minerals and creates an exploration licence. Auction revenue goes to state governments. The first tranche of 20 blocks was launched in November 2023.
+- **New auction powers.** A 2023 amendment to the national mining law lets the central government auction concessions for listed critical minerals and creates an exploration licence. Auction revenue goes to state governments.
 - **A national mission.** In January 2025 the Cabinet approved the National Critical Mineral Mission: ₹16,300 crore of government outlay, plus ₹18,000 crore expected from public sector undertakings and others, over seven years.
 - **Producer responsibility.** The Battery Waste Management Rules of 2022, since amended, require battery producers and importers to finance collection and recycling.
 
@@ -54,7 +54,7 @@ Key concerns include occupational safety in mining and processing; heat exposure
 
 ## Funding mechanisms
 
-- **District Mineral Foundations** had collected more than ₹1 lakh crore by early 2025. Analyses reported that roughly half had not been spent. These are public funds with a defined purpose. They are not open grants for external organisations.
+- **District Mineral Foundations** had collected more than ₹1 lakh crore by early 2025. How much has been spent, and on what, needs separate verification. These are public funds with a defined purpose. They are not open grants for external organisations.
 - **The National Critical Mineral Mission** is a public programme. No open application route for civil society has been identified.
 
 See the [finance records](../../finance/) for status and verification dates.

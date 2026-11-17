@@ -38,7 +38,7 @@ Because criticality depends on an economy's needs and its supply exposure, lists
 
 ## Where vulnerability really sits
 
-For many energy minerals, the tightest point is not the mine but the refinery. The International Energy Agency reports that for copper, lithium, nickel, cobalt, graphite and rare earths, the top three refining countries held about 86% of the market on average in 2024, up from about 82% in 2020. Mining was less concentrated.
+For many energy minerals, the tightest point is not the mine but the refinery. Reporting on the International Energy Agency's 2025 outlook says that for copper, lithium, nickel, cobalt, graphite and rare earths, the top three refining countries held about 86% of the market on average in 2024, up from about 82% in 2020.
 
 That concentration is why governments talk about "diversifying" supply. Diversification creates new projects in new places, and that is where this portal's central question begins: when supply moves, who decides, who benefits and who bears the risk?
 

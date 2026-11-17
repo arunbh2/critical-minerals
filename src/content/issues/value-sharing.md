@@ -10,7 +10,7 @@ reviewDue: 2027-05-17
 countries: [india, indonesia]
 minerals: [nickel, copper, cobalt]
 lifecycle: [exploration-extraction, processing-refining]
-claims: [c-india-dmf-collections, c-india-dmf-unspent, c-indonesia-ore-ban, c-india-mmdr-2023]
+claims: [c-india-dmf-collections, c-indonesia-ore-ban, c-india-mmdr-2023]
 sources: [rs-dmf-2024, iwp-dmf-2025, iea-policy-indonesia-nickel, prs-mmdr-2023]
 responsibilities:
   direct:

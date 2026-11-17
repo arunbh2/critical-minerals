@@ -9,7 +9,7 @@ reviewDue: 2027-02-17
 countries: [indonesia]
 issues: [decent-work-safety, water-climate-risk, value-sharing, community-consent]
 lifecycle: [exploration-extraction, processing-refining, manufacturing, collection-recycling]
-claims: [c-indonesia-nickel-share, c-indonesia-ore-ban, c-growth-single-supplier, c-morowali-2023, c-eu-batteries]
+claims: [c-indonesia-ore-ban, c-morowali-2023, c-eu-batteries]
 sources: [usgs-mcs-2025, iea-policy-indonesia-nickel, iea-gcmo-2025, jakpost-morowali-2023-12-24, eurlex-batteries]
 limitations: "This profile does not yet include verified data on the energy sources, emissions or water effects of specific Indonesian processing sites."
 meaning:
@@ -28,7 +28,7 @@ Most nickel goes into stainless steel. A growing share goes into battery cathode
 
 ## Lifecycle and geography
 
-Laterite ore can be smelted into nickel pig iron or ferronickel for steel, or processed by high-pressure acid leaching into intermediates suitable for batteries. Indonesia produced around 60% of the world's mined nickel in 2024. Since 2020 it has prohibited exports of unprocessed ore so that processing happens in the country.
+Laterite ore can be smelted into nickel pig iron or ferronickel for steel, or processed by high-pressure acid leaching into intermediates suitable for batteries. Indonesia is the largest producer of mined nickel. Since 2020 it has prohibited exports of unprocessed ore so that processing happens in the country.
 
 ## Development questions
 

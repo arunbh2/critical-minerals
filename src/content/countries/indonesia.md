@@ -10,7 +10,7 @@ reviewDue: 2027-02-17
 minerals: [nickel, cobalt]
 issues: [decent-work-safety, water-climate-risk, value-sharing, community-consent, accountability-remedy]
 lifecycle: [exploration-extraction, processing-refining, manufacturing]
-claims: [c-indonesia-nickel-share, c-indonesia-ore-ban, c-growth-single-supplier, c-gcmo-2026-growth, c-morowali-2023, c-jetp-indonesia]
+claims: [c-indonesia-ore-ban, c-gcmo-2026-growth, c-morowali-2023, c-jetp-indonesia]
 sources: [usgs-mcs-2025, iea-policy-indonesia-nickel, iea-gcmo-2025, iea-gcmo-2026, jakpost-morowali-2023-12-24, jakpost-morowali-2023-12-27, bhrrc-morowali-2023, chn-jetp-2022, eeas-jetp-cipp]
 limitations: "This dossier relies on national policy records, international data and news reporting. It does not yet include verified site-level environmental data, official investigation findings on industrial accidents, or first-hand community and worker perspectives."
 meaning:
@@ -24,7 +24,7 @@ unclear:
 
 ## Role in value chains
 
-Indonesia produced around 60% of the world's mined nickel in 2024 and has become the leading source of growth in refined nickel supply. Much of its output is processed in large industrial parks, notably in Central Sulawesi and North Maluku, into products for stainless steel and, increasingly, battery materials. Cobalt is recovered as a by-product of some nickel processing.
+Indonesia is the world's largest producer of mined nickel, and together with China it accounts for most recent growth in refined supply of key energy minerals. Much of its output is processed in large industrial parks, notably in Central Sulawesi and North Maluku, into products for stainless steel and, increasingly, battery materials. Cobalt is recovered as a by-product of some nickel processing.
 
 ## Major policy drivers
 

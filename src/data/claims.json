@@ -1,7 +1,7 @@
 [
   {
     "id": "c-refining-top3-2024",
-    "text": "Across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from about 82% in 2020 to about 86% in 2024.",
+    "text": "Reporting on the International Energy Agency's 2025 outlook says that across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from 82% in 2020 to 86% in 2024.",
     "sources": [
       "iea-gcmo-2025-es",
       "miningcom-gcmo-2025",
@@ -54,7 +54,7 @@
   },
   {
     "id": "c-gcmo-2026-growth",
-    "text": "The IEA's 2026 outlook reported that China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals, and that expanding export restrictions had turned concentration into an immediate economic-security concern.",
+    "text": "Reporting on the IEA's 2026 outlook says China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals, and that export restrictions have turned concentration into an economic-security concern.",
     "sources": [
       "iea-news-2026",
       "gmr-gcmo-2026",
@@ -71,7 +71,7 @@
   },
   {
     "id": "c-india-cm-list-2023",
-    "text": "In June 2023 India's Ministry of Mines published its first list of 30 critical minerals, prepared by a committee constituted in November 2022. The Ministry said the list would be revisited periodically.",
+    "text": "In 2023 India's Ministry of Mines published its first list of 30 critical minerals.",
     "sources": [
       "mines-india-cm-2023",
       "iep-cm-2023",
@@ -87,7 +87,7 @@
   },
   {
     "id": "c-india-ncmm-2025",
-    "text": "On 29 January 2025 India's Union Cabinet approved a National Critical Mineral Mission with a government outlay of ₹16,300 crore and a further ₹18,000 crore expected from public sector undertakings and others, a combined ₹34,300 crore over seven years.",
+    "text": "In 2025 India's Union Cabinet approved a National Critical Mineral Mission with a government outlay of ₹16,300 crore and a further ₹18,000 crore expected from public sector undertakings and others, a combined ₹34,300 crore over seven years.",
     "sources": [
       "pmindia-ncmm-2025",
       "tribune-ncmm-2025"
@@ -117,7 +117,7 @@
   },
   {
     "id": "c-india-mmdr-2023",
-    "text": "An amendment to India's mining law, in force from 17 August 2023, allows the central government to auction mining leases and composite licences for listed critical minerals and creates an exploration licence for critical and deep-seated minerals. Auction revenue accrues to state governments.",
+    "text": "A 2023 amendment to India's mining law allows the central government to auction concessions for listed critical minerals and creates an exploration licence for critical and deep-seated minerals. Auction revenue accrues to state governments.",
     "sources": [
       "prs-mmdr-2023",
       "iea-policy-mmdr-2023"
@@ -144,13 +144,13 @@
   },
   {
     "id": "c-india-dmf-collections",
-    "text": "District Mineral Foundations, funded by levies on mining leaseholders, had collected more than ₹1 lakh crore cumulatively by early 2025. Odisha, Chhattisgarh and Jharkhand together accounted for more than half of the total.",
+    "text": "District Mineral Foundations, funded by levies on mining leaseholders, have collected more than ₹1 lakh crore. Odisha, Chhattisgarh and Jharkhand account for a large share of the total.",
     "sources": [
       "rs-dmf-2024",
       "iwp-dmf-2025"
     ],
     "verification": "not-verified",
-    "asOf": "early 2025",
+    "asOf": "as reported in 2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
     "evidenceSources": [
@@ -171,7 +171,7 @@
   },
   {
     "id": "c-india-bwmr-2022",
-    "text": "India's Battery Waste Management Rules, notified in August 2022, replaced earlier battery rules and introduced extended producer responsibility: producers, including importers, must register with the Central Pollution Control Board and meet collection and recycling obligations, with environmental compensation for non-fulfilment. The rules have since been amended.",
+    "text": "India's Battery Waste Management Rules of 2022 introduced extended producer responsibility, making producers, including importers, responsible for collecting and recycling waste batteries.",
     "sources": [
       "pib-bwmr-2022",
       "iea-policy-india-bwmr",
@@ -189,7 +189,7 @@
   },
   {
     "id": "c-indonesia-ore-ban",
-    "text": "Indonesia has prohibited exports of nickel ore since 1 January 2020, two years earlier than previously planned. An earlier ban from 2014 had been partly relaxed between 2017 and 2019.",
+    "text": "Indonesia has prohibited exports of nickel ore since January 2020.",
     "sources": [
       "iea-policy-indonesia-nickel",
       "aljazeera-nickel-2019",
@@ -223,7 +223,7 @@
   },
   {
     "id": "c-morowali-2023",
-    "text": "On 24 December 2023 a furnace accident at a nickel smelter in the Indonesia Morowali Industrial Park, Central Sulawesi, killed workers and injured dozens. Initial company statements reported 13 deaths; later reporting raised the toll to around 20. The park operator revised its initial account of the cause, and labour groups criticised safety and evacuation arrangements.",
+    "text": "In December 2023 a furnace accident at a nickel smelter in the Indonesia Morowali Industrial Park killed workers and injured dozens. Initial reports gave 13 deaths; police later revised the death toll up from 13 to 18, and the park operator's account of the cause was disputed.",
     "sources": [
       "jakpost-morowali-2023-12-24",
       "jakpost-morowali-2023-12-27",
@@ -241,7 +241,7 @@
   },
   {
     "id": "c-drc-cobalt-share",
-    "text": "The Democratic Republic of the Congo produced roughly three-quarters of the world's mined cobalt in 2024.",
+    "text": "USGS estimates put the Democratic Republic of the Congo's 2024 mine production of cobalt at 220,000 tonnes out of a world total of about 290,000 tonnes, roughly three-quarters.",
     "sources": [
       "usgs-mcs-2025-cobalt",
       "usgs-mcs-2025"
@@ -256,7 +256,7 @@
   },
   {
     "id": "c-drc-export-2025",
-    "text": "The Democratic Republic of the Congo suspended cobalt exports in February 2025 and replaced the suspension with an export quota system in October 2025.",
+    "text": "In 2025 the Democratic Republic of the Congo suspended cobalt exports and later replaced the suspension with export quotas.",
     "sources": [
       "iea-policy-drc-cobalt",
       "kitco-drc-quotas-2025",
@@ -287,7 +287,7 @@
   },
   {
     "id": "c-china-ree-2025",
-    "text": "On 4 April 2025 China placed seven medium and heavy rare earth elements (samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium) and related products under export licensing.",
+    "text": "In April 2025 China placed seven medium and heavy rare earth elements (samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium) and related products under export licensing.",
     "sources": [
       "csis-ree-2025",
       "orf-china-controls"
@@ -302,7 +302,7 @@
   },
   {
     "id": "c-eu-crma",
-    "text": "The EU Critical Raw Materials Act entered into force on 23 May 2024. It sets non-binding 2030 benchmarks for EU extraction (10%), processing (40%) and recycling (25%) of annual consumption of strategic raw materials, and aims for no more than 65% of any strategic raw material to come from a single third country.",
+    "text": "The EU Critical Raw Materials Act, adopted in 2024, sets non-binding 2030 benchmarks for EU extraction (10%), processing (40%) and recycling (25%) of annual consumption of strategic raw materials, and aims for no more than 65% of any strategic raw material to come from a single third country.",
     "sources": [
       "council-crma",
       "nrf-crma-2024",
@@ -319,7 +319,7 @@
   },
   {
     "id": "c-eu-strategic-projects",
-    "text": "Under the Act, the European Commission designated 47 strategic projects in EU member states in March 2025 and 13 outside the EU in June 2025.",
+    "text": "In 2025 the European Commission designated 47 strategic projects in EU member states and 13 outside the EU under the Critical Raw Materials Act.",
     "sources": [
       "mw-eu-47-projects",
       "nsenergy-eu-13-2025",
@@ -336,7 +336,7 @@
   },
   {
     "id": "c-eu-batteries",
-    "text": "The EU Batteries Regulation sets lithium recovery targets of 50% by the end of 2027 and 80% by the end of 2031, and 90% and 95% for cobalt, copper, lead and nickel. Minimum recycled content for new batteries starts in August 2031 at 16% cobalt, 6% lithium, 6% nickel and 85% lead. Electric-vehicle, light-transport and larger industrial batteries require a digital battery passport from February 2027.",
+    "text": "The EU Batteries Regulation sets lithium recovery targets of 50% by the end of 2027 and 80% by the end of 2031, and 90% and 95% for cobalt, copper, lead and nickel. Minimum recycled content for new batteries starts in 2031 at 16% cobalt, 6% lithium, 6% nickel and 85% lead. Larger batteries require a digital battery passport.",
     "sources": [
       "eurlex-batteries",
       "erp-batteries-2023",
@@ -353,7 +353,7 @@
   },
   {
     "id": "c-un-panel-2024",
-    "text": "The UN Secretary-General's Panel on Critical Energy Transition Minerals published its report on 11 September 2024 with seven voluntary guiding principles and five actionable recommendations. Its first principle is that human rights must be at the core of all mineral value chains.",
+    "text": "In 2024 the UN Secretary-General's Panel on Critical Energy Transition Minerals published seven voluntary guiding principles. Its first principle is that human rights must be at the core of all mineral value chains.",
     "sources": [
       "un-panel-cetm",
       "iisd-un-panel-2024"
@@ -368,7 +368,7 @@
   },
   {
     "id": "c-jetp-indonesia",
-    "text": "Indonesia's Just Energy Transition Partnership was announced at the G20 summit in Bali in November 2022 with an initial US$20 billion: US$10 billion pledged by a group of governments and a further US$10 billion of private finance to be mobilised. Its investment plan was launched in November 2023.",
+    "text": "Indonesia's Just Energy Transition Partnership was announced with an initial US$20 billion of public and private finance, and a Comprehensive Investment and Policy Plan followed.",
     "sources": [
       "chn-jetp-2022",
       "eeas-jetp-cipp"
@@ -384,7 +384,7 @@
   },
   {
     "id": "c-wb-csm-2019",
-    "text": "The World Bank launched its Climate-Smart Mining Facility, a multi-donor trust fund, in May 2019 with initial support from the German government, Rio Tinto and Anglo American. At launch it targeted US$50 million over five years across mitigation, adaptation, reducing material impacts and market opportunities.",
+    "text": "The World Bank launched its Climate-Smart Mining Facility in 2019, with partners including the German government, Rio Tinto and Anglo American.",
     "sources": [
       "miningcom-csm-2019",
       "wb-csm"

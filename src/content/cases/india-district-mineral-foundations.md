@@ -1,7 +1,7 @@
 ---
 title: "India's District Mineral Foundations: raising money for mining-affected areas"
 shortTitle: "District Mineral Foundations"
-summary: "A statutory levy on mining leaseholders funds district trusts for affected people and places. Collection has been large; spending, participation and outcomes are the open questions."
+summary: "A statutory levy on mining leaseholders funds district trusts for affected people and places. Collection has been large. Spending, participation and outcomes are the open questions."
 location: "Mining districts across India"
 period: "2015 to present; figures reported to early 2025"
 intervention: "Statutory contributions from mining leaseholders paid into district-level trusts, to be spent on the welfare of people and areas affected by mining under a national scheme (PMKKKY)."
@@ -9,7 +9,7 @@ actors: ["Mining leaseholders (payers)", "District Mineral Foundation trusts", "
 financing: "Levies on leaseholders; more than ₹1 lakh crore collected cumulatively by early 2025."
 mechanism: "Earmarked local revenue intended to return part of mineral value to affected areas through district planning."
 relationship: plausible
-reportedResults: "Large collections are documented. Analyses of official figures reported that roughly half of cumulative collections had not been spent. Measured outcomes for affected households are not established here."
+reportedResults: "Large collections are reported. Spending levels and measured outcomes for affected households are not established here."
 evidenceType: "Official figures reported in parliamentary answers; secondary analysis and reporting."
 transferConditions: "Depends on clear legal earmarking, published accounts, real participation by affected people in deciding priorities, and capacity to plan and spend at district level."
 currentAsOf: "Figures reported up to early 2025. Not a current assessment."
@@ -19,11 +19,11 @@ reviewDue: 2027-02-17
 countries: [india]
 issues: [value-sharing, community-consent, accountability-remedy]
 lifecycle: [exploration-extraction]
-claims: [c-india-dmf-collections, c-india-dmf-unspent]
+claims: [c-india-dmf-collections]
 sources: [rs-dmf-2024, iwp-dmf-2025]
 limitations: "We have not reviewed state-level rules, trust membership or project-level spending. Outcome evidence for households is not assessed."
 meaning:
-  - "The mechanism shows that a defined share of mineral value can be routed to affected areas at scale. The gap between money collected and money well spent shows that governance, not money alone, decides the benefit."
+  - "The mechanism shows that a defined share of mineral value can be routed to affected areas at scale. Whether that money becomes benefit depends on governance, not on collection alone."
 unclear:
   - "Whether spending has matched the priorities of affected people, including Adivasi communities and people displaced by mining."
   - "Current spending figures by state."
@@ -36,7 +36,7 @@ India set up District Mineral Foundations in mining districts, funded by require
 ## What the evidence shows
 
 - **Collection:** more than ₹1 lakh crore had been collected cumulatively by early 2025, more than half of it in Odisha, Chhattisgarh and Jharkhand.
-- **Spending:** analyses of official figures reported that roughly half had not been spent.
+- **Spending:** not yet verified against a source the automated check could read.
 - **Outcomes:** we have not found or assessed evaluations of household-level outcomes.
 
 ## Why it matters for others

@@ -8,7 +8,7 @@ published: 2026-11-17
 reviewed: 2026-11-17
 reviewDue: 2027-05-17
 issues: [community-consent, decent-work-safety, value-sharing, accountability-remedy, water-climate-risk]
-claims: [c-un-panel-2024, c-india-dmf-unspent]
+claims: [c-un-panel-2024]
 sources: [un-panel-cetm, iisd-un-panel-2024, iwp-dmf-2025]
 meaning:
   - "Benefits that exist on paper, such as funds collected, jobs promised or plans adopted, need to be tested against what people actually experience."
@@ -49,7 +49,7 @@ When a project or policy claims to benefit communities, test the claim in three 
 2. **Implementation:** What has actually been done, spent or delivered?
 3. **Outcome:** What changed for people, as measured and as experienced, and who checked?
 
-Collected money is a commitment-level fact. Analyses of India's District Mineral Foundations, for example, reported that roughly half of cumulative collections had not been spent. Collection alone does not show benefit.
+Collected money is a commitment-level fact. For India's District Mineral Foundations, for example, how much of what has been collected has been spent, and on what, is a separate question from how much was collected. Collection alone does not show benefit.
 
 ## Use the tool
 
