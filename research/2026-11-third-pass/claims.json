@@ -1,0 +1,36 @@
+{
+  "batch": "2026-11-third-pass",
+  "created": "2026-11-17",
+  "note": "Term corrections found by auditing the second pass: a singular term that missed a plural ('District Mineral Foundations'), and a bare '13' that matched '13 member states' rather than the 13 projects outside the EU.",
+  "claims": [
+    {
+      "id": "c-india-dmf-collections",
+      "text": "District Mineral Foundations, funded by levies on mining leaseholders, had collected more than ₹1 lakh crore cumulatively by early 2025. Odisha, Chhattisgarh and Jharkhand together accounted for more than half of the total.",
+      "sources": [
+        "iwp-dmf-2025",
+        "rs-dmf-2024"
+      ],
+      "terms": [
+        "district mineral foundation*",
+        "lakh crore",
+        "odisha",
+        "chhattisgarh",
+        "jharkhand"
+      ]
+    },
+    {
+      "id": "c-eu-strategic-projects",
+      "text": "Under the Act, the European Commission designated 47 strategic projects in EU member states in March 2025 and 13 outside the EU in June 2025.",
+      "sources": [
+        "mw-eu-47-projects",
+        "nsenergy-eu-13-2025",
+        "spg-eu-13-projects"
+      ],
+      "terms": [
+        "47 strategic projects | 47 projects",
+        "13 strategic projects | 13 overseas | 13 projects | 13 new",
+        "strategic projects"
+      ]
+    }
+  ]
+}
