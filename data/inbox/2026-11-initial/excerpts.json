@@ -1,331 +1,399 @@
 {
   "batch": "2026-11-initial",
-  "checkedAt": "2026-11-17T05:46:42.154Z",
+  "checkedAt": "2026-11-17T05:51:50.576Z",
   "note": "Short excerpts (about 180 characters) around each found term, kept as evidence. Not for republication.",
   "excerpts": [
     {
       "source": "iep-cm-2023",
       "claim": "c-india-cm-list-2023",
       "term": "30 critical minerals",
+      "matched": "30 critical minerals",
       "excerpt": "unveiled india's first-ever report on “critical minerals for india” identifying a list of 30 critical minerals. india has taken a significant step towards enhancing its strategic resource security by"
     },
     {
       "source": "tribune-ncmm-2025",
       "claim": "c-india-ncmm-2025",
       "term": "16,300",
+      "matched": "16300",
       "excerpt": "oved the launch of the national critical mineral mission (ncmm) with an expenditure of rs.16300 crore and expected investment of rs.18000 crore by psus, etc. according to the cabinet, a"
     },
     {
       "source": "tribune-ncmm-2025",
       "claim": "c-india-ncmm-2025",
       "term": "18,000",
+      "matched": "18000",
       "excerpt": "ineral mission (ncmm) with an expenditure of rs.16300 crore and expected investment of rs.18000 crore by psus, etc. according to the cabinet, as part of the atmanirbhar bharat initiativ"
     },
     {
       "source": "tribune-ncmm-2025",
       "claim": "c-india-ncmm-2025",
       "term": "34,300",
+      "matched": "34300",
       "excerpt": "'national critical mineral mission' to build a resilient value chain with an outlay of rs.34300 cr over seven years - the tribune gen z speak up ! about the tribune code of ethics downl"
     },
     {
       "source": "tribune-ncmm-2025",
       "claim": "c-india-ncmm-scope",
       "term": "exploration",
+      "matched": "exploration",
       "excerpt": "ved by the union cabinet, will encompass all stages of the value chain, including mineral exploration, mining, beneficiation, processing, and recovery from end-of-life products. the mission w"
     },
     {
       "source": "tribune-ncmm-2025",
       "claim": "c-india-ncmm-scope",
       "term": "beneficiation",
+      "matched": "beneficiation",
       "excerpt": "net, will encompass all stages of the value chain, including mineral exploration, mining, beneficiation, processing, and recovery from end-of-life products. the mission will intensify the explo"
     },
     {
       "source": "tribune-ncmm-2025",
       "claim": "c-india-ncmm-scope",
       "term": "stockpile",
+      "matched": "stockpile",
       "excerpt": "ts abroad and enhance trade with resource-rich countries. it also proposes development of stockpile of critical minerals within the country. the mission includes provisions for setting up o"
     },
     {
       "source": "tribune-ncmm-2025",
       "claim": "c-india-ncmm-scope",
       "term": "end-of-life",
+      "matched": "end-of-life",
       "excerpt": "hain, including mineral exploration, mining, beneficiation, processing, and recovery from end-of-life products. the mission will intensify the exploration of critical minerals within the coun"
     },
     {
       "source": "prs-mmdr-2023",
       "claim": "c-india-mmdr-2023",
       "term": "exploration licence",
+      "matched": "exploration licence",
       "excerpt": "urface excavation as part of reconnaissance. the bill allows these prohibited activities. exploration licence for specified minerals: the act provides for following types of concessions: (i) a reconn"
     },
     {
       "source": "prs-mmdr-2023",
       "claim": "c-india-mmdr-2023",
       "term": "critical",
+      "matched": "critical",
       "excerpt": "ed cases. the bill adds that auction for composite licence and mining lease for specified critical and strategic minerals will be conducted by the central government. these minerals includ"
     },
     {
       "source": "prs-mmdr-2023",
       "claim": "c-india-mmdr-2023",
       "term": "state government",
+      "matched": "state government",
       "excerpt": "the act. auction for exploration licence : the exploration licence will be granted by the state government through competitive bidding. the central government will prescribe details such as manner"
     },
     {
       "source": "iwp-dmf-2025",
       "claim": "c-india-dmf-collections",
-      "term": "district mineral foundation",
-      "excerpt": "ance and policy mining's promise, communities' plight: unearthing the truth about india's district mineral foundations despite holding over rs. 1 lakh crore, are district mineral foundations truly benefiting"
-    },
-    {
-      "source": "iwp-dmf-2025",
-      "claim": "c-india-dmf-collections",
       "term": "lakh crore",
+      "matched": "lakh crore",
       "excerpt": "nearthing the truth about india's district mineral foundations despite holding over rs. 1 lakh crore, are district mineral foundations truly benefiting mining-affected communities? this anal"
     },
     {
       "source": "iwp-dmf-2025",
       "claim": "c-india-dmf-collections",
       "term": "odisha",
+      "matched": "odisha",
       "excerpt": ", scarcity on the ground the dmfs have collected an impressive rs. 103242 crores so far . odisha, chhattisgarh, and jharkhand alone account for over 56% of the total. however, only about"
     },
     {
       "source": "iwp-dmf-2025",
       "claim": "c-india-dmf-collections",
       "term": "chhattisgarh",
+      "matched": "chhattisgarh",
       "excerpt": "ty on the ground the dmfs have collected an impressive rs. 103242 crores so far . odisha, chhattisgarh, and jharkhand alone account for over 56% of the total. however, only about 40% of the to"
     },
     {
       "source": "iwp-dmf-2025",
       "claim": "c-india-dmf-collections",
       "term": "jharkhand",
+      "matched": "jharkhand",
       "excerpt": "he dmfs have collected an impressive rs. 103242 crores so far . odisha, chhattisgarh, and jharkhand alone account for over 56% of the total. however, only about 40% of the total accruals ha"
-    },
-    {
-      "source": "iwp-dmf-2025",
-      "claim": "c-india-dmf-unspent",
-      "term": "district mineral foundation",
-      "excerpt": "ance and policy mining's promise, communities' plight: unearthing the truth about india's district mineral foundations despite holding over rs. 1 lakh crore, are district mineral foundations truly benefiting"
     },
     {
       "source": "usgs-mcs-2025-nickel",
       "claim": "c-indonesia-nickel-share",
       "term": "indonesia",
+      "matched": "indonesia",
       "excerpt": "average price of $16400 per metric ton, largely owing to continued surplus of nickel from indonesia. in early 2024, supply concerns related to nickel asset closures, delays in issuing new n"
     },
     {
       "source": "usgs-mcs-2025-nickel",
       "claim": "c-indonesia-nickel-share",
       "term": "60",
-      "excerpt": "00 39700 40000 exports: ores and concentrates 13400 14900 15200 9100 5000 primary 11300 11600 11100 12200 17000 secondary 46300 29200 44400 56800 48000 consumption: reported, primary"
-    },
-    {
-      "source": "usgs-mcs-2025",
-      "claim": "c-indonesia-nickel-share",
-      "term": "60",
-      "excerpt": "logical survey, 212 p., https://doi.org/10.3133/mcs2025. issn: 2379-9803 (online) issn: 0160-5151 (print) table of contents introduction figure 1-the role of nonfuel mineral commodit"
+      "matched": "60",
+      "excerpt": "31 - 2 4 nickel ores and concentrates, nickel content 2604.00.0040 free. ferronickel 7202.60.0000 free. unwrought nickel, not alloyed 7502.10.0000 free. nickel waste and scrap 7503.0"
     },
     {
       "source": "jakpost-morowali-2023-12-24",
       "claim": "c-morowali-2023",
       "term": "morowali",
+      "matched": "morowali",
       "excerpt": "ed source this aerial picture taken on may 12, 2023 shows a general view of pt. indonesia morowali industrial park (imip), one of the biggest nickel producers in north konawe, central sula"
     },
     {
       "source": "jakpost-morowali-2023-12-24",
       "claim": "c-morowali-2023",
       "term": "furnace",
+      "matched": "furnace",
       "excerpt": "indonesia nickel smelter furnace blast kills 13 workers, wounds 38 - archipelago - the jakarta post the jakarta post pleas"
     },
     {
       "source": "jakpost-morowali-2023-12-24",
       "claim": "c-morowali-2023",
       "term": "13",
+      "matched": "13",
       "excerpt": "indonesia nickel smelter furnace blast kills 13 workers, wounds 38 - archipelago - the jakarta post the jakarta post please update your b"
     },
     {
       "source": "jakpost-morowali-2023-12-27",
       "claim": "c-morowali-2023",
       "term": "morowali",
+      "matched": "morowali",
       "excerpt": "as death toll rises, morowali blast brings work safety squarely into focus - regulations - the jakarta post the jakarta"
     },
     {
       "source": "jakpost-morowali-2023-12-27",
       "claim": "c-morowali-2023",
       "term": "furnace",
+      "matched": "furnace",
       "excerpt": "squarely into focus as the police revise the death toll from the morowali nickel smelter furnace explosion on christmas day, the government is increasing scrutiny of work safety amid cal"
     },
     {
       "source": "jakpost-morowali-2023-12-27",
       "claim": "c-morowali-2023",
       "term": "13",
+      "matched": "13",
       "excerpt": "li industrial park (imip) said on tuesday. the police also revised the death toll up from 13 to 18. itss operates as one of the tenants at the imip, the world's nickel production epi"
     },
     {
       "source": "bhrrc-morowali-2023",
       "claim": "c-morowali-2023",
       "term": "morowali",
+      "matched": "morowali",
       "excerpt": "guages: 简体中文 , 繁體中文 24 dec 2023 author: reuters, author: 新华社 tsingshan group pt indonesia morowali industrial park pt indonesia tsingshan stainless steel (itss) pt indonesia morowali indus"
     },
     {
       "source": "bhrrc-morowali-2023",
       "claim": "c-morowali-2023",
       "term": "furnace",
+      "matched": "furnace",
       "excerpt": "indonesia nickel smelter furnace fire kills 13 workers, injures 46 - business and human rights centre abuses affiliation a"
     },
     {
       "source": "bhrrc-morowali-2023",
       "claim": "c-morowali-2023",
       "term": "13",
+      "matched": "13",
       "excerpt": "indonesia nickel smelter furnace fire kills 13 workers, injures 46 - business and human rights centre abuses affiliation arrow-down arro"
     },
     {
       "source": "usgs-mcs-2025-cobalt",
       "claim": "c-drc-cobalt-share",
       "term": "congo",
+      "matched": "congo",
       "excerpt": "e increased to another record high in 2024. the increase in mine production was mainly in congo (kinshasa), the world's leading source of mined cobalt, which accounted for an estimated"
     },
     {
       "source": "usgs-mcs-2025-cobalt",
       "claim": "c-drc-cobalt-share",
       "term": "220,000",
+      "matched": "220000",
       "excerpt": "202 3 20 2 4 united states 500 300 70000 australia 5220 3600 10 1700000 canada 4220 4500 220000 congo (kinshasa) 175000 220000 6000000 cuba 3300 3500 500000 indonesia 19000 28000 640000"
     },
     {
       "source": "usgs-mcs-2025-cobalt",
       "claim": "c-drc-cobalt-share",
       "term": "290,000",
+      "matched": "290000",
       "excerpt": "0000 turkey 2500 2700 91000 other countries 6080 6200 800000 world total (rounded) 238000 290000 11000000 world resources: 9 identified cobalt resources of the united states are estimate"
     },
     {
       "source": "orf-china-controls",
       "claim": "c-china-graphite-2023",
       "term": "graphite",
+      "matched": "graphite",
       "excerpt": "ern. the 2023-2025 export controls on key critical minerals including germanium, gallium, graphite, and antimony by the people's republic of china (prc) highlight china's strategic use of"
     },
     {
       "source": "orf-china-controls",
       "claim": "c-china-graphite-2023",
       "term": "december 2023",
+      "matched": "december 2023",
       "excerpt": "r and purchaser licensing requirements for exports of graphite, which went into effect in december 2023. on august 15, 2024, the prc announced export restrictions on dual-use exports of antimon"
     },
     {
       "source": "csis-ree-2025",
       "claim": "c-china-ree-2025",
       "term": "samarium",
+      "matched": "samarium",
       "excerpt": "trump's tariff increases on chinese products. the new restrictions apply to 7 of 17 rees-samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium-and requires companies"
     },
     {
       "source": "csis-ree-2025",
       "claim": "c-china-ree-2025",
       "term": "gadolinium",
+      "matched": "gadolinium",
       "excerpt": "ariff increases on chinese products. the new restrictions apply to 7 of 17 rees-samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium-and requires companies to secure sp"
     },
     {
       "source": "csis-ree-2025",
       "claim": "c-china-ree-2025",
       "term": "terbium",
+      "matched": "terbium",
       "excerpt": "ses on chinese products. the new restrictions apply to 7 of 17 rees-samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium-and requires companies to secure special exp"
     },
     {
       "source": "csis-ree-2025",
       "claim": "c-china-ree-2025",
       "term": "dysprosium",
+      "matched": "dysprosium",
       "excerpt": "inese products. the new restrictions apply to 7 of 17 rees-samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium-and requires companies to secure special export licenses"
     },
     {
       "source": "csis-ree-2025",
       "claim": "c-china-ree-2025",
       "term": "lutetium",
+      "matched": "lutetium",
       "excerpt": "ts. the new restrictions apply to 7 of 17 rees-samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium-and requires companies to secure special export licenses to export"
     },
     {
       "source": "csis-ree-2025",
       "claim": "c-china-ree-2025",
       "term": "scandium",
+      "matched": "scandium",
       "excerpt": "w restrictions apply to 7 of 17 rees-samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium-and requires companies to secure special export licenses to export the miner"
     },
     {
       "source": "csis-ree-2025",
       "claim": "c-china-ree-2025",
       "term": "yttrium",
+      "matched": "yttrium",
       "excerpt": "apply to 7 of 17 rees-samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium-and requires companies to secure special export licenses to export the minerals and magne"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "50%",
+      "matched": "50%",
+      "excerpt": "d of 2028 and 61% by the end of 2031; targets for lithium recovery from waste batteries - 50% by the end of 2027 and 80% by the end of 2031 - which can be amended to take into account"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "80%",
+      "matched": "80%",
+      "excerpt": "d of 2031; targets for lithium recovery from waste batteries - 50% by the end of 2027 and 80% by the end of 2031 - which can be amended to take into account market and technological d"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "16%",
+      "matched": "16%",
+      "excerpt": "nt for industrial batteries, starting, lighting and ignition batteries and ev batteries - 16% for cobalt, 85% for lead, 6% for lithium and 6% for nickel from 18 august 2031; recycling"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "6%",
+      "matched": "6%",
+      "excerpt": "tarting, lighting and ignition batteries and ev batteries - 16% for cobalt, 85% for lead, 6% for lithium and 6% for nickel from 18 august 2031; recycling efficiency targets - 80% for"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "85%",
+      "matched": "85%",
+      "excerpt": "l batteries, starting, lighting and ignition batteries and ev batteries - 16% for cobalt, 85% for lead, 6% for lithium and 6% for nickel from 18 august 2031; recycling efficiency targ"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "passport",
+      "matched": "passport",
+      "excerpt": "e required in the form of a qr code and, for lmt, industrial and ev batteries, a 'battery passport'. labelling requirements will apply from 2026 and the qr code from 2027. the regulation a"
     },
     {
       "source": "un-panel-cetm",
       "claim": "c-un-panel-2024",
       "term": "seven",
+      "matched": "seven",
       "excerpt": "mber 2024, the panel published its report “resourcing the energy transition.” it outlined seven guiding principles and five actionable recommendations to embed equity and justice in the"
     },
     {
       "source": "un-panel-cetm",
       "claim": "c-un-panel-2024",
       "term": "guiding principles",
+      "matched": "guiding principles",
       "excerpt": "024, the panel published its report “resourcing the energy transition.” it outlined seven guiding principles and five actionable recommendations to embed equity and justice in the race to net-zero e"
     },
     {
       "source": "un-panel-cetm",
       "claim": "c-un-panel-2024",
       "term": "human rights",
+      "matched": "human rights",
       "excerpt": "hallenges , including impacts on livelihoods, the environment, health, human security and human rights, and can undermine efforts towards the energy transition. as minerals extraction accelera"
     },
     {
       "source": "chn-jetp-2022",
       "claim": "c-jetp-indonesia",
       "term": "just energy transition partnership",
+      "matched": "just energy transition partnership",
       "excerpt": "country's electricity demand instead.indonesian minister luhut pandjaitan announced the \"just energy transition partnership\" (jetp) on the sidelines of a g20 leaders summit in bali on tuesday.it is a \"groundbreaki"
     },
     {
       "source": "chn-jetp-2022",
       "claim": "c-jetp-indonesia",
       "term": "20bn",
+      "matched": "20bn",
       "excerpt": "rich nations pledge $20bn for indonesia's coal-to-clean switch rich nations pledge $20bn for indonesia's coal-to-cl"
     },
     {
       "source": "eeas-jetp-cipp",
       "claim": "c-jetp-indonesia",
       "term": "just energy transition partnership",
+      "matched": "just energy transition partnership",
       "excerpt": "kingdom of great britain and northern ireland, jointly welcome the launch of indonesia's just energy transition partnership (jetp) comprehensive investment and policy plan (cipp). launched in jakarta today, the ci"
     },
     {
       "source": "eeas-jetp-cipp",
       "claim": "c-jetp-indonesia",
       "term": "comprehensive investment and policy plan",
+      "matched": "comprehensive investment and policy plan",
       "excerpt": "indonesia just energy transition comprehensive investment and policy plan launched | eeas sorry, you need to enable javascript to visit this website. skip to main"
     },
     {
       "source": "miningcom-csm-2019",
       "claim": "c-wb-csm-2019",
       "term": "climate-smart mining",
+      "matched": "climate-smart mining",
       "excerpt": "per graphite lithium nickel wind turbines. image from pixabay the world bank launched the climate-smart mining facility on friday, the first-ever fund dedicated to making mining for minerals climate-s"
     },
     {
       "source": "miningcom-csm-2019",
       "claim": "c-wb-csm-2019",
       "term": "rio tinto",
+      "matched": "rio tinto",
       "excerpt": "mineral value chain. partners include the german government and private sector companies, rio tinto and anglo american. the facility will also assist governments to build a robust policy, r"
     },
     {
       "source": "miningcom-csm-2019",
       "claim": "c-wb-csm-2019",
       "term": "anglo american",
+      "matched": "anglo american",
       "excerpt": "chain. partners include the german government and private sector companies, rio tinto and anglo american. the facility will also assist governments to build a robust policy, regulatory and legal"
     },
     {
       "source": "miningcom-csm-2019",
       "claim": "c-wb-csm-2019",
       "term": "50",
+      "matched": "50",
       "excerpt": "coal uranium cobalt diamond zinc platinum palladium silver potash suppliers equipment top 50 usa canada australia regions africa china latin america europe asia live charts gold copp"
     },
     {
       "source": "wb-csm",
       "claim": "c-wb-csm-2019",
       "term": "climate-smart mining",
+      "matched": "climate-smart mining",
       "excerpt": "climate-smart mining: minerals for climate action understanding poverty topics metals and minerals brief clima"
-    },
-    {
-      "source": "wb-csm",
-      "claim": "c-wb-csm-2019",
-      "term": "50",
-      "excerpt": "he production of minerals, such as graphite, lithium and cobalt, could increase by nearly 500% by 2050, to meet the growing demand for clean energy technologies. it estimates that ov"
     }
   ]
 }

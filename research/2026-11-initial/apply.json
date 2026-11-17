@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-initial",
-  "appliedAt": "2026-11-17T05:46:42.345Z",
+  "appliedAt": "2026-11-17T05:51:50.632Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
@@ -28,7 +28,7 @@
     },
     {
       "claim": "c-india-cm-list-2023",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "iep-cm-2023"
@@ -36,7 +36,7 @@
     },
     {
       "claim": "c-india-ncmm-2025",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "tribune-ncmm-2025"
@@ -44,7 +44,7 @@
     },
     {
       "claim": "c-india-ncmm-scope",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "tribune-ncmm-2025"
@@ -52,7 +52,7 @@
     },
     {
       "claim": "c-india-mmdr-2023",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "prs-mmdr-2023"
@@ -66,8 +66,8 @@
     },
     {
       "claim": "c-india-dmf-collections",
-      "from": "not-verified",
-      "to": "secondary",
+      "from": "secondary",
+      "to": "not-verified",
       "evidenceSources": [
         "iwp-dmf-2025"
       ]
@@ -76,9 +76,7 @@
       "claim": "c-india-dmf-unspent",
       "from": "not-verified",
       "to": "not-verified",
-      "evidenceSources": [
-        "iwp-dmf-2025"
-      ]
+      "evidenceSources": []
     },
     {
       "claim": "c-india-bwmr-2022",
@@ -94,16 +92,15 @@
     },
     {
       "claim": "c-indonesia-nickel-share",
-      "from": "not-verified",
+      "from": "original-checked",
       "to": "original-checked",
       "evidenceSources": [
-        "usgs-mcs-2025-nickel",
-        "usgs-mcs-2025"
+        "usgs-mcs-2025-nickel"
       ]
     },
     {
       "claim": "c-morowali-2023",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "jakpost-morowali-2023-12-24",
@@ -113,7 +110,7 @@
     },
     {
       "claim": "c-drc-cobalt-share",
-      "from": "not-verified",
+      "from": "original-checked",
       "to": "original-checked",
       "evidenceSources": [
         "usgs-mcs-2025-cobalt"
@@ -127,7 +124,7 @@
     },
     {
       "claim": "c-china-graphite-2023",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "orf-china-controls"
@@ -135,7 +132,7 @@
     },
     {
       "claim": "c-china-ree-2025",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "csis-ree-2025"
@@ -156,12 +153,14 @@
     {
       "claim": "c-eu-batteries",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "original-checked",
+      "evidenceSources": [
+        "eurlex-batteries"
+      ]
     },
     {
       "claim": "c-un-panel-2024",
-      "from": "not-verified",
+      "from": "original-checked",
       "to": "original-checked",
       "evidenceSources": [
         "un-panel-cetm"
@@ -169,7 +168,7 @@
     },
     {
       "claim": "c-jetp-indonesia",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "chn-jetp-2022",
@@ -178,7 +177,7 @@
     },
     {
       "claim": "c-wb-csm-2019",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "secondary",
       "evidenceSources": [
         "miningcom-csm-2019",
