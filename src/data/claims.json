@@ -9,11 +9,13 @@
       "iea-gcmo-2025-overview",
       "iea-gcmo-2025"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "2024",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "miningcom-gcmo-2025"
+    ]
   },
   {
     "id": "c-mining-top3-2024",
@@ -28,7 +30,7 @@
     "verification": "not-verified",
     "asOf": "2024",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
+    "batch": "2026-11-second-pass",
     "evidenceSources": []
   },
   {
@@ -44,8 +46,11 @@
     "verification": "not-verified",
     "asOf": "2020–2024",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "miningcom-gcmo-2025",
+      "northernminer-gcmo-2025"
+    ]
   },
   {
     "id": "c-gcmo-2026-growth",
@@ -56,11 +61,13 @@
       "iea-gcmo-2026",
       "iea-gcmo-2026-es"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "2026",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "gmr-gcmo-2026"
+    ]
   },
   {
     "id": "c-india-cm-list-2023",
@@ -142,7 +149,7 @@
       "rs-dmf-2024",
       "iwp-dmf-2025"
     ],
-    "verification": "secondary",
+    "verification": "not-verified",
     "asOf": "early 2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
@@ -160,9 +167,7 @@
     "asOf": "2024–2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-initial",
-    "evidenceSources": [
-      "iwp-dmf-2025"
-    ]
+    "evidenceSources": []
   },
   {
     "id": "c-india-bwmr-2022",
@@ -173,11 +178,14 @@
       "lawrbit-bwmr-2022",
       "mondaq-bwmr-2022"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "2022; amended since",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "lawrbit-bwmr-2022",
+      "mondaq-bwmr-2022"
+    ]
   },
   {
     "id": "c-indonesia-ore-ban",
@@ -187,11 +195,13 @@
       "aljazeera-nickel-2019",
       "nrf-nickel-regulation"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "2020",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "aljazeera-nickel-2019"
+    ]
   },
   {
     "id": "c-indonesia-nickel-share",
@@ -203,13 +213,12 @@
       "usgs-mcs-2025",
       "iea-gcmo-2025"
     ],
-    "verification": "original-checked",
+    "verification": "not-verified",
     "asOf": "2024 estimate",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
+    "batch": "2026-11-second-pass",
     "evidenceSources": [
-      "usgs-mcs-2025-nickel",
-      "usgs-mcs-2025"
+      "usgs-mcs-2025-nickel"
     ]
   },
   {
@@ -254,11 +263,13 @@
       "mw-drc-quotas-2025",
       "spg-drc-quotas-2025"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "kitco-drc-quotas-2025"
+    ]
   },
   {
     "id": "c-china-graphite-2023",
@@ -297,11 +308,14 @@
       "nrf-crma-2024",
       "te-crma-2024"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "May 2024",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "nrf-crma-2024",
+      "te-crma-2024"
+    ]
   },
   {
     "id": "c-eu-strategic-projects",
@@ -311,11 +325,14 @@
       "nsenergy-eu-13-2025",
       "spg-eu-13-projects"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "mw-eu-47-projects",
+      "nsenergy-eu-13-2025"
+    ]
   },
   {
     "id": "c-eu-batteries",
@@ -325,11 +342,14 @@
       "erp-batteries-2023",
       "fieldfisher-batteries"
     ],
-    "verification": "not-verified",
+    "verification": "original-checked",
     "asOf": "Regulation (EU) 2023/1542, as summarised",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
-    "evidenceSources": []
+    "batch": "2026-11-second-pass",
+    "evidenceSources": [
+      "eurlex-batteries",
+      "erp-batteries-2023"
+    ]
   },
   {
     "id": "c-un-panel-2024",
@@ -372,7 +392,7 @@
     "verification": "secondary",
     "asOf": "May 2019",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
+    "batch": "2026-11-second-pass",
     "evidenceSources": [
       "miningcom-csm-2019",
       "wb-csm"

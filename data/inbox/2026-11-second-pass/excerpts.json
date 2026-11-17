@@ -1,0 +1,336 @@
+{
+  "batch": "2026-11-second-pass",
+  "checkedAt": "2026-11-17T05:52:51.304Z",
+  "note": "Short excerpts (about 180 characters) around each found term, kept as evidence. Not for republication.",
+  "excerpts": [
+    {
+      "source": "miningcom-gcmo-2025",
+      "claim": "c-refining-top3-2024",
+      "term": "86%",
+      "matched": "86%",
+      "excerpt": "el. the average market share of the top three refined material suppliers rose from 82% to 86%, with single countries-china for cobalt, graphite and rare earths, and indonesia for nick"
+    },
+    {
+      "source": "miningcom-gcmo-2025",
+      "claim": "c-refining-top3-2024",
+      "term": "82%",
+      "matched": "82%",
+      "excerpt": "nd nickel. the average market share of the top three refined material suppliers rose from 82% to 86%, with single countries-china for cobalt, graphite and rare earths, and indonesia f"
+    },
+    {
+      "source": "miningcom-gcmo-2025",
+      "claim": "c-growth-single-supplier",
+      "term": "indonesia",
+      "matched": "indonesia",
+      "excerpt": "obal refining capacity of critical minerals became even more concentrated, with china and indonesia accounting for the vast majority of supply growth for battery metals like cobalt, graphit"
+    },
+    {
+      "source": "miningcom-gcmo-2025",
+      "claim": "c-growth-single-supplier",
+      "term": "nickel",
+      "matched": "nickel",
+      "excerpt": "al sign in join watch company spotlight copper gold critical minerals commodities lithium nickel iron ore rare earth coal uranium cobalt diamond zinc platinum palladium silver potash sup"
+    },
+    {
+      "source": "miningcom-gcmo-2025",
+      "claim": "c-growth-single-supplier",
+      "term": "cobalt",
+      "matched": "cobalt",
+      "excerpt": "copper gold critical minerals commodities lithium nickel iron ore rare earth coal uranium cobalt diamond zinc platinum palladium silver potash suppliers equipment top 50 usa canada austr"
+    },
+    {
+      "source": "miningcom-gcmo-2025",
+      "claim": "c-growth-single-supplier",
+      "term": "graphite",
+      "matched": "graphite",
+      "excerpt": "minerals energy africa asia australia canada china europe latin america usa cobalt copper graphite lithium manganese molybdenum nickel rare earth specialty minerals tungsten graphite powde"
+    },
+    {
+      "source": "northernminer-gcmo-2025",
+      "claim": "c-growth-single-supplier",
+      "term": "indonesia",
+      "matched": "indonesia",
+      "excerpt": "dcast stock tables press releases buyer's guide tnm marco polo latest november 16, 2026 | indonesia seeks 70% of mining returns for state november 16, 2026 | brixton hits rich silver veins"
+    },
+    {
+      "source": "northernminer-gcmo-2025",
+      "claim": "c-growth-single-supplier",
+      "term": "nickel",
+      "matched": "nickel",
+      "excerpt": "ommodities battery metals coal copper diamonds gold industrial/specialty minerals lithium nickel platinum group metals silver uranium zinc-lead regions africa asia australia, nz & south"
+    },
+    {
+      "source": "gmr-gcmo-2026",
+      "claim": "c-gcmo-2026-growth",
+      "term": "three-quarters | three quarters",
+      "matched": "three-quarters",
+      "excerpt": "iners - indonesia for nickel and china for other key energy minerals - accounted for over three-quarters of total growth in refined supply. in several markets, including for manganese, nickel, a"
+    },
+    {
+      "source": "gmr-gcmo-2026",
+      "claim": "c-gcmo-2026-growth",
+      "term": "export restrictions",
+      "matched": "export restrictions",
+      "excerpt": "tel: +44 (0)1252 718 999 | email: enquiries@ globalminingreview.com supply concentration, export restrictions, and declining investment put critical mineral security at risk | global mining review ho"
+    },
+    {
+      "source": "aljazeera-nickel-2019",
+      "claim": "c-indonesia-ore-ban",
+      "term": "nickel ore",
+      "matched": "nickel ore",
+      "excerpt": "world's biggest nickel ore maker bans exports from january 2020 | joko widodo | al jazeera skip links skip to conten"
+    },
+    {
+      "source": "aljazeera-nickel-2019",
+      "claim": "c-indonesia-ore-ban",
+      "term": "january 2020 | 1 january 2020",
+      "matched": "january 2020",
+      "excerpt": "world's biggest nickel ore maker bans exports from january 2020 | joko widodo | al jazeera skip links skip to content play live sign up show navigation m"
+    },
+    {
+      "source": "usgs-mcs-2025-nickel",
+      "claim": "c-indonesia-nickel-share",
+      "term": "indonesia",
+      "matched": "indonesia",
+      "excerpt": "average price of $16400 per metric ton, largely owing to continued surplus of nickel from indonesia. in early 2024, supply concerns related to nickel asset closures, delays in issuing new n"
+    },
+    {
+      "source": "kitco-drc-quotas-2025",
+      "claim": "c-drc-export-2025",
+      "term": "cobalt",
+      "matched": "cobalt",
+      "excerpt": "congo to permanently ban cobalt exporters that breach quotas | kitco news buy/sell gold & silver bullion coins and bars p"
+    },
+    {
+      "source": "kitco-drc-quotas-2025",
+      "claim": "c-drc-export-2025",
+      "term": "suspen* | ban",
+      "matched": "ban",
+      "excerpt": "congo to permanently ban cobalt exporters that breach quotas | kitco news buy/sell gold & silver bullion coins and"
+    },
+    {
+      "source": "kitco-drc-quotas-2025",
+      "claim": "c-drc-export-2025",
+      "term": "quota*",
+      "matched": "quota",
+      "excerpt": "congo to permanently ban cobalt exporters that breach quotas | kitco news buy/sell gold & silver bullion coins and bars precious metals all metal quo"
+    },
+    {
+      "source": "nrf-crma-2024",
+      "claim": "c-eu-crma",
+      "term": "10%",
+      "matched": "10%",
+      "excerpt": "ma also sets out three benchmarks for the eu's annual consumption of these raw materials; 10% derived from local extraction; 40% to be processed in the eu; and 25% derived from recycl"
+    },
+    {
+      "source": "nrf-crma-2024",
+      "claim": "c-eu-crma",
+      "term": "40%",
+      "matched": "40%",
+      "excerpt": "or the eu's annual consumption of these raw materials; 10% derived from local extraction; 40% to be processed in the eu; and 25% derived from recycled materials. one central aim of th"
+    },
+    {
+      "source": "nrf-crma-2024",
+      "claim": "c-eu-crma",
+      "term": "25%",
+      "matched": "25%",
+      "excerpt": "hese raw materials; 10% derived from local extraction; 40% to be processed in the eu; and 25% derived from recycled materials. one central aim of these benchmarks is to increase and d"
+    },
+    {
+      "source": "te-crma-2024",
+      "claim": "c-eu-crma",
+      "term": "10%",
+      "matched": "10%",
+      "excerpt": "criteria: ● prioritise in line with crma's benchmarks: 40% processing, 25% recycling and 10% mining. metals processing and material recovery (recycling) bring the biggest value added"
+    },
+    {
+      "source": "te-crma-2024",
+      "claim": "c-eu-crma",
+      "term": "40%",
+      "matched": "40%",
+      "excerpt": "nd. ● on recycling, the recovered lithium, nickel, cobalt and manganese could cover up to 40% of the demand by 2030 if all batteries are collected and production scrap included, risin"
+    },
+    {
+      "source": "te-crma-2024",
+      "claim": "c-eu-crma",
+      "term": "25%",
+      "matched": "25%",
+      "excerpt": "t&e's recommended criteria: ● prioritise in line with crma's benchmarks: 40% processing, 25% recycling and 10% mining. metals processing and material recovery (recycling) bring the b"
+    },
+    {
+      "source": "te-crma-2024",
+      "claim": "c-eu-crma",
+      "term": "65%",
+      "matched": "65%",
+      "excerpt": "3 | brie fi ng minerals demand by 2030, alongside a diversi fi cation goal of no moe that 65% of any critical mineral originating from any single third country. - the 2030 objectives"
+    },
+    {
+      "source": "mw-eu-47-projects",
+      "claim": "c-eu-strategic-projects",
+      "term": "47",
+      "matched": "47",
+      "excerpt": "eu designates 47 strategic raw materials projects to strengthen supply chain https://www.miningweekly.com"
+    },
+    {
+      "source": "mw-eu-47-projects",
+      "claim": "c-eu-strategic-projects",
+      "term": "13",
+      "matched": "13",
+      "excerpt": "editor font size: - + the european commission has designated 47 strategic projects across 13 member states as part of the critical raw materials act (crma) implementation. the select"
+    },
+    {
+      "source": "mw-eu-47-projects",
+      "claim": "c-eu-strategic-projects",
+      "term": "strategic projects",
+      "matched": "strategic projects",
+      "excerpt": "media contract publishing editor font size: - + the european commission has designated 47 strategic projects across 13 member states as part of the critical raw materials act (crma) implementation."
+    },
+    {
+      "source": "nsenergy-eu-13-2025",
+      "claim": "c-eu-strategic-projects",
+      "term": "47",
+      "matched": "47",
+      "excerpt": "sources and fortify economic security. the new projects complement an existing roster of 47 strategic projects within the eu, unveiled on 25 march 2025. collectively, these 60 proje"
+    },
+    {
+      "source": "nsenergy-eu-13-2025",
+      "claim": "c-eu-strategic-projects",
+      "term": "13",
+      "matched": "13",
+      "excerpt": "eu endorses 13 overseas strategic projects for raw material access eb our combined knowledge, your compe"
+    },
+    {
+      "source": "nsenergy-eu-13-2025",
+      "claim": "c-eu-strategic-projects",
+      "term": "strategic projects",
+      "matched": "strategic projects",
+      "excerpt": "eu endorses 13 overseas strategic projects for raw material access eb our combined knowledge, your competitive advantage subscribe -"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "50%",
+      "matched": "50%",
+      "excerpt": "d of 2028 and 61% by the end of 2031; targets for lithium recovery from waste batteries - 50% by the end of 2027 and 80% by the end of 2031 - which can be amended to take into account"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "80%",
+      "matched": "80%",
+      "excerpt": "d of 2031; targets for lithium recovery from waste batteries - 50% by the end of 2027 and 80% by the end of 2031 - which can be amended to take into account market and technological d"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "16%",
+      "matched": "16%",
+      "excerpt": "nt for industrial batteries, starting, lighting and ignition batteries and ev batteries - 16% for cobalt, 85% for lead, 6% for lithium and 6% for nickel from 18 august 2031; recycling"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "6%",
+      "matched": "6%",
+      "excerpt": "tarting, lighting and ignition batteries and ev batteries - 16% for cobalt, 85% for lead, 6% for lithium and 6% for nickel from 18 august 2031; recycling efficiency targets - 80% for"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "85%",
+      "matched": "85%",
+      "excerpt": "l batteries, starting, lighting and ignition batteries and ev batteries - 16% for cobalt, 85% for lead, 6% for lithium and 6% for nickel from 18 august 2031; recycling efficiency targ"
+    },
+    {
+      "source": "eurlex-batteries",
+      "claim": "c-eu-batteries",
+      "term": "passport",
+      "matched": "passport",
+      "excerpt": "e required in the form of a qr code and, for lmt, industrial and ev batteries, a 'battery passport'. labelling requirements will apply from 2026 and the qr code from 2027. the regulation a"
+    },
+    {
+      "source": "erp-batteries-2023",
+      "claim": "c-eu-batteries",
+      "term": "50%",
+      "matched": "50%",
+      "excerpt": "er 2025 31 december 2030 lead-acid 75% 80% lithium-based 65% 70% nickel-cadmium 80% other 50% recovery of materials material 31 december 2027 31 december 2031 cobalt 90% 95% copper 90"
+    },
+    {
+      "source": "erp-batteries-2023",
+      "claim": "c-eu-batteries",
+      "term": "80%",
+      "matched": "80%",
+      "excerpt": "or: recycling efficiency battery material 31 december 2025 31 december 2030 lead-acid 75% 80% lithium-based 65% 70% nickel-cadmium 80% other 50% recovery of materials material 31 dece"
+    },
+    {
+      "source": "erp-batteries-2023",
+      "claim": "c-eu-batteries",
+      "term": "passport",
+      "matched": "passport",
+      "excerpt": "re life cycle of batteries, from design to end-of-life. key features include the “battery passport” and the carbon footprint declaration which will lead to greater levels of transparency."
+    },
+    {
+      "source": "lawrbit-bwmr-2022",
+      "claim": "c-india-bwmr-2022",
+      "term": "battery waste management rules",
+      "matched": "battery waste management rules",
+      "excerpt": "he government of india, ministry of environment, forest and climate change introduced the battery waste management rules, 2022 (hereinafter referred to as rules of 2022) replacing the batteries (management and"
+    },
+    {
+      "source": "lawrbit-bwmr-2022",
+      "claim": "c-india-bwmr-2022",
+      "term": "extended producer responsibility",
+      "matched": "extended producer responsibility",
+      "excerpt": "has widened the jurisdiction of these rules by introducing the following fresh provisions extended producer responsibility (epr) : the battery manufacturers (producers), including importers, are responsible for c"
+    },
+    {
+      "source": "mondaq-bwmr-2022",
+      "claim": "c-india-bwmr-2022",
+      "term": "battery waste management rules",
+      "matched": "battery waste management rules",
+      "excerpt": "ulatory landscape: the ministry of environment, forest, and climate change introduced the battery waste management rules, 2022 (\" bwmr \"), replacing the batteries (management and handling) rules, 2001 (\"rules 2"
+    },
+    {
+      "source": "mondaq-bwmr-2022",
+      "claim": "c-india-bwmr-2022",
+      "term": "extended producer responsibility",
+      "matched": "extended producer responsibility",
+      "excerpt": "sible for ensuring the disposal and recycling of waste batteries in compliance with their extended producer responsibility (\" epr\" ) requirements. additionally, importers of batteries or equipment containing batt"
+    },
+    {
+      "source": "miningcom-csm-2019",
+      "claim": "c-wb-csm-2019",
+      "term": "climate-smart mining",
+      "matched": "climate-smart mining",
+      "excerpt": "per graphite lithium nickel wind turbines. image from pixabay the world bank launched the climate-smart mining facility on friday, the first-ever fund dedicated to making mining for minerals climate-s"
+    },
+    {
+      "source": "miningcom-csm-2019",
+      "claim": "c-wb-csm-2019",
+      "term": "rio tinto",
+      "matched": "rio tinto",
+      "excerpt": "mineral value chain. partners include the german government and private sector companies, rio tinto and anglo american. the facility will also assist governments to build a robust policy, r"
+    },
+    {
+      "source": "miningcom-csm-2019",
+      "claim": "c-wb-csm-2019",
+      "term": "anglo american",
+      "matched": "anglo american",
+      "excerpt": "chain. partners include the german government and private sector companies, rio tinto and anglo american. the facility will also assist governments to build a robust policy, regulatory and legal"
+    },
+    {
+      "source": "miningcom-csm-2019",
+      "claim": "c-wb-csm-2019",
+      "term": "50m | 50 million",
+      "matched": "50 million",
+      "excerpt": "energy storage and electric vehicles. the world bank is targeting a total investment of $50 million, to be deployed over a 5-year timeframe. the fund will focus on activities around four co"
+    },
+    {
+      "source": "wb-csm",
+      "claim": "c-wb-csm-2019",
+      "term": "climate-smart mining",
+      "matched": "climate-smart mining",
+      "excerpt": "climate-smart mining: minerals for climate action understanding poverty topics metals and minerals brief clima"
+    }
+  ]
+}

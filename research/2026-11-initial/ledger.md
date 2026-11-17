@@ -1,6 +1,6 @@
 # Research ledger: 2026-11-initial
 
-Sources fetched: 2026-11-17T05:46:42.154Z. Gate run: 2026-11-17T05:46:42.269Z.
+Sources fetched: 2026-11-17T05:51:50.576Z. Gate run: 2026-11-17T05:51:50.608Z.
 
 ## Used (13)
 
@@ -12,10 +12,8 @@ Sources fetched: 2026-11-17T05:46:42.154Z. Gate run: 2026-11-17T05:46:42.269Z.
   - Evidence: "exploration" in tribune-ncmm-2025; "beneficiation" in tribune-ncmm-2025; "stockpile" in tribune-ncmm-2025; "end-of-life" in tribune-ncmm-2025
 - **c-india-mmdr-2023** (Reported by secondary sources): An amendment to India's mining law, in force from 17 August 2023, allows the central government to auction mining leases and composite licences for listed critical minerals and creates an exploration licence for critical and deep-seated minerals. Auction revenue accrues to state governments.
   - Evidence: "exploration licence" in prs-mmdr-2023; "critical" in prs-mmdr-2023; "state government" in prs-mmdr-2023
-- **c-india-dmf-collections** (Reported by secondary sources): District Mineral Foundations, funded by levies on mining leaseholders, had collected more than ₹1 lakh crore cumulatively by early 2025. Odisha, Chhattisgarh and Jharkhand together accounted for more than half of the total.
-  - Evidence: "district mineral foundation" in iwp-dmf-2025; "lakh crore" in iwp-dmf-2025; "odisha" in iwp-dmf-2025; "chhattisgarh" in iwp-dmf-2025; "jharkhand" in iwp-dmf-2025
 - **c-indonesia-nickel-share** (Checked against an original): Indonesia produced around 60% of the world's mined nickel in 2024, by far the largest share of any country.
-  - Evidence: "indonesia" in usgs-mcs-2025-nickel; "60" in usgs-mcs-2025-nickel, usgs-mcs-2025
+  - Evidence: "indonesia" in usgs-mcs-2025-nickel; "60" in usgs-mcs-2025-nickel
 - **c-morowali-2023** (Reported by secondary sources): On 24 December 2023 a furnace accident at a nickel smelter in the Indonesia Morowali Industrial Park, Central Sulawesi, killed workers and injured dozens. Initial company statements reported 13 deaths; later reporting raised the toll to around 20. The park operator revised its initial account of the cause, and labour groups criticised safety and evacuation arrangements.
   - Evidence: "morowali" in jakpost-morowali-2023-12-24, jakpost-morowali-2023-12-27, bhrrc-morowali-2023; "furnace" in jakpost-morowali-2023-12-24, jakpost-morowali-2023-12-27, bhrrc-morowali-2023; "13" in jakpost-morowali-2023-12-24, jakpost-morowali-2023-12-27, bhrrc-morowali-2023
 - **c-drc-cobalt-share** (Checked against an original): The Democratic Republic of the Congo produced roughly three-quarters of the world's mined cobalt in 2024.
@@ -24,12 +22,14 @@ Sources fetched: 2026-11-17T05:46:42.154Z. Gate run: 2026-11-17T05:46:42.269Z.
   - Evidence: "graphite" in orf-china-controls; "december 2023" in orf-china-controls
 - **c-china-ree-2025** (Reported by secondary sources): On 4 April 2025 China placed seven medium and heavy rare earth elements (samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium) and related products under export licensing.
   - Evidence: "samarium" in csis-ree-2025; "gadolinium" in csis-ree-2025; "terbium" in csis-ree-2025; "dysprosium" in csis-ree-2025; "lutetium" in csis-ree-2025; "scandium" in csis-ree-2025; "yttrium" in csis-ree-2025
+- **c-eu-batteries** (Checked against an original): The EU Batteries Regulation sets lithium recovery targets of 50% by the end of 2027 and 80% by the end of 2031, and 90% and 95% for cobalt, copper, lead and nickel. Minimum recycled content for new batteries starts in August 2031 at 16% cobalt, 6% lithium, 6% nickel and 85% lead. Electric-vehicle, light-transport and larger industrial batteries require a digital battery passport from February 2027.
+  - Evidence: "50%" in eurlex-batteries; "80%" in eurlex-batteries; "16%" in eurlex-batteries; "6%" in eurlex-batteries; "85%" in eurlex-batteries; "passport" in eurlex-batteries
 - **c-un-panel-2024** (Checked against an original): The UN Secretary-General's Panel on Critical Energy Transition Minerals published its report on 11 September 2024 with seven voluntary guiding principles and five actionable recommendations. Its first principle is that human rights must be at the core of all mineral value chains.
   - Evidence: "seven" in un-panel-cetm; "guiding principles" in un-panel-cetm; "human rights" in un-panel-cetm
 - **c-jetp-indonesia** (Reported by secondary sources): Indonesia's Just Energy Transition Partnership was announced at the G20 summit in Bali in November 2022 with an initial US$20 billion: US$10 billion pledged by a group of governments and a further US$10 billion of private finance to be mobilised. Its investment plan was launched in November 2023.
   - Evidence: "just energy transition partnership" in chn-jetp-2022, eeas-jetp-cipp; "20bn" in chn-jetp-2022; "comprehensive investment and policy plan" in eeas-jetp-cipp
 - **c-wb-csm-2019** (Reported by secondary sources): The World Bank launched its Climate-Smart Mining Facility, a multi-donor trust fund, in May 2019 with initial support from the German government, Rio Tinto and Anglo American. At launch it targeted US$50 million over five years across mitigation, adaptation, reducing material impacts and market opportunities.
-  - Evidence: "climate-smart mining" in miningcom-csm-2019, wb-csm; "rio tinto" in miningcom-csm-2019; "anglo american" in miningcom-csm-2019; "50" in miningcom-csm-2019, wb-csm
+  - Evidence: "climate-smart mining" in miningcom-csm-2019, wb-csm; "rio tinto" in miningcom-csm-2019; "anglo american" in miningcom-csm-2019; "50" in miningcom-csm-2019
 
 ## Held back from pages (12)
 
@@ -43,7 +43,9 @@ Sources fetched: 2026-11-17T05:46:42.154Z. Gate run: 2026-11-17T05:46:42.269Z.
   - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
 - **c-india-first-tranche** (not verified): terms not found: "first tranche", "20".
   - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
-- **c-india-dmf-unspent** (not verified): terms not found: "spent".
+- **c-india-dmf-collections** (not verified): terms not found: "district mineral foundation".
+  - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
+- **c-india-dmf-unspent** (not verified): terms not found: "district mineral foundation", "spent".
   - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
 - **c-india-bwmr-2022** (not verified): terms not found: "battery waste management rules", "extended producer responsibility".
   - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
@@ -54,8 +56,6 @@ Sources fetched: 2026-11-17T05:46:42.154Z. Gate run: 2026-11-17T05:46:42.269Z.
 - **c-eu-crma** (not verified): terms not found: "10%", "40%", "25%", "65%".
   - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
 - **c-eu-strategic-projects** (not verified): terms not found: "47", "13", "strategic projects".
-  - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
-- **c-eu-batteries** (not verified): terms not found: "50%", "80%", "16%", "6%", "85%", "passport".
   - Why: the fetched sources did not contain every term this claim rests on. Missing evidence is not a finding that the claim is false.
 
 ## Sources that could not be read

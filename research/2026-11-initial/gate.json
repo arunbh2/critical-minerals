@@ -1,7 +1,7 @@
 {
   "batch": "2026-11-initial",
-  "gatedAt": "2026-11-17T05:46:42.269Z",
-  "checkedAt": "2026-11-17T05:46:42.154Z",
+  "gatedAt": "2026-11-17T05:51:50.608Z",
+  "checkedAt": "2026-11-17T05:51:50.576Z",
   "results": [
     {
       "claim": "c-refining-top3-2024",
@@ -204,13 +204,11 @@
     },
     {
       "claim": "c-india-dmf-collections",
-      "status": "secondary",
+      "status": "not-verified",
       "terms": [
         {
           "term": "district mineral foundation",
-          "foundIn": [
-            "iwp-dmf-2025"
-          ]
+          "foundIn": []
         },
         {
           "term": "lakh crore",
@@ -237,7 +235,9 @@
           ]
         }
       ],
-      "missing": []
+      "missing": [
+        "district mineral foundation"
+      ]
     },
     {
       "claim": "c-india-dmf-unspent",
@@ -245,9 +245,7 @@
       "terms": [
         {
           "term": "district mineral foundation",
-          "foundIn": [
-            "iwp-dmf-2025"
-          ]
+          "foundIn": []
         },
         {
           "term": "spent",
@@ -255,6 +253,7 @@
         }
       ],
       "missing": [
+        "district mineral foundation",
         "spent"
       ]
     },
@@ -307,8 +306,7 @@
         {
           "term": "60",
           "foundIn": [
-            "usgs-mcs-2025-nickel",
-            "usgs-mcs-2025"
+            "usgs-mcs-2025-nickel"
           ]
         }
       ],
@@ -514,41 +512,46 @@
     },
     {
       "claim": "c-eu-batteries",
-      "status": "not-verified",
+      "status": "original-checked",
       "terms": [
         {
           "term": "50%",
-          "foundIn": []
+          "foundIn": [
+            "eurlex-batteries"
+          ]
         },
         {
           "term": "80%",
-          "foundIn": []
+          "foundIn": [
+            "eurlex-batteries"
+          ]
         },
         {
           "term": "16%",
-          "foundIn": []
+          "foundIn": [
+            "eurlex-batteries"
+          ]
         },
         {
           "term": "6%",
-          "foundIn": []
+          "foundIn": [
+            "eurlex-batteries"
+          ]
         },
         {
           "term": "85%",
-          "foundIn": []
+          "foundIn": [
+            "eurlex-batteries"
+          ]
         },
         {
           "term": "passport",
-          "foundIn": []
+          "foundIn": [
+            "eurlex-batteries"
+          ]
         }
       ],
-      "missing": [
-        "50%",
-        "80%",
-        "16%",
-        "6%",
-        "85%",
-        "passport"
-      ]
+      "missing": []
     },
     {
       "claim": "c-un-panel-2024",
@@ -627,8 +630,7 @@
         {
           "term": "50",
           "foundIn": [
-            "miningcom-csm-2019",
-            "wb-csm"
+            "miningcom-csm-2019"
           ]
         }
       ],

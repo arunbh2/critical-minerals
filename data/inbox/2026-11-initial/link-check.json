@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-initial",
-  "checkedAt": "2026-11-17T05:46:42.154Z",
+  "checkedAt": "2026-11-17T05:51:50.576Z",
   "results": [
     {
       "source": "iea-gcmo-2025",
@@ -388,20 +388,20 @@
         {
           "claim": "c-india-dmf-collections",
           "found": [
-            "district mineral foundation",
             "lakh crore",
             "odisha",
             "chhattisgarh",
             "jharkhand"
           ],
-          "missing": []
+          "missing": [
+            "district mineral foundation"
+          ]
         },
         {
           "claim": "c-india-dmf-unspent",
-          "found": [
-            "district mineral foundation"
-          ],
+          "found": [],
           "missing": [
+            "district mineral foundation",
             "spent"
           ]
         }
@@ -513,11 +513,10 @@
       "checks": [
         {
           "claim": "c-indonesia-nickel-share",
-          "found": [
-            "60"
-          ],
+          "found": [],
           "missing": [
-            "indonesia"
+            "indonesia",
+            "60"
           ]
         },
         {
@@ -774,20 +773,20 @@
       "finalUrl": "https://eur-lex.europa.eu/EN/legal-content/summary/sustainability-rules-for-batteries-and-waste-batteries.html",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 5678,
+      "textLength": 11144,
       "error": null,
       "checks": [
         {
           "claim": "c-eu-batteries",
-          "found": [],
-          "missing": [
+          "found": [
             "50%",
             "80%",
             "16%",
             "6%",
             "85%",
             "passport"
-          ]
+          ],
+          "missing": []
         }
       ]
     },
@@ -906,12 +905,12 @@
         {
           "claim": "c-wb-csm-2019",
           "found": [
-            "climate-smart mining",
-            "50"
+            "climate-smart mining"
           ],
           "missing": [
             "rio tinto",
-            "anglo american"
+            "anglo american",
+            "50"
           ]
         }
       ]
