@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { graph, TYPE_LABEL } from '../lib/content';
+import { url } from '../lib/url';
+const nodes = (await graph()).sort((a, b) => a.title.localeCompare(b.title));
+const types = [...new Set(nodes.map((n) => TYPE_LABEL[n.type]))].sort();
+---
+<Base title="Search" description="Search every explainer, profile, dossier, record and source on Critical Minerals." searchable={false}>
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Search' }]} />
+    <div class="reading">
+      <h1>Search</h1>
+      <form id="search-form" class="search-form" role="search" action={url('search/')} method="get">
+        <div class="field">
+          <label for="q">Search the guide</label>
+          <span class="hint" id="q-hint">Try a mineral, a country, an issue or an organisation, for example “nickel safety” or “District Mineral Foundation”.</span>
+          <div class="search-row">
+            <input id="q" name="q" type="search" autocomplete="off" aria-describedby="q-hint" />
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+        </div>
+        <div class="field type-field" hidden>
+          <label for="type">Type of page</label>
+          <select id="type" name="type"><option value="">All types</option>{types.map((t) => <option value={t}>{t}</option>)}</select>
+        </div>
+      </form>
+      <p id="search-status" class="sans" role="status" aria-live="polite"></p>
+      <ol id="search-results" class="record-list results"></ol>
+      <noscript><p class="notice">Search needs JavaScript. All pages are listed below.</p></noscript>
+      <section id="all-pages" aria-labelledby="all-h">
+        <h2 id="all-h">All pages, A to Z</h2>
+        <ul class="az">{nodes.map((n) => <li><a href={n.href}>{n.title}</a> <span class="meta">{TYPE_LABEL[n.type]}</span></li>)}</ul>
+      </section>
+    </div>
+  </div>
+</Base>
+<script>
+  type Result = { url: string; excerpt: string; meta: { title?: string }; filters: { type?: string[] } };
+  const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+  const form = document.getElementById('search-form') as HTMLFormElement;
+  const input = document.getElementById('q') as HTMLInputElement;
+  const typeSel = document.getElementById('type') as HTMLSelectElement;
+  const status = document.getElementById('search-status')!;
+  const list = document.getElementById('search-results')!;
+  const allPages = document.getElementById('all-pages')!;
+  (document.querySelector('.type-field') as HTMLElement).hidden = false;
+
+  // Pagefind excerpts contain <mark> tags around matches; keep only those.
+  const safeExcerpt = (html: string) => {
+    const esc = html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return esc.replace(/&lt;mark&gt;/g, '<mark>').replace(/&lt;\/mark&gt;/g, '</mark>').replace(/&amp;(#?\w+;)/g, '&$1');
+  };
+  const escape = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+
+  let pagefind: any;
+  async function load() {
+    if (!pagefind) {
+      pagefind = await import(/* @vite-ignore */ `${base}pagefind/pagefind.js`);
+      await pagefind.options({ baseUrl: base });
+    }
+    return pagefind;
+  }
+
+  let seq = 0;
+  async function run(push: boolean) {
+    const q = input.value.trim();
+    const type = typeSel.value;
+    const params = new URLSearchParams();
+    if (q) params.set('q', q);
+    if (type) params.set('type', type);
+    const next = params.toString() ? `?${params}` : location.pathname;
+    if (push) history.pushState(null, '', next); else history.replaceState(null, '', next);
+    const mine = ++seq;
+    list.innerHTML = '';
+    if (!q) { status.textContent = ''; allPages.hidden = false; return; }
+    allPages.hidden = true;
+    status.textContent = 'Searching…';
+    try {
+      const pf = await load();
+      const res = await pf.search(q, type ? { filters: { type } } : {});
+      const data: Result[] = await Promise.all(res.results.slice(0, 30).map((r: any) => r.data()));
+      if (mine !== seq) return;
+      if (!data.length) {
+        status.innerHTML = `No results for “${escape(q)}”${type ? ` in ${escape(type)}` : ''}. Try fewer or different words, check spelling, ${type ? 'search all types, ' : ''}or <a href="${base}start-here/">start with the basics</a>.`;
+        allPages.hidden = false;
+        return;
+      }
+      status.textContent = `${res.results.length} result${res.results.length === 1 ? '' : 's'} for “${q}”${type ? ` in ${type}` : ''}${res.results.length > 30 ? ', showing the first 30' : ''}.`;
+      list.innerHTML = data.map((d) => `<li><p class="kicker">${escape(d.filters.type?.[0] ?? 'Page')}</p><h3><a href="${escape(d.url)}">${escape(d.meta.title ?? d.url)}</a></h3><p>${safeExcerpt(d.excerpt)}</p></li>`).join('');
+    } catch (err) {
+      status.textContent = 'Search is unavailable right now. Use the A to Z list below.';
+      allPages.hidden = false;
+    }
+  }
+
+  const fromUrl = () => {
+    const p = new URLSearchParams(location.search);
+    input.value = p.get('q') ?? '';
+    typeSel.value = p.get('type') ?? '';
+  };
+  form.addEventListener('submit', (e) => { e.preventDefault(); run(true); });
+  typeSel.addEventListener('change', () => run(true));
+  let t: number | undefined;
+  input.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => run(false), 250); });
+  window.addEventListener('popstate', () => { fromUrl(); run(false); });
+  fromUrl();
+  if (input.value) run(false); else input.focus();
+</script>
+<style>
+  .search-row { display: flex; gap: 8px; }
+  .search-row input { flex: 1; }
+  .results :global(mark) { background: var(--newyork-90); color: inherit; padding: 0 1px; }
+  .az { columns: 2; padding-left: 1.1em; font-family: var(--font-sans); font-size: 0.95rem; }
+  .az li { break-inside: avoid; }
+  @media (max-width: 600px) { .az { columns: 1; } .search-row { flex-direction: column; } }
+</style>

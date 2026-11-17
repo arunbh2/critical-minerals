@@ -1,0 +1,75 @@
+---
+import '@fontsource-variable/source-serif-4/opsz.css';
+import '@fontsource-variable/source-serif-4/opsz-italic.css';
+import '@fontsource-variable/source-sans-3';
+import '../styles/global.css';
+import serifWoff from '@fontsource-variable/source-serif-4/files/source-serif-4-latin-opsz-normal.woff2?url';
+import sansWoff from '@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2?url';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { SITE } from '../site.config';
+import { url, absoluteUrl } from '../lib/url';
+
+interface Props {
+  title: string;
+  description?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  /** Extra JSON-LD objects, built only from approved public fields. */
+  jsonld?: Record<string, unknown>[];
+  /** Exclude this page from the search index (e.g. search page itself). */
+  searchable?: boolean;
+  reviewed?: string;
+  /** Search result type label for the Pagefind type filter. */
+  searchType?: string;
+}
+const { title, description = SITE.description, type = 'website', noindex = false, jsonld = [], searchable = true, searchType = 'Page' } = Astro.props;
+const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.descriptor}` : `${title} | ${SITE.name}`;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImage = absoluteUrl('brand/avatar-512.png', Astro.site);
+const baseLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  description: SITE.description,
+  url: absoluteUrl('', Astro.site),
+  inLanguage: SITE.language,
+};
+const ld = [baseLd, ...jsonld];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="preload" as="font" type="font/woff2" href={serifWoff} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={sansWoff} crossorigin />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#141F52" />
+    <link rel="icon" href={url('brand/favicon.ico')} sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/svg+xml" href={url('brand/favicon.svg')} sizes="any" />
+    <link rel="apple-touch-icon" href={url('brand/apple-touch-icon.png')} />
+    <link rel="manifest" href={url('site.webmanifest')} />
+    <link rel="sitemap" href={url('sitemap-index.xml')} />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary" />
+    <meta data-pagefind-filter="type[content]" content={searchType} />
+    <script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main" tabindex="-1" data-pagefind-body={searchable ? '' : undefined}>
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

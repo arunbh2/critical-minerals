@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from 'astro:content';
+import Entry from '../../layouts/Entry.astro';
+import { url } from '../../lib/url';
+import { vocabLabel } from '../../lib/content';
+export async function getStaticPaths() {
+  return (await getCollection('cases')).filter((e) => !e.data.draft).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+<Entry type="cases" id={entry.id} kicker="Case study" data={d}
+  crumbs={[{ label: 'Evidence & practice', href: url('practice/') }, { label: d.title }]}>
+  <section slot="facts" class="panel-data reading case-facts" aria-labelledby="case-h">
+    <h2 id="case-h" class="kicker">Case record</h2>
+    <dl class="facts">
+      <dt>Location</dt><dd>{d.location}</dd>
+      <dt>Period</dt><dd>{d.period}</dd>
+      <dt>Currency of evidence</dt><dd>{d.currentAsOf}</dd>
+      <dt>Intervention</dt><dd>{d.intervention}</dd>
+      <dt>Actors</dt><dd>{d.actors.join('; ')}</dd>
+      <dt>Financing</dt><dd>{d.financing}</dd>
+      <dt>Mechanism</dt><dd>{d.mechanism}</dd>
+      <dt>Status of the causal link</dt><dd><span class="status">{vocabLabel('relationship', d.relationship)}</span></dd>
+      <dt>Reported results</dt><dd>{d.reportedResults}</dd>
+      <dt>Evidence type</dt><dd>{d.evidenceType}</dd>
+      <dt>Transfer conditions</dt><dd>{d.transferConditions}</dd>
+    </dl>
+  </section>
+  <Content />
+</Entry>
+<style>.case-facts { margin-bottom: 1.5rem; } .case-facts h2 { margin-top: 0; }</style>

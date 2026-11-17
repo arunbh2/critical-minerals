@@ -1,0 +1,16 @@
+---
+import { titleFor, hrefFor, vocabLabel } from '../lib/content';
+interface Props { countries?: string[]; minerals?: string[]; issues?: string[]; lifecycle?: string[] }
+const { countries = [], minerals = [], issues = [], lifecycle = [] } = Astro.props;
+const items = [
+  ...(await Promise.all(countries.map(async (id) => ({ label: await titleFor('countries', id), href: hrefFor('countries', id) })))),
+  ...(await Promise.all(minerals.map(async (id) => ({ label: await titleFor('minerals', id), href: hrefFor('minerals', id) })))),
+  ...(await Promise.all(issues.map(async (id) => ({ label: await titleFor('issues', id), href: hrefFor('issues', id) })))),
+];
+---
+{(items.length > 0 || lifecycle.length > 0) && (
+  <ul class="chips" aria-label="Topics">
+    {items.map((i) => <li><a class="chip" href={i.href}>{i.label}</a></li>)}
+    {lifecycle.map((l) => <li><span class="chip">{vocabLabel('lifecycle', l)}</span></li>)}
+  </ul>
+)}

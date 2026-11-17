@@ -1,0 +1,73 @@
+---
+import Base from './Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import RecordMeta from '../components/RecordMeta.astro';
+import Evidence from '../components/Evidence.astro';
+import SourceList from '../components/SourceList.astro';
+import Related from '../components/Related.astro';
+import Tags from '../components/Tags.astro';
+import { claimsById, TYPE_LABEL, type EntityType } from '../lib/content';
+import { absoluteUrl } from '../lib/url';
+
+interface Props {
+  type: EntityType;
+  id: string;
+  kicker: string;
+  data: any;
+  crumbs: { label: string; href?: string }[];
+  minutes?: number;
+  lead?: string;
+}
+const { type, id, kicker, data, crumbs, minutes, lead } = Astro.props;
+// Sources shown = sources named on the record plus sources behind its claims.
+const claimSources = (await claimsById(data.claims ?? [])).flatMap((c) => c.data.sources);
+const allSources = [...new Set([...(data.sources ?? []), ...claimSources])];
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': type === 'updates' ? 'NewsArticle' : 'Article',
+  headline: data.title,
+  description: data.summary,
+  datePublished: data.published,
+  dateModified: data.updated ?? data.reviewed,
+  inLanguage: 'en',
+  url: absoluteUrl(Astro.url.pathname.replace(import.meta.env.BASE_URL, ''), Astro.site),
+  isPartOf: { '@type': 'WebSite', name: 'Critical Minerals' },
+}];
+---
+<Base title={data.title} description={data.summary} type="article" jsonld={jsonld} searchType={TYPE_LABEL[type]}>
+  <div class="wrap">
+    <Breadcrumbs items={crumbs} />
+    <article class="entry" data-record-type={type} data-record-id={id}>
+      <header class="entry-head reading">
+        <p class="kicker red-rule">{kicker}</p>
+        <h1>{data.title}</h1>
+        {lead && <p class="lead-question">{lead}</p>}
+        <p class="standfirst">{data.summary}</p>
+        <RecordMeta published={data.published} updated={data.updated} reviewed={data.reviewed} reviewDue={data.reviewDue} minutes={minutes} editor={data.editor} />
+        <Tags countries={data.countries} minerals={data.minerals} issues={data.issues} lifecycle={data.lifecycle} />
+      </header>
+      <slot name="facts" />
+      <div class="reading prose">
+        <slot />
+      </div>
+      <div class="reading">
+        <slot name="after" />
+        <Evidence claims={data.claims} meaning={data.meaning} unclear={data.unclear} />
+        {data.limitations && (
+          <section class="evidence" aria-labelledby="limits-h">
+            <h2 id="limits-h">Coverage limits</h2>
+            <p>{data.limitations}</p>
+          </section>
+        )}
+        <SourceList ids={allSources} />
+      </div>
+      <Related type={type} id={id} refs={{ countries: data.countries, minerals: data.minerals, issues: data.issues }} />
+    </article>
+  </div>
+</Base>
+<style>
+  .entry-head { margin-bottom: 1.5rem; }
+  .lead-question { font-family: var(--font-serif); font-size: 1.25rem; color: var(--chicago-30); margin-bottom: 0.75rem; }
+  .prose :global(h2) { border-top: 1px solid var(--color-rule); padding-top: 1rem; }
+  .prose :global(h2:first-child) { margin-top: 0.5rem; }
+</style>

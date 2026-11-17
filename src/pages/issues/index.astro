@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { hrefFor } from '../../lib/content';
+const items = (await getCollection('issues')).sort((a, b) => a.data.order - b.data.order);
+---
+<Base title="People & environment" description="Worker, community, environmental and climate issues across the critical-minerals lifecycle.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'People & environment' }]} />
+    <header class="reading"><p class="kicker red-rule">People & environment</p><h1>The issues that decide whether people benefit</h1>
+      <p class="standfirst">Each explainer separates three things: what individual actors must do themselves, what needs shared coordination, and what requires wider changes in rules, finance or institutions.</p></header>
+    <ol class="record-list reading issue-list">
+      {items.map((i) => <li><p class="kicker">Issue {i.data.order}</p><h3><a href={hrefFor('issues', i.id)}>{i.data.title}</a></h3><p class="issue-q">{i.data.editorialQuestion}</p><p>{i.data.summary}</p></li>)}
+    </ol>
+  </div>
+</Base>
+<style>.issue-q { color: var(--chicago-30); }</style>

@@ -1,0 +1,40 @@
+---
+import Page from '../layouts/Page.astro';
+import { url } from '../lib/url';
+import vocab from '../data/vocab.json';
+---
+<Page title="Methodology" kicker="How we work" description="How Critical Minerals selects, verifies, labels and reviews evidence, and how it keeps facts, interpretation and open questions apart."
+  standfirst="How we decide what to publish, how we label what we know, and how we keep records current.">
+  <h2>Three visible distinctions</h2>
+  <p>Every substantive page separates:</p>
+  <ul>
+    <li><strong>What we know:</strong> specific claims, each linked to dated sources, with a statement of how it was verified.</li>
+    <li><strong>What this may mean:</strong> editorial interpretation, labelled as such.</li>
+    <li><strong>What remains unclear:</strong> open questions, contested points and gaps in the evidence.</li>
+  </ul>
+  <p>We do not give a single confidence score to every kind of claim. A production statistic, a legal date and an alleged harm need different kinds of evidence.</p>
+  <h2>Verification levels</h2>
+  <dl class="facts">{vocab.verification.map((v) => <><dt>{v.id === 'primary-checked' ? 'Primary-checked' : 'Corroborated'}</dt><dd>{v.label}.</dd></>)}</dl>
+  <p>In this first release, sources were checked through independent reporting of the primary documents. Direct checks of every primary document are in progress, and each claim says which level applies. Claims we could not corroborate are not published. They sit in a private verification queue.</p>
+  <h2>Sources</h2>
+  <p>Each source records its title, publisher, URL, publication date where available, retrieval date, a locator where relevant, and reuse terms. Retrieval date is not publication date. We link to and summarise sources rather than republishing them. We use primary sources for policy, deadlines, eligibility and finance where possible, and triangulate contested or consequential claims.</p>
+  <h2>Allegations, responses and findings</h2>
+  <p>We keep apart an allegation, a company or government response, an official finding, and an independently evaluated outcome. Where these differ, we say so and date each one.</p>
+  <h2>Relationships between causes and effects</h2>
+  <dl class="facts">{vocab.relationship.map((v) => <><dt>{v.label}</dt><dd>{({ documented: 'The link is shown by evidence for this specific case.', plausible: 'A credible mechanism exists, but evidence for this case is incomplete.', hypothesis: 'A proposed link that has not yet been tested.' } as Record<string, string>)[v.id]}</dd></>)}</dl>
+  <h2>Finance records</h2>
+  <p>Funding records distinguish five states: strategy or stated interest, historical precedent, defined programme, open opportunity, and award or deployment. The instrument is recorded separately: grant, loan, equity, guarantee, technical assistance, public budget or mixed. We never add overlapping amounts into a total. We distinguish pledged, committed, awarded and disbursed money. A record is shown as open only with a verified application route. It is shown as closed automatically once its deadline passes. A record without a deadline is never closed automatically; it is flagged for re-verification.</p>
+  <h2>Review intervals</h2>
+  <ul>
+    <li>Open opportunities: weekly.</li>
+    <li>Active programmes and fast-moving policy: monthly.</li>
+    <li>Country, organisation and mineral records: quarterly.</li>
+    <li>Explainers: at least annually.</li>
+  </ul>
+  <p>These are editorial operating standards, not automated processes. Each page shows when it was last reviewed and when its next review is due. A page past its review date is marked as overdue.</p>
+  <h2>Editorial workflow</h2>
+  <p>Research → draft → source check → substantive review → publish → scheduled review → correction or archive. Substantive changes are recorded in the public version history of the site's repository.</p>
+  <h2>AI and automation</h2>
+  <p>AI tools may assist research and drafting. Content does not gain authority because a tool produced it. Every published claim must meet the same sourcing standard, and nothing about allegations, eligibility, funding amounts or legal interpretation is published without editorial review. There is no chatbot on this site.</p>
+  <p><a href={url('corrections/')}>How to request a correction</a></p>
+</Page>

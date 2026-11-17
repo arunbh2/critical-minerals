@@ -1,0 +1,33 @@
+---
+import Page from '../../layouts/Page.astro';
+import { EXPORTS } from '../../lib/exports';
+import { url } from '../../lib/url';
+---
+<Page title="Open data" kicker="For researchers and agents" description="Documented JSON exports of every public record on Critical Minerals, with JSON Schemas, stable IDs and filter semantics."
+  standfirst="Every public record on this site is available as JSON, generated from the same source as the pages.">
+  <h2>Exports</h2>
+  <div class="table-wrap">
+    <table>
+      <caption>Collections</caption>
+      <thead><tr><th scope="col">Collection</th><th scope="col">Contents</th><th scope="col">Schema</th></tr></thead>
+      <tbody>
+        {Object.entries(EXPORTS).map(([k, v]) => (
+          <tr><td><a href={url(`data/${k}.json`)}>{k}.json</a></td><td>{v}</td><td><a href={url(`data/schema/${k}.schema.json`)}>schema</a></td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <h2>Conventions</h2>
+  <ul>
+    <li><strong>Stable IDs.</strong> Each record has an <code>id</code> that matches its URL slug. Cross-references (<code>countries</code>, <code>minerals</code>, <code>issues</code>, <code>sources</code>, <code>claims</code>) use these IDs, and the build fails if any reference is broken.</li>
+    <li><strong>Dates.</strong> <code>YYYY-MM-DD</code>. Deadlines use full ISO 8601 with a timezone offset. <code>reviewed</code> and <code>lastVerified</code> record editorial checks, and editing a page does not change them.</li>
+    <li><strong>Unknown values</strong> are <code>null</code> and are never guessed.</li>
+    <li><strong>Finance status.</strong> <code>recordState</code> is one of strategy, precedent, programme, open or award. <code>accessStatusText</code> and <code>verificationStatusText</code> carry the human-readable status as of the build date. Amounts carry <code>stage</code> and <code>basis</code>. Do not sum them.</li>
+    <li><strong>Verification.</strong> <code>primary-checked</code> or <code>corroborated</code> (independent reporting; primary check pending).</li>
+  </ul>
+  <h2>Filter semantics</h2>
+  <p>List pages accept query parameters that combine with AND. A record matches a parameter if any of its values equals the parameter. For example, <a href={url('finance/?supports=governance&state=programme')}><code>finance/?supports=governance&amp;state=programme</code></a>. Parameters: finance (<code>supports</code>, <code>country</code>, <code>instrument</code>, <code>state</code>); policies (<code>jurisdiction</code>, <code>state</code>, <code>mineral</code>); organisations (<code>type</code>, <code>country</code>, <code>issue</code>); search (<code>q</code>).</p>
+  <h2>Reuse</h2>
+  <p>Our own summaries and record structures may be reused with attribution to Critical Minerals and a link to the record. Third-party sources keep their own terms: follow the links.</p>
+  <p>Also available: <a href={url('sitemap-index.xml')}>sitemap</a> · <a href={url('llms.txt')}>llms.txt</a> (a supplementary index).</p>
+</Page>

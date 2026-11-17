@@ -1,0 +1,381 @@
+[
+  {
+    "id": "iea",
+    "name": "International Energy Agency",
+    "type": "intergovernmental",
+    "role": "Publishes critical-minerals market outlooks, demand scenarios and a searchable database of national mineral policies.",
+    "geography": "Global",
+    "initiative": "Global Critical Minerals Outlook and policy database",
+    "deliveryModel": "Research, data and policy analysis for member and partner governments",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.iea.org/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing"
+    ],
+    "sources": [
+      "iea-gcmo-2025",
+      "iea-gcmo-2026"
+    ],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "unctad",
+    "name": "UN Trade and Development (UNCTAD)",
+    "type": "intergovernmental",
+    "role": "Analyses commodity dependence, trade and the conditions under which producing countries can add and retain value.",
+    "geography": "Global, with a focus on developing countries",
+    "initiative": "Commodities and development research",
+    "deliveryModel": "Research, intergovernmental deliberation and technical cooperation",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://unctad.org/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "eiti",
+    "name": "Extractive Industries Transparency Initiative",
+    "type": "multi-stakeholder",
+    "role": "Maintains a global standard under which implementing countries disclose information on contracts, licences, payments, revenues and beneficial ownership in oil, gas and mining.",
+    "geography": "Implementing countries worldwide, including Indonesia",
+    "initiative": "EITI Standard",
+    "deliveryModel": "Country-level multi-stakeholder groups of government, companies and civil society, with independent validation",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://eiti.org/",
+    "countries": [
+      "indonesia"
+    ],
+    "minerals": [],
+    "issues": [
+      "accountability-remedy",
+      "value-sharing"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "nrgi",
+    "name": "Natural Resource Governance Institute",
+    "type": "research",
+    "role": "Researches and advises on how countries govern oil, gas and mineral wealth, including fiscal terms, state-owned enterprises and transparency.",
+    "geography": "Global",
+    "initiative": "Natural resource governance research and advice",
+    "deliveryModel": "Policy research, country engagement and capacity building",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://resourcegovernance.org/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing",
+      "accountability-remedy"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "bhrrc",
+    "name": "Business & Human Rights Resource Centre",
+    "type": "civil-society",
+    "role": "Records allegations of human rights harm linked to companies and invites company responses, including through a tracker focused on transition minerals.",
+    "geography": "Global",
+    "initiative": "Transition minerals tracking",
+    "deliveryModel": "Public database of allegations and company responses",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.business-humanrights.org/",
+    "countries": [
+      "indonesia",
+      "india"
+    ],
+    "minerals": [],
+    "issues": [
+      "accountability-remedy",
+      "decent-work-safety"
+    ],
+    "sources": [
+      "bhrrc-morowali-2023"
+    ],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "oecd",
+    "name": "Organisation for Economic Co-operation and Development",
+    "type": "intergovernmental",
+    "role": "Maintains due diligence guidance on responsible mineral supply chains, widely referenced by regulation and industry schemes.",
+    "geography": "Global",
+    "initiative": "Due Diligence Guidance for Responsible Supply Chains of Minerals",
+    "deliveryModel": "Standards, peer learning and implementation support",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.oecd.org/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "accountability-remedy"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "ilo",
+    "name": "International Labour Organization",
+    "type": "intergovernmental",
+    "role": "Sets international labour standards, including on occupational safety and health in mines, and supports governments, employers and workers to apply them.",
+    "geography": "Global",
+    "initiative": "Labour standards for mining and industry",
+    "deliveryModel": "Tripartite standard setting with governments, employers and workers; technical cooperation",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.ilo.org/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "decent-work-safety"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "irma",
+    "name": "Initiative for Responsible Mining Assurance",
+    "type": "multi-stakeholder",
+    "role": "Operates an independent, third-party audit standard for industrial mine sites, governed jointly by companies, buyers, investors, unions, affected communities and civil society.",
+    "geography": "Global",
+    "initiative": "IRMA Standard for Responsible Mining",
+    "deliveryModel": "Independent site audits against a multi-stakeholder standard",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://responsiblemining.net/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "community-consent",
+      "accountability-remedy",
+      "water-climate-risk"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "world-bank",
+    "name": "World Bank",
+    "type": "financier",
+    "role": "Finances and advises governments on extractive-sector governance, including through a Climate-Smart Mining initiative.",
+    "geography": "Global",
+    "initiative": "Climate-Smart Mining Facility",
+    "deliveryModel": "Loans, grants, trust funds and technical assistance to governments",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.worldbank.org/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "water-climate-risk",
+      "value-sharing"
+    ],
+    "sources": [
+      "wb-csm",
+      "miningcom-csm-2019"
+    ],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "unido",
+    "name": "United Nations Industrial Development Organization",
+    "type": "intergovernmental",
+    "role": "Supports inclusive and sustainable industrial development, including work on industrial value chains relevant to minerals.",
+    "geography": "Global",
+    "initiative": "Industrial development cooperation",
+    "deliveryModel": "Technical cooperation, policy advice and convening",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.unido.org/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing",
+      "circularity-recovery"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "icmm",
+    "name": "International Council on Mining and Metals",
+    "type": "industry-initiative",
+    "role": "An industry association whose member companies commit to a set of mining principles and performance expectations.",
+    "geography": "Global",
+    "initiative": "Mining Principles",
+    "deliveryModel": "Member commitments with site-level validation",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.icmm.com/",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "accountability-remedy",
+      "decent-work-safety"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "global-battery-alliance",
+    "name": "Global Battery Alliance",
+    "type": "multi-stakeholder",
+    "role": "Convenes companies, governments and civil society on battery value chains, including work on a battery passport.",
+    "geography": "Global",
+    "initiative": "Battery passport",
+    "deliveryModel": "Multi-stakeholder convening and standards development",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.globalbattery.org/",
+    "countries": [],
+    "minerals": [
+      "cobalt",
+      "lithium",
+      "nickel",
+      "graphite"
+    ],
+    "issues": [
+      "circularity-recovery"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "cse",
+    "name": "Centre for Science and Environment",
+    "type": "research",
+    "role": "An Indian research and advocacy organisation that has examined how District Mineral Foundation funds are governed and spent.",
+    "geography": "India",
+    "initiative": "District Mineral Foundation analysis",
+    "deliveryModel": "Research, training and public advocacy",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.cseindia.org/",
+    "countries": [
+      "india"
+    ],
+    "minerals": [],
+    "issues": [
+      "value-sharing",
+      "community-consent"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "ceew",
+    "name": "Council on Energy, Environment and Water",
+    "type": "research",
+    "role": "An Indian policy research institution that publishes analysis on critical minerals for India's energy transition.",
+    "geography": "India",
+    "initiative": "Critical minerals research",
+    "deliveryModel": "Policy research and advice",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.ceew.in/",
+    "countries": [
+      "india"
+    ],
+    "minerals": [],
+    "issues": [
+      "value-sharing",
+      "circularity-recovery"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "jatam",
+    "name": "Mining Advocacy Network (JATAM)",
+    "type": "civil-society",
+    "role": "An Indonesian network that documents the social and environmental effects of mining and supports affected communities.",
+    "geography": "Indonesia",
+    "initiative": "Community documentation and advocacy",
+    "deliveryModel": "Community-based documentation, campaigning and legal support",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.jatam.org/",
+    "countries": [
+      "indonesia"
+    ],
+    "minerals": [
+      "nickel"
+    ],
+    "issues": [
+      "community-consent",
+      "water-climate-risk",
+      "accountability-remedy"
+    ],
+    "sources": [],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "ministry-of-mines-india",
+    "name": "Ministry of Mines, Government of India",
+    "type": "public-authority",
+    "role": "Sets mining policy for non-fuel minerals, publishes India's critical minerals list and runs central auctions of critical mineral blocks.",
+    "geography": "India",
+    "initiative": "Critical minerals list, auctions and National Critical Mineral Mission",
+    "deliveryModel": "Policy, regulation and auctions",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://mines.gov.in/",
+    "countries": [
+      "india"
+    ],
+    "minerals": [
+      "copper",
+      "lithium",
+      "cobalt",
+      "graphite",
+      "rare-earths",
+      "nickel"
+    ],
+    "issues": [
+      "value-sharing"
+    ],
+    "sources": [
+      "mines-india-cm-2023",
+      "pmindia-ncmm-2025"
+    ],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "esdm-indonesia",
+    "name": "Ministry of Energy and Mineral Resources, Republic of Indonesia",
+    "type": "public-authority",
+    "role": "Regulates mining in Indonesia, including the rules that ended exports of nickel ore.",
+    "geography": "Indonesia",
+    "initiative": "Mineral export and processing rules",
+    "deliveryModel": "Policy, licensing and regulation",
+    "evidenceNote": "Role summarised from the organisation's public mandate. Implementation and evaluated results are not assessed in this profile.",
+    "url": "https://www.esdm.go.id/",
+    "countries": [
+      "indonesia"
+    ],
+    "minerals": [
+      "nickel"
+    ],
+    "issues": [
+      "value-sharing"
+    ],
+    "sources": [
+      "iea-policy-indonesia-nickel"
+    ],
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  }
+]

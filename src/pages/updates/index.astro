@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { hrefFor } from '../../lib/content';
+import { formatDate } from '../../lib/status.js';
+const items = (await getCollection('updates')).sort((a, b) => b.data.eventDate.localeCompare(a.data.eventDate));
+---
+<Base title="Updates" description="Selected consequential developments in critical minerals, each dated and linked to its sources.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Updates' }]} />
+    <header class="reading"><p class="kicker red-rule">Updates</p><h1>Selected developments</h1>
+      <p class="standfirst">A small number of consequential developments, chosen for what they mean for workers, communities and the environment. This is not a live news feed. Each item shows the date of the event.</p></header>
+    <ul class="record-list reading">
+      {items.map((u) => <li><p class="kicker"><time datetime={u.data.eventDate}>{formatDate(u.data.eventDate)}</time></p><h3><a href={hrefFor('updates', u.id)}>{u.data.title}</a></h3><p>{u.data.summary}</p></li>)}
+    </ul>
+  </div>
+</Base>

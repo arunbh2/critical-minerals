@@ -1,0 +1,243 @@
+[
+  {
+    "id": "india-national-critical-mineral-mission",
+    "title": "National Critical Mineral Mission",
+    "provider": "Government of India (Ministry of Mines)",
+    "programme": "National Critical Mineral Mission",
+    "purpose": "Public programme to build domestic and overseas supply of critical minerals, from exploration and processing to recovery from end-of-life products.",
+    "supports": [
+      "industrial-infrastructure",
+      "circularity",
+      "technology-demonstration"
+    ],
+    "instruments": [
+      "public-budget"
+    ],
+    "recordState": "programme",
+    "geography": "India, with overseas asset acquisition",
+    "countries": [
+      "india"
+    ],
+    "minerals": [
+      "lithium",
+      "cobalt",
+      "graphite",
+      "rare-earths",
+      "copper",
+      "nickel"
+    ],
+    "issues": [
+      "value-sharing",
+      "circularity-recovery"
+    ],
+    "eligibleEntities": null,
+    "partnershipConditions": null,
+    "coFinancing": "A further ₹18,000 crore is expected from public sector undertakings and others. This is an expectation, not committed public money, and is not added to the government figure.",
+    "amount": {
+      "value": 16300,
+      "currency": "INR crore",
+      "basis": "total-envelope",
+      "stage": "target",
+      "note": "Approved government outlay over seven years."
+    },
+    "applicationRoute": null,
+    "opens": null,
+    "closes": null,
+    "sources": [
+      "pmindia-ncmm-2025"
+    ],
+    "lastVerified": "2026-11-17",
+    "verification": "corroborated",
+    "uncertainties": "No open application route for civil-society or community organisations has been identified. Component-level budgets, implementing agencies and disbursement have not been verified.",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "india-district-mineral-foundations",
+    "title": "District Mineral Foundations (PMKKKY)",
+    "provider": "District Mineral Foundation trusts, funded by mining leaseholder contributions",
+    "programme": "Pradhan Mantri Khanij Kshetra Kalyan Yojana (PMKKKY)",
+    "purpose": "District-level funds for the welfare of people and areas affected by mining, financed by statutory contributions from mining leaseholders.",
+    "supports": [
+      "community-development",
+      "governance"
+    ],
+    "instruments": [
+      "public-budget"
+    ],
+    "recordState": "programme",
+    "geography": "Mining districts in India",
+    "countries": [
+      "india"
+    ],
+    "minerals": [],
+    "issues": [
+      "value-sharing",
+      "community-consent",
+      "accountability-remedy"
+    ],
+    "eligibleEntities": "Allocation decisions sit with district trusts. Rules for who sits on trusts and how affected people participate vary by state and have changed over time.",
+    "partnershipConditions": null,
+    "coFinancing": null,
+    "amount": {
+      "value": null,
+      "currency": "INR",
+      "basis": "unknown",
+      "stage": "unknown",
+      "note": "More than ₹1 lakh crore had been collected cumulatively by early 2025. Collections are not the same as spending, and roughly half was reported unspent."
+    },
+    "applicationRoute": null,
+    "opens": null,
+    "closes": null,
+    "sources": [
+      "rs-dmf-2024",
+      "iwp-dmf-2025"
+    ],
+    "lastVerified": "2026-11-17",
+    "verification": "corroborated",
+    "uncertainties": "Current national rules, state-level variation and up-to-date collection and spending figures need primary verification.",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "indonesia-jetp",
+    "title": "Indonesia Just Energy Transition Partnership",
+    "provider": "International Partners Group of governments, with private finance mobilisation",
+    "programme": "Just Energy Transition Partnership (JETP)",
+    "purpose": "Finance package for Indonesia's power-sector transition away from coal, guided by a Comprehensive Investment and Policy Plan.",
+    "supports": [
+      "industrial-infrastructure",
+      "governance"
+    ],
+    "instruments": [
+      "mixed"
+    ],
+    "recordState": "programme",
+    "geography": "Indonesia",
+    "countries": [
+      "indonesia"
+    ],
+    "minerals": [
+      "nickel"
+    ],
+    "issues": [
+      "water-climate-risk"
+    ],
+    "eligibleEntities": null,
+    "partnershipConditions": null,
+    "coFinancing": "Half of the initial headline figure is a private-finance mobilisation goal rather than public money.",
+    "amount": {
+      "value": 20,
+      "currency": "USD billion",
+      "basis": "total-envelope",
+      "stage": "pledged",
+      "note": "Initial headline package: about US$10 billion in government pledges and about US$10 billion of private finance to be mobilised."
+    },
+    "applicationRoute": null,
+    "opens": null,
+    "closes": null,
+    "sources": [
+      "chn-jetp-2022",
+      "eeas-jetp-cipp"
+    ],
+    "lastVerified": "2026-11-17",
+    "verification": "corroborated",
+    "uncertainties": "This is an energy-sector programme, included because power supply for nickel processing affects emissions and local exposure. How captive power for industrial parks is treated, what share of the package is grant or loan, and how much has been disbursed have not been verified.",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "world-bank-climate-smart-mining",
+    "title": "Climate-Smart Mining Facility",
+    "provider": "World Bank (multi-donor trust fund)",
+    "programme": "Climate-Smart Mining Initiative",
+    "purpose": "Technical support to help resource-rich developing countries manage mineral production with lower climate and environmental footprints.",
+    "supports": [
+      "governance",
+      "adaptation-drr",
+      "circularity",
+      "technology-demonstration"
+    ],
+    "instruments": [
+      "technical-assistance",
+      "grant"
+    ],
+    "recordState": "programme",
+    "geography": "Developing and emerging economies",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "water-climate-risk",
+      "circularity-recovery"
+    ],
+    "eligibleEntities": "At launch, support was described as working with governments of developing and emerging economies.",
+    "partnershipConditions": null,
+    "coFinancing": "Initial supporters were the German government, Rio Tinto and Anglo American.",
+    "amount": {
+      "value": 50,
+      "currency": "USD million",
+      "basis": "total-envelope",
+      "stage": "target",
+      "note": "Target at launch in 2019, over five years. Current size not verified."
+    },
+    "applicationRoute": null,
+    "opens": null,
+    "closes": null,
+    "sources": [
+      "miningcom-csm-2019",
+      "wb-csm"
+    ],
+    "lastVerified": "2026-11-17",
+    "verification": "corroborated",
+    "uncertainties": "Facility status after its initial five-year horizon, current donors and any application route have not been verified.",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "eu-crma-strategic-projects",
+    "title": "EU strategic raw materials projects",
+    "provider": "European Commission",
+    "programme": "Critical Raw Materials Act strategic projects",
+    "purpose": "Designation of mining, processing and recycling projects that receive faster permitting and coordinated help to access finance.",
+    "supports": [
+      "industrial-infrastructure",
+      "circularity"
+    ],
+    "instruments": [
+      "mixed"
+    ],
+    "recordState": "programme",
+    "geography": "EU member states and selected third countries",
+    "countries": [],
+    "minerals": [
+      "lithium",
+      "nickel",
+      "cobalt",
+      "graphite",
+      "rare-earths",
+      "copper"
+    ],
+    "issues": [
+      "value-sharing",
+      "community-consent"
+    ],
+    "eligibleEntities": "Project promoters that meet the Act's criteria.",
+    "partnershipConditions": null,
+    "coFinancing": null,
+    "amount": {
+      "value": null,
+      "currency": null,
+      "basis": "unknown",
+      "stage": "unknown",
+      "note": "Designation is not itself funding. Reported investment needs for designated projects are capital requirements, not money awarded."
+    },
+    "applicationRoute": null,
+    "opens": null,
+    "closes": null,
+    "sources": [
+      "mw-eu-47-projects",
+      "spg-eu-13-projects",
+      "council-crma"
+    ],
+    "lastVerified": "2026-11-17",
+    "verification": "corroborated",
+    "uncertainties": "Timing of any further selection rounds and the finance actually mobilised for designated projects have not been verified.",
+    "reviewDue": "2026-12-17"
+  }
+]

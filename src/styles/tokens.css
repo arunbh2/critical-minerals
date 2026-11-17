@@ -1,0 +1,131 @@
+/*
+ * Foundation tokens: exact supplied palette values (Section 6).
+ * Components never use these directly; they use the semantic layer below,
+ * so one change propagates across pages, charts and tools.
+ */
+:root {
+  /* Red */
+  --red-base: #E3120B;
+  --red-60: #F6423C;
+
+  /* Chicago */
+  --chicago-20: #141F52;
+  --chicago-30: #1F2E7A;
+  --chicago-45: #2E45B8;
+  --chicago-55: #475ED1;
+  --chicago-90: #D6DBF5;
+  --chicago-95: #EBEDFA;
+
+  /* Hong Kong */
+  --hongkong-45: #1DC9A4;
+  --hongkong-55: #36E2BD;
+  --hongkong-90: #D2F9F0;
+  --hongkong-95: #E9FCF8;
+
+  /* Tokyo */
+  --tokyo-45: #C91D42;
+  --tokyo-55: #E2365B;
+  --tokyo-90: #F9D2DB;
+  --tokyo-95: #FCE9ED;
+
+  /* Singapore */
+  --singapore-55: #F97A1F;
+  --singapore-65: #FB9851;
+  --singapore-75: #FCB583;
+  --singapore-90: #FEE1CD;
+
+  /* New York */
+  --newyork-55: #F9C31F;
+  --newyork-65: #FBD051;
+  --newyork-75: #FCDE83;
+  --newyork-90: #FEF2CD;
+
+  /* London */
+  --london-5: #0D0D0D;
+  --london-10: #1A1A1A;
+  --london-20: #333333;
+  --london-35: #595959;
+  --london-70: #B3B3B3;
+  --london-85: #D9D9D9;
+  --london-95: #F2F2F2;
+  --london-100: #FFFFFF;
+
+  /* Los Angeles (warm paper) */
+  --losangeles-85: #E1DFD0;
+  --losangeles-90: #EBE9E0;
+  --losangeles-95: #F5F4EF;
+
+  /* Paris (cool canvas) */
+  --paris-85: #D0E1E1;
+  --paris-90: #E0EBEB;
+  --paris-95: #EFF5F5;
+}
+
+/* Semantic tokens: what components use. */
+:root {
+  --color-canvas: var(--losangeles-95);
+  --color-canvas-data: var(--paris-95);
+  --color-surface: var(--london-100);
+  --color-surface-muted: var(--losangeles-90);
+
+  --color-text: var(--london-10);
+  --color-heading: var(--london-5);
+  --color-text-muted: var(--london-35);
+  --color-rule: var(--london-85);
+  --color-rule-strong: var(--london-70);
+
+  --color-signature: var(--red-base);
+  --color-signature-on-dark: var(--red-60);
+
+  --color-link: var(--chicago-30);
+  --color-link-hover: var(--chicago-20);
+  --color-action: var(--chicago-30);
+  --color-action-hover: var(--chicago-20);
+  --color-action-text: var(--london-100);
+  --color-focus: var(--chicago-45);
+  --color-selection: var(--chicago-90);
+  --color-select-surface: var(--chicago-95);
+
+  --color-nav-bg: var(--chicago-20);
+  --color-nav-text: var(--london-100);
+
+  --color-status-open-bg: var(--hongkong-90);
+  --color-status-open-text: var(--london-5);
+  --color-status-open-edge: #0E6E59; /* darkened from Hong Kong 45 for a 3:1 boundary */
+  --color-status-review-bg: var(--newyork-90);
+  --color-status-review-text: var(--london-5);
+  --color-status-review-edge: #8A6A00; /* darkened from New York 55 for a 3:1 boundary */
+  --color-status-neutral-bg: var(--london-95);
+  --color-status-neutral-text: var(--london-10);
+  --color-status-neutral-edge: var(--london-35);
+
+  --color-error: var(--tokyo-45);
+  --color-error-bg: var(--tokyo-95);
+
+  --chart-1: var(--chicago-45);
+  --chart-2: var(--hongkong-45);
+  --chart-3: var(--singapore-55);
+  --chart-4: var(--tokyo-45);
+  --chart-annotation: var(--singapore-55);
+
+  /* Typography */
+  --font-serif: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Source Sans 3 Variable', 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --text-body: 1.0625rem;   /* 17px */
+  --text-body-lg: 1.125rem; /* 18px */
+  --leading-body: 1.55;
+  --measure: 66ch;
+
+  /* Spacing: element gaps and grid gutters (Section 6) */
+  --gap: 12px;
+  --gutter: 24px;
+  --page-max: 72rem;
+  --radius: 2px;
+}
+
+@media (min-width: 601px) {
+  :root {
+    --gap: 16px;
+    --gutter: 32px;
+  }
+}

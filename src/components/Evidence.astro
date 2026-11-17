@@ -1,0 +1,40 @@
+---
+import { claimsById } from '../lib/content';
+import { formatDate } from '../lib/status.js';
+import { url } from '../lib/url';
+import vocab from '../data/vocab.json';
+interface Props { claims?: string[]; meaning?: string[]; unclear?: string[]; level?: 2 | 3 }
+const { claims = [], meaning = [], unclear = [], level = 2 } = Astro.props;
+const items = await claimsById(claims);
+const H = level === 2 ? 'h2' : 'h3';
+const vlabel = (id: string) => vocab.verification.find((v) => v.id === id)?.label ?? id;
+---
+{items.length > 0 && (
+  <section class="evidence evidence-known" aria-labelledby="known-h">
+    <H id="known-h">What we know</H>
+    <ul class="claim-list">
+      {items.map((c) => (
+        <li id={`claim-${c.id}`}>
+          {c.data.text}
+          <span class="claim-cite"> As of {c.data.asOf}. Sources:{' '}
+            {c.data.sources.map((s, i) => (<><a href={url(`sources/#${s}`)}>{s}</a>{i < c.data.sources.length - 1 ? ', ' : ''}</>))}.
+            {' '}<span>{vlabel(c.data.verification)}.</span>
+          </span>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+{meaning.length > 0 && (
+  <section class="evidence evidence-meaning" aria-labelledby="meaning-h">
+    <H id="meaning-h">What this may mean</H>
+    <p class="meta">Editorial interpretation, not established fact.</p>
+    <ul class="claim-list">{meaning.map((m) => <li>{m}</li>)}</ul>
+  </section>
+)}
+{unclear.length > 0 && (
+  <section class="evidence evidence-unclear" aria-labelledby="unclear-h">
+    <H id="unclear-h">What remains unclear</H>
+    <ul class="claim-list">{unclear.map((m) => <li>{m}</li>)}</ul>
+  </section>
+)}

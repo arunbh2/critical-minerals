@@ -1,0 +1,16 @@
+---
+import { getCollection, render } from 'astro:content';
+import Entry from '../../layouts/Entry.astro';
+import { url } from '../../lib/url';
+import { formatDate } from '../../lib/status.js';
+export async function getStaticPaths() {
+  return (await getCollection('updates')).filter((e) => !e.data.draft).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<Entry type="updates" id={entry.id} kicker={`Update · ${formatDate(entry.data.eventDate)}`} data={entry.data}
+  crumbs={[{ label: 'Updates', href: url('updates/') }, { label: entry.data.title }]}>
+  <Content />
+  <section slot="after" class="notice"><strong>Why it matters:</strong> {entry.data.whyItMatters}</section>
+</Entry>

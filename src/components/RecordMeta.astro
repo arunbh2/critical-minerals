@@ -1,0 +1,18 @@
+---
+import { formatDate, verificationStatus } from '../lib/status.js';
+interface Props {
+  published?: string; updated?: string; reviewed: string; reviewDue: string;
+  minutes?: number; editor?: string; checkedLabel?: string;
+}
+const { published, updated, reviewed, reviewDue, minutes, editor, checkedLabel = 'Reviewed' } = Astro.props;
+const v = verificationStatus({ reviewed, reviewDue }, new Date());
+---
+<p class="meta record-meta" data-review-due={reviewDue}>
+  {minutes && <span>{minutes} min read · </span>}
+  {published && <span>Published <time datetime={published}>{formatDate(published)}</time> · </span>}
+  {updated && <span>Updated <time datetime={updated}>{formatDate(updated)}</time> · </span>}
+  <span>{checkedLabel} <time datetime={reviewed}>{formatDate(reviewed)}</time></span>
+  <span> · Next review <time datetime={reviewDue}>{formatDate(reviewDue)}</time></span>
+  {v.key === 'due' && <span> <span class="status status-review">Review overdue</span></span>}
+  {editor && <span> · Editor: {editor}</span>}
+</p>

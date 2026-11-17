@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Lifecycle from '../components/Lifecycle.astro';
+import { url } from '../lib/url';
+import { hrefFor } from '../lib/content';
+const countries = await getCollection('countries');
+const minerals = (await getCollection('minerals')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<Base title="Explore" description="Browse countries, minerals and lifecycle stages, and follow the connections between them.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Explore' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Explore</p>
+      <h1>Explore the landscape</h1>
+      <p class="standfirst">Move from a place to a mineral, from a mineral to an issue, and from an issue to the evidence and the people working on it.</p>
+    </header>
+    <section aria-labelledby="c-h">
+      <h2 id="c-h">Countries</h2>
+      <p class="meta">This release covers India and Indonesia in depth. Limited coverage of other countries does not mean nothing relevant is happening there.</p>
+      <div class="grid grid-2">
+        {countries.map((c) => (
+          <div class="panel">
+            <p class="kicker">{c.data.region}</p>
+            <h3><a href={hrefFor('countries', c.id)}>{c.data.title}</a></h3>
+            <p>{c.data.leadQuestion}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+    <section aria-labelledby="m-h">
+      <h2 id="m-h">Minerals and material groups</h2>
+      <ul class="record-list grid grid-2">
+        {minerals.map((m) => <li><h3><a href={hrefFor('minerals', m.id)}>{m.data.title}</a></h3><p>{m.data.summary}</p></li>)}
+      </ul>
+    </section>
+    <section aria-labelledby="l-h">
+      <h2 id="l-h">Lifecycle stages</h2>
+      <Lifecycle />
+    </section>
+    <section aria-labelledby="o-h">
+      <h2 id="o-h">Organisations</h2>
+      <p><a class="link-arrow" href={url('landscape/')}>See who works on what, where</a></p>
+    </section>
+  </div>
+</Base>
+<style>.record-list.grid { border-top: 0; } .record-list.grid > li { border-top: 1px solid var(--color-rule); }</style>

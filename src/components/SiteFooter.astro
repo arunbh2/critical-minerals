@@ -1,0 +1,43 @@
+---
+import { SITE } from '../site.config';
+import { url } from '../lib/url';
+---
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a href={url('')} class="footer-logo">
+        <img src={url('brand/logo-reverse.svg')} width="352" height="50" alt="Critical Minerals home" />
+      </a>
+      <p class="footer-note">{SITE.descriptor}. {SITE.coverage}</p>
+      <p class="footer-note">Listing an organisation, programme or policy is not an endorsement or a partnership.</p>
+    </div>
+    <nav aria-label="About this site">
+      <ul>
+        <li><a href={url('about/')}>About and ownership</a></li>
+        <li><a href={url('methodology/')}>Methodology</a></li>
+        <li><a href={url('sources/')}>Sources</a></li>
+        <li><a href={url('corrections/')}>Corrections</a></li>
+        <li><a href={url('privacy/')}>Privacy</a></li>
+        <li><a href={url('data/')}>Open data</a></li>
+        <li><a href={url('updates/')}>Updates</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+<style>
+  .site-footer { background: var(--chicago-20); color: var(--london-100); padding: 2.5rem 0 3rem; margin-top: 2rem; }
+  .footer-grid { display: grid; gap: var(--gutter); }
+  @media (min-width: 761px) { .footer-grid { grid-template-columns: 1.4fr 1fr; } }
+  .footer-logo { display: inline-block; line-height: 0; padding: 4px 0; }
+  .footer-logo img { width: 240px; height: auto; }
+  .footer-note { font-family: var(--font-sans); font-size: 0.95rem; color: var(--losangeles-90); max-width: 46ch; }
+  .site-footer ul { list-style: none; padding: 0; margin: 0; columns: 2; font-family: var(--font-sans); }
+  .site-footer li { margin: 0 0 8px; break-inside: avoid; }
+  .site-footer a { color: var(--london-100); }
+  .site-footer a:focus-visible { outline-color: var(--london-100); }
+  @media print {
+    .site-footer { background: #fff; color: #000; padding: 1rem 0 0; border-top: 1px solid #000; }
+    .footer-logo { display: none; }
+    .footer-note { color: #000; }
+  }
+</style>

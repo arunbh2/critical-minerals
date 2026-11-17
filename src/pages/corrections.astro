@@ -1,0 +1,14 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../site.config';
+---
+<Page title="Corrections" kicker="Accountability" description="How to report an error on Critical Minerals, and how corrections are made and recorded."
+  standfirst="If something on this site is wrong, out of date or unfair, we want to know.">
+  <h2>How to request a correction</h2>
+  <p>Open a public issue in the site's repository: <a href={SITE.correctionsUrl} rel="noopener">{SITE.correctionsUrl.replace('https://', '')}</a>. Include the page address, what you believe is wrong, and a source if you have one.</p>
+  <p><strong>Do not include personal or sensitive information</strong>, such as names of vulnerable people, testimony or contact details. Issues are public.</p>
+  <h2>What happens next</h2>
+  <p>An editor reviews the request against the sources. If a correction is needed, the page is updated, its review date is reset, and the change appears in the repository's public history. Significant corrections are noted on the page.</p>
+  <h2>Corrections made</h2>
+  <p>None yet. This is the first release.</p>
+</Page>

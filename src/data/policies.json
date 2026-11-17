@@ -1,0 +1,379 @@
+[
+  {
+    "id": "india-critical-minerals-list-2023",
+    "title": "India's list of critical minerals",
+    "jurisdiction": "India",
+    "issuingBody": "Ministry of Mines",
+    "state": "adopted",
+    "dates": {},
+    "primaryDocument": "mines-india-cm-2023",
+    "affectedActors": [
+      "Central and state mining authorities",
+      "Exploration and mining companies",
+      "Downstream manufacturers"
+    ],
+    "mechanism": "Identification list used to prioritise exploration, auctions and policy support.",
+    "funding": null,
+    "summary": "In June 2023 India published its first list of 30 critical minerals, identified by an expert committee using a staged assessment. The Ministry said the list would be revisited periodically.",
+    "implications": "The list shapes which minerals receive auction priority and public support. It does not itself establish protections for workers or communities in the places where these minerals are found.",
+    "countries": [
+      "india"
+    ],
+    "minerals": [
+      "lithium",
+      "cobalt",
+      "copper",
+      "graphite",
+      "rare-earths",
+      "nickel"
+    ],
+    "issues": [
+      "value-sharing"
+    ],
+    "sources": [
+      "mines-india-cm-2023"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "india-mmdr-amendment-2023",
+    "title": "Mines and Minerals (Development and Regulation) Amendment Act, 2023",
+    "jurisdiction": "India",
+    "issuingBody": "Parliament of India",
+    "state": "effective",
+    "dates": {
+      "effective": "2023-08-17"
+    },
+    "primaryDocument": "prs-mmdr-2023",
+    "affectedActors": [
+      "Central government",
+      "State governments",
+      "Exploration companies",
+      "Communities in mineral-bearing areas"
+    ],
+    "mechanism": "Central auctions of mining leases and composite licences for listed critical minerals; a new exploration licence for critical and deep-seated minerals.",
+    "funding": "Auction revenue accrues to state governments.",
+    "summary": "The amendment lets the central government auction concessions for listed critical minerals and creates an exploration licence intended to draw private investment into exploration.",
+    "implications": "Moving auctions to the centre changes who decides on concessions while revenue stays with states. How affected communities are informed and consulted before auction is a question to examine block by block.",
+    "countries": [
+      "india"
+    ],
+    "minerals": [
+      "lithium",
+      "cobalt",
+      "graphite",
+      "rare-earths",
+      "copper",
+      "nickel"
+    ],
+    "issues": [
+      "community-consent",
+      "value-sharing"
+    ],
+    "sources": [
+      "prs-mmdr-2023",
+      "iea-policy-mmdr-2023",
+      "pib-auction-tranche-2023"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "india-national-critical-mineral-mission-2025",
+    "title": "National Critical Mineral Mission",
+    "jurisdiction": "India",
+    "issuingBody": "Union Cabinet",
+    "state": "adopted",
+    "dates": {
+      "adopted": "2025-01-29"
+    },
+    "primaryDocument": "pmindia-ncmm-2025",
+    "affectedActors": [
+      "Ministry of Mines",
+      "Public sector undertakings",
+      "Private companies",
+      "Recyclers"
+    ],
+    "mechanism": "Seven-year mission spanning exploration, processing, overseas acquisition, stockpiling, processing parks and recycling.",
+    "funding": "₹16,300 crore government outlay; ₹18,000 crore expected from PSUs and others.",
+    "summary": "India's Cabinet approved a seven-year mission to build supply chains for critical minerals across the lifecycle.",
+    "implications": "The mission is mainly about supply security. Whether it includes requirements on worker safety, community participation or benefit sharing has not been verified and should be checked in the guidelines.",
+    "countries": [
+      "india"
+    ],
+    "minerals": [
+      "lithium",
+      "cobalt",
+      "graphite",
+      "rare-earths",
+      "copper",
+      "nickel"
+    ],
+    "issues": [
+      "value-sharing",
+      "circularity-recovery"
+    ],
+    "sources": [
+      "pmindia-ncmm-2025"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "india-battery-waste-rules-2022",
+    "title": "Battery Waste Management Rules, 2022",
+    "jurisdiction": "India",
+    "issuingBody": "Ministry of Environment, Forest and Climate Change",
+    "state": "amended",
+    "dates": {},
+    "primaryDocument": "pib-bwmr-2022",
+    "affectedActors": [
+      "Battery producers and importers",
+      "Recyclers and refurbishers",
+      "Informal collectors",
+      "Central Pollution Control Board"
+    ],
+    "mechanism": "Extended producer responsibility with registration, collection and recycling obligations and environmental compensation for non-fulfilment.",
+    "funding": null,
+    "summary": "Notified in August 2022, the rules make producers responsible for collecting and recycling waste batteries. They have since been amended, including changes to targets.",
+    "implications": "Formal producer responsibility can raise recovery, but it also affects informal collectors and repairers whose work and safety are rarely addressed by the rules themselves.",
+    "countries": [
+      "india"
+    ],
+    "minerals": [
+      "lithium",
+      "cobalt",
+      "nickel",
+      "graphite"
+    ],
+    "issues": [
+      "circularity-recovery",
+      "decent-work-safety"
+    ],
+    "sources": [
+      "pib-bwmr-2022",
+      "iea-policy-india-bwmr"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "indonesia-nickel-ore-export-ban",
+    "title": "Prohibition of nickel ore exports",
+    "jurisdiction": "Indonesia",
+    "issuingBody": "Ministry of Energy and Mineral Resources",
+    "state": "effective",
+    "dates": {
+      "effective": "2020-01-01"
+    },
+    "primaryDocument": "iea-policy-indonesia-nickel",
+    "affectedActors": [
+      "Nickel miners",
+      "Smelter and refinery investors",
+      "Workers in industrial parks",
+      "Communities near mines and parks"
+    ],
+    "mechanism": "Export prohibition on unprocessed ore to require domestic processing.",
+    "funding": null,
+    "summary": "Indonesia has banned exports of nickel ore since 1 January 2020 so that ore is processed domestically.",
+    "implications": "The ban is widely credited with attracting large processing investment. Who captures the added value, and who bears the safety, pollution and land costs of rapid industrial growth, are the central development questions.",
+    "countries": [
+      "indonesia"
+    ],
+    "minerals": [
+      "nickel",
+      "cobalt"
+    ],
+    "issues": [
+      "value-sharing",
+      "decent-work-safety",
+      "water-climate-risk"
+    ],
+    "sources": [
+      "iea-policy-indonesia-nickel"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "eu-critical-raw-materials-act",
+    "title": "Critical Raw Materials Act",
+    "jurisdiction": "European Union",
+    "issuingBody": "European Parliament and Council",
+    "state": "effective",
+    "dates": {
+      "adopted": "2024-04-11",
+      "effective": "2024-05-23"
+    },
+    "primaryDocument": "council-crma",
+    "affectedActors": [
+      "EU member states",
+      "Project promoters",
+      "Third-country suppliers",
+      "Recyclers"
+    ],
+    "mechanism": "Lists of critical and strategic raw materials, non-binding 2030 benchmarks, strategic project designation and supply monitoring.",
+    "funding": "No dedicated fund; strategic projects receive coordinated help to access finance.",
+    "summary": "The Act aims to diversify EU supply of critical raw materials through domestic extraction, processing and recycling, and through partnerships with third countries.",
+    "implications": "For producing countries the Act creates both demand and expectations. Whether partnerships deliver local processing, decent work and community benefit depends on terms negotiated project by project.",
+    "countries": [],
+    "minerals": [
+      "lithium",
+      "nickel",
+      "cobalt",
+      "graphite",
+      "rare-earths",
+      "copper"
+    ],
+    "issues": [
+      "value-sharing",
+      "circularity-recovery"
+    ],
+    "sources": [
+      "council-crma",
+      "mw-eu-47-projects",
+      "spg-eu-13-projects"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "eu-batteries-regulation",
+    "title": "Batteries Regulation (EU) 2023/1542",
+    "jurisdiction": "European Union",
+    "issuingBody": "European Parliament and Council",
+    "state": "effective",
+    "dates": {},
+    "primaryDocument": "eurlex-batteries",
+    "affectedActors": [
+      "Battery manufacturers and importers selling in the EU",
+      "Recyclers",
+      "Suppliers across battery value chains"
+    ],
+    "mechanism": "Lifecycle requirements including material recovery targets, minimum recycled content, due diligence and a digital battery passport.",
+    "funding": null,
+    "summary": "The regulation sets staged recovery and recycled-content requirements and requires a digital passport for larger batteries.",
+    "implications": "Requirements set in the EU travel through supply chains to producing and recycling countries, including India and Indonesia, with consequences for data, traceability and recyclers' working conditions.",
+    "countries": [],
+    "minerals": [
+      "lithium",
+      "cobalt",
+      "nickel",
+      "graphite"
+    ],
+    "issues": [
+      "circularity-recovery",
+      "accountability-remedy"
+    ],
+    "sources": [
+      "eurlex-batteries"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2027-02-17"
+  },
+  {
+    "id": "china-rare-earth-export-licensing-2025",
+    "title": "Export licensing for seven medium and heavy rare earth elements",
+    "jurisdiction": "China",
+    "issuingBody": "Ministry of Commerce",
+    "state": "effective",
+    "dates": {
+      "effective": "2025-04-04"
+    },
+    "primaryDocument": "csis-ree-2025",
+    "affectedActors": [
+      "Magnet and component manufacturers worldwide",
+      "Rare earth processors outside China"
+    ],
+    "mechanism": "Export licensing for listed elements and related products.",
+    "funding": null,
+    "summary": "China placed seven medium and heavy rare earth elements and related products under export licensing in April 2025.",
+    "implications": "Licensing in the dominant processing country affects prices and availability worldwide and accelerates efforts to build processing elsewhere, with new questions about where environmental burdens of separation will fall.",
+    "countries": [],
+    "minerals": [
+      "rare-earths"
+    ],
+    "issues": [
+      "value-sharing"
+    ],
+    "sources": [
+      "csis-ree-2025",
+      "orf-china-controls"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "china-graphite-export-permits-2023",
+    "title": "Export permits for certain graphite products",
+    "jurisdiction": "China",
+    "issuingBody": "Ministry of Commerce",
+    "state": "amended",
+    "dates": {},
+    "primaryDocument": "orf-china-controls",
+    "affectedActors": [
+      "Battery anode manufacturers",
+      "Graphite producers outside China"
+    ],
+    "mechanism": "Export permit requirements for listed graphite products.",
+    "funding": null,
+    "summary": "China introduced export permits for certain graphite products, effective from December 2023, and later widened the scope.",
+    "implications": "Graphite controls affect battery supply chains and add pressure for new graphite mining and processing elsewhere.",
+    "countries": [],
+    "minerals": [
+      "graphite"
+    ],
+    "issues": [
+      "value-sharing"
+    ],
+    "sources": [
+      "orf-china-controls"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2026-12-17"
+  },
+  {
+    "id": "drc-cobalt-export-measures-2025",
+    "title": "Cobalt export suspension and quotas",
+    "jurisdiction": "Democratic Republic of the Congo",
+    "issuingBody": "Strategic minerals regulator (ARECOMS)",
+    "state": "amended",
+    "dates": {
+      "effective": "2025-02-22"
+    },
+    "primaryDocument": "iea-policy-drc-cobalt",
+    "affectedActors": [
+      "Industrial cobalt producers",
+      "Artisanal miners and traders",
+      "Refiners abroad"
+    ],
+    "mechanism": "Temporary export suspension, replaced by export quotas.",
+    "funding": null,
+    "summary": "The DRC suspended cobalt exports in February 2025 and replaced the suspension with quotas in October 2025.",
+    "implications": "Supply management by the dominant producer shows producer governments using market power. Effects on artisanal miners' incomes and safety deserve separate attention.",
+    "countries": [],
+    "minerals": [
+      "cobalt"
+    ],
+    "issues": [
+      "value-sharing",
+      "decent-work-safety"
+    ],
+    "sources": [
+      "iea-policy-drc-cobalt"
+    ],
+    "verification": "corroborated",
+    "reviewed": "2026-11-17",
+    "reviewDue": "2026-12-17"
+  }
+]

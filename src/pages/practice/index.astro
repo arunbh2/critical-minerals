@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { hrefFor, vocabLabel } from '../../lib/content';
+import { url } from '../../lib/url';
+const items = (await getCollection('cases')).filter((c) => !c.data.draft);
+---
+<Base title="Evidence & practice" description="Traceable case studies of interventions in critical-minerals value chains, with evidence type, limitations and transfer conditions.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Evidence & practice' }]} />
+    <header class="reading"><p class="kicker red-rule">Evidence & practice</p><h1>What has been tried, and what do we know?</h1>
+      <p class="standfirst">Case studies record the intervention, the actors, the money, the mechanism and the evidence, and say clearly when a result is documented, plausible or still an untested hypothesis.</p></header>
+    <ul class="record-list reading">
+      {items.map((c) => <li><p class="kicker">{c.data.location} · {c.data.period}</p><h3><a href={hrefFor('cases', c.id)}>{c.data.title}</a></h3><p>{c.data.summary}</p><p class="meta"><span class="status">{vocabLabel('relationship', c.data.relationship)}</span> · {c.data.currentAsOf}</p></li>)}
+    </ul>
+    <div class="reading">
+      <h2>Using the evidence</h2>
+      <ul>
+        <li><a href={url('methodology/')}>How we assess evidence</a>: what counts as documented, plausible or hypothesis.</li>
+        <li><a href={url('sources/')}>Source register</a>: every source with publication and retrieval dates.</li>
+        <li><a href={url('updates/')}>Updates</a>: selected consequential developments, dated.</li>
+        <li><a href={url('policies/')}>Policy records</a> and <a href={url('landscape/')}>organisations</a>.</li>
+      </ul>
+      <p class="meta">This release publishes {items.length} case studies. Further cases are held back until their sources can be verified.</p>
+    </div>
+  </div>
+</Base>

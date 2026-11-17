@@ -1,0 +1,15 @@
+---
+import { accessStatus, verificationStatus, formatDate } from '../lib/status.js';
+interface Props { r: { recordState: string; opens: string | null; closes: string | null; lastVerified: string; reviewDue: string; verification: string } }
+const { r } = Astro.props;
+const now = new Date();
+const a = accessStatus(r, now);
+const v = verificationStatus(r, now);
+---
+<span class="status-pair">
+  <span class={`status status-${a.tone}`} data-access-status data-state={r.recordState} data-opens={r.opens ?? ''} data-closes={r.closes ?? ''}>{a.label}</span>
+  <span class={`status ${v.key === 'due' ? 'status-review' : ''}`} data-verification-status data-checked={r.lastVerified} data-due={r.reviewDue}>
+    <span data-label>{v.label}</span>&nbsp;<time datetime={r.lastVerified}>{formatDate(r.lastVerified)}</time>
+  </span>
+</span>
+<style>.status-pair { display: inline-flex; flex-wrap: wrap; gap: 6px; }</style>

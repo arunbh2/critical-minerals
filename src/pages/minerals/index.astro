@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { hrefFor } from '../../lib/content';
+import { url } from '../../lib/url';
+const items = (await getCollection('minerals')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<Base title="Minerals" description="Profiles of copper, lithium, nickel, cobalt, graphite and rare earth elements: uses, lifecycle, development questions and recovery options.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Explore', href: url('explore/') }, { label: 'Minerals' }]} />
+    <header class="reading"><p class="kicker red-rule">Mineral profiles</p><h1>Minerals and material groups</h1>
+      <p class="standfirst">What each material is, what it is used for, where its lifecycle runs, and the development questions it raises.</p></header>
+    <ul class="record-list reading">{items.map((m) => <li><h3><a href={hrefFor('minerals', m.id)}>{m.data.title}</a></h3><p>{m.data.summary}</p></li>)}</ul>
+  </div>
+</Base>

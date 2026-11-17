@@ -1,0 +1,124 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Lifecycle from '../components/Lifecycle.astro';
+import { url } from '../lib/url';
+import { hrefFor } from '../lib/content';
+import { formatDate } from '../lib/status.js';
+import { SITE } from '../site.config';
+const countries = await getCollection('countries');
+const updates = (await getCollection('updates')).sort((a, b) => b.data.eventDate.localeCompare(a.data.eventDate)).slice(0, 3);
+const counts = {
+  learn: (await getCollection('learn')).length,
+  minerals: (await getCollection('minerals')).length,
+  issues: (await getCollection('issues')).length,
+  orgs: (await getCollection('organisations')).length,
+  policies: (await getCollection('policies')).length,
+  finance: (await getCollection('finance')).length,
+  cases: (await getCollection('cases')).length,
+};
+---
+<Base title={SITE.name}>
+  <div class="wrap">
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="reading">
+        <h1 id="hero-h" class="red-rule">Critical minerals. Lasting benefits for people and places.</h1>
+        <p class="standfirst">As mineral investment reshapes economies, what decides whether workers, communities and the environment benefit? This guide connects mineral development with the people, policies, finance and evidence that answer that question.</p>
+        <p class="hero-actions">
+          <a class="btn btn-primary" href={url('start-here/')}>Start with the basics</a>
+          <a class="btn btn-secondary" href={url('explore/')}>Explore the landscape</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="why" aria-labelledby="why-h">
+      <h2 id="why-h">Why this matters</h2>
+      <div class="grid grid-3 why-grid">
+        <p>Copper, lithium, nickel, cobalt, graphite and rare earths link everyday technology and clean energy to mines, refineries, factories and recycling yards.</p>
+        <p>Governments call them critical and compete to secure them. Announcements and investment are growing fast. On their own, they do not show who benefits.</p>
+        <p>The development questions are about relationships: who decides, who captures value, who bears the risk, who pays, and whether promises become practice.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="entr-h">
+      <h2 id="entr-h">Where do you want to begin?</h2>
+      <div class="grid grid-3 entrances">
+        <a class="entrance" href={url('start-here/')}><span class="kicker">Understand the field</span><span class="entrance-q">What makes a mineral “critical”, and why should development colleagues care?</span><span class="link-arrow">Six-part learning journey</span></a>
+        <a class="entrance" href={url('issues/')}><span class="kicker">Examine a place or issue</span><span class="entrance-q">Who protects the contract worker, the fishing village, the informal recycler?</span><span class="link-arrow">People & environment</span></a>
+        <a class="entrance" href={url('finance/')}><span class="kicker">Follow policy and finance</span><span class="entrance-q">Is that funding announcement a strategy, a programme or an open call?</span><span class="link-arrow">Finance & policy</span></a>
+      </div>
+    </section>
+
+    <section aria-labelledby="lc-h">
+      <h2 id="lc-h">The lifecycle, and who is involved at each stage</h2>
+      <Lifecycle />
+    </section>
+
+    <section aria-labelledby="ctry-h">
+      <h2 id="ctry-h">In depth: India and Indonesia</h2>
+      <div class="grid grid-2">
+        {countries.map((c) => (
+          <article class="feature">
+            <p class="kicker red-rule">Country dossier · {c.data.region}</p>
+            <h3><a href={hrefFor('countries', c.id)}>{c.data.title}</a></h3>
+            <p class="feature-q">{c.data.leadQuestion}</p>
+            <p>{c.data.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section aria-labelledby="up-h">
+      <h2 id="up-h">Selected developments</h2>
+      <ul class="record-list">
+        {updates.map((u) => <li><p class="kicker"><time datetime={u.data.eventDate}>{formatDate(u.data.eventDate)}</time></p><h3><a href={hrefFor('updates', u.id)}>{u.data.title}</a></h3><p>{u.data.whyItMatters}</p></li>)}
+      </ul>
+      <p><a class="link-arrow" href={url('updates/')}>All updates</a></p>
+    </section>
+
+    <section class="tool-promo" aria-labelledby="tool-h">
+      <div class="reading">
+        <p class="kicker">Tool</p>
+        <h2 id="tool-h">Assess a community-benefit proposition</h2>
+        <p>A guided worksheet for a specific place and project. It separates what is documented from what is assumed and what is missing, and ends with the questions still to investigate. It gives no score and no verdict. Your answers stay in your browser.</p>
+        <p><a class="btn btn-inverse" href={url('tools/community-benefit/')}>Open the worksheet</a></p>
+      </div>
+    </section>
+
+    <section class="coverage" aria-labelledby="cov-h">
+      <h2 id="cov-h">What this guide covers, and how</h2>
+      <div class="grid grid-2">
+        <div>
+          <p><strong>Coverage.</strong> {SITE.coverage} This first release has {counts.learn} explainers, {counts.minerals} mineral profiles, {counts.issues} issue explainers, {counts.policies} policy records, {counts.finance} finance records, {counts.orgs} organisation profiles and {counts.cases} case studies.</p>
+          <p><strong>What is not here yet.</strong> First-hand community and worker perspectives, local-language material, and coverage of other producing countries.</p>
+        </div>
+        <div>
+          <p><strong>Evidence.</strong> Every page separates what we know, what it may mean and what remains unclear. Facts carry dated sources. Where a primary document has not yet been checked, we say so.</p>
+          <p><a href={url('methodology/')}>Methodology</a> · <a href={url('sources/')}>Sources</a> · <a href={url('about/')}>About and ownership</a> · <a href={url('corrections/')}>Corrections</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Base>
+<style>
+  section { margin-top: 3rem; }
+  .hero { margin-top: 2.25rem; }
+  .hero h1 { font-size: clamp(2.1rem, 1.4rem + 3.2vw, 3.4rem); max-width: 20ch; margin-top: 0; }
+  .hero h1.red-rule::before { margin-bottom: 18px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: var(--gap); margin-top: 1.5rem; }
+  .why-grid p { margin: 0; padding-top: 0.75rem; border-top: 2px solid var(--london-20); }
+  .entrance { display: flex; flex-direction: column; gap: 8px; padding: 1rem 1.1rem 1.1rem; background: var(--color-surface); border: 1px solid var(--color-rule); border-top: 3px solid var(--chicago-30); text-decoration: none; color: var(--color-text); }
+  .entrance:hover { border-color: var(--chicago-45); background: var(--color-select-surface); color: var(--color-text); }
+  .entrance-q { font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.35; color: var(--color-heading); flex: 1; }
+  .entrance .link-arrow { color: var(--color-link); }
+  .entrance .kicker { margin: 0; }
+  .feature { border-top: 1px solid var(--color-rule); padding-top: 0.5rem; }
+  .feature h3 { font-size: 1.6rem; margin: 0.2rem 0 0.4rem; }
+  .feature-q { color: var(--chicago-30); font-size: 1.1rem; }
+  .tool-promo { background: var(--chicago-20); color: var(--london-100); padding: 2rem 1.25rem; margin-left: -16px; margin-right: -16px; }
+  @media (min-width: 601px) { .tool-promo { padding: 2.25rem var(--gutter); margin-left: 0; margin-right: 0; } }
+  .tool-promo h2 { color: var(--london-100); margin-top: 0.2rem; }
+  .tool-promo .kicker { color: var(--losangeles-85); }
+  .coverage { border-top: 2px solid var(--london-20); padding-top: 0.5rem; }
+  .coverage p { font-size: 0.98rem; }
+</style>
