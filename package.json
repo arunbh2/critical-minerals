@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "node tools/build-counts.js && astro build && node tools/build-twins.js && pagefind --site dist",
+    "build": "node tools/build-counts.js && astro build && node tools/build-well-known.js && node tools/build-twins.js && pagefind --site dist",
     "preview": "astro preview",
     "validate": "node tools/check-data.js",
     "check:dist": "node tools/check-output.js",

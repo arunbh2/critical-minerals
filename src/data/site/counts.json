@@ -10,9 +10,9 @@
   "policies": 10,
   "financeRecords": 5,
   "openOpportunities": 0,
-  "sources": 40,
-  "claimsPublished": 0,
-  "claimsOriginalChecked": 0,
-  "claimsSecondary": 0,
-  "claimsHeldBack": 25
+  "sources": 55,
+  "claimsPublished": 13,
+  "claimsOriginalChecked": 3,
+  "claimsSecondary": 10,
+  "claimsHeldBack": 12
 }

@@ -1,0 +1,28 @@
+---
+import Page from '../layouts/Page.astro';
+import { PACKS, ASSISTANT_WARNING } from '../../tools/site-text.js';
+import { url } from '../lib/url';
+---
+<Page title="Use this guide with an AI assistant" shortTitle="Use with AI" kicker="Evidence packs" description="Download plain-text evidence packs to give an AI assistant, with starter questions and the evidence labels kept, so answers stay tied to checked sources."
+  standfirst="Each pack is one plain-text file per topic. Give it to an AI assistant along with your question, so the answers stay tied to checked, dated sources.">
+  <p class="notice"><strong>Remember:</strong> {ASSISTANT_WARNING}</p>
+  <h2>How to use a pack</h2>
+  <ol>
+    <li>Download the pack for your topic.</li>
+    <li>Attach it or paste it into your assistant, and ask it to answer only from the pack and to say when the pack does not answer the question.</li>
+    <li>Ask it to keep each fact&rsquo;s evidence label and date, and to separate facts from interpretation.</li>
+    <li>Open the cited sources for anything you plan to rely on.</li>
+  </ol>
+  <p>Packs contain only claims that passed the automated source check. Nothing is uploaded anywhere. You choose what to share with your assistant.</p>
+  <h2>Packs</h2>
+  <ul class="record-list">
+    {PACKS.map((p) => (
+      <li>
+        <h3><a href={url(`packs/${p.id}.txt`)} download>{p.title}</a></h3>
+        <p class="meta">Plain text · starter questions:</p>
+        <ul>{p.questions.map((q) => <li>{q}</li>)}</ul>
+      </li>
+    ))}
+  </ul>
+  <p>For the whole site in one file, use <a href={url('llms-full.txt')}>llms-full.txt</a>. Every page also has a Markdown version at its address followed by <code>index.md</code>.</p>
+</Page>

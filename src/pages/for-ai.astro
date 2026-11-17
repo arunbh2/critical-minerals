@@ -1,0 +1,42 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE, OWNERSHIP, STANDARDS, AGENT_DO, AGENT_AVOID, HOST_LIMITS, EVIDENCE_LABELS, CONTENT_SIGNALS, AI_USE } from '../../tools/site-text.js';
+import counts from '../data/site/counts.json';
+import { endpoints } from '../lib/ai';
+const e = endpoints(Astro.site);
+---
+<Page title="Information for AI systems and agents" shortTitle="For AI systems" kicker="Not a human?" description="What Critical Minerals offers AI systems and agents: endpoints, Markdown twins, open data, how to cite and how to use the content responsibly."
+  standfirst="This page is for AI systems, crawlers and agents, and for the people who build them. Nothing here is hidden from human readers.">
+  <p>The same content is available as <a href={e.forAiJson}>JSON</a> and <a href={e.forAiTxt}>plain text</a>. No authentication is needed (<a href={e.auth}>auth.md</a>).</p>
+  <h2>What this site is</h2>
+  <p>{SITE.description} {SITE.coverage}</p>
+  <p>{OWNERSHIP}</p>
+  <p class="sans">It currently publishes {counts.claimsPublished} claims: {counts.claimsOriginalChecked} checked against an original and {counts.claimsSecondary} reported by secondary sources. {counts.claimsHeldBack} further claims are held back until their evidence can be checked. It lists {counts.openOpportunities} open funding opportunities.</p>
+  <h2>Evidence labels</h2>
+  <dl class="facts">{EVIDENCE_LABELS.map((l) => <><dt>{l.label}</dt><dd>{l.explain}</dd></>)}</dl>
+  <h2>Please do</h2>
+  <ul>{AGENT_DO.map((s) => <li>{s}</li>)}</ul>
+  <h2>Please avoid</h2>
+  <ul>{AGENT_AVOID.map((s) => <li>{s}</li>)}</ul>
+  <p class="meta">These requests restate the site&rsquo;s own <a href="#standards">editorial standards</a>. They never ask an agent to act against its user or its own guidelines.</p>
+  <h2 id="standards">Editorial standards</h2>
+  <ul>{STANDARDS.map((s) => <li>{s}</li>)}</ul>
+  <h2>How AI is used here</h2>
+  <ul>{AI_USE.map((s) => <li>{s}</li>)}</ul>
+  <h2>Endpoints</h2>
+  <ul class="sans">
+    <li><a href={e.llms}>llms.txt</a> (short index) and <a href={e.llmsFull}>llms-full.txt</a> (every page as text)</li>
+    <li>A Markdown twin of every page at <code>&lt;page&gt;/index.md</code>, linked from each page head</li>
+    <li><a href={e.openapi}>OpenAPI description</a> and <a href={e.apiCatalog}>API catalogue</a></li>
+    {e.data.map((d) => <li>Data, {d.name}: <a href={d.json}>JSON</a>{d.csv && <> · <a href={d.csv}>CSV</a></>} · <a href={d.schema}>schema</a></li>)}
+    <li><a href={e.sitemap}>sitemap.xml</a> · <a href={e.sitemapJson}>sitemap.json</a> · <a href={e.changes}>changes.json</a> · <a href={e.feed}>Atom feed</a></li>
+    <li><a href={e.useWithAi}>Evidence packs</a> for use with an AI assistant</li>
+    <li><a href={e.agents}>agents.txt</a> · <a href={e.terms}>terms-of-use.md</a></li>
+  </ul>
+  <h2>Content signals</h2>
+  <p class="sans"><code>{Object.entries(CONTENT_SIGNALS).map(([k, v]) => `${k}=${v}`).join(', ')}</code>: search indexing, AI input and AI training are permitted. There is no text-and-data-mining reservation.</p>
+  <h2>What this host can do</h2>
+  <ul>{HOST_LIMITS.map((s) => <li>{s}</li>)}</ul>
+  <h2>How to cite</h2>
+  <p>See <a href={e.cite}>how to cite</a>. Corrections: <a href={SITE.correctionsUrl}>public issues</a>.</p>
+</Page>

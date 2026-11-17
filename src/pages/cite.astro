@@ -1,0 +1,20 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE, citation } from '../../tools/site-text.js';
+import { url, absoluteUrl } from '../lib/url';
+const example = citation({ title: 'Indonesia', url: absoluteUrl('countries/indonesia/', Astro.site), reviewed: '17 November 2026', accessed: '<date you accessed it>' });
+---
+<Page title="How to cite Critical Minerals" shortTitle="How to cite" kicker="Citation" description="How to cite pages, data and claims from Critical Minerals, with a citation pattern, an example and guidance on evidence labels and dates."
+  standfirst="Cite the specific page, its review date and the date you accessed it. Keep the evidence label with any fact you repeat.">
+  <h2>Pattern</h2>
+  <p class="panel sans">{citation({ title: '<page title>', url: '<page url>', reviewed: '<review date shown on the page>', accessed: '<date you accessed it>' })}</p>
+  <h2>Example</h2>
+  <p class="panel sans">{example}</p>
+  <h2>Citing a specific fact</h2>
+  <p>Each fact in a &ldquo;What we know&rdquo; section has its own anchor and cites the original sources. Where possible, cite the original source directly, and say that you found it through Critical Minerals. Keep the label: &ldquo;Checked against an original&rdquo; or &ldquo;Reported by secondary sources&rdquo;.</p>
+  <h2>Citing data</h2>
+  <p>Cite the export URL and its generated date, for example <a href={url('data/finance.json')}>data/finance.json</a>. See <a href={url('data/')}>open data</a>.</p>
+  <h2>Reuse</h2>
+  <p>{SITE.licence}</p>
+  <p>Found an error? <a href={url('corrections/')}>Request a correction</a>.</p>
+</Page>

@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Monthly rebuild keeps time-dependent output fresh (security.txt Expires, statuses).
+  schedule:
+    - cron: '23 5 1 * *'
 
 # Least privilege by default; Pages write and OIDC are granted only to the deploy job.
 permissions:
@@ -77,6 +80,8 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist
+          # Publish /.well-known/ (dot-folders are excluded by default).
+          include-hidden-files: true
 
   deploy:
     name: Deploy

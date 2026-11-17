@@ -1,0 +1,6 @@
+# Host configuration. This site is deployed by GitHub Actions (no Jekyll run), and the
+# workflow uploads dist/ with include-hidden-files: true so /.well-known/ is published.
+# This file covers the case where the site is ever published by Jekyll from a branch:
+# Jekyll hides dot-folders unless they are included.
+include:
+  - .well-known

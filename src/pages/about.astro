@@ -2,18 +2,24 @@
 import Page from '../layouts/Page.astro';
 import { url } from '../lib/url';
 import { SITE } from '../site.config';
+import { OWNERSHIP, AI_USE, STANDARDS } from '../../tools/site-text.js';
 ---
-<Page title="About and ownership" kicker="About" description="What Critical Minerals is, who it is for, how it is run, and what it is not."
+<Page title="About and ownership" shortTitle="About and approach" kicker="About" description="What Critical Minerals is, who it is for, how it is run, and what it is not."
   standfirst="Critical Minerals is a public-interest guide for people learning about critical minerals and for those making development and funding decisions about them.">
   <h2>Purpose</h2>
   <p>The guide asks one question: as mineral investment reshapes economies, what decides whether workers, communities and the environment benefit? It explains the field from first principles. It connects places, minerals and issues to evidence, policy and finance, and it helps readers frame better questions and interventions.</p>
   <h2>Who it is for</h2>
   <p>It is written first for development practitioners and funders who are new to minerals, and then for researchers, policy practitioners and civil-society organisations. Communities and workers are rights holders and knowledge contributors. We do not pretend that an English-language professional website automatically serves frontline communities.</p>
   <h2>Ownership and editorial arrangement</h2>
-  <p>Critical Minerals is an early-stage editorial project. It is not a registered organisation, and it has no members, partners, sponsors or endorsements. Named editorial attribution will be added once confirmed. Nothing on this site is published on behalf of another organisation.</p>
+  <p>{OWNERSHIP}</p>
   <p>Listing an organisation, programme or policy is not an endorsement or a partnership. Organisations listed have not reviewed or approved their profiles.</p>
   <h2>Coverage</h2>
   <p>{SITE.coverage} Limited coverage of other countries does not mean nothing relevant is happening there.</p>
+  <h2 id="approach">Approach</h2>
+  <ul>{STANDARDS.map((x) => <li>{x}</li>)}</ul>
+  <h2 id="ai">How AI is used</h2>
+  <ul>{AI_USE.map((x) => <li>{x}</li>)}</ul>
+  <p>Information for AI systems and agents is on <a href={url('for-ai/')}>a page of its own</a>.</p>
   <h2>How the site is built</h2>
   <p>The site is static and has no tracking, accounts or forms that send data anywhere. Its records are published as <a href={url('data/')}>open data</a>. Read the <a href={url('methodology/')}>methodology</a>, see the <a href={url('sources/')}>sources</a>, or <a href={url('corrections/')}>request a correction</a>.</p>
 </Page>

@@ -1,0 +1,55 @@
+// Plain-text rendering of the for-ai content, shared by /for-ai.txt and /agents.txt.
+import { SITE, OWNERSHIP, STANDARDS, AGENT_DO, AGENT_AVOID, HOST_LIMITS, EVIDENCE_LABELS, CONTENT_SIGNALS, ASSISTANT_WARNING, citation } from '../../tools/site-text.js';
+import counts from '../data/site/counts.json';
+import { endpoints } from './ai';
+
+export function forAiText(site: URL | undefined) {
+  const e = endpoints(site);
+  return [
+    `# ${SITE.name}: information for AI systems and agents`,
+    '',
+    SITE.description,
+    `Coverage: ${SITE.coverage}`,
+    `Ownership: ${OWNERSHIP}`,
+    `Published claims: ${counts.claimsPublished} (${counts.claimsOriginalChecked} checked against an original, ${counts.claimsSecondary} reported by secondary sources). Open funding opportunities listed: ${counts.openOpportunities}.`,
+    '',
+    'Authentication: none. Everything is public and read-only.',
+    `Content signals: ${Object.entries(CONTENT_SIGNALS).map(([k, v]) => `${k}=${v}`).join(', ')}`,
+    '',
+    '## Evidence labels',
+    ...EVIDENCE_LABELS.map((l) => `- ${l.label}: ${l.explain}`),
+    '',
+    '## Editorial standards',
+    ...STANDARDS.map((s) => `- ${s}`),
+    '',
+    '## Please do',
+    ...AGENT_DO.map((s) => `- ${s}`),
+    '',
+    '## Please avoid',
+    ...AGENT_AVOID.map((s) => `- ${s}`),
+    '',
+    '## What this host can do',
+    ...HOST_LIMITS.map((s) => `- ${s}`),
+    '',
+    '## How to cite',
+    citation({ title: '<page title>', url: '<page url>', reviewed: '<review date shown on the page>', accessed: '<date you accessed it>' }),
+    `More: ${e.cite}`,
+    '',
+    '## Endpoints',
+    `- Human page for AI systems: ${e.forAiPage}`,
+    `- JSON: ${e.forAiJson}`,
+    `- Index: ${e.llms}`,
+    `- Full text: ${e.llmsFull}`,
+    `- Sitemap: ${e.sitemap} and ${e.sitemapJson}`,
+    `- Changes: ${e.changes} and ${e.feed}`,
+    `- OpenAPI description: ${e.openapi}`,
+    `- API catalogue: ${e.apiCatalog}`,
+    ...e.data.map((d) => `- Data, ${d.name}: ${d.json}${d.csv ? ` and ${d.csv}` : ''}`),
+    ...e.packs.map((p) => `- Evidence pack, ${p.title}: ${p.url}`),
+    `- Markdown twin of any page: <page url>index.md`,
+    '',
+    `Note: ${ASSISTANT_WARNING}`,
+    `Corrections: ${SITE.correctionsUrl}`,
+    '',
+  ].join('\n');
+}

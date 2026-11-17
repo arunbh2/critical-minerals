@@ -20,7 +20,7 @@ interface Props {
 }
 const { type, id, kicker, data, crumbs, minutes, lead } = Astro.props;
 // Sources shown = sources named on the record plus sources behind its claims.
-const claimSources = (await claimsById(data.claims ?? [])).flatMap((c) => c.data.sources);
+const claimSources = (await claimsById(data.claims ?? [])).filter((c) => c.data.verification !== 'not-verified').flatMap((c) => c.data.evidenceSources.length ? c.data.evidenceSources : c.data.sources);
 const allSources = [...new Set([...(data.sources ?? []), ...claimSources])];
 const jsonld = [{
   '@context': 'https://schema.org',
