@@ -1,10 +1,10 @@
 {
   "batch": "2026-11-initial",
-  "appliedAt": "2026-11-17T05:51:50.632Z",
+  "appliedAt": "2026-11-17T05:55:20.767Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "not-verified",
       "evidenceSources": []
     },
@@ -22,7 +22,7 @@
     },
     {
       "claim": "c-gcmo-2026-growth",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "not-verified",
       "evidenceSources": []
     },
@@ -66,7 +66,7 @@
     },
     {
       "claim": "c-india-dmf-collections",
-      "from": "secondary",
+      "from": "not-verified",
       "to": "not-verified",
       "evidenceSources": [
         "iwp-dmf-2025"
@@ -80,19 +80,19 @@
     },
     {
       "claim": "c-india-bwmr-2022",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "not-verified",
       "evidenceSources": []
     },
     {
       "claim": "c-indonesia-ore-ban",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "not-verified",
       "evidenceSources": []
     },
     {
       "claim": "c-indonesia-nickel-share",
-      "from": "original-checked",
+      "from": "not-verified",
       "to": "original-checked",
       "evidenceSources": [
         "usgs-mcs-2025-nickel"
@@ -118,7 +118,7 @@
     },
     {
       "claim": "c-drc-export-2025",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "not-verified",
       "evidenceSources": []
     },
@@ -140,19 +140,19 @@
     },
     {
       "claim": "c-eu-crma",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "not-verified",
       "evidenceSources": []
     },
     {
       "claim": "c-eu-strategic-projects",
-      "from": "not-verified",
+      "from": "secondary",
       "to": "not-verified",
       "evidenceSources": []
     },
     {
       "claim": "c-eu-batteries",
-      "from": "not-verified",
+      "from": "original-checked",
       "to": "original-checked",
       "evidenceSources": [
         "eurlex-batteries"

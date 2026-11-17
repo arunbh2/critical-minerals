@@ -1,0 +1,22 @@
+{
+  "batch": "2026-11-third-pass",
+  "appliedAt": "2026-11-17T05:56:19.935Z",
+  "changes": [
+    {
+      "claim": "c-india-dmf-collections",
+      "from": "not-verified",
+      "to": "secondary",
+      "evidenceSources": [
+        "iwp-dmf-2025"
+      ]
+    },
+    {
+      "claim": "c-eu-strategic-projects",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "nsenergy-eu-13-2025"
+      ]
+    }
+  ]
+}

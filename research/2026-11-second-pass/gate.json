@@ -1,7 +1,7 @@
 {
   "batch": "2026-11-second-pass",
-  "gatedAt": "2026-11-17T05:52:51.333Z",
-  "checkedAt": "2026-11-17T05:52:51.304Z",
+  "gatedAt": "2026-11-17T05:56:17.307Z",
+  "checkedAt": "2026-11-17T05:56:17.273Z",
   "results": [
     {
       "claim": "c-refining-top3-2024",
@@ -163,37 +163,34 @@
     },
     {
       "claim": "c-eu-crma",
-      "status": "secondary",
+      "status": "not-verified",
       "terms": [
         {
           "term": "10%",
           "foundIn": [
-            "nrf-crma-2024",
-            "te-crma-2024"
+            "nrf-crma-2024"
           ]
         },
         {
           "term": "40%",
           "foundIn": [
-            "nrf-crma-2024",
-            "te-crma-2024"
+            "nrf-crma-2024"
           ]
         },
         {
           "term": "25%",
           "foundIn": [
-            "nrf-crma-2024",
-            "te-crma-2024"
+            "nrf-crma-2024"
           ]
         },
         {
           "term": "65%",
-          "foundIn": [
-            "te-crma-2024"
-          ]
+          "foundIn": []
         }
       ],
-      "missing": []
+      "missing": [
+        "65%"
+      ]
     },
     {
       "claim": "c-eu-strategic-projects",
@@ -276,14 +273,12 @@
         {
           "term": "battery waste management rules",
           "foundIn": [
-            "lawrbit-bwmr-2022",
             "mondaq-bwmr-2022"
           ]
         },
         {
           "term": "extended producer responsibility",
           "foundIn": [
-            "lawrbit-bwmr-2022",
             "mondaq-bwmr-2022"
           ]
         }
