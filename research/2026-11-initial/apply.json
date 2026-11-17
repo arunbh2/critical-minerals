@@ -1,0 +1,156 @@
+{
+  "batch": "2026-11-initial",
+  "appliedAt": "2026-11-17T05:45:04.158Z",
+  "changes": [
+    {
+      "claim": "c-refining-top3-2024",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-mining-top3-2024",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-growth-single-supplier",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-gcmo-2026-growth",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-india-cm-list-2023",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-india-ncmm-2025",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-india-ncmm-scope",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-india-mmdr-2023",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-india-first-tranche",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-india-dmf-collections",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-india-dmf-unspent",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-india-bwmr-2022",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-indonesia-nickel-share",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-morowali-2023",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-drc-cobalt-share",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-china-graphite-2023",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-china-ree-2025",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-eu-crma",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-eu-strategic-projects",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-eu-batteries",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-un-panel-2024",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-jetp-indonesia",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-wb-csm-2019",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    }
+  ]
+}

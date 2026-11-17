@@ -3,64 +3,97 @@
     "id": "c-refining-top3-2024",
     "text": "Across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from about 82% in 2020 to about 86% in 2024.",
     "sources": [
-      "iea-gcmo-2025"
+      "iea-gcmo-2025",
+      "iea-gcmo-2025-es",
+      "iea-gcmo-2025-overview"
     ],
-    "verification": "corroborated",
-    "asOf": "2024"
+    "verification": "not-verified",
+    "asOf": "2024",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-mining-top3-2024",
     "text": "Mining is less concentrated than refining: the average share of the three largest mining countries for the same minerals rose from about 73% in 2020 to about 77% in 2024.",
     "sources": [
-      "iea-gcmo-2025"
+      "iea-gcmo-2025",
+      "iea-gcmo-2025-es",
+      "iea-gcmo-2025-overview"
     ],
-    "verification": "corroborated",
-    "asOf": "2024"
+    "verification": "not-verified",
+    "asOf": "2024",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-growth-single-supplier",
     "text": "Around 90% of recent refined supply growth came from the single largest supplier of each mineral, for example Indonesia for nickel and China for cobalt and graphite.",
     "sources": [
-      "iea-gcmo-2025"
+      "iea-gcmo-2025",
+      "iea-gcmo-2025-es",
+      "iea-gcmo-2025-overview"
     ],
-    "verification": "corroborated",
-    "asOf": "2020–2024"
+    "verification": "not-verified",
+    "asOf": "2020–2024",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-gcmo-2026-growth",
     "text": "The IEA's 2026 outlook reported that China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals, and that expanding export restrictions had turned concentration into an immediate economic-security concern.",
     "sources": [
-      "iea-gcmo-2026"
+      "iea-gcmo-2026",
+      "iea-gcmo-2026-es",
+      "iea-news-2026"
     ],
-    "verification": "corroborated",
-    "asOf": "2026"
+    "verification": "not-verified",
+    "asOf": "2026",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-india-cm-list-2023",
     "text": "In June 2023 India's Ministry of Mines published its first list of 30 critical minerals, prepared by a committee constituted in November 2022. The Ministry said the list would be revisited periodically.",
     "sources": [
-      "mines-india-cm-2023"
+      "mines-india-cm-2023",
+      "iep-cm-2023",
+      "invezz-cm-2023"
     ],
-    "verification": "corroborated",
-    "asOf": "June 2023"
+    "verification": "not-verified",
+    "asOf": "June 2023",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-india-ncmm-2025",
     "text": "On 29 January 2025 India's Union Cabinet approved a National Critical Mineral Mission with a government outlay of ₹16,300 crore and a further ₹18,000 crore expected from public sector undertakings and others, a combined ₹34,300 crore over seven years.",
     "sources": [
-      "pmindia-ncmm-2025"
+      "pmindia-ncmm-2025",
+      "tribune-ncmm-2025"
     ],
-    "verification": "corroborated",
-    "asOf": "January 2025"
+    "verification": "not-verified",
+    "asOf": "January 2025",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-india-ncmm-scope",
     "text": "The Mission covers exploration, mining, beneficiation, processing and recovery from end-of-life products, and includes support for overseas mineral asset acquisition, a proposed national stockpile and mineral processing parks.",
     "sources": [
-      "pmindia-ncmm-2025"
+      "pmindia-ncmm-2025",
+      "tribune-ncmm-2025"
     ],
-    "verification": "corroborated",
-    "asOf": "January 2025"
+    "verification": "not-verified",
+    "asOf": "January 2025",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-india-mmdr-2023",
@@ -69,8 +102,11 @@
       "prs-mmdr-2023",
       "iea-policy-mmdr-2023"
     ],
-    "verification": "corroborated",
-    "asOf": "August 2023"
+    "verification": "not-verified",
+    "asOf": "August 2023",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-india-first-tranche",
@@ -78,8 +114,11 @@
     "sources": [
       "pib-auction-tranche-2023"
     ],
-    "verification": "corroborated",
-    "asOf": "November 2023"
+    "verification": "not-verified",
+    "asOf": "November 2023",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-india-dmf-collections",
@@ -88,8 +127,11 @@
       "rs-dmf-2024",
       "iwp-dmf-2025"
     ],
-    "verification": "corroborated",
-    "asOf": "early 2025"
+    "verification": "not-verified",
+    "asOf": "early 2025",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-india-dmf-unspent",
@@ -97,8 +139,11 @@
     "sources": [
       "iwp-dmf-2025"
     ],
-    "verification": "corroborated",
-    "asOf": "2024–2025"
+    "verification": "not-verified",
+    "asOf": "2024–2025",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-india-bwmr-2022",
@@ -107,8 +152,11 @@
       "pib-bwmr-2022",
       "iea-policy-india-bwmr"
     ],
-    "verification": "corroborated",
-    "asOf": "2022; amended since"
+    "verification": "not-verified",
+    "asOf": "2022; amended since",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-indonesia-ore-ban",
@@ -116,18 +164,26 @@
     "sources": [
       "iea-policy-indonesia-nickel"
     ],
-    "verification": "corroborated",
-    "asOf": "2020"
+    "verification": "not-verified",
+    "asOf": "2020",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-indonesia-nickel-share",
     "text": "Indonesia produced around 60% of the world's mined nickel in 2024, by far the largest share of any country.",
     "sources": [
+      "usgs-mcs-2025-nickel",
+      "spg-indonesia-2024",
       "usgs-mcs-2025",
       "iea-gcmo-2025"
     ],
-    "verification": "corroborated",
-    "asOf": "2024 estimate"
+    "verification": "not-verified",
+    "asOf": "2024 estimate",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-morowali-2023",
@@ -137,26 +193,37 @@
       "jakpost-morowali-2023-12-27",
       "bhrrc-morowali-2023"
     ],
-    "verification": "corroborated",
-    "asOf": "December 2023"
+    "verification": "not-verified",
+    "asOf": "December 2023",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-drc-cobalt-share",
     "text": "The Democratic Republic of the Congo produced roughly three-quarters of the world's mined cobalt in 2024.",
     "sources": [
+      "usgs-mcs-2025-cobalt",
       "usgs-mcs-2025"
     ],
-    "verification": "corroborated",
-    "asOf": "2024 estimate"
+    "verification": "not-verified",
+    "asOf": "2024 estimate",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-drc-export-2025",
     "text": "The Democratic Republic of the Congo suspended cobalt exports in February 2025 and replaced the suspension with an export quota system in October 2025.",
     "sources": [
-      "iea-policy-drc-cobalt"
+      "iea-policy-drc-cobalt",
+      "spg-drc-quotas-2025"
     ],
-    "verification": "corroborated",
-    "asOf": "2025"
+    "verification": "not-verified",
+    "asOf": "2025",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-china-graphite-2023",
@@ -164,8 +231,11 @@
     "sources": [
       "orf-china-controls"
     ],
-    "verification": "corroborated",
-    "asOf": "December 2023"
+    "verification": "not-verified",
+    "asOf": "December 2023",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-china-ree-2025",
@@ -174,8 +244,11 @@
       "csis-ree-2025",
       "orf-china-controls"
     ],
-    "verification": "corroborated",
-    "asOf": "April 2025"
+    "verification": "not-verified",
+    "asOf": "April 2025",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-eu-crma",
@@ -183,8 +256,11 @@
     "sources": [
       "council-crma"
     ],
-    "verification": "corroborated",
-    "asOf": "May 2024"
+    "verification": "not-verified",
+    "asOf": "May 2024",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-eu-strategic-projects",
@@ -193,8 +269,11 @@
       "mw-eu-47-projects",
       "spg-eu-13-projects"
     ],
-    "verification": "corroborated",
-    "asOf": "2025"
+    "verification": "not-verified",
+    "asOf": "2025",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-eu-batteries",
@@ -202,8 +281,11 @@
     "sources": [
       "eurlex-batteries"
     ],
-    "verification": "corroborated",
-    "asOf": "Regulation (EU) 2023/1542, as summarised"
+    "verification": "not-verified",
+    "asOf": "Regulation (EU) 2023/1542, as summarised",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-un-panel-2024",
@@ -212,8 +294,11 @@
       "un-panel-cetm",
       "iisd-un-panel-2024"
     ],
-    "verification": "corroborated",
-    "asOf": "September 2024"
+    "verification": "not-verified",
+    "asOf": "September 2024",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-jetp-indonesia",
@@ -222,8 +307,11 @@
       "chn-jetp-2022",
       "eeas-jetp-cipp"
     ],
-    "verification": "corroborated",
-    "asOf": "2022–2023"
+    "verification": "not-verified",
+    "asOf": "2022–2023",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   },
   {
     "id": "c-wb-csm-2019",
@@ -232,7 +320,10 @@
       "miningcom-csm-2019",
       "wb-csm"
     ],
-    "verification": "corroborated",
-    "asOf": "May 2019"
+    "verification": "not-verified",
+    "asOf": "May 2019",
+    "checkedAt": "2026-11-17",
+    "batch": "2026-11-initial",
+    "evidenceSources": []
   }
 ]

@@ -1,0 +1,52 @@
+name: Verify sources
+
+# Fetches every staged source (HTML or PDF), records which claim terms it contains,
+# gates claims, applies the labels and writes the ledger. Run manually on a branch to
+# commit the results there; the monthly run on main only reports, so evidence that
+# has gone missing (link rot, changed pages) is noticed without changing the site.
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: Research batch folder under research/ (blank = latest)
+        required: false
+        default: ''
+  schedule:
+    - cron: '17 3 7 * *'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Stage
+        run: node tools/research-stage.js ${{ inputs.batch }}
+      - name: Fetch sources and record found terms
+        run: node tools/verify-sources.js ${{ inputs.batch }}
+      - name: Gate claims
+        run: node tools/research-gate.js ${{ inputs.batch }}
+      - name: Apply labels
+        run: node tools/research-apply.js ${{ inputs.batch }}
+      - name: Write ledger
+        run: node tools/research-ledger.js ${{ inputs.batch }}
+      - name: Summary
+        run: cat research/*/ledger.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit results to this branch (manual runs on branches other than main)
+        if: github.event_name == 'workflow_dispatch' && github.ref != 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/inbox research src/data/claims.json
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -m "Record source verification results"
+          git push
