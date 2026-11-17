@@ -7,11 +7,16 @@ export const readJson = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
 export const writeJson = (p, v) => writeFileSync(join(ROOT, p), JSON.stringify(v, null, 2) + '\n');
 export const exists = (p) => existsSync(join(ROOT, p));
 
+/** Batch folders sort alphabetically in the order they were created. */
+export const BATCH_NAME = /^\d{4}-\d{2}-\d+-[a-z0-9-]+$/;
+
 /** Latest batch name (folders under research/ sort by date prefix), or the one given. */
 export function batchName(arg) {
   if (arg) return arg;
   const dirs = readdirSync(join(ROOT, 'research'), { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).sort();
   if (!dirs.length) throw new Error('No research batches found under research/.');
+  const bad = dirs.filter((d) => !BATCH_NAME.test(d));
+  if (bad.length) throw new Error(`research/${bad[0]}: batch names must be YYYY-MM-N-label (N = sequence) so that alphabetical order is date order. Fix: rename the folder and data/inbox/<batch>.`);
   return dirs.at(-1);
 }
 

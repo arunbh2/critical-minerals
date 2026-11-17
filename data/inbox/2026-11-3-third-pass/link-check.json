@@ -1,0 +1,110 @@
+{
+  "batch": "2026-11-3-third-pass",
+  "checkedAt": "2026-11-17T05:59:22.831Z",
+  "results": [
+    {
+      "source": "iwp-dmf-2025",
+      "url": "https://www.indiawaterportal.org/governance-and-policy/minings-promise-communities-plight-unearthing-the-truth-about-indias-district-mineral-foundations",
+      "finalUrl": "https://www.indiawaterportal.org/governance-and-policy/minings-promise-communities-plight-unearthing-the-truth-about-indias-district-mineral-foundations",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 10558,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-india-dmf-collections",
+          "found": [
+            "district mineral foundation*",
+            "lakh crore",
+            "odisha",
+            "chhattisgarh",
+            "jharkhand"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "rs-dmf-2024",
+      "url": "https://rsdebate.nic.in/bitstream/123456789/752721/1/PQ_266_16122024_U2348_p513_p513.pdf",
+      "finalUrl": "https://rsdebate.nic.in/bitstream/123456789/752721/1/PQ_266_16122024_U2348_p513_p513.pdf",
+      "status": 0,
+      "contentType": "",
+      "textLength": 0,
+      "error": "fetch failed",
+      "checks": [
+        {
+          "claim": "c-india-dmf-collections",
+          "found": [],
+          "missing": [
+            "district mineral foundation*",
+            "lakh crore",
+            "odisha",
+            "chhattisgarh",
+            "jharkhand"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "mw-eu-47-projects",
+      "url": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
+      "finalUrl": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-strategic-projects",
+          "found": [],
+          "missing": [
+            "47 strategic projects | 47 projects",
+            "13 strategic projects | 13 overseas | 13 projects | 13 new",
+            "strategic projects"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "nsenergy-eu-13-2025",
+      "url": "https://www.nsenergybusiness.com/news/eu-endorses-13-overseas-strategic-projects-for-raw-material-access",
+      "finalUrl": "https://www.nsenergybusiness.com/news/eu-endorses-13-overseas-strategic-projects-for-raw-material-access/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 9906,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-strategic-projects",
+          "found": [
+            "47 strategic projects | 47 projects",
+            "13 strategic projects | 13 overseas | 13 projects | 13 new",
+            "strategic projects"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "spg-eu-13-projects",
+      "url": "https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc",
+      "finalUrl": "https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc",
+      "status": 403,
+      "contentType": "text/html",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-strategic-projects",
+          "found": [],
+          "missing": [
+            "47 strategic projects | 47 projects",
+            "13 strategic projects | 13 overseas | 13 projects | 13 new",
+            "strategic projects"
+          ]
+        }
+      ]
+    }
+  ]
+}

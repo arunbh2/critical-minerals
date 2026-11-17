@@ -1,0 +1,105 @@
+{
+  "batch": "2026-11-2-second-pass",
+  "appliedAt": "2026-11-17T05:59:20.721Z",
+  "changes": [
+    {
+      "claim": "c-refining-top3-2024",
+      "from": "not-verified",
+      "to": "secondary",
+      "evidenceSources": [
+        "miningcom-gcmo-2025"
+      ]
+    },
+    {
+      "claim": "c-mining-top3-2024",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": []
+    },
+    {
+      "claim": "c-growth-single-supplier",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": [
+        "miningcom-gcmo-2025",
+        "northernminer-gcmo-2025"
+      ]
+    },
+    {
+      "claim": "c-gcmo-2026-growth",
+      "from": "not-verified",
+      "to": "secondary",
+      "evidenceSources": [
+        "gmr-gcmo-2026"
+      ]
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "from": "not-verified",
+      "to": "secondary",
+      "evidenceSources": [
+        "aljazeera-nickel-2019"
+      ]
+    },
+    {
+      "claim": "c-indonesia-nickel-share",
+      "from": "original-checked",
+      "to": "not-verified",
+      "evidenceSources": [
+        "usgs-mcs-2025-nickel"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "from": "not-verified",
+      "to": "secondary",
+      "evidenceSources": [
+        "kitco-drc-quotas-2025"
+      ]
+    },
+    {
+      "claim": "c-eu-crma",
+      "from": "not-verified",
+      "to": "not-verified",
+      "evidenceSources": [
+        "nrf-crma-2024"
+      ]
+    },
+    {
+      "claim": "c-eu-strategic-projects",
+      "from": "not-verified",
+      "to": "secondary",
+      "evidenceSources": [
+        "mw-eu-47-projects",
+        "nsenergy-eu-13-2025"
+      ]
+    },
+    {
+      "claim": "c-eu-batteries",
+      "from": "original-checked",
+      "to": "original-checked",
+      "evidenceSources": [
+        "eurlex-batteries",
+        "erp-batteries-2023"
+      ]
+    },
+    {
+      "claim": "c-india-bwmr-2022",
+      "from": "not-verified",
+      "to": "secondary",
+      "evidenceSources": [
+        "lawrbit-bwmr-2022",
+        "mondaq-bwmr-2022"
+      ]
+    },
+    {
+      "claim": "c-wb-csm-2019",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "miningcom-csm-2019",
+        "wb-csm"
+      ]
+    }
+  ]
+}

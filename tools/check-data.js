@@ -99,7 +99,7 @@ for (const f of js.finance) {
 
 // Every claim used somewhere; every source used somewhere (orphans are a smell).
 const usedClaims = new Set(Object.values(md).flat().flatMap((e) => e.data.claims ?? []));
-for (const c of js.claims) if (!usedClaims.has(c.id)) err(`claims/${c.id}: not used on any page`);
+for (const c of js.claims) if (c.data.verification !== 'not-verified' && !usedClaims.has(c.id)) err(`claims/${c.id}: published claim not used on any page. Fix: cite it in a page's claims list, or remove it.`);
 const usedSources = new Set([
   ...Object.values(md).flat().flatMap((e) => e.data.sources ?? []),
   ...js.claims.flatMap((c) => c.data.sources),

@@ -42,7 +42,7 @@ jobs:
       - name: Stage, fetch, gate, apply and write the ledger for each batch, oldest first
         # Later batches re-judge claims from earlier ones, so apply runs in date order.
         run: |
-          if [ -n "${{ inputs.batch }}" ]; then batches="${{ inputs.batch }}"; else batches=$(ls -d research/*/ | xargs -n1 basename | sort); fi
+          if [ -n "${{ inputs.batch }}" ]; then batches="${{ inputs.batch }}"; else batches=$(ls -d research/*/ | xargs -n1 basename | sort -V); fi
           for b in $batches; do
             echo "::group::Batch $b"
             node tools/research-stage.js "$b"

@@ -1,0 +1,668 @@
+{
+  "batch": "2026-11-2-second-pass",
+  "checkedAt": "2026-11-17T05:59:20.664Z",
+  "results": [
+    {
+      "source": "iea-gcmo-2025-es",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
+      "finalUrl": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-refining-top3-2024",
+          "found": [],
+          "missing": [
+            "86%",
+            "82%"
+          ]
+        },
+        {
+          "claim": "c-mining-top3-2024",
+          "found": [],
+          "missing": [
+            "77%",
+            "73%"
+          ]
+        },
+        {
+          "claim": "c-growth-single-supplier",
+          "found": [],
+          "missing": [
+            "90%",
+            "indonesia",
+            "nickel",
+            "cobalt",
+            "graphite"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "miningcom-gcmo-2025",
+      "url": "https://www.mining.com/?p=1179474",
+      "finalUrl": "https://www.mining.com/?p=1179474",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 9289,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-refining-top3-2024",
+          "found": [
+            "86%",
+            "82%"
+          ],
+          "missing": []
+        },
+        {
+          "claim": "c-mining-top3-2024",
+          "found": [],
+          "missing": [
+            "77%",
+            "73%"
+          ]
+        },
+        {
+          "claim": "c-growth-single-supplier",
+          "found": [
+            "indonesia",
+            "nickel",
+            "cobalt",
+            "graphite"
+          ],
+          "missing": [
+            "90%"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "northernminer-gcmo-2025",
+      "url": "https://www.northernminer.com/commodities-markets/china-still-controls-critical-minerals-despite-efforts-iea/1003878837/",
+      "finalUrl": "https://www.northernminer.com/subscribe-login/?id=1003878837",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 4953,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-refining-top3-2024",
+          "found": [],
+          "missing": [
+            "86%",
+            "82%"
+          ]
+        },
+        {
+          "claim": "c-mining-top3-2024",
+          "found": [],
+          "missing": [
+            "77%",
+            "73%"
+          ]
+        },
+        {
+          "claim": "c-growth-single-supplier",
+          "found": [
+            "indonesia",
+            "nickel"
+          ],
+          "missing": [
+            "90%",
+            "cobalt",
+            "graphite"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "iea-news-2026",
+      "url": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
+      "finalUrl": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-gcmo-2026-growth",
+          "found": [],
+          "missing": [
+            "three-quarters | three quarters",
+            "export restrictions"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "gmr-gcmo-2026",
+      "url": "https://www.globalminingreview.com/mining/17072026/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk/",
+      "finalUrl": "https://www.globalminingreview.com/mining/17072026/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 9110,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-gcmo-2026-growth",
+          "found": [
+            "three-quarters | three quarters",
+            "export restrictions"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "iea-policy-indonesia-nickel",
+      "url": "https://www.iea.org/policies/16084-prohibition-of-the-export-of-nickel-ore",
+      "finalUrl": "https://www.iea.org/policies/16084-prohibition-of-the-export-of-nickel-ore",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-indonesia-ore-ban",
+          "found": [],
+          "missing": [
+            "nickel ore",
+            "january 2020 | 1 january 2020"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "aljazeera-nickel-2019",
+      "url": "https://www.aljazeera.com/economy/2019/9/2/worlds-biggest-nickel-ore-maker-bans-exports-from-january-2020",
+      "finalUrl": "https://www.aljazeera.com/economy/2019/9/2/worlds-biggest-nickel-ore-maker-bans-exports-from-january-2020",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 4004,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-indonesia-ore-ban",
+          "found": [
+            "nickel ore",
+            "january 2020 | 1 january 2020"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "nrf-nickel-regulation",
+      "url": "https://www.nortonrosefulbright.com/en/knowledge/publications/b571b094/indonesia-amends-regulation-on-nickel-export-to-boost-production-of-value-added-products",
+      "finalUrl": "https://www.nortonrosefulbright.com/en/knowledge/publications",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 5993,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-indonesia-ore-ban",
+          "found": [],
+          "missing": [
+            "nickel ore",
+            "january 2020 | 1 january 2020"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "usgs-mcs-2025-nickel",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-nickel.pdf",
+      "finalUrl": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-nickel.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "textLength": 6877,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-indonesia-nickel-share",
+          "found": [
+            "indonesia"
+          ],
+          "missing": [
+            "60% | 62% | 61.6% | 60.2%"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "nasdaq-nickel-producers",
+      "url": "https://www.nasdaq.com/articles/top-9-nickel-producing-countries",
+      "finalUrl": "https://www.nasdaq.com/articles/top-9-nickel-producing-countries",
+      "status": 0,
+      "contentType": "",
+      "textLength": 0,
+      "error": "timeout",
+      "checks": [
+        {
+          "claim": "c-indonesia-nickel-share",
+          "found": [],
+          "missing": [
+            "indonesia",
+            "60% | 62% | 61.6% | 60.2%"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "spg-indonesia-2024",
+      "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/11/indonesia-mining-by-the-numbers-2024",
+      "finalUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/11/indonesia-mining-by-the-numbers-2024",
+      "status": 403,
+      "contentType": "text/html",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-indonesia-nickel-share",
+          "found": [],
+          "missing": [
+            "indonesia",
+            "60% | 62% | 61.6% | 60.2%"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "iea-policy-drc-cobalt",
+      "url": "https://www.iea.org/policies/28969-temporary-suspension-of-cobalt-export-from-the-democratic-republic-of-congo",
+      "finalUrl": "https://www.iea.org/policies/28969-temporary-suspension-of-cobalt-export-from-the-democratic-republic-of-congo",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-drc-export-2025",
+          "found": [],
+          "missing": [
+            "cobalt",
+            "suspen* | ban",
+            "quota*"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "kitco-drc-quotas-2025",
+      "url": "https://www.kitco.com/news/off-the-wire/2025-10-06/congo-permanently-ban-cobalt-exporters-breach-quotas",
+      "finalUrl": "https://www.kitco.com/news/off-the-wire/2025-10-06/congo-permanently-ban-cobalt-exporters-breach-quotas",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 4500,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-drc-export-2025",
+          "found": [
+            "cobalt",
+            "suspen* | ban",
+            "quota*"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "mw-drc-quotas-2025",
+      "url": "https://www.miningweekly.com/article/congo-weighs-cobalt-export-quotas-to-revive-prices-amid-supply-glut-2025-02-26",
+      "finalUrl": "https://www.miningweekly.com/article/congo-weighs-cobalt-export-quotas-to-revive-prices-amid-supply-glut-2025-02-26",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-drc-export-2025",
+          "found": [],
+          "missing": [
+            "cobalt",
+            "suspen* | ban",
+            "quota*"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "spg-drc-quotas-2025",
+      "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/10/drc-cobalt-export-quotas-to-support-cobalt-prices-though-challenges-loom",
+      "finalUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/10/drc-cobalt-export-quotas-to-support-cobalt-prices-though-challenges-loom",
+      "status": 403,
+      "contentType": "text/html",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-drc-export-2025",
+          "found": [],
+          "missing": [
+            "cobalt",
+            "suspen* | ban",
+            "quota*"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "council-crma",
+      "url": "https://www.consilium.europa.eu/en/policies/the-critical-raw-materials-act/",
+      "finalUrl": "https://www.consilium.europa.eu/en/policies/the-critical-raw-materials-act/",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-crma",
+          "found": [],
+          "missing": [
+            "10%",
+            "40%",
+            "25%",
+            "65%"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "nrf-crma-2024",
+      "url": "https://connections.nortonrosefulbright.com/post/102j3ah/the-critical-raw-materials-act-has-been-formally-adopted-what-do-you-need-to-kno",
+      "finalUrl": "https://connections.nortonrosefulbright.com/post/102j3ah/the-critical-raw-materials-act-has-been-formally-adopted-what-do-you-need-to-kno",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 9195,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-crma",
+          "found": [
+            "10%",
+            "40%",
+            "25%"
+          ],
+          "missing": [
+            "65%"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "te-crma-2024",
+      "url": "https://www.transportenvironment.org/uploads/files/2024_09_CRMA_implementation_briefing.pdf",
+      "finalUrl": "https://www.transportenvironment.org/uploads/files/2024_09_CRMA_implementation_briefing.pdf",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-crma",
+          "found": [],
+          "missing": [
+            "10%",
+            "40%",
+            "25%",
+            "65%"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "mw-eu-47-projects",
+      "url": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
+      "finalUrl": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 17345,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-strategic-projects",
+          "found": [
+            "47",
+            "13",
+            "strategic projects"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "nsenergy-eu-13-2025",
+      "url": "https://www.nsenergybusiness.com/news/eu-endorses-13-overseas-strategic-projects-for-raw-material-access",
+      "finalUrl": "https://www.nsenergybusiness.com/news/eu-endorses-13-overseas-strategic-projects-for-raw-material-access/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 9906,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-strategic-projects",
+          "found": [
+            "47",
+            "13",
+            "strategic projects"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "spg-eu-13-projects",
+      "url": "https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc",
+      "finalUrl": "https://www.spglobal.com/commodity-insights/en/news-research/latest-news/metals/060425-eu-identifies-13-new-strategic-critical-mineral-projects-located-outside-bloc",
+      "status": 403,
+      "contentType": "text/html",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-strategic-projects",
+          "found": [],
+          "missing": [
+            "47",
+            "13",
+            "strategic projects"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "eurlex-batteries",
+      "url": "https://eur-lex.europa.eu/EN/legal-content/summary/sustainability-rules-for-batteries-and-waste-batteries.html",
+      "finalUrl": "https://eur-lex.europa.eu/EN/legal-content/summary/sustainability-rules-for-batteries-and-waste-batteries.html",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 11144,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-batteries",
+          "found": [
+            "50%",
+            "80%",
+            "16%",
+            "6%",
+            "85%",
+            "passport"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "erp-batteries-2023",
+      "url": "https://erp-recycling.org/uk/news-and-events/2023/09/batteries-regulations/",
+      "finalUrl": "https://erp-recycling.org/uk/news-and-events/2023/09/batteries-regulations/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 8478,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-eu-batteries",
+          "found": [
+            "50%",
+            "80%",
+            "passport"
+          ],
+          "missing": [
+            "16%",
+            "6%",
+            "85%"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "fieldfisher-batteries",
+      "url": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
+      "finalUrl": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
+      "status": 0,
+      "contentType": "",
+      "textLength": 0,
+      "error": "fetch failed",
+      "checks": [
+        {
+          "claim": "c-eu-batteries",
+          "found": [],
+          "missing": [
+            "50%",
+            "80%",
+            "16%",
+            "6%",
+            "85%",
+            "passport"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "pib-bwmr-2022",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1854433",
+      "finalUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1854433",
+      "status": 403,
+      "contentType": "text/html",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-india-bwmr-2022",
+          "found": [],
+          "missing": [
+            "battery waste management rules",
+            "extended producer responsibility"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "iea-policy-india-bwmr",
+      "url": "https://www.iea.org/policies/25166-battery-waste-management-rules-2022",
+      "finalUrl": "https://www.iea.org/policies/25166-battery-waste-management-rules-2022",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-india-bwmr-2022",
+          "found": [],
+          "missing": [
+            "battery waste management rules",
+            "extended producer responsibility"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "lawrbit-bwmr-2022",
+      "url": "https://www.lawrbit.com/article/batteries-waste-management-rules/",
+      "finalUrl": "https://www.lawrbit.com/article/batteries-waste-management-rules/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 13191,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-india-bwmr-2022",
+          "found": [
+            "battery waste management rules",
+            "extended producer responsibility"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "mondaq-bwmr-2022",
+      "url": "https://www.mondaq.com/india/waste-management/1547088/navigating-indias-battery-waste-regulation",
+      "finalUrl": "https://www.legal500.com/intelligence/india/environment/navigating-india%27s-battery-waste-regulation",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "textLength": 17005,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-india-bwmr-2022",
+          "found": [
+            "battery waste management rules",
+            "extended producer responsibility"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "miningcom-csm-2019",
+      "url": "https://www.mining.com/world-bank-germany-rio-anglo-set-climate-smart-mining-fund/",
+      "finalUrl": "https://www.mining.com/world-bank-germany-rio-anglo-set-climate-smart-mining-fund/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 6010,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-wb-csm-2019",
+          "found": [
+            "climate-smart mining",
+            "rio tinto",
+            "anglo american",
+            "50m | 50 million"
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "source": "wb-csm",
+      "url": "https://www.worldbank.org/en/topic/extractiveindustries/brief/climate-smart-mining-minerals-for-climate-action",
+      "finalUrl": "https://www.worldbank.org/en/topic/extractiveindustries/brief/climate-smart-mining-minerals-for-climate-action",
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "textLength": 5232,
+      "error": null,
+      "checks": [
+        {
+          "claim": "c-wb-csm-2019",
+          "found": [
+            "climate-smart mining"
+          ],
+          "missing": [
+            "rio tinto",
+            "anglo american",
+            "50m | 50 million"
+          ]
+        }
+      ]
+    }
+  ]
+}

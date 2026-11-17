@@ -1,0 +1,63 @@
+{
+  "batch": "2026-11-3-third-pass",
+  "checkedAt": "2026-11-17T05:59:22.831Z",
+  "note": "Short excerpts (about 180 characters) around each found term, kept as evidence. Not for republication.",
+  "excerpts": [
+    {
+      "source": "iwp-dmf-2025",
+      "claim": "c-india-dmf-collections",
+      "term": "district mineral foundation*",
+      "matched": "district mineral foundation",
+      "excerpt": "ance and policy mining's promise, communities' plight: unearthing the truth about india's district mineral foundations despite holding over rs. 1 lakh crore, are district mineral foundations truly benefiting"
+    },
+    {
+      "source": "iwp-dmf-2025",
+      "claim": "c-india-dmf-collections",
+      "term": "lakh crore",
+      "matched": "lakh crore",
+      "excerpt": "nearthing the truth about india's district mineral foundations despite holding over rs. 1 lakh crore, are district mineral foundations truly benefiting mining-affected communities? this anal"
+    },
+    {
+      "source": "iwp-dmf-2025",
+      "claim": "c-india-dmf-collections",
+      "term": "odisha",
+      "matched": "odisha",
+      "excerpt": ", scarcity on the ground the dmfs have collected an impressive rs. 103242 crores so far . odisha, chhattisgarh, and jharkhand alone account for over 56% of the total. however, only about"
+    },
+    {
+      "source": "iwp-dmf-2025",
+      "claim": "c-india-dmf-collections",
+      "term": "chhattisgarh",
+      "matched": "chhattisgarh",
+      "excerpt": "ty on the ground the dmfs have collected an impressive rs. 103242 crores so far . odisha, chhattisgarh, and jharkhand alone account for over 56% of the total. however, only about 40% of the to"
+    },
+    {
+      "source": "iwp-dmf-2025",
+      "claim": "c-india-dmf-collections",
+      "term": "jharkhand",
+      "matched": "jharkhand",
+      "excerpt": "he dmfs have collected an impressive rs. 103242 crores so far . odisha, chhattisgarh, and jharkhand alone account for over 56% of the total. however, only about 40% of the total accruals ha"
+    },
+    {
+      "source": "nsenergy-eu-13-2025",
+      "claim": "c-eu-strategic-projects",
+      "term": "47 strategic projects | 47 projects",
+      "matched": "47 strategic projects",
+      "excerpt": "sources and fortify economic security. the new projects complement an existing roster of 47 strategic projects within the eu, unveiled on 25 march 2025. collectively, these 60 projects aim to enhance"
+    },
+    {
+      "source": "nsenergy-eu-13-2025",
+      "claim": "c-eu-strategic-projects",
+      "term": "13 strategic projects | 13 overseas | 13 projects | 13 new",
+      "matched": "13 strategic projects",
+      "excerpt": "y. (credit: aliaksandr antanovich/shutterstock) the european commission (ec) has endorsed 13 strategic projects situated outside the european union (eu) to ensure raw material access and augment local"
+    },
+    {
+      "source": "nsenergy-eu-13-2025",
+      "claim": "c-eu-strategic-projects",
+      "term": "strategic projects",
+      "matched": "strategic projects",
+      "excerpt": "eu endorses 13 overseas strategic projects for raw material access eb our combined knowledge, your competitive advantage subscribe -"
+    }
+  ]
+}

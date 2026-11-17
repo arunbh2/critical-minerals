@@ -1,0 +1,309 @@
+{
+  "batch": "2026-11-4-fourth-pass",
+  "created": "2026-11-17",
+  "note": "Completeness pass: every number and date in a published claim must be one of the terms it is checked against. Claims were trimmed to what their terms check, and date terms were added where the date matters. All previously published claims, plus the two corrected in the third pass, are re-checked.",
+  "claims": [
+    {
+      "id": "c-refining-top3-2024",
+      "text": "Reporting on the International Energy Agency's 2025 outlook says that across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from 82% in 2020 to 86% in 2024.",
+      "sources": [
+        "iea-gcmo-2025-es",
+        "miningcom-gcmo-2025",
+        "northernminer-gcmo-2025",
+        "iea-gcmo-2025-overview",
+        "iea-gcmo-2025"
+      ],
+      "terms": [
+        "86%",
+        "82%",
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "id": "c-gcmo-2026-growth",
+      "text": "Reporting on the IEA's 2026 outlook says China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals, and that export restrictions have turned concentration into an economic-security concern.",
+      "sources": [
+        "iea-news-2026",
+        "gmr-gcmo-2026",
+        "iea-gcmo-2026",
+        "iea-gcmo-2026-es"
+      ],
+      "terms": [
+        "three-quarters | three quarters",
+        "export restrictions",
+        "2026"
+      ]
+    },
+    {
+      "id": "c-india-cm-list-2023",
+      "text": "In 2023 India's Ministry of Mines published its first list of 30 critical minerals.",
+      "sources": [
+        "mines-india-cm-2023",
+        "iep-cm-2023",
+        "invezz-cm-2023"
+      ],
+      "terms": [
+        "30 critical minerals",
+        "2023"
+      ]
+    },
+    {
+      "id": "c-india-ncmm-2025",
+      "text": "In 2025 India's Union Cabinet approved a National Critical Mineral Mission with a government outlay of ₹16,300 crore and a further ₹18,000 crore expected from public sector undertakings and others, a combined ₹34,300 crore over seven years.",
+      "sources": [
+        "pmindia-ncmm-2025",
+        "tribune-ncmm-2025"
+      ],
+      "terms": [
+        "16,300",
+        "18,000",
+        "34,300",
+        "seven years",
+        "2025"
+      ]
+    },
+    {
+      "id": "c-india-ncmm-scope",
+      "text": "The Mission covers exploration, mining, beneficiation, processing and recovery from end-of-life products, and includes support for overseas mineral asset acquisition, a proposed national stockpile and mineral processing parks.",
+      "sources": [
+        "pmindia-ncmm-2025",
+        "tribune-ncmm-2025"
+      ],
+      "terms": [
+        "exploration",
+        "beneficiation",
+        "stockpile",
+        "end-of-life"
+      ]
+    },
+    {
+      "id": "c-india-mmdr-2023",
+      "text": "A 2023 amendment to India's mining law allows the central government to auction concessions for listed critical minerals and creates an exploration licence for critical and deep-seated minerals. Auction revenue accrues to state governments.",
+      "sources": [
+        "prs-mmdr-2023",
+        "iea-policy-mmdr-2023"
+      ],
+      "terms": [
+        "exploration licence",
+        "critical",
+        "state government",
+        "2023"
+      ]
+    },
+    {
+      "id": "c-india-dmf-collections",
+      "text": "District Mineral Foundations, funded by levies on mining leaseholders, have collected more than ₹1 lakh crore. Odisha, Chhattisgarh and Jharkhand account for a large share of the total.",
+      "sources": [
+        "rs-dmf-2024",
+        "iwp-dmf-2025"
+      ],
+      "terms": [
+        "district mineral foundation*",
+        "1 lakh crore",
+        "odisha",
+        "chhattisgarh",
+        "jharkhand"
+      ]
+    },
+    {
+      "id": "c-india-bwmr-2022",
+      "text": "India's Battery Waste Management Rules of 2022 introduced extended producer responsibility, making producers, including importers, responsible for collecting and recycling waste batteries.",
+      "sources": [
+        "pib-bwmr-2022",
+        "iea-policy-india-bwmr",
+        "lawrbit-bwmr-2022",
+        "mondaq-bwmr-2022"
+      ],
+      "terms": [
+        "battery waste management rules",
+        "extended producer responsibility",
+        "2022"
+      ]
+    },
+    {
+      "id": "c-indonesia-ore-ban",
+      "text": "Indonesia has prohibited exports of nickel ore since January 2020.",
+      "sources": [
+        "iea-policy-indonesia-nickel",
+        "aljazeera-nickel-2019",
+        "nrf-nickel-regulation"
+      ],
+      "terms": [
+        "nickel ore",
+        "january 2020 | 1 january 2020"
+      ]
+    },
+    {
+      "id": "c-morowali-2023",
+      "text": "In December 2023 a furnace accident at a nickel smelter in the Indonesia Morowali Industrial Park killed workers and injured dozens. Initial reports gave 13 deaths; police later revised the death toll up from 13 to 18, and the park operator's account of the cause was disputed.",
+      "sources": [
+        "jakpost-morowali-2023-12-24",
+        "jakpost-morowali-2023-12-27",
+        "bhrrc-morowali-2023"
+      ],
+      "terms": [
+        "morowali",
+        "furnace",
+        "13",
+        "18",
+        "death toll",
+        "2023"
+      ]
+    },
+    {
+      "id": "c-drc-cobalt-share",
+      "text": "USGS estimates put the Democratic Republic of the Congo's 2024 mine production of cobalt at 220,000 tonnes out of a world total of about 290,000 tonnes, roughly three-quarters.",
+      "sources": [
+        "usgs-mcs-2025-cobalt",
+        "usgs-mcs-2025"
+      ],
+      "terms": [
+        "congo",
+        "220,000",
+        "290,000",
+        "2024"
+      ]
+    },
+    {
+      "id": "c-drc-export-2025",
+      "text": "In 2025 the Democratic Republic of the Congo suspended cobalt exports and later replaced the suspension with export quotas.",
+      "sources": [
+        "iea-policy-drc-cobalt",
+        "kitco-drc-quotas-2025",
+        "mw-drc-quotas-2025",
+        "spg-drc-quotas-2025"
+      ],
+      "terms": [
+        "cobalt",
+        "suspen* | ban",
+        "quota*",
+        "2025"
+      ]
+    },
+    {
+      "id": "c-china-graphite-2023",
+      "text": "China introduced export permit requirements for certain graphite products, announced in October 2023 and effective from December 2023.",
+      "sources": [
+        "orf-china-controls"
+      ],
+      "terms": [
+        "graphite",
+        "december 2023"
+      ]
+    },
+    {
+      "id": "c-china-ree-2025",
+      "text": "In April 2025 China placed seven medium and heavy rare earth elements (samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium) and related products under export licensing.",
+      "sources": [
+        "csis-ree-2025",
+        "orf-china-controls"
+      ],
+      "terms": [
+        "samarium",
+        "gadolinium",
+        "terbium",
+        "dysprosium",
+        "lutetium",
+        "scandium",
+        "yttrium",
+        "april",
+        "2025"
+      ]
+    },
+    {
+      "id": "c-eu-crma",
+      "text": "The EU Critical Raw Materials Act, adopted in 2024, sets non-binding 2030 benchmarks for EU extraction (10%), processing (40%) and recycling (25%) of annual consumption of strategic raw materials.",
+      "sources": [
+        "council-crma",
+        "nrf-crma-2024",
+        "te-crma-2024"
+      ],
+      "terms": [
+        "10%",
+        "40%",
+        "25%",
+        "2030",
+        "2024"
+      ]
+    },
+    {
+      "id": "c-eu-strategic-projects",
+      "text": "In 2025 the European Commission designated 47 strategic projects in EU member states and 13 outside the EU under the Critical Raw Materials Act.",
+      "sources": [
+        "mw-eu-47-projects",
+        "nsenergy-eu-13-2025",
+        "spg-eu-13-projects"
+      ],
+      "terms": [
+        "47 strategic projects | 47 projects",
+        "13 strategic projects | 13 overseas | 13 projects | 13 new",
+        "strategic projects",
+        "2025"
+      ]
+    },
+    {
+      "id": "c-eu-batteries",
+      "text": "The EU Batteries Regulation sets lithium recovery targets of 50% by the end of 2027 and 80% by the end of 2031, and 90% and 95% for cobalt, copper, lead and nickel. Minimum recycled content for new batteries starts in 2031 at 16% cobalt, 6% lithium, 6% nickel and 85% lead. Larger batteries require a digital battery passport.",
+      "sources": [
+        "eurlex-batteries",
+        "erp-batteries-2023",
+        "fieldfisher-batteries"
+      ],
+      "terms": [
+        "50%",
+        "80%",
+        "90%",
+        "95%",
+        "16%",
+        "6%",
+        "85%",
+        "2027",
+        "2031",
+        "passport"
+      ]
+    },
+    {
+      "id": "c-un-panel-2024",
+      "text": "In 2024 the UN Secretary-General's Panel on Critical Energy Transition Minerals published seven voluntary guiding principles. Its first principle is that human rights must be at the core of all mineral value chains.",
+      "sources": [
+        "un-panel-cetm",
+        "iisd-un-panel-2024"
+      ],
+      "terms": [
+        "seven",
+        "guiding principles",
+        "human rights",
+        "2024"
+      ]
+    },
+    {
+      "id": "c-jetp-indonesia",
+      "text": "Indonesia's Just Energy Transition Partnership was announced with an initial US$20 billion of public and private finance, and a Comprehensive Investment and Policy Plan followed.",
+      "sources": [
+        "chn-jetp-2022",
+        "eeas-jetp-cipp"
+      ],
+      "terms": [
+        "just energy transition partnership",
+        "20bn | 20 billion",
+        "comprehensive investment and policy plan"
+      ]
+    },
+    {
+      "id": "c-wb-csm-2019",
+      "text": "The World Bank launched its Climate-Smart Mining Facility in 2019, with partners including the German government, Rio Tinto and Anglo American.",
+      "sources": [
+        "miningcom-csm-2019",
+        "wb-csm"
+      ],
+      "terms": [
+        "climate-smart mining",
+        "rio tinto",
+        "anglo american",
+        "german government",
+        "2019"
+      ]
+    }
+  ]
+}
