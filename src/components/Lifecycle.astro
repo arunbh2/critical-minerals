@@ -1,0 +1,84 @@
+---
+import { url } from '../lib/url';
+const stages = [
+  { id: 'exploration-extraction', label: 'Explore and extract', what: 'Surveying, drilling and mining ore or pumping brine.', who: 'Host communities, mine workers, licensing authorities, mining companies, financiers.', question: 'Were people told before the licence was granted, and could they say no?', links: [['issues/community-consent/', 'Community decision-making and consent'], ['minerals/lithium/', 'Lithium']] },
+  { id: 'processing-refining', label: 'Process and refine', what: 'Concentrating, smelting and chemically refining ore into metals and compounds.', who: 'Plant and contract workers, nearby residents, industrial park operators, environmental regulators.', question: 'Who is responsible for safety when many companies share one industrial park?', links: [['countries/indonesia/', 'Indonesia'], ['issues/decent-work-safety/', 'Decent work and safety']] },
+  { id: 'manufacturing', label: 'Manufacture', what: 'Turning refined materials into cathodes, magnets, wire, cells and products.', who: 'Factory workers, manufacturers, buyers and brands, industrial policy makers.', question: 'Do supply-chain standards reach back to the mine, or stop at the factory gate?', links: [['issues/accountability-remedy/', 'Accountability and remedy'], ['minerals/rare-earths/', 'Rare earth elements']] },
+  { id: 'use-repair-reuse', label: 'Use, repair, reuse', what: 'Using products for longer, repairing them and giving batteries a second life.', who: 'Users, repairers, refurbishers, product designers.', question: 'A battery gets a second life. What happens to the collector’s livelihood?', links: [['issues/circularity-recovery/', 'Circularity and safe recovery'], ['learn/the-lifecycle/', 'The lifecycle explained']] },
+  { id: 'collection-recycling', label: 'Collect and recycle', what: 'Collecting end-of-life products and recovering materials.', who: 'Formal and informal collectors, recyclers, producers with take-back duties, regulators.', question: 'When recycling is formalised, are informal workers included or pushed out?', links: [['practice/india-battery-producer-responsibility/', 'India’s battery producer-responsibility rules'], ['minerals/cobalt/', 'Cobalt']] },
+];
+---
+<div class="lifecycle" data-lifecycle>
+  <div class="lc-tabs" role="tablist" aria-label="Lifecycle stages" hidden>
+    {stages.map((s, i) => (
+      <button type="button" role="tab" id={`lc-tab-${s.id}`} aria-controls={`lc-panel-${s.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+        <span class="lc-num" aria-hidden="true">{i + 1}</span><span>{s.label}</span>
+      </button>
+    ))}
+  </div>
+  <div class="lc-panels">
+    {stages.map((s, i) => (
+      <section id={`lc-panel-${s.id}`} class="lc-panel" role="tabpanel" aria-labelledby={`lc-tab-${s.id}`}>
+        <h3><span class="lc-num" aria-hidden="true">{i + 1}</span> {s.label}</h3>
+        <p><strong>What happens:</strong> {s.what}</p>
+        <p><strong>Who is involved:</strong> {s.who}</p>
+        <p class="lc-question">{s.question}</p>
+        <p class="sans">{s.links.map(([h, l], j) => <>{j > 0 && ' · '}<a href={url(h)}>{l}</a></>)}</p>
+      </section>
+    ))}
+  </div>
+  <p class="meta lc-note">The loop never fully closes. Some material is lost at every stage, and growing demand cannot yet be met from recycling alone.</p>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-lifecycle]').forEach((root) => {
+    const tablist = root.querySelector<HTMLElement>('[role="tablist"]')!;
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('[role="tabpanel"]'));
+    tablist.hidden = false;
+    root.classList.add('is-enhanced');
+    const select = (i: number, focus = false) => {
+      tabs.forEach((t, j) => { t.setAttribute('aria-selected', String(i === j)); t.tabIndex = i === j ? 0 : -1; });
+      panels.forEach((p, j) => { p.hidden = i !== j; });
+      if (focus) tabs[i].focus();
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(i));
+      t.addEventListener('keydown', (e) => {
+        const k = e.key;
+        if (k === 'ArrowRight' || k === 'ArrowDown') { e.preventDefault(); select((i + 1) % tabs.length, true); }
+        if (k === 'ArrowLeft' || k === 'ArrowUp') { e.preventDefault(); select((i - 1 + tabs.length) % tabs.length, true); }
+        if (k === 'Home') { e.preventDefault(); select(0, true); }
+        if (k === 'End') { e.preventDefault(); select(tabs.length - 1, true); }
+      });
+    });
+    select(0);
+  });
+</script>
+<style>
+  .lc-tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-bottom: 2px solid var(--london-20); }
+  .lc-tabs button {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left;
+    background: transparent; border: 0; border-bottom: 4px solid transparent; margin-bottom: -2px;
+    padding: 10px 10px 12px; font-family: var(--font-sans); font-weight: 600; font-size: 0.98rem;
+    color: var(--london-20); cursor: pointer; min-height: 44px; position: relative;
+  }
+  .lc-tabs button + button::before { content: '→'; position: absolute; left: -8px; top: 12px; color: var(--london-70); }
+  .lc-tabs button[aria-selected='true'] { color: var(--chicago-30); border-bottom-color: var(--color-signature); background: var(--color-surface); }
+  .lc-tabs button:hover { color: var(--chicago-20); background: var(--color-select-surface); }
+  .lc-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; border: 2px solid currentColor; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; }
+  .lc-panels { margin: 0; }
+  .lc-panel { padding: 1rem 0; border-bottom: 1px solid var(--color-rule); margin: 0; }
+  .is-enhanced .lc-panel { background: var(--color-surface); padding: 1rem 1.25rem; border: 1px solid var(--color-rule); border-top: 0; }
+  .lc-panel h3 { margin-top: 0; display: flex; align-items: center; gap: 8px; }
+  .is-enhanced .lc-panel h3 { display: none; }
+  .lc-question { color: var(--chicago-30); font-size: 1.1em; }
+  .lc-note { margin-top: 0.75rem; }
+  @media (max-width: 760px) {
+    .lc-tabs { grid-template-columns: 1fr; border-bottom: 0; border-left: 2px solid var(--london-20); }
+    .lc-tabs button { flex-direction: row; align-items: center; border-bottom: 0; border-left: 4px solid transparent; margin: 0 0 0 -2px; }
+    .lc-tabs button[aria-selected='true'] { border-left-color: var(--color-signature); }
+    .lc-tabs button + button::before { content: none; }
+    .is-enhanced .lc-panel { border-top: 1px solid var(--color-rule); margin-top: var(--gap); }
+  }
+  @media print { .lc-tabs { display: none !important; } .lc-panel { display: block !important; } .is-enhanced .lc-panel h3 { display: flex; } }
+</style>

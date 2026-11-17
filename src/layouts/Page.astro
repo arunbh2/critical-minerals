@@ -1,0 +1,17 @@
+---
+import Base from './Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+interface Props { title: string; description: string; kicker?: string; standfirst?: string; searchable?: boolean; noindex?: boolean }
+const { title, description, kicker, standfirst, searchable, noindex } = Astro.props;
+---
+<Base title={title} description={description} searchable={searchable} noindex={noindex}>
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: title }]} />
+    <article class="reading page-prose">
+      {kicker && <p class="kicker red-rule">{kicker}</p>}
+      <h1>{title}</h1>
+      {standfirst && <p class="standfirst">{standfirst}</p>}
+      <slot />
+    </article>
+  </div>
+</Base>

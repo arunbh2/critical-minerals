@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import Page from '../layouts/Page.astro';
+import { formatDate } from '../lib/status.js';
+import { vocabLabel } from '../lib/content';
+import { url } from '../lib/url';
+const sources = (await getCollection('sources')).sort((a, b) => a.data.publisher.localeCompare(b.data.publisher) || a.data.title.localeCompare(b.data.title));
+const claims = await getCollection('claims');
+const usedBy = (id: string) => claims.filter((c) => c.data.sources.includes(id)).length;
+---
+<Page title="Sources" kicker="Source register" description="Every source cited on Critical Minerals, with publisher, publication date, retrieval date and verification notes."
+  standfirst="Every source cited on this site, with its publication and retrieval dates. Follow the links to read the originals.">
+  <p class="sans"><a href={url('data/sources.json')}>Download the source register (JSON)</a> · <a href={url('data/claims.json')}>Download claims (JSON)</a></p>
+  <ol class="register">
+    {sources.map((s) => (
+      <li id={s.id}>
+        <p class="kicker">{vocabLabel('sourceTypes', s.data.type)} · <code>{s.id}</code></p>
+        <h2><a href={s.data.url} rel="noopener">{s.data.title}</a></h2>
+        <dl class="facts">
+          <dt>Publisher</dt><dd>{s.data.publisher}</dd>
+          <dt>Published</dt><dd>{s.data.published ? formatDate(s.data.published) : 'Date not stated'}</dd>
+          <dt>Retrieved</dt><dd>{formatDate(s.data.retrieved)}</dd>
+          {s.data.locator && <><dt>Locator</dt><dd>{s.data.locator}</dd></>}
+          <dt>Reuse</dt><dd>{s.data.reuse}</dd>
+          <dt>Cited in claims</dt><dd>{usedBy(s.id)}</dd>
+          {s.data.note && <><dt>Verification note</dt><dd>{s.data.note}</dd></>}
+        </dl>
+      </li>
+    ))}
+  </ol>
+</Page>
+<style>
+  .register { list-style: none; padding: 0; }
+  .register li { border-top: 1px solid var(--color-rule); padding: 1rem 0; margin: 0; scroll-margin-top: 1rem; }
+  .register li:target { background: var(--color-select-surface); }
+  .register h2 { font-size: 1.15rem; margin: 0.2rem 0 0.6rem; overflow-wrap: anywhere; }
+  code { font-size: 0.85em; }
+</style>

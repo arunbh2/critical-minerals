@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FilterShell from '../../components/FilterShell.astro';
+import FinanceStatus from '../../components/FinanceStatus.astro';
+import { hrefFor, vocabLabel } from '../../lib/content';
+import { url } from '../../lib/url';
+import vocab from '../../data/vocab.json';
+const records = (await getCollection('finance')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const geos = [...new Set(records.flatMap((r) => r.data.countries))];
+const fmtAmount = (a: any) => a.value == null ? 'Not established' : `${a.value.toLocaleString('en-GB')} ${a.currency}`;
+const filters = [
+  { name: 'supports', label: 'What the money supports', options: vocab.financeSupports.map((v) => ({ value: v.id, label: v.label })) },
+  { name: 'country', label: 'Geography', options: [...geos.map((g) => ({ value: g, label: g[0].toUpperCase() + g.slice(1) })), { value: 'multi', label: 'Multi-country or global' }] },
+  { name: 'instrument', label: 'Instrument', options: vocab.instruments.map((v) => ({ value: v.id, label: v.label })) },
+  { name: 'state', label: 'Record state', options: vocab.recordStates.map((v) => ({ value: v.id, label: v.label })) },
+];
+---
+<Base title="Finance" description="Funding mechanisms connected to critical minerals, with record state, instrument, verification date and uncertainties shown for each.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Finance & policy' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Finance & policy</p>
+      <h1>Follow the money</h1>
+      <p class="standfirst">Who pays, through what mechanism, at what stage? These records separate strategic interest, defined programmes, open opportunities and actual awards, so ambition is not mistaken for access.</p>
+    </header>
+    <div class="notice reading">
+      <p><strong>No record here is currently an open opportunity.</strong> We have not verified any open call for applications in this release. A programme is a defined funding effort. It is not a call you can apply to. Amounts are never added together, because pledges, targets and disbursements are different things.</p>
+    </div>
+    <p class="sans"><a href={url('policies/')} class="link-arrow">Policy records</a> &nbsp; <a href={url('data/finance.json')}>Download finance records (JSON)</a></p>
+
+    <h2>Browse by what the money supports</h2>
+    <ul class="chips">{vocab.financeSupports.map((s) => <li><a class="chip" href={`?supports=${s.id}`}>{s.label}</a></li>)}</ul>
+
+    <FilterShell filters={filters} noun="finance records">
+      <div class="table-wrap">
+        <table>
+          <caption>Finance records ({records.length})</caption>
+          <thead><tr><th scope="col">Record</th><th scope="col">Supports</th><th scope="col">Instrument</th><th scope="col" class="num">Amount</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            {records.map((r) => (
+              <tr data-filter-item data-supports={r.data.supports.join(' ')} data-instrument={r.data.instruments.join(' ')} data-state={r.data.recordState} data-country={r.data.countries.length ? r.data.countries.join(' ') : 'multi'}>
+                <td><a href={hrefFor('finance', r.id)}><strong>{r.data.title}</strong></a><br /><span class="meta">{r.data.provider} · {r.data.geography}</span></td>
+                <td>{r.data.supports.map((s) => vocabLabel('financeSupports', s)).join(', ')}</td>
+                <td>{r.data.instruments.map((s) => vocabLabel('instruments', s)).join(', ')}</td>
+                <td class="num">{fmtAmount(r.data.amount)}<br /><span class="meta">{r.data.amount.stage === 'unknown' ? 'stage not established' : r.data.amount.stage}{r.data.amount.basis !== 'unknown' ? `, ${r.data.amount.basis.replace('-', ' ')}` : ''}</span></td>
+                <td><FinanceStatus r={r.data} /></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </FilterShell>
+    <section class="reading">
+      <h2>How to read these records</h2>
+      <dl class="facts">
+        {vocab.recordStates.map((s) => <><dt>{s.label}</dt><dd>{({ strategy: 'A government, bank or foundation has stated interest or ambition. There is no defined programme or application route.', precedent: 'Funding was provided in the past. It shows what has been possible, not what is available now.', programme: 'A defined programme with a purpose and budget. Access is usually restricted, and it is not an open call.', open: 'A currently open call with a verified application route and deadline. Shown as closed automatically once the deadline passes.', award: 'Money committed, awarded or disbursed to a named recipient.' } as Record<string, string>)[s.id]}</dd></>)}
+      </dl>
+      <p class="meta">Verification dates show when our editors last checked a record against its sources. Editing the page does not change that date. Records past their review date are flagged "Verification due". They are not removed.</p>
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import Entry from '../../layouts/Entry.astro';
+import { url } from '../../lib/url';
+import { readingMinutes } from '../../lib/status.js';
+export async function getStaticPaths() {
+  const all = (await getCollection('learn')).filter((e) => !e.data.draft).sort((a, b) => a.data.order - b.data.order);
+  return all.map((entry, i) => ({ params: { slug: entry.id }, props: { entry, prev: all[i - 1], next: all[i + 1], total: all.length } }));
+}
+const { entry, prev, next, total } = Astro.props;
+const { Content } = await render(entry);
+---
+<Entry type="learn" id={entry.id} kicker={`Start here · Part ${entry.data.order} of ${total}`} data={entry.data} minutes={readingMinutes(entry.body)} lead={entry.data.question}
+  crumbs={[{ label: 'Start here', href: url('start-here/') }, { label: entry.data.title }]}>
+  <Content />
+  <nav slot="after" class="journey-nav sans" aria-label="Learning journey">
+    {prev ? <a href={url(`learn/${prev.id}/`)} rel="prev"><span class="meta">Previous</span><br />{prev.data.title}</a> : <span></span>}
+    {next ? <a href={url(`learn/${next.id}/`)} rel="next" class="next"><span class="meta">Next</span><br />{next.data.title}</a>
+      : <a href={url('tools/community-benefit/')} class="next"><span class="meta">Put it to use</span><br />Assess a community-benefit proposition</a>}
+  </nav>
+</Entry>
+<style>
+  .journey-nav { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); margin: 2rem 0 1rem; padding: 1rem 0; border-top: 2px solid var(--london-20); border-bottom: 1px solid var(--color-rule); }
+  .journey-nav a { text-decoration: none; font-weight: 600; }
+  .journey-nav a:hover { text-decoration: underline; }
+  .journey-nav .next { text-align: right; }
+  @media (max-width: 600px) { .journey-nav { grid-template-columns: 1fr; } .journey-nav .next { text-align: left; } }
+</style>

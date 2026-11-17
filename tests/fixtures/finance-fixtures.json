@@ -1,0 +1,10 @@
+{
+  "_marker": "__TEST_FIXTURE__ synthetic records for unit tests only; never published",
+  "records": [
+    { "id": "fixture-open", "recordState": "open", "opens": "2026-01-01T00:00:00Z", "closes": "2026-12-31T23:59:00+07:00", "lastVerified": "2026-11-10", "reviewDue": "2026-11-17T00:00:00Z" },
+    { "id": "fixture-expired", "recordState": "open", "opens": null, "closes": "2026-11-01T17:00:00+05:30", "lastVerified": "2026-10-01", "reviewDue": "2026-10-08" },
+    { "id": "fixture-undated", "recordState": "open", "opens": null, "closes": null, "lastVerified": "2026-11-01", "reviewDue": "2026-11-08" },
+    { "id": "fixture-upcoming", "recordState": "open", "opens": "2027-02-01T00:00:00Z", "closes": "2027-03-01T00:00:00Z", "lastVerified": "2026-11-15", "reviewDue": "2026-11-22" },
+    { "id": "fixture-programme", "recordState": "programme", "opens": null, "closes": "2020-01-01T00:00:00Z", "lastVerified": "2026-01-01", "reviewDue": "2026-02-01" }
+  ]
+}

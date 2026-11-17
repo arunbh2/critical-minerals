@@ -1,0 +1,26 @@
+---
+import { sourcesById } from '../lib/content';
+import { formatDate } from '../lib/status.js';
+interface Props { ids: string[]; heading?: string }
+const { ids, heading = 'Sources' } = Astro.props;
+const list = ids.length ? await sourcesById([...new Set(ids)]) : [];
+---
+{list.length > 0 && (
+  <section class="sources-block" aria-labelledby="sources-h">
+    <h2 id="sources-h">{heading}</h2>
+    <ol class="source-list sans">
+      {list.map((s) => (
+        <li>
+          <a href={s.data.url} rel="noopener">{s.data.title}</a>. {s.data.publisher}.
+          {' '}Published: {s.data.published ? formatDate(s.data.published) : 'date not stated'}.
+          {' '}Retrieved: {formatDate(s.data.retrieved)}.
+          {s.data.locator && <> {s.data.locator}.</>}
+        </li>
+      ))}
+    </ol>
+  </section>
+)}
+<style>
+  .source-list { font-size: 0.92rem; padding-left: 1.2em; }
+  .source-list li { margin-bottom: 0.5em; overflow-wrap: anywhere; }
+</style>

@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SourceList from '../../components/SourceList.astro';
+import Related from '../../components/Related.astro';
+import Tags from '../../components/Tags.astro';
+import RecordMeta from '../../components/RecordMeta.astro';
+import { vocabLabel } from '../../lib/content';
+import { url } from '../../lib/url';
+export async function getStaticPaths() {
+  return (await getCollection('organisations')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+---
+<Base title={d.name} description={d.role} searchType="Organisation">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Organisations', href: url('landscape/') }, { label: d.name }]} />
+    <article class="reading">
+      <p class="kicker red-rule">Organisation · {vocabLabel('orgTypes', d.type)}</p>
+      <h1>{d.name}</h1>
+      <p class="standfirst">{d.role}</p>
+      <RecordMeta reviewed={d.reviewed} reviewDue={d.reviewDue} />
+      <Tags countries={d.countries} minerals={d.minerals} issues={d.issues} />
+      <div class="panel-data">
+        <dl class="facts">
+          <dt>Type</dt><dd>{vocabLabel('orgTypes', d.type)}</dd>
+          <dt>Geography</dt><dd>{d.geography}</dd>
+          <dt>Relevant initiative</dt><dd>{d.initiative}</dd>
+          <dt>Delivery model</dt><dd>{d.deliveryModel}</dd>
+          <dt>Public website</dt><dd><a href={d.url} rel="noopener">{d.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a></dd>
+        </dl>
+      </div>
+      <section class="evidence evidence-unclear" aria-labelledby="ev-h">
+        <h2 id="ev-h">Evidence and limits</h2>
+        <p>{d.evidenceNote}</p>
+        <p>Listing is not endorsement or partnership.</p>
+      </section>
+      <SourceList ids={d.sources} heading="Sources that mention this organisation" />
+    </article>
+    <Related type="organisations" id={entry.id} refs={{ countries: d.countries, minerals: d.minerals, issues: d.issues }} />
+  </div>
+</Base>

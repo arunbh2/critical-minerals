@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import Entry from '../../layouts/Entry.astro';
+import { url } from '../../lib/url';
+export async function getStaticPaths() {
+  return (await getCollection('issues')).filter((e) => !e.data.draft).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const r = entry.data.responsibilities;
+---
+<Entry type="issues" id={entry.id} kicker="People & environment" data={entry.data} lead={entry.data.editorialQuestion}
+  crumbs={[{ label: 'People & environment', href: url('issues/') }, { label: entry.data.title }]}>
+  <Content />
+  <section slot="after" class="responsibility" aria-labelledby="resp-h">
+    <h2 id="resp-h">Who is responsible for what</h2>
+    <p class="meta">Shared coordination never dilutes an individual actor's own obligations. Benefits never substitute for rights or remedy.</p>
+    <div class="resp-grid">
+      <div class="panel"><h3>Direct obligations</h3><ul>{r.direct.map((x) => <li>{x}</li>)}</ul></div>
+      <div class="panel"><h3>Shared coordination</h3><ul>{r.shared.map((x) => <li>{x}</li>)}</ul></div>
+      <div class="panel"><h3>Wider changes in rules, finance or institutions</h3><ul>{r.systemic.map((x) => <li>{x}</li>)}</ul></div>
+    </div>
+  </section>
+</Entry>
+<style>
+  .resp-grid { display: grid; gap: var(--gap); }
+  .resp-grid h3 { margin-top: 0.2rem; font-size: 1.05rem; }
+  .resp-grid ul { padding-left: 1.1em; margin: 0; font-size: 0.98rem; }
+</style>

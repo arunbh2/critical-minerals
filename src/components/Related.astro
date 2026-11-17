@@ -1,0 +1,32 @@
+---
+import { relatedTo, TYPE_LABEL, type EntityType } from '../lib/content';
+interface Props { type: EntityType; id: string; refs: { countries?: string[]; minerals?: string[]; issues?: string[] } }
+const { type, id, refs } = Astro.props;
+const groups = await relatedTo(type, id, refs);
+const order: EntityType[] = ['countries', 'minerals', 'issues', 'learn', 'policies', 'finance', 'organisations', 'cases', 'updates'];
+const plural: Record<EntityType, string> = {
+  learn: 'Explainers', minerals: 'Minerals', countries: 'Countries', issues: 'Issues', cases: 'Case studies',
+  updates: 'Updates', organisations: 'Organisations', finance: 'Finance records', policies: 'Policy records',
+};
+const present = order.filter((k) => groups[k]?.length);
+---
+{present.length > 0 && (
+  <section class="related no-print-break" aria-labelledby="related-h">
+    <h2 id="related-h">Connected records</h2>
+    <div class="related-grid">
+      {present.map((k) => (
+        <div>
+          <h3 class="kicker">{plural[k]}</h3>
+          <ul>{groups[k]!.map((n) => <li><a href={n.href}>{n.title}</a></li>)}</ul>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+<style>
+  .related { border-top: 1px solid var(--color-rule); margin-top: 2.5rem; padding-top: 0.5rem; }
+  .related-grid { display: grid; gap: var(--gap) var(--gutter); grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); font-family: var(--font-sans); }
+  .related ul { list-style: none; padding: 0; margin: 0; }
+  .related li { margin: 0 0 6px; }
+  .related h3 { margin: 0.75rem 0 0.4rem; }
+</style>

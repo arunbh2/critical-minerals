@@ -1,0 +1,27 @@
+---
+import { getCollection, render } from 'astro:content';
+import Entry from '../../layouts/Entry.astro';
+import { url } from '../../lib/url';
+import { hrefFor } from '../../lib/content';
+export async function getStaticPaths() {
+  return (await getCollection('countries')).filter((e) => !e.data.draft).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const orgs = (await getCollection('organisations')).filter((o) => o.data.countries.includes(entry.id));
+const policies = (await getCollection('policies')).filter((p) => p.data.countries.includes(entry.id));
+const finance = (await getCollection('finance')).filter((f) => f.data.countries.includes(entry.id));
+---
+<Entry type="countries" id={entry.id} kicker={`Country dossier · ${entry.data.region}`} data={entry.data} lead={entry.data.leadQuestion}
+  crumbs={[{ label: 'Explore', href: url('explore/') }, { label: 'Countries', href: url('countries/') }, { label: entry.data.title }]}>
+  <Content />
+  <div slot="after">
+    <h2>Policy records</h2>
+    <ul class="record-list">{policies.map((p) => <li><h3><a href={hrefFor('policies', p.id)}>{p.data.title}</a></h3><p class="meta">{p.data.issuingBody}</p></li>)}</ul>
+    <h2>Organisations working here</h2>
+    <p class="meta">Listing is not endorsement or partnership. Profiles describe stated mandates.</p>
+    <ul class="record-list">{orgs.map((o) => <li><h3><a href={hrefFor('organisations', o.id)}>{o.data.name}</a></h3><p>{o.data.role}</p></li>)}</ul>
+    {finance.length > 0 && <><h2>Finance records</h2>
+    <ul class="record-list">{finance.map((f) => <li><h3><a href={hrefFor('finance', f.id)}>{f.data.title}</a></h3><p class="meta">{f.data.provider}</p></li>)}</ul></>}
+  </div>
+</Entry>

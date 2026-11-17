@@ -1,0 +1,338 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { STEPS } from '../../../lib/worksheet.js';
+import { url } from '../../../lib/url';
+const total = STEPS.length + 1;
+---
+<Base title="Assess a community-benefit proposition" description="A guided, browser-only worksheet that separates what is documented, assumed and missing about a mineral project's claimed community benefits. No score, no verdict." searchType="Tool">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Tools' }, { label: 'Community-benefit worksheet' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Tool</p>
+      <h1>Assess a community-benefit proposition</h1>
+      <p class="standfirst">A guided worksheet for one place and one project. It helps you separate what is documented from what is assumed and what is missing, and ends with the questions still to investigate.</p>
+    </header>
+
+    <section class="reading ws-intro panel" aria-labelledby="before-h">
+      <h2 id="before-h" class="kicker">Before you begin</h2>
+      <ul>
+        <li><strong>{STEPS.length} short sections</strong> and a summary. Answer what you can. Every field except place and activity is optional.</li>
+        <li><strong>No score and no verdict.</strong> Rights cannot be offset by points for jobs or investment, so the worksheet gives no rating.</li>
+        <li><strong>Private by default.</strong> Your answers stay in this browser. Nothing is sent anywhere. Drafts are saved only if you choose.</li>
+        <li><strong>Protect people.</strong> Do not record names, contact details or testimony of individuals who could be put at risk.</li>
+      </ul>
+      <p class="meta">Background: <a href={url('learn/just-transition-community-benefit/')}>What a just transition and real community benefit require</a>.</p>
+    </section>
+
+    <div class="ws" id="worksheet" data-total={total}>
+      <div class="ws-draft panel-data sans no-print" data-js-only hidden>
+        <div class="ws-draft-row">
+          <input type="checkbox" id="save-draft" />
+          <label for="save-draft">Save a draft in this browser</label>
+        </div>
+        <p class="hint" id="draft-status" role="status" aria-live="polite">Drafts are off. Your answers will be lost if you close this page.</p>
+        <p class="ws-draft-actions">
+          <button type="button" class="btn btn-quiet" id="restore-draft" hidden>Restore saved draft</button>
+          <button type="button" class="btn btn-quiet" id="delete-draft" hidden>Delete saved draft</button>
+        </p>
+      </div>
+
+      <ol class="ws-progress sans no-print" data-js-only hidden aria-label="Progress">
+        {STEPS.map((s, i) => <li data-step-index={i}><span class="ws-pnum">{i + 1}</span><span class="ws-plabel">{s.title}</span></li>)}
+        <li data-step-index={STEPS.length}><span class="ws-pnum">{total}</span><span class="ws-plabel">Summary</span></li>
+      </ol>
+
+      <form id="ws-form" class="ws-form" novalidate>
+        <div class="ws-errors notice" id="ws-errors" tabindex="-1" hidden role="alert"></div>
+        {STEPS.map((s, i) => (
+          <fieldset class="ws-step panel-data" data-step={s.id} data-step-index={i} aria-describedby={`intro-${s.id}`}>
+            <legend><span class="ws-stepnum sans">Section {i + 1} of {STEPS.length}</span> {s.title}</legend>
+            <p id={`intro-${s.id}`}>{s.intro}</p>
+            <details class="ws-prompts sans">
+              <summary>Questions to consider</summary>
+              <ul>{s.prompts.map((p) => <li>{p}</li>)}</ul>
+            </details>
+            {s.fields.map((f) => (
+              <div class={`field ws-field ws-kind-${f.kind}`} data-field={f.id}>
+                <label for={`ws-${f.id}`}>{f.label}{f.required && <span class="req"> (required)</span>}</label>
+                <span class="hint" id={`hint-${f.id}`}>{f.hint}</span>
+                {f.short
+                  ? <input type="text" id={`ws-${f.id}`} name={f.id} aria-describedby={`hint-${f.id}`} required={f.required} autocomplete="off" />
+                  : <textarea id={`ws-${f.id}`} name={f.id} rows="4" aria-describedby={`hint-${f.id}`}></textarea>}
+                <p class="error-text" id={`err-${f.id}`} hidden></p>
+              </div>
+            ))}
+            <div class="ws-nav no-print" data-js-only hidden>
+              {i > 0 && <button type="button" class="btn btn-quiet" data-back>Back</button>}
+              <button type="button" class="btn btn-primary" data-continue>Continue</button>
+            </div>
+          </fieldset>
+        ))}
+      </form>
+
+      <section class="ws-summary" id="ws-summary" data-step-index={STEPS.length} hidden aria-labelledby="sum-h" tabindex="-1">
+        <div class="ws-summary-head">
+          <p class="kicker red-rule">Summary · Section {total} of {total}</p>
+          <h2 id="sum-h">Your assessment</h2>
+          <p class="ws-disclaimer"><strong>User-entered material.</strong> Everything below was entered by you. It has not been checked by Critical Minerals. This summary gives no score, certification or verdict.</p>
+        </div>
+        <div id="ws-summary-body"></div>
+        <div class="ws-actions no-print">
+          <button type="button" class="btn btn-quiet" data-back>Back</button>
+          <button type="button" class="btn btn-primary" id="dl-md">Download Markdown</button>
+          <button type="button" class="btn btn-secondary" id="dl-json">Download JSON</button>
+          <button type="button" class="btn btn-secondary" id="print">Print summary</button>
+          <button type="button" class="btn btn-quiet" id="start-over">Start over</button>
+        </div>
+        <p class="hint no-print" id="dl-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <noscript>
+        <p class="notice reading">This worksheet works without JavaScript as a single long form you can fill in and print with your browser's print command. Downloads and saved drafts need JavaScript.</p>
+      </noscript>
+    </div>
+  </div>
+</Base>
+
+<script>
+  import { STEPS, ALL_FIELDS, validateStep, toMarkdown, toJSON, fileSlug, isEmpty } from '../../../lib/worksheet.js';
+
+  const KEY = 'cm-community-benefit-draft-v1';
+  const PREF = 'cm-community-benefit-save-v1';
+  const root = document.getElementById('worksheet')!;
+  const form = document.getElementById('ws-form') as HTMLFormElement;
+  const steps = Array.from(form.querySelectorAll<HTMLFieldSetElement>('.ws-step'));
+  const summary = document.getElementById('ws-summary')!;
+  const summaryBody = document.getElementById('ws-summary-body')!;
+  const progress = Array.from(root.querySelectorAll<HTMLLIElement>('.ws-progress li'));
+  const errorsBox = document.getElementById('ws-errors')!;
+  const saveBox = document.getElementById('save-draft') as HTMLInputElement;
+  const draftStatus = document.getElementById('draft-status')!;
+  const restoreBtn = document.getElementById('restore-draft') as HTMLButtonElement;
+  const deleteBtn = document.getElementById('delete-draft') as HTMLButtonElement;
+  const dlStatus = document.getElementById('dl-status')!;
+  let current = 0;
+
+  // Storage can be unavailable (private mode, blocked site data): never fail.
+  const store = {
+    get(k: string) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k: string, v: string) { try { localStorage.setItem(k, v); return true; } catch { return false; } },
+    del(k: string) { try { localStorage.removeItem(k); } catch { /* ignore */ } },
+  };
+
+  root.classList.add('is-enhanced');
+  root.querySelectorAll<HTMLElement>('[data-js-only]').forEach((el) => (el.hidden = false));
+
+  const read = (): Record<string, string> => {
+    const d: Record<string, string> = {};
+    for (const f of ALL_FIELDS) d[f.id] = (form.elements.namedItem(f.id) as HTMLInputElement | HTMLTextAreaElement)?.value ?? '';
+    return d;
+  };
+  const write = (d: Record<string, string>) => {
+    for (const f of ALL_FIELDS) {
+      const el = form.elements.namedItem(f.id) as HTMLInputElement | HTMLTextAreaElement | null;
+      if (el) el.value = d[f.id] ?? '';
+    }
+  };
+
+  const clearErrors = () => {
+    errorsBox.hidden = true;
+    errorsBox.innerHTML = '';
+    form.querySelectorAll('.field-error').forEach((el) => el.classList.remove('field-error'));
+    form.querySelectorAll<HTMLElement>('.error-text').forEach((el) => { el.hidden = true; el.textContent = ''; });
+    form.querySelectorAll('[aria-invalid]').forEach((el) => el.removeAttribute('aria-invalid'));
+  };
+
+  const showErrors = (errs: { id: string; message: string }[]) => {
+    clearErrors();
+    for (const e of errs) {
+      const wrap = form.querySelector(`[data-field="${e.id}"]`)!;
+      const input = form.elements.namedItem(e.id) as HTMLElement;
+      const msg = document.getElementById(`err-${e.id}`)!;
+      wrap.classList.add('field-error');
+      msg.textContent = e.message;
+      msg.hidden = false;
+      input.setAttribute('aria-invalid', 'true');
+      input.setAttribute('aria-describedby', `err-${e.id} hint-${e.id}`);
+    }
+    errorsBox.innerHTML = `<p><strong>There ${errs.length === 1 ? 'is a problem' : `are ${errs.length} problems`} to fix before continuing:</strong></p><ul>${errs.map((e) => `<li><a href="#ws-${e.id}">${e.message}</a></li>`).join('')}</ul>`;
+    errorsBox.hidden = false;
+    (form.elements.namedItem(errs[0].id) as HTMLElement).focus();
+  };
+
+  const escapeHtml = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+
+  const renderSummary = () => {
+    const d = read();
+    const kindLabel: Record<string, string> = { documented: 'Documented', assumed: 'Assumed or claimed', missing: 'Missing or unknown', context: 'Context' };
+    let html = `<dl class="facts"><dt>Place</dt><dd>${escapeHtml(d.place || 'Not stated')}</dd><dt>Activity</dt><dd>${escapeHtml(d.activity || 'Not stated')}</dd></dl>`;
+    for (const s of STEPS) {
+      html += `<section class="ws-sum-sec"><h3>${escapeHtml(s.title)}</h3>`;
+      for (const f of s.fields) {
+        if (f.id === 'place' || f.id === 'activity') continue;
+        const v = (d[f.id] || '').trim();
+        html += `<div class="ws-sum-item ws-kind-${f.kind}"><p class="ws-sum-label"><span class="status">${kindLabel[f.kind]}</span> ${escapeHtml(f.label)}</p>${v ? `<p class="ws-sum-value">${escapeHtml(v).replace(/\n/g, '<br>')}</p>` : '<p class="meta">Not answered.</p>'}</div>`;
+      }
+      html += `</section>`;
+    }
+    summaryBody.innerHTML = html;
+  };
+
+  const show = (i: number, focus = true) => {
+    current = i;
+    steps.forEach((s, j) => (s.hidden = j !== i));
+    const onSummary = i === steps.length;
+    summary.hidden = !onSummary;
+    if (onSummary) renderSummary();
+    progress.forEach((p, j) => {
+      p.classList.toggle('is-current', j === i);
+      p.classList.toggle('is-done', j < i);
+      if (j === i) p.setAttribute('aria-current', 'step'); else p.removeAttribute('aria-current');
+    });
+    if (focus) {
+      const target = onSummary ? summary : steps[i].querySelector('legend')!;
+      if (!onSummary) steps[i].setAttribute('tabindex', '-1');
+      (onSummary ? summary : steps[i]).focus({ preventScroll: true });
+      (target as HTMLElement).scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    }
+  };
+
+  form.addEventListener('click', (e) => {
+    const t = e.target as HTMLElement;
+    if (t.closest('[data-continue]')) {
+      const errs = validateStep(STEPS[current].id, read());
+      if (errs.length) { showErrors(errs); return; }
+      clearErrors();
+      show(current + 1);
+    } else if (t.closest('[data-back]')) {
+      clearErrors();
+      show(current - 1);
+    }
+  });
+  summary.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('[data-back]')) show(steps.length - 1);
+  });
+  form.addEventListener('submit', (e) => e.preventDefault());
+  errorsBox.addEventListener('click', (e) => {
+    const a = (e.target as HTMLElement).closest('a');
+    if (a) { e.preventDefault(); document.querySelector<HTMLElement>(a.getAttribute('href')!)?.focus(); }
+  });
+
+  // Drafts: only with explicit choice.
+  const refreshDraftUi = () => {
+    const has = !!store.get(KEY);
+    deleteBtn.hidden = !has;
+    restoreBtn.hidden = !has || saveBox.checked;
+    if (saveBox.checked) draftStatus.textContent = 'Drafts are on. Your answers are saved in this browser on this device as you type.';
+    else draftStatus.textContent = has ? 'A saved draft exists in this browser. Restore it or delete it.' : 'Drafts are off. Your answers will be lost if you close this page.';
+  };
+  const saveDraft = () => {
+    if (!saveBox.checked) return;
+    if (!store.set(KEY, JSON.stringify({ savedAt: new Date().toISOString(), data: read() }))) {
+      draftStatus.textContent = 'This browser is not allowing local storage, so the draft cannot be saved.';
+    }
+  };
+  saveBox.addEventListener('change', () => {
+    if (saveBox.checked) { store.set(PREF, '1'); saveDraft(); }
+    else store.del(PREF);
+    refreshDraftUi();
+  });
+  form.addEventListener('input', saveDraft);
+  restoreBtn.addEventListener('click', () => {
+    try { write(JSON.parse(store.get(KEY) || '{}').data || {}); } catch { /* corrupt draft */ }
+    saveBox.checked = true; store.set(PREF, '1');
+    refreshDraftUi();
+    draftStatus.textContent = 'Draft restored. Saving is on.';
+  });
+  deleteBtn.addEventListener('click', () => {
+    store.del(KEY); store.del(PREF);
+    saveBox.checked = false;
+    refreshDraftUi();
+    draftStatus.textContent = 'Saved draft deleted from this browser.';
+    saveBox.focus();
+  });
+  if (store.get(PREF) === '1' && store.get(KEY)) {
+    try { write(JSON.parse(store.get(KEY)!).data || {}); saveBox.checked = true; } catch { /* ignore */ }
+  }
+  refreshDraftUi();
+
+  // Exports
+  const download = (name: string, type: string, text: string) => {
+    const blob = new Blob([text], { type });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
+    dlStatus.textContent = `Downloaded ${name}.`;
+  };
+  const source = location.origin + location.pathname;
+  document.getElementById('dl-md')!.addEventListener('click', () => download(`${fileSlug(read())}.md`, 'text/markdown;charset=utf-8', toMarkdown(read(), { source })));
+  document.getElementById('dl-json')!.addEventListener('click', () => download(`${fileSlug(read())}.json`, 'application/json;charset=utf-8', JSON.stringify(toJSON(read()), null, 2)));
+  document.getElementById('print')!.addEventListener('click', () => window.print());
+  document.getElementById('start-over')!.addEventListener('click', () => {
+    if (!isEmpty(read()) && !window.confirm('Clear all answers on this page? A saved draft, if any, is kept until you delete it.')) return;
+    form.reset();
+    show(0);
+  });
+
+  // Printing from any step prints the summary of answers so far.
+  let summaryWasHidden = true;
+  window.addEventListener('beforeprint', () => { renderSummary(); summaryWasHidden = summary.hidden; summary.hidden = false; });
+  window.addEventListener('afterprint', () => { summary.hidden = summaryWasHidden; });
+
+  show(0, false);
+</script>
+
+<style>
+  .ws-intro { margin-bottom: 1.5rem; }
+  .ws-intro h2 { margin-top: 0; }
+  .ws-intro ul { padding-left: 1.1em; margin-bottom: 0.5rem; }
+  .ws { max-width: 52rem; }
+  .ws-draft { margin-bottom: 1rem; }
+  .ws-draft-row { display: flex; align-items: center; gap: 10px; }
+  .ws-draft-row input { width: 22px; height: 22px; accent-color: var(--chicago-30); }
+  .ws-draft-row label { margin: 0; }
+  .ws-draft .hint { margin: 6px 0 0; }
+  .ws-draft-actions { display: flex; gap: 8px; margin: 8px 0 0; flex-wrap: wrap; }
+  .ws-draft-actions:has(button:not([hidden])) { margin-top: 8px; }
+  .ws-progress { list-style: none; padding: 0; margin: 0 0 1rem; display: flex; gap: 4px; }
+  .ws-progress li { flex: 1; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 0.8rem; color: var(--london-35); border-top: 4px solid var(--london-85); padding-top: 6px; }
+  .ws-progress li.is-done { border-top-color: var(--chicago-55); color: var(--london-20); }
+  .ws-progress li.is-current { border-top-color: var(--color-signature); color: var(--london-5); font-weight: 700; }
+  .ws-pnum { font-weight: 700; }
+  @media (max-width: 760px) { .ws-plabel { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } }
+  .ws-step { padding: 1.25rem; margin-bottom: 1rem; }
+  .ws-step:focus { outline: none; }
+  .ws-step legend { float: left; width: 100%; margin-bottom: 0.75rem; }
+  .ws-step legend + * { clear: both; }
+  .ws-stepnum { display: block; font-size: 0.85rem; font-weight: 600; color: var(--london-35); }
+  .ws-prompts { margin: 0 0 1rem; }
+  .ws-prompts summary { cursor: pointer; color: var(--color-link); font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+  .ws-prompts ul { margin: 0.25rem 0 0; padding-left: 1.1em; }
+  .req { font-weight: 400; color: var(--london-35); }
+  .ws-field label { font-family: var(--font-sans); }
+  .ws-kind-documented > label::before, .ws-kind-assumed > label::before, .ws-kind-missing > label::before { content: ''; display: inline-block; width: 10px; height: 10px; margin-right: 8px; border: 2px solid var(--london-20); vertical-align: 0; }
+  .ws-kind-documented > label::before { background: var(--london-20); }
+  .ws-kind-assumed > label::before { border-style: dashed; }
+  .ws-kind-missing > label::before { border-radius: 50%; }
+  .ws-nav, .ws-actions { display: flex; gap: var(--gap); flex-wrap: wrap; margin-top: 1rem; }
+  .ws-nav [data-continue] { margin-left: auto; }
+  .ws-summary { background: var(--color-surface); border: 1px solid var(--color-rule); padding: 1.25rem; }
+  .ws-summary:focus { outline: none; }
+  .ws-summary h2 { margin-top: 0.2rem; }
+  .ws-disclaimer { font-family: var(--font-sans); font-size: 0.95rem; background: var(--newyork-90); padding: 0.6rem 0.9rem; }
+  :global(.ws-sum-sec) { border-top: 1px solid var(--color-rule); padding-top: 0.25rem; margin-top: 1rem; }
+  :global(.ws-sum-sec h3) { margin: 0.6rem 0; }
+  :global(.ws-sum-label) { font-family: var(--font-sans); font-weight: 600; margin: 0.5rem 0 0.25rem; }
+  :global(.ws-sum-value) { white-space: normal; margin-top: 0; }
+  .ws:not(.is-enhanced) .ws-step { display: block; }
+  @media print {
+    .ws-intro, .ws-form, .ws-progress, .ws-draft, header.reading .standfirst { display: none !important; }
+    .ws.is-enhanced .ws-summary { display: block !important; border: 0; padding: 0; }
+    .ws:not(.is-enhanced) .ws-form { display: block !important; }
+    .ws-disclaimer { background: #fff; border: 1px solid #000; }
+  }
+</style>

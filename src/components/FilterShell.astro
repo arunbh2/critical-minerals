@@ -1,0 +1,36 @@
+---
+// Wraps a filterable list: filter controls on the cool data canvas,
+// a visible reset, a live count and an explanatory empty state.
+interface Props { filters: { name: string; label: string; options: { value: string; label: string }[] }[]; noun?: string }
+const { filters, noun = 'records' } = Astro.props;
+---
+<div data-filter-root class="filter-root">
+  <p class="meta" data-filter-nojs>All {noun} are listed. Filters need JavaScript.</p>
+  <form data-filter-form class="panel-data filter-form" hidden aria-label={`Filter ${noun}`}>
+    <div class="filter-grid">
+      {filters.map((f) => (
+        <div class="field">
+          <label for={`f-${f.name}`}>{f.label}</label>
+          <select id={`f-${f.name}`} name={f.name}>
+            <option value="">All</option>
+            {f.options.map((o) => <option value={o.value}>{o.label}</option>)}
+          </select>
+        </div>
+      ))}
+    </div>
+    <p class="filter-status sans"><span data-filter-count aria-live="polite"></span> <a href="?" data-filter-reset hidden>Reset filters</a></p>
+  </form>
+  <div data-filter-empty hidden class="notice" role="status">
+    <p><strong>No {noun} match these filters.</strong> Filtered by: <span data-filter-desc></span>.</p>
+    <p><a href="?" data-filter-reset>Reset filters</a> to see all {noun}.</p>
+  </div>
+  <slot />
+</div>
+<script>import '../scripts/filters.ts';</script>
+<style>
+  .filter-form { margin: 1rem 0 1.25rem; }
+  .filter-grid { display: grid; gap: 0 var(--gutter); grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
+  .filter-status { margin: 0; font-size: 0.95rem; }
+  .filter-status a { margin-left: 12px; font-weight: 600; }
+  [hidden] { display: none !important; }
+</style>

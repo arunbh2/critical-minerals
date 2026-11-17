@@ -1,0 +1,238 @@
+[
+  {
+    "id": "c-refining-top3-2024",
+    "text": "Across copper, lithium, nickel, cobalt, graphite and rare earth elements, the average market share of the three largest refining countries rose from about 82% in 2020 to about 86% in 2024.",
+    "sources": [
+      "iea-gcmo-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "2024"
+  },
+  {
+    "id": "c-mining-top3-2024",
+    "text": "Mining is less concentrated than refining: the average share of the three largest mining countries for the same minerals rose from about 73% in 2020 to about 77% in 2024.",
+    "sources": [
+      "iea-gcmo-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "2024"
+  },
+  {
+    "id": "c-growth-single-supplier",
+    "text": "Around 90% of recent refined supply growth came from the single largest supplier of each mineral, for example Indonesia for nickel and China for cobalt and graphite.",
+    "sources": [
+      "iea-gcmo-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "2020–2024"
+  },
+  {
+    "id": "c-gcmo-2026-growth",
+    "text": "The IEA's 2026 outlook reported that China and Indonesia together accounted for more than three-quarters of refined supply growth across key energy minerals, and that expanding export restrictions had turned concentration into an immediate economic-security concern.",
+    "sources": [
+      "iea-gcmo-2026"
+    ],
+    "verification": "corroborated",
+    "asOf": "2026"
+  },
+  {
+    "id": "c-india-cm-list-2023",
+    "text": "In June 2023 India's Ministry of Mines published its first list of 30 critical minerals, prepared by a committee constituted in November 2022. The Ministry said the list would be revisited periodically.",
+    "sources": [
+      "mines-india-cm-2023"
+    ],
+    "verification": "corroborated",
+    "asOf": "June 2023"
+  },
+  {
+    "id": "c-india-ncmm-2025",
+    "text": "On 29 January 2025 India's Union Cabinet approved a National Critical Mineral Mission with a government outlay of ₹16,300 crore and a further ₹18,000 crore expected from public sector undertakings and others, a combined ₹34,300 crore over seven years.",
+    "sources": [
+      "pmindia-ncmm-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "January 2025"
+  },
+  {
+    "id": "c-india-ncmm-scope",
+    "text": "The Mission covers exploration, mining, beneficiation, processing and recovery from end-of-life products, and includes support for overseas mineral asset acquisition, a proposed national stockpile and mineral processing parks.",
+    "sources": [
+      "pmindia-ncmm-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "January 2025"
+  },
+  {
+    "id": "c-india-mmdr-2023",
+    "text": "An amendment to India's mining law, in force from 17 August 2023, allows the central government to auction mining leases and composite licences for listed critical minerals and creates an exploration licence for critical and deep-seated minerals. Auction revenue accrues to state governments.",
+    "sources": [
+      "prs-mmdr-2023",
+      "iea-policy-mmdr-2023"
+    ],
+    "verification": "corroborated",
+    "asOf": "August 2023"
+  },
+  {
+    "id": "c-india-first-tranche",
+    "text": "The central government launched its first tranche of critical and strategic mineral block auctions, covering 20 blocks, on 29 November 2023.",
+    "sources": [
+      "pib-auction-tranche-2023"
+    ],
+    "verification": "corroborated",
+    "asOf": "November 2023"
+  },
+  {
+    "id": "c-india-dmf-collections",
+    "text": "District Mineral Foundations, funded by levies on mining leaseholders, had collected more than ₹1 lakh crore cumulatively by early 2025. Odisha, Chhattisgarh and Jharkhand together accounted for more than half of the total.",
+    "sources": [
+      "rs-dmf-2024",
+      "iwp-dmf-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "early 2025"
+  },
+  {
+    "id": "c-india-dmf-unspent",
+    "text": "Analyses of official figures in 2024 and 2025 reported that roughly half of cumulative District Mineral Foundation collections had not yet been spent.",
+    "sources": [
+      "iwp-dmf-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "2024–2025"
+  },
+  {
+    "id": "c-india-bwmr-2022",
+    "text": "India's Battery Waste Management Rules, notified in August 2022, replaced earlier battery rules and introduced extended producer responsibility: producers, including importers, must register with the Central Pollution Control Board and meet collection and recycling obligations, with environmental compensation for non-fulfilment. The rules have since been amended.",
+    "sources": [
+      "pib-bwmr-2022",
+      "iea-policy-india-bwmr"
+    ],
+    "verification": "corroborated",
+    "asOf": "2022; amended since"
+  },
+  {
+    "id": "c-indonesia-ore-ban",
+    "text": "Indonesia has prohibited exports of nickel ore since 1 January 2020, two years earlier than previously planned. An earlier ban from 2014 had been partly relaxed between 2017 and 2019.",
+    "sources": [
+      "iea-policy-indonesia-nickel"
+    ],
+    "verification": "corroborated",
+    "asOf": "2020"
+  },
+  {
+    "id": "c-indonesia-nickel-share",
+    "text": "Indonesia produced around 60% of the world's mined nickel in 2024, by far the largest share of any country.",
+    "sources": [
+      "usgs-mcs-2025",
+      "iea-gcmo-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "2024 estimate"
+  },
+  {
+    "id": "c-morowali-2023",
+    "text": "On 24 December 2023 a furnace accident at a nickel smelter in the Indonesia Morowali Industrial Park, Central Sulawesi, killed workers and injured dozens. Initial company statements reported 13 deaths; later reporting raised the toll to around 20. The park operator revised its initial account of the cause, and labour groups criticised safety and evacuation arrangements.",
+    "sources": [
+      "jakpost-morowali-2023-12-24",
+      "jakpost-morowali-2023-12-27",
+      "bhrrc-morowali-2023"
+    ],
+    "verification": "corroborated",
+    "asOf": "December 2023"
+  },
+  {
+    "id": "c-drc-cobalt-share",
+    "text": "The Democratic Republic of the Congo produced roughly three-quarters of the world's mined cobalt in 2024.",
+    "sources": [
+      "usgs-mcs-2025"
+    ],
+    "verification": "corroborated",
+    "asOf": "2024 estimate"
+  },
+  {
+    "id": "c-drc-export-2025",
+    "text": "The Democratic Republic of the Congo suspended cobalt exports in February 2025 and replaced the suspension with an export quota system in October 2025.",
+    "sources": [
+      "iea-policy-drc-cobalt"
+    ],
+    "verification": "corroborated",
+    "asOf": "2025"
+  },
+  {
+    "id": "c-china-graphite-2023",
+    "text": "China introduced export permit requirements for certain graphite products, announced in October 2023 and effective from December 2023.",
+    "sources": [
+      "orf-china-controls"
+    ],
+    "verification": "corroborated",
+    "asOf": "December 2023"
+  },
+  {
+    "id": "c-china-ree-2025",
+    "text": "On 4 April 2025 China placed seven medium and heavy rare earth elements (samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium) and related products under export licensing.",
+    "sources": [
+      "csis-ree-2025",
+      "orf-china-controls"
+    ],
+    "verification": "corroborated",
+    "asOf": "April 2025"
+  },
+  {
+    "id": "c-eu-crma",
+    "text": "The EU Critical Raw Materials Act entered into force on 23 May 2024. It sets non-binding 2030 benchmarks for EU extraction (10%), processing (40%) and recycling (25%) of annual consumption of strategic raw materials, and aims for no more than 65% of any strategic raw material to come from a single third country.",
+    "sources": [
+      "council-crma"
+    ],
+    "verification": "corroborated",
+    "asOf": "May 2024"
+  },
+  {
+    "id": "c-eu-strategic-projects",
+    "text": "Under the Act, the European Commission designated 47 strategic projects in EU member states in March 2025 and 13 outside the EU in June 2025.",
+    "sources": [
+      "mw-eu-47-projects",
+      "spg-eu-13-projects"
+    ],
+    "verification": "corroborated",
+    "asOf": "2025"
+  },
+  {
+    "id": "c-eu-batteries",
+    "text": "The EU Batteries Regulation sets lithium recovery targets of 50% by the end of 2027 and 80% by the end of 2031, and 90% and 95% for cobalt, copper, lead and nickel. Minimum recycled content for new batteries starts in August 2031 at 16% cobalt, 6% lithium, 6% nickel and 85% lead. Electric-vehicle, light-transport and larger industrial batteries require a digital battery passport from February 2027.",
+    "sources": [
+      "eurlex-batteries"
+    ],
+    "verification": "corroborated",
+    "asOf": "Regulation (EU) 2023/1542, as summarised"
+  },
+  {
+    "id": "c-un-panel-2024",
+    "text": "The UN Secretary-General's Panel on Critical Energy Transition Minerals published its report on 11 September 2024 with seven voluntary guiding principles and five actionable recommendations. Its first principle is that human rights must be at the core of all mineral value chains.",
+    "sources": [
+      "un-panel-cetm",
+      "iisd-un-panel-2024"
+    ],
+    "verification": "corroborated",
+    "asOf": "September 2024"
+  },
+  {
+    "id": "c-jetp-indonesia",
+    "text": "Indonesia's Just Energy Transition Partnership was announced at the G20 summit in Bali in November 2022 with an initial US$20 billion: US$10 billion pledged by a group of governments and a further US$10 billion of private finance to be mobilised. Its investment plan was launched in November 2023.",
+    "sources": [
+      "chn-jetp-2022",
+      "eeas-jetp-cipp"
+    ],
+    "verification": "corroborated",
+    "asOf": "2022–2023"
+  },
+  {
+    "id": "c-wb-csm-2019",
+    "text": "The World Bank launched its Climate-Smart Mining Facility, a multi-donor trust fund, in May 2019 with initial support from the German government, Rio Tinto and Anglo American. At launch it targeted US$50 million over five years across mitigation, adaptation, reducing material impacts and market opportunities.",
+    "sources": [
+      "miningcom-csm-2019",
+      "wb-csm"
+    ],
+    "verification": "corroborated",
+    "asOf": "May 2019"
+  }
+]

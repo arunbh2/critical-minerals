@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FilterShell from '../../components/FilterShell.astro';
+import { hrefFor, vocabLabel } from '../../lib/content';
+import { formatDate } from '../../lib/status.js';
+import { url } from '../../lib/url';
+import vocab from '../../data/vocab.json';
+const records = (await getCollection('policies')).sort((a, b) => a.data.jurisdiction.localeCompare(b.data.jurisdiction) || a.data.title.localeCompare(b.data.title));
+const jur = [...new Set(records.map((r) => r.data.jurisdiction))].sort();
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+const mins = [...new Set(records.flatMap((r) => r.data.minerals))].sort();
+const filters = [
+  { name: 'jurisdiction', label: 'Jurisdiction', options: jur.map((j) => ({ value: slug(j), label: j })) },
+  { name: 'state', label: 'Legal state', options: vocab.policyStates.map((v) => ({ value: v.id, label: v.label })) },
+  { name: 'mineral', label: 'Mineral', options: mins.map((m) => ({ value: m, label: m.replace('-', ' ') })) },
+];
+const keyDate = (d: any) => d.effective ?? d.adopted ?? d.announced ?? d.amended;
+---
+<Base title="Policies" description="Policy records on critical minerals, with legal state, issuing body, dates, mechanism and development implications kept separate from summaries.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Finance & policy', href: url('finance/') }, { label: 'Policies' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Finance & policy</p>
+      <h1>Policy records</h1>
+      <p class="standfirst">Laws, rules and programmes that shape where minerals are mined, processed and recovered. Each record separates a plain summary from our interpretation of what it means for workers, communities and the environment.</p>
+    </header>
+    <p class="sans"><a href={url('finance/')} class="link-arrow">Finance records</a> &nbsp; <a href={url('data/policies.json')}>Download policy records (JSON)</a></p>
+    <FilterShell filters={filters} noun="policy records">
+      <ul class="record-list">
+        {records.map((r) => (
+          <li data-filter-item data-jurisdiction={slug(r.data.jurisdiction)} data-state={r.data.state} data-mineral={r.data.minerals.join(' ')}>
+            <p class="kicker">{r.data.jurisdiction} · {r.data.issuingBody}</p>
+            <h3><a href={hrefFor('policies', r.id)}>{r.data.title}</a></h3>
+            <p>{r.data.summary}</p>
+            <p class="meta"><span class="status">{vocabLabel('policyStates', r.data.state)}</span> {keyDate(r.data.dates) && <> · {formatDate(keyDate(r.data.dates))}</>} · Reviewed {formatDate(r.data.reviewed)}</p>
+          </li>
+        ))}
+      </ul>
+    </FilterShell>
+  </div>
+</Base>

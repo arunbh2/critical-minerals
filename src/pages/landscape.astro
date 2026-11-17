@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FilterShell from '../components/FilterShell.astro';
+import { hrefFor, vocabLabel, titleFor } from '../lib/content';
+import { url } from '../lib/url';
+import vocab from '../data/vocab.json';
+const orgs = (await getCollection('organisations')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+const issues = (await getCollection('issues')).sort((a, b) => a.data.order - b.data.order);
+const filters = [
+  { name: 'type', label: 'Type of organisation', options: vocab.orgTypes.map((v) => ({ value: v.id, label: v.label })) },
+  { name: 'country', label: 'Geography', options: [{ value: 'india', label: 'India' }, { value: 'indonesia', label: 'Indonesia' }, { value: 'global', label: 'Global or multi-country' }] },
+  { name: 'issue', label: 'Issue', options: issues.map((i) => ({ value: i.id, label: i.data.title })) },
+];
+---
+<Base title="Organisations" description="An evidence-linked landscape of organisations working on critical minerals, people and the environment. Listing is not endorsement.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Explore', href: url('explore/') }, { label: 'Organisations' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Delivery landscape</p>
+      <h1>Where does capability exist?</h1>
+      <p class="standfirst">Organisations working on standards, data, rights, finance and policy across the critical-minerals lifecycle. Use this list to find who works where. It does not rank anyone.</p>
+    </header>
+    <div class="notice reading"><p>Listing is not endorsement or partnership. Profiles summarise each organisation's <strong>stated mandate</strong>. They do not assess implementation or results. Local community and worker organisations will be added only where evidence and consent allow.</p></div>
+    <FilterShell filters={filters} noun="organisations">
+      <ul class="record-list">
+        {orgs.map((o) => (
+          <li data-filter-item data-type={o.data.type} data-country={o.data.countries.length ? o.data.countries.join(' ') : 'global'} data-issue={o.data.issues.join(' ')}>
+            <p class="kicker">{vocabLabel('orgTypes', o.data.type)} · {o.data.geography}</p>
+            <h3><a href={hrefFor('organisations', o.id)}>{o.data.name}</a></h3>
+            <p>{o.data.role}</p>
+          </li>
+        ))}
+      </ul>
+    </FilterShell>
+    <p class="sans"><a href={url('data/organisations.json')}>Download organisation records (JSON)</a></p>
+  </div>
+</Base>

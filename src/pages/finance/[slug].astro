@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FinanceStatus from '../../components/FinanceStatus.astro';
+import SourceList from '../../components/SourceList.astro';
+import Related from '../../components/Related.astro';
+import Tags from '../../components/Tags.astro';
+import { vocabLabel } from '../../lib/content';
+import { formatDeadline, formatDate } from '../../lib/status.js';
+import { url } from '../../lib/url';
+import vocab from '../../data/vocab.json';
+export async function getStaticPaths() {
+  return (await getCollection('finance')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const nf = (v: string | null) => v ?? 'Not established';
+const vlabel = vocab.verification.find((v) => v.id === d.verification)?.label;
+---
+<Base title={d.title} description={d.purpose} searchType="Finance record">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Finance', href: url('finance/') }, { label: d.title }]} />
+    <article class="reading">
+      <p class="kicker red-rule">Finance record · {vocabLabel('recordStates', d.recordState)}</p>
+      <h1>{d.title}</h1>
+      <p class="standfirst">{d.purpose}</p>
+      <p><FinanceStatus r={d} /></p>
+      <Tags countries={d.countries} minerals={d.minerals} issues={d.issues} />
+      <div class="panel-data">
+        <dl class="facts">
+          <dt>Provider</dt><dd>{d.provider}</dd>
+          <dt>Programme</dt><dd>{d.programme}</dd>
+          <dt>Record state</dt><dd>{vocabLabel('recordStates', d.recordState)}</dd>
+          <dt>Instrument</dt><dd>{d.instruments.map((i) => vocabLabel('instruments', i)).join(', ')}</dd>
+          <dt>Supports</dt><dd>{d.supports.map((s) => vocabLabel('financeSupports', s)).join(', ')}</dd>
+          <dt>Geography</dt><dd>{d.geography}</dd>
+          <dt>Amount</dt><dd class="tabular">{d.amount.value == null ? 'Not established' : `${d.amount.value.toLocaleString('en-GB')} ${d.amount.currency}`} (stage: {d.amount.stage === 'unknown' ? 'not established' : d.amount.stage}; basis: {d.amount.basis === 'unknown' ? 'not established' : d.amount.basis.replace('-', ' ')}){d.amount.note && <><br />{d.amount.note}</>}</dd>
+          <dt>Eligible entities</dt><dd>{nf(d.eligibleEntities)}</dd>
+          <dt>Partnership conditions</dt><dd>{nf(d.partnershipConditions)}</dd>
+          <dt>Co-financing</dt><dd>{nf(d.coFinancing)}</dd>
+          <dt>Application route</dt><dd>{d.applicationRoute ?? 'None identified. Do not treat this record as an open call.'}</dd>
+          <dt>Opens</dt><dd>{formatDeadline(d.opens)}</dd>
+          <dt>Closes</dt><dd>{formatDeadline(d.closes)}</dd>
+          <dt>Last verified</dt><dd><time datetime={d.lastVerified}>{formatDate(d.lastVerified)}</time>: {vlabel}</dd>
+          <dt>Next verification</dt><dd><time datetime={d.reviewDue}>{formatDate(d.reviewDue)}</time></dd>
+        </dl>
+      </div>
+      <section class="evidence evidence-unclear" aria-labelledby="unc-h">
+        <h2 id="unc-h">What remains unclear</h2>
+        <p>{d.uncertainties}</p>
+      </section>
+      <SourceList ids={d.sources} heading="Primary and supporting sources" />
+    </article>
+    <Related type="finance" id={entry.id} refs={{ countries: d.countries, minerals: d.minerals, issues: d.issues }} />
+  </div>
+</Base>

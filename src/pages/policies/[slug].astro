@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SourceList from '../../components/SourceList.astro';
+import Related from '../../components/Related.astro';
+import Tags from '../../components/Tags.astro';
+import RecordMeta from '../../components/RecordMeta.astro';
+import { vocabLabel, sourcesById } from '../../lib/content';
+import { formatDate } from '../../lib/status.js';
+import { url } from '../../lib/url';
+import vocab from '../../data/vocab.json';
+export async function getStaticPaths() {
+  return (await getCollection('policies')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const [primary] = await sourcesById([d.primaryDocument]);
+const vlabel = vocab.verification.find((v) => v.id === d.verification)?.label;
+const dates = Object.entries(d.dates).filter(([, v]) => v) as [string, string][];
+---
+<Base title={d.title} description={d.summary} searchType="Policy record">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Policies', href: url('policies/') }, { label: d.title }]} />
+    <article class="reading">
+      <p class="kicker red-rule">Policy record · {d.jurisdiction}</p>
+      <h1>{d.title}</h1>
+      <p><span class="status">{vocabLabel('policyStates', d.state)}</span></p>
+      <RecordMeta reviewed={d.reviewed} reviewDue={d.reviewDue} />
+      <Tags countries={d.countries} minerals={d.minerals} issues={d.issues} />
+      <h2>Summary</h2>
+      <p>{d.summary}</p>
+      <div class="panel-data">
+        <dl class="facts">
+          <dt>Jurisdiction</dt><dd>{d.jurisdiction}</dd>
+          <dt>Issuing body</dt><dd>{d.issuingBody}</dd>
+          <dt>Legal state</dt><dd>{vocabLabel('policyStates', d.state)}</dd>
+          {dates.length ? dates.map(([k, v]) => <><dt>{k[0].toUpperCase() + k.slice(1)}</dt><dd><time datetime={v}>{formatDate(v)}</time></dd></>) : <><dt>Key dates</dt><dd>See summary; exact dates pending verification</dd></>}
+          <dt>Primary document</dt><dd><a href={primary.data.url} rel="noopener">{primary.data.title}</a> ({primary.data.publisher})</dd>
+          <dt>Mechanism</dt><dd>{d.mechanism}</dd>
+          <dt>Funding</dt><dd>{d.funding ?? 'None established'}</dd>
+          <dt>Affected actors</dt><dd>{d.affectedActors.join('; ')}</dd>
+          <dt>Verification</dt><dd>{vlabel}</dd>
+        </dl>
+      </div>
+      <section class="evidence evidence-meaning" aria-labelledby="impl-h">
+        <h2 id="impl-h">What this may mean for development</h2>
+        <p class="meta">Editorial interpretation, kept separate from the summary above.</p>
+        <p>{d.implications}</p>
+      </section>
+      <SourceList ids={d.sources} />
+    </article>
+    <Related type="policies" id={entry.id} refs={{ countries: d.countries, minerals: d.minerals, issues: d.issues }} />
+  </div>
+</Base>

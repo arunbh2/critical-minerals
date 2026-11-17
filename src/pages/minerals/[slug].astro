@@ -1,0 +1,19 @@
+---
+import { getCollection, render } from 'astro:content';
+import Entry from '../../layouts/Entry.astro';
+import { url } from '../../lib/url';
+export async function getStaticPaths() {
+  return (await getCollection('minerals')).filter((e) => !e.data.draft).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<Entry type="minerals" id={entry.id} kicker={entry.data.group ? 'Material group' : 'Mineral profile'} data={entry.data}
+  crumbs={[{ label: 'Explore', href: url('explore/') }, { label: 'Minerals', href: url('minerals/') }, { label: entry.data.title }]}>
+  <aside slot="facts" class="panel reading facts-panel sans" aria-label="Main uses">
+    <h2 class="kicker">Main uses</h2>
+    <ul>{entry.data.uses.map((u) => <li>{u}</li>)}</ul>
+  </aside>
+  <Content />
+</Entry>
+<style>.facts-panel { margin-bottom: 1.5rem; } .facts-panel ul { margin: 0; padding-left: 1.1em; } .facts-panel h2 { margin-top: 0; }</style>

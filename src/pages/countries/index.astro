@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { hrefFor } from '../../lib/content';
+import { url } from '../../lib/url';
+const countries = await getCollection('countries');
+---
+<Base title="Countries" description="Country dossiers connecting value chains, policy, people, institutions, finance and evidence.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Explore', href: url('explore/') }, { label: 'Countries' }]} />
+    <header class="reading"><p class="kicker red-rule">Country dossiers</p><h1>Countries</h1>
+      <p class="standfirst">Deeper coverage begins with India and Indonesia. Other countries appear in mineral profiles and policy records where evidence allows.</p></header>
+    <ul class="record-list reading">{countries.map((c) => <li><h3><a href={hrefFor('countries', c.id)}>{c.data.title}</a></h3><p>{c.data.summary}</p></li>)}</ul>
+  </div>
+</Base>
