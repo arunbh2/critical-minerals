@@ -149,10 +149,10 @@
       "rs-dmf-2024",
       "iwp-dmf-2025"
     ],
-    "verification": "not-verified",
+    "verification": "secondary",
     "asOf": "as reported in 2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-initial",
+    "batch": "2026-11-third-pass",
     "evidenceSources": [
       "iwp-dmf-2025"
     ]
@@ -308,13 +308,12 @@
       "nrf-crma-2024",
       "te-crma-2024"
     ],
-    "verification": "secondary",
+    "verification": "not-verified",
     "asOf": "May 2024",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-second-pass",
     "evidenceSources": [
-      "nrf-crma-2024",
-      "te-crma-2024"
+      "nrf-crma-2024"
     ]
   },
   {
@@ -328,9 +327,8 @@
     "verification": "secondary",
     "asOf": "2025",
     "checkedAt": "2026-11-17",
-    "batch": "2026-11-second-pass",
+    "batch": "2026-11-third-pass",
     "evidenceSources": [
-      "mw-eu-47-projects",
       "nsenergy-eu-13-2025"
     ]
   },

@@ -1,7 +1,7 @@
 {
   "batch": "2026-11-second-pass",
-  "gatedAt": "2026-11-17T05:56:17.307Z",
-  "checkedAt": "2026-11-17T05:56:17.273Z",
+  "gatedAt": "2026-11-17T05:59:20.695Z",
+  "checkedAt": "2026-11-17T05:59:20.664Z",
   "results": [
     {
       "claim": "c-refining-top3-2024",
@@ -273,12 +273,14 @@
         {
           "term": "battery waste management rules",
           "foundIn": [
+            "lawrbit-bwmr-2022",
             "mondaq-bwmr-2022"
           ]
         },
         {
           "term": "extended producer responsibility",
           "foundIn": [
+            "lawrbit-bwmr-2022",
             "mondaq-bwmr-2022"
           ]
         }
