@@ -50,7 +50,7 @@ In CI the deploy build reads both values from `actions/configure-pages`, so it f
 ### One-time GitHub settings
 
 1. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
-2. **Settings → Secrets and variables → Actions → New repository secret:** name it `RESTRICTED_TERMS` and paste the private list of phrases that must never appear on the public site, one per line. The deploy job refuses to publish without it. Locally, the same list goes in `private/restricted-terms.txt`, which git ignores.
+2. **Settings → Secrets and variables → Actions → New repository secret:** name it `RESTRICTED_TERMS` and paste the private list of phrases that must never appear on the public site, one per line (case-insensitive; write a line as `/pattern/` for a case-sensitive regular expression, such as a whole-word abbreviation). The deploy job refuses to publish without it. Locally, the same list goes in `private/restricted-terms.txt`, which git ignores.
 3. **Settings → Environments → github-pages:** keep the deployment branch rule limited to `main`. This is the default.
 4. Merge to `main`, or run the workflow manually from the **Actions** tab. The deploy job prints the live URL.
 

@@ -33,11 +33,15 @@ for (const f of files) {
 // 2. Restricted strings in any text output, including decompressed search index fragments.
 // Names of restricted institutions and people are private, so they are NOT written
 // in this public file. They come from the RESTRICTED_TERMS secret in CI, or from the
-// git-ignored file private/restricted-terms.txt locally (one phrase per line).
+// git-ignored file private/restricted-terms.txt locally (one phrase per line,
+// case-insensitive, flexible spacing; or /regex/ for a case-sensitive pattern).
 const termSource = process.env.RESTRICTED_TERMS
   ?? (existsSync(new URL('../private/restricted-terms.txt', import.meta.url))
     ? readFileSync(new URL('../private/restricted-terms.txt', import.meta.url), 'utf8') : '');
 const terms = termSource.split(/\r?\n/).map((t) => t.trim()).filter((t) => t && !t.startsWith('#'));
+// A line written as /pattern/ is a case-sensitive regular expression, e.g. /\bPA\b/
+// for an abbreviation that must match only as a whole capitalised word.
+const toRe = (t) => (/^\/.+\/$/.test(t) ? new RegExp(t.slice(1, -1)) : new RegExp(esc(t), 'i'));
 const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s*');
 let termsNote = `${terms.length} private restricted term(s) checked`;
 if (!terms.length) {
@@ -45,7 +49,7 @@ if (!terms.length) {
   termsNote = 'WARNING: no private restricted terms supplied; that part of the scan was skipped';
 }
 const restricted = [
-  ...terms.map((t) => ({ re: new RegExp(esc(t), 'i'), why: 'restricted term (private list)' })),
+  ...terms.map((t) => ({ re: toRe(t), why: 'restricted term (private list)' })),
   { re: /[a-z0-9._%+-]+@(gmail|yahoo|outlook|hotmail)\.[a-z]{2,}/i, why: 'personal email address', skip: /^pagefind\/pagefind-(component-)?ui\.js$/ },
   { re: /commissioning (brief|user)|leadership note|internal proposal/i, why: 'private commissioning material' },
   { re: /\b(ghp_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16})\b/, why: 'credential-like string' },
