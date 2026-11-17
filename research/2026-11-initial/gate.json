@@ -1,7 +1,7 @@
 {
   "batch": "2026-11-initial",
-  "gatedAt": "2026-11-17T05:45:04.134Z",
-  "checkedAt": "2026-11-17T05:45:04.109Z",
+  "gatedAt": "2026-11-17T05:46:42.269Z",
+  "checkedAt": "2026-11-17T05:46:42.154Z",
   "results": [
     {
       "claim": "c-refining-top3-2024",
@@ -92,90 +92,97 @@
     },
     {
       "claim": "c-india-cm-list-2023",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "30 critical minerals",
-          "foundIn": []
+          "foundIn": [
+            "iep-cm-2023"
+          ]
         }
       ],
-      "missing": [
-        "30 critical minerals"
-      ]
+      "missing": []
     },
     {
       "claim": "c-india-ncmm-2025",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "16,300",
-          "foundIn": []
+          "foundIn": [
+            "tribune-ncmm-2025"
+          ]
         },
         {
           "term": "18,000",
-          "foundIn": []
+          "foundIn": [
+            "tribune-ncmm-2025"
+          ]
         },
         {
           "term": "34,300",
-          "foundIn": []
+          "foundIn": [
+            "tribune-ncmm-2025"
+          ]
         }
       ],
-      "missing": [
-        "16,300",
-        "18,000",
-        "34,300"
-      ]
+      "missing": []
     },
     {
       "claim": "c-india-ncmm-scope",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "exploration",
-          "foundIn": []
+          "foundIn": [
+            "tribune-ncmm-2025"
+          ]
         },
         {
           "term": "beneficiation",
-          "foundIn": []
+          "foundIn": [
+            "tribune-ncmm-2025"
+          ]
         },
         {
           "term": "stockpile",
-          "foundIn": []
+          "foundIn": [
+            "tribune-ncmm-2025"
+          ]
         },
         {
           "term": "end-of-life",
-          "foundIn": []
+          "foundIn": [
+            "tribune-ncmm-2025"
+          ]
         }
       ],
-      "missing": [
-        "exploration",
-        "beneficiation",
-        "stockpile",
-        "end-of-life"
-      ]
+      "missing": []
     },
     {
       "claim": "c-india-mmdr-2023",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "exploration licence",
-          "foundIn": []
+          "foundIn": [
+            "prs-mmdr-2023"
+          ]
         },
         {
           "term": "critical",
-          "foundIn": []
+          "foundIn": [
+            "prs-mmdr-2023"
+          ]
         },
         {
           "term": "state government",
-          "foundIn": []
+          "foundIn": [
+            "prs-mmdr-2023"
+          ]
         }
       ],
-      "missing": [
-        "exploration licence",
-        "critical",
-        "state government"
-      ]
+      "missing": []
     },
     {
       "claim": "c-india-first-tranche",
@@ -197,36 +204,40 @@
     },
     {
       "claim": "c-india-dmf-collections",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "district mineral foundation",
-          "foundIn": []
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
         },
         {
           "term": "lakh crore",
-          "foundIn": []
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
         },
         {
           "term": "odisha",
-          "foundIn": []
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
         },
         {
           "term": "chhattisgarh",
-          "foundIn": []
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
         },
         {
           "term": "jharkhand",
-          "foundIn": []
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
         }
       ],
-      "missing": [
-        "district mineral foundation",
-        "lakh crore",
-        "odisha",
-        "chhattisgarh",
-        "jharkhand"
-      ]
+      "missing": []
     },
     {
       "claim": "c-india-dmf-unspent",
@@ -234,7 +245,9 @@
       "terms": [
         {
           "term": "district mineral foundation",
-          "foundIn": []
+          "foundIn": [
+            "iwp-dmf-2025"
+          ]
         },
         {
           "term": "spent",
@@ -242,7 +255,6 @@
         }
       ],
       "missing": [
-        "district mineral foundation",
         "spent"
       ]
     },
@@ -284,67 +296,79 @@
     },
     {
       "claim": "c-indonesia-nickel-share",
-      "status": "not-verified",
+      "status": "original-checked",
       "terms": [
         {
           "term": "indonesia",
-          "foundIn": []
+          "foundIn": [
+            "usgs-mcs-2025-nickel"
+          ]
         },
         {
           "term": "60",
-          "foundIn": []
+          "foundIn": [
+            "usgs-mcs-2025-nickel",
+            "usgs-mcs-2025"
+          ]
         }
       ],
-      "missing": [
-        "indonesia",
-        "60"
-      ]
+      "missing": []
     },
     {
       "claim": "c-morowali-2023",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "morowali",
-          "foundIn": []
+          "foundIn": [
+            "jakpost-morowali-2023-12-24",
+            "jakpost-morowali-2023-12-27",
+            "bhrrc-morowali-2023"
+          ]
         },
         {
           "term": "furnace",
-          "foundIn": []
+          "foundIn": [
+            "jakpost-morowali-2023-12-24",
+            "jakpost-morowali-2023-12-27",
+            "bhrrc-morowali-2023"
+          ]
         },
         {
           "term": "13",
-          "foundIn": []
+          "foundIn": [
+            "jakpost-morowali-2023-12-24",
+            "jakpost-morowali-2023-12-27",
+            "bhrrc-morowali-2023"
+          ]
         }
       ],
-      "missing": [
-        "morowali",
-        "furnace",
-        "13"
-      ]
+      "missing": []
     },
     {
       "claim": "c-drc-cobalt-share",
-      "status": "not-verified",
+      "status": "original-checked",
       "terms": [
         {
           "term": "congo",
-          "foundIn": []
+          "foundIn": [
+            "usgs-mcs-2025-cobalt"
+          ]
         },
         {
           "term": "220,000",
-          "foundIn": []
+          "foundIn": [
+            "usgs-mcs-2025-cobalt"
+          ]
         },
         {
           "term": "290,000",
-          "foundIn": []
+          "foundIn": [
+            "usgs-mcs-2025-cobalt"
+          ]
         }
       ],
-      "missing": [
-        "congo",
-        "220,000",
-        "290,000"
-      ]
+      "missing": []
     },
     {
       "claim": "c-drc-export-2025",
@@ -371,64 +395,71 @@
     },
     {
       "claim": "c-china-graphite-2023",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "graphite",
-          "foundIn": []
+          "foundIn": [
+            "orf-china-controls"
+          ]
         },
         {
           "term": "december 2023",
-          "foundIn": []
+          "foundIn": [
+            "orf-china-controls"
+          ]
         }
       ],
-      "missing": [
-        "graphite",
-        "december 2023"
-      ]
+      "missing": []
     },
     {
       "claim": "c-china-ree-2025",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "samarium",
-          "foundIn": []
+          "foundIn": [
+            "csis-ree-2025"
+          ]
         },
         {
           "term": "gadolinium",
-          "foundIn": []
+          "foundIn": [
+            "csis-ree-2025"
+          ]
         },
         {
           "term": "terbium",
-          "foundIn": []
+          "foundIn": [
+            "csis-ree-2025"
+          ]
         },
         {
           "term": "dysprosium",
-          "foundIn": []
+          "foundIn": [
+            "csis-ree-2025"
+          ]
         },
         {
           "term": "lutetium",
-          "foundIn": []
+          "foundIn": [
+            "csis-ree-2025"
+          ]
         },
         {
           "term": "scandium",
-          "foundIn": []
+          "foundIn": [
+            "csis-ree-2025"
+          ]
         },
         {
           "term": "yttrium",
-          "foundIn": []
+          "foundIn": [
+            "csis-ree-2025"
+          ]
         }
       ],
-      "missing": [
-        "samarium",
-        "gadolinium",
-        "terbium",
-        "dysprosium",
-        "lutetium",
-        "scandium",
-        "yttrium"
-      ]
+      "missing": []
     },
     {
       "claim": "c-eu-crma",
@@ -521,77 +552,87 @@
     },
     {
       "claim": "c-un-panel-2024",
-      "status": "not-verified",
+      "status": "original-checked",
       "terms": [
         {
           "term": "seven",
-          "foundIn": []
+          "foundIn": [
+            "un-panel-cetm"
+          ]
         },
         {
           "term": "guiding principles",
-          "foundIn": []
+          "foundIn": [
+            "un-panel-cetm"
+          ]
         },
         {
           "term": "human rights",
-          "foundIn": []
+          "foundIn": [
+            "un-panel-cetm"
+          ]
         }
       ],
-      "missing": [
-        "seven",
-        "guiding principles",
-        "human rights"
-      ]
+      "missing": []
     },
     {
       "claim": "c-jetp-indonesia",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "just energy transition partnership",
-          "foundIn": []
+          "foundIn": [
+            "chn-jetp-2022",
+            "eeas-jetp-cipp"
+          ]
         },
         {
           "term": "20bn",
-          "foundIn": []
+          "foundIn": [
+            "chn-jetp-2022"
+          ]
         },
         {
           "term": "comprehensive investment and policy plan",
-          "foundIn": []
+          "foundIn": [
+            "eeas-jetp-cipp"
+          ]
         }
       ],
-      "missing": [
-        "just energy transition partnership",
-        "20bn",
-        "comprehensive investment and policy plan"
-      ]
+      "missing": []
     },
     {
       "claim": "c-wb-csm-2019",
-      "status": "not-verified",
+      "status": "secondary",
       "terms": [
         {
           "term": "climate-smart mining",
-          "foundIn": []
+          "foundIn": [
+            "miningcom-csm-2019",
+            "wb-csm"
+          ]
         },
         {
           "term": "rio tinto",
-          "foundIn": []
+          "foundIn": [
+            "miningcom-csm-2019"
+          ]
         },
         {
           "term": "anglo american",
-          "foundIn": []
+          "foundIn": [
+            "miningcom-csm-2019"
+          ]
         },
         {
           "term": "50",
-          "foundIn": []
+          "foundIn": [
+            "miningcom-csm-2019",
+            "wb-csm"
+          ]
         }
       ],
-      "missing": [
-        "climate-smart mining",
-        "rio tinto",
-        "anglo american",
-        "50"
-      ]
+      "missing": []
     }
   ]
 }

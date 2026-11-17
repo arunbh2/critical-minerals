@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-initial",
-  "appliedAt": "2026-11-17T05:45:04.158Z",
+  "appliedAt": "2026-11-17T05:46:42.345Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
@@ -29,26 +29,34 @@
     {
       "claim": "c-india-cm-list-2023",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "iep-cm-2023"
+      ]
     },
     {
       "claim": "c-india-ncmm-2025",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "tribune-ncmm-2025"
+      ]
     },
     {
       "claim": "c-india-ncmm-scope",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "tribune-ncmm-2025"
+      ]
     },
     {
       "claim": "c-india-mmdr-2023",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "prs-mmdr-2023"
+      ]
     },
     {
       "claim": "c-india-first-tranche",
@@ -59,14 +67,18 @@
     {
       "claim": "c-india-dmf-collections",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "iwp-dmf-2025"
+      ]
     },
     {
       "claim": "c-india-dmf-unspent",
       "from": "not-verified",
       "to": "not-verified",
-      "evidenceSources": []
+      "evidenceSources": [
+        "iwp-dmf-2025"
+      ]
     },
     {
       "claim": "c-india-bwmr-2022",
@@ -83,20 +95,29 @@
     {
       "claim": "c-indonesia-nickel-share",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "original-checked",
+      "evidenceSources": [
+        "usgs-mcs-2025-nickel",
+        "usgs-mcs-2025"
+      ]
     },
     {
       "claim": "c-morowali-2023",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "jakpost-morowali-2023-12-24",
+        "jakpost-morowali-2023-12-27",
+        "bhrrc-morowali-2023"
+      ]
     },
     {
       "claim": "c-drc-cobalt-share",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "original-checked",
+      "evidenceSources": [
+        "usgs-mcs-2025-cobalt"
+      ]
     },
     {
       "claim": "c-drc-export-2025",
@@ -107,14 +128,18 @@
     {
       "claim": "c-china-graphite-2023",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "orf-china-controls"
+      ]
     },
     {
       "claim": "c-china-ree-2025",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "csis-ree-2025"
+      ]
     },
     {
       "claim": "c-eu-crma",
@@ -137,20 +162,28 @@
     {
       "claim": "c-un-panel-2024",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "original-checked",
+      "evidenceSources": [
+        "un-panel-cetm"
+      ]
     },
     {
       "claim": "c-jetp-indonesia",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "chn-jetp-2022",
+        "eeas-jetp-cipp"
+      ]
     },
     {
       "claim": "c-wb-csm-2019",
       "from": "not-verified",
-      "to": "not-verified",
-      "evidenceSources": []
+      "to": "secondary",
+      "evidenceSources": [
+        "miningcom-csm-2019",
+        "wb-csm"
+      ]
     }
   ]
 }
