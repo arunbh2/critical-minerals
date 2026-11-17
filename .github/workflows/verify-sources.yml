@@ -11,6 +11,15 @@ on:
         description: Research batch folder under research/ (blank = latest)
         required: false
         default: ''
+  # Also runs on working branches whenever a batch's claims change, so new claims
+  # are checked before they can reach main. Pushes made by this workflow's own
+  # token do not trigger workflows, so it cannot loop.
+  push:
+    branches-ignore: [main]
+    paths:
+      - 'research/*/claims.json'
+      - 'tools/verify-sources.js'
+      - 'tools/research-*.js'
   schedule:
     - cron: '17 3 7 * *'
 
@@ -41,8 +50,8 @@ jobs:
         run: node tools/research-ledger.js ${{ inputs.batch }}
       - name: Summary
         run: cat research/*/ledger.md >> "$GITHUB_STEP_SUMMARY"
-      - name: Commit results to this branch (manual runs on branches other than main)
-        if: github.event_name == 'workflow_dispatch' && github.ref != 'refs/heads/main'
+      - name: Commit results to this branch (never on main)
+        if: github.event_name != 'schedule' && github.ref != 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
