@@ -35,7 +35,7 @@ function loadJson(p) {
   return arr.map((r) => ({ id: r.id, data: r }));
 }
 
-const md = Object.fromEntries(['learn', 'minerals', 'countries', 'issues', 'cases', 'updates'].map((c) => [c, loadMd(`src/content/${c}`)]));
+const md = Object.fromEntries(['learn', 'minerals', 'countries', 'issues', 'cases', 'updates', 'pathways'].map((c) => [c, loadMd(`src/content/${c}`)]));
 const js = {
   organisations: loadJson('src/data/organisations.json'),
   finance: loadJson('src/data/finance.json'),
@@ -151,11 +151,18 @@ for (const o of js.opportunities) {
   }
 }
 
+for (const p of md.pathways) {
+  for (const l of p.data.learning ?? []) if (!known.sources.has(l.source)) err(`pathways/${p.id}: unknown learning source "${l.source}"`);
+  for (const e of p.data.employers ?? []) orgRef(`pathways/${p.id}`, 'employer', e);
+  if (!vset('roleFamilies').has(p.id)) err(`pathways/${p.id}: file name must match a roleFamilies id in vocab.json`);
+}
+for (const o of [...js.opportunities, ...js.organisations]) for (const f of [...(o.data.roleFamilies ?? []), ...(o.data.functions ?? [])]) if (!vset('roleFamilies').has(f)) err(`${o.id}: unknown role family "${f}"`);
+
 // Every claim used somewhere; every source used somewhere (orphans are a smell).
 const usedClaims = new Set(Object.values(md).flat().flatMap((e) => e.data.claims ?? []));
 for (const c of js.claims) if (isPublishable(c.data) && !usedClaims.has(c.id)) err(`claims/${c.id}: published claim not used on any page. Fix: cite it in a page's claims list, or remove it.`);
 const usedSources = new Set([
-  ...Object.values(md).flat().flatMap((e) => e.data.sources ?? []),
+  ...Object.values(md).flat().flatMap((e) => [...(e.data.sources ?? []), ...(e.data.learning ?? []).map((l) => l.source)]),
   ...js.claims.flatMap((c) => c.data.sources),
   ...[...js.organisations, ...js.finance, ...js.policies, ...js.programmes, ...js.awards, ...js.opportunities].flatMap((e) => [...(e.data.sources ?? []), e.data.primaryDocument].filter(Boolean)),
 ]);

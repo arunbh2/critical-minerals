@@ -793,5 +793,115 @@
     "retrieved": "2026-11-21",
     "reuse": "Link and short attributed quotation only.",
     "note": "Official call for proposals. Contact details on the source are not reproduced here."
+  },
+  {
+    "id": "oecd-ddg-minerals",
+    "title": "OECD Due Diligence Guidance for Responsible Supply Chains of Minerals from Conflict-Affected and High-Risk Areas (third edition)",
+    "publisher": "OECD",
+    "url": "https://www.oecd.org/en/publications/oecd-due-diligence-guidance-for-responsible-supply-chains-of-minerals-from-conflict-affected-and-high-risk-areas_9789264252479-en.html",
+    "type": "intergovernmental",
+    "published": "2016-04",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Learning resource for career pathways."
+  },
+  {
+    "id": "oecd-responsible-minerals",
+    "title": "Responsible mineral supply chains",
+    "publisher": "OECD",
+    "url": "https://www.oecd.org/en/topics/sub-issues/due-diligence-guidance-for-responsible-business-conduct/responsible-mineral-supply-chains.html",
+    "type": "intergovernmental",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Topic hub listing the guidance and companion materials. Learning resource."
+  },
+  {
+    "id": "ilo-c176",
+    "title": "Safety and Health in Mines Convention, 1995 (No. 176)",
+    "publisher": "International Labour Organization",
+    "url": "https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB%3A12100%3A0%3A%3ANO%3A%3AP12100_INSTRUMENT_ID%3A312321",
+    "type": "legal",
+    "published": "1995",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Learning resource for career pathways."
+  },
+  {
+    "id": "ilo-mining-guide",
+    "title": "Resource guide on the mining sector",
+    "publisher": "International Labour Organization",
+    "url": "https://www.ilo.org/resource/resource-guide-mining-sector",
+    "type": "intergovernmental",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Learning resource for career pathways."
+  },
+  {
+    "id": "ungp-2011",
+    "title": "Guiding Principles on Business and Human Rights",
+    "publisher": "United Nations Office of the High Commissioner for Human Rights",
+    "url": "https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf",
+    "type": "intergovernmental",
+    "published": "2011",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Learning resource for career pathways."
+  },
+  {
+    "id": "eiti-standard",
+    "title": "The EITI Standard",
+    "publisher": "Extractive Industries Transparency Initiative",
+    "url": "https://eiti.org/eiti-standard",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Learning resource for career pathways."
+  },
+  {
+    "id": "eiti-guidance",
+    "title": "Guidance notes",
+    "publisher": "Extractive Industries Transparency Initiative",
+    "url": "https://eiti.org/guidance-notes",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Learning resource for career pathways."
+  },
+  {
+    "id": "ifc-performance-standards",
+    "title": "IFC Performance Standards on Environmental and Social Sustainability",
+    "publisher": "International Finance Corporation",
+    "url": "https://www.ifc.org/en/insights-reports/2012/ifc-performance-standards",
+    "type": "intergovernmental",
+    "published": "2012",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Learning resource for career pathways."
+  },
+  {
+    "id": "gba-battery-passport",
+    "title": "Battery Passport",
+    "publisher": "Global Battery Alliance",
+    "url": "https://www.globalbattery.org/battery-passport/",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Learning resource for career pathways."
+  },
+  {
+    "id": "nrgi-advanced-course",
+    "title": "Natural Resource Governance and Development: Policies and Practice (Advanced Course)",
+    "publisher": "Natural Resource Governance Institute",
+    "url": "https://resourcegovernance.org/events/natural-resource-governance-and-development-policies-and-practice-advanced-course",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Course page. Editions, dates and fees change; check the page for the current offer."
   }
 ]

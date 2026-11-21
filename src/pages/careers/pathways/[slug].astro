@@ -1,0 +1,71 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import RecordMeta from '../../../components/RecordMeta.astro';
+import Related from '../../../components/Related.astro';
+import OpStatus from '../../../components/funding/OpStatus.astro';
+import { fundingData, groupOpportunities } from '../../../lib/funding';
+import { hrefFor, vocabLabel } from '../../../lib/content';
+import { CONTRIBUTIONS } from '../../../lib/careers';
+import { url } from '../../../lib/url';
+export async function getStaticPaths() {
+  return (await getCollection('pathways')).filter((p) => !p.data.draft).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const sources = new Map((await getCollection('sources')).map((s) => [s.id, s.data]));
+const { org, orgs, opportunities, name } = await fundingData();
+const employers = [...new Set([...d.employers, ...orgs.filter((o) => o.data.functions.includes(entry.id)).map((o) => o.id)])].filter((id) => org.has(id));
+const live = groupOpportunities(opportunities.filter((o) => o.data.roleFamilies.includes(entry.id)));
+const related = [...live.open, ...live.needsCheck];
+---
+<Base title={d.title} shortTitle={d.shortTitle} description={d.summary} type="article" searchType="Career pathway"
+  jsonld={[{ '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.summary, datePublished: d.published, dateModified: d.reviewed, isAccessibleForFree: true }]}>
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Careers', href: url('careers/') }, { label: 'Pathways', href: url('careers/pathways/') }, { label: d.shortTitle ?? d.title }]} />
+    <article class="reading">
+      <p class="kicker red-rule">Career pathway · {CONTRIBUTIONS.find((c) => c.id === d.contribution)?.label}</p>
+      <h1>{d.title}</h1>
+      <p class="standfirst">{d.summary}</p>
+      <RecordMeta published={d.published} reviewed={d.reviewed} reviewDue={d.reviewDue} />
+      <p class="notice">Our guidance, drawn from how employers and standards describe this work. It is interpretation, not a guarantee of any job. Example job titles are illustrations, not vacancies.</p>
+      {d.regulated && <p class="notice"><strong>Regulated work.</strong> {d.regulated}</p>}
+      <h2>The problem this work addresses</h2>
+      <p>{d.problem}</p>
+      <h2>What people in these roles do</h2>
+      <ul>{d.responsibilities.map((r) => <li>{r}</li>)}</ul>
+      <h2>Who hires</h2>
+      <ul>{d.employerTypes.map((r) => <li>{r}</li>)}</ul>
+      <h3>Example job titles</h3>
+      <p class="meta">Illustrations of how roles are often named. Not vacancies.</p>
+      <ul class="chips">{d.titles.map((t) => <li><span class="chip">{t}</span></li>)}</ul>
+      <div class="grid grid-2 skills">
+        <section><h2>Skills that transfer</h2><ul>{d.transferable.map((r) => <li>{r}</li>)}</ul></section>
+        <section><h2>What you would need to add</h2><ul>{d.gaps.map((r) => <li>{r}</li>)}</ul></section>
+      </div>
+      <h2>Routes in</h2>
+      <dl class="facts">
+        <dt>Entry</dt><dd>{d.routes.entry}</dd>
+        <dt>Mid-career</dt><dd>{d.routes.mid}</dd>
+        <dt>Senior</dt><dd>{d.routes.senior}</dd>
+        <dt>Usually required</dt><dd>{d.required.join('; ') || 'Varies by employer'}</dd>
+        <dt>Often desirable</dt><dd>{d.desirable.join('; ')}</dd>
+        <dt>Fieldwork and languages</dt><dd>{d.fieldwork}</dd>
+      </dl>
+      <h2>Two portfolio exercises</h2>
+      <p class="meta">Small pieces of work you can do now to build and show the specialist knowledge.</p>
+      <ol>{d.portfolio.map((r) => <li>{r}</li>)}</ol>
+      <h2>Where to learn</h2>
+      <ul>{d.learning.map((l) => { const s = sources.get(l.source); return <li><a href={s?.url} rel="noopener">{s?.title}</a> ({s?.publisher}). {l.why}</li>; })}</ul>
+      <h2>Employers with official routes</h2>
+      <ul>{employers.map((id) => <li><a href={hrefFor('organisations', id)}>{name(id)}</a>{org.get(id)?.data.careersUrl && <> · <a href={org.get(id)!.data.careersUrl!} rel="noopener">jobs page</a></>}</li>)}</ul>
+      <h2>Live roles in this family</h2>
+      {related.length ? <ul class="record-list">{related.map(({ o }) => <li data-op-scope><a href={hrefFor('opportunities', o.id)}>{o.data.title}</a> <OpStatus op={o.data} /></li>)}</ul> : <p>No verified role in this family is listed right now. Check the employers&rsquo; own pages, or see <a href={url('careers/opportunities/')}>all opportunities</a>, including closed precedents.</p>}
+      <Content />
+    </article>
+    <Related type="pathways" id={entry.id} refs={{ issues: d.issues }} />
+  </div>
+</Base>
+<style>.skills { margin: 1rem 0; } .skills h2 { font-size: 1.25rem; }</style>

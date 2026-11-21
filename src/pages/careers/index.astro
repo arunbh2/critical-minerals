@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { fundingData, groupOpportunities, audienceOf } from '../../lib/funding';
+import { CONTRIBUTIONS } from '../../lib/careers';
+import { hrefFor } from '../../lib/content';
+import { url } from '../../lib/url';
+const pathways = (await getCollection('pathways')).filter((p) => !p.data.draft).sort((a, b) => a.data.order - b.data.order);
+const { orgs, opportunities } = await fundingData();
+const employers = orgs.filter((o) => o.data.roles.some((r) => r === 'employer' || r === 'procurer'));
+const g = groupOpportunities(opportunities.filter((o) => audienceOf(o.data.type) === 'careers'));
+---
+<Base title="The mineral transition needs more than mining expertise" shortTitle="Careers in minerals" searchType="Careers" description="Career pathways for development, policy, finance, rights, environment and data professionals in the mineral transition, with skill gaps, employers and verified opportunities.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Careers' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Careers</p>
+      <h1>The mineral transition needs more than mining expertise.</h1>
+      <p class="standfirst">Communities need advocates, governments need analysts, supply chains need people who can tell paper compliance from real conditions, and programmes need people who can follow the money. Here is where your skills may fit, and what you would need to learn.</p>
+    </header>
+    <ul class="entrances grid grid-2" role="list">
+      <li class="panel"><h2><a href={url('careers/pathways/')}>Career pathways</a></h2><p>{pathways.length} role families: what the work is, who hires, which skills transfer and what is missing.</p></li>
+      <li class="panel"><h2><a href={url('careers/explorer/')}>Find where your skills fit</a></h2><p>Choose your experience and interests and see which pathways match, and why. No sign-up, nothing stored.</p></li>
+      <li class="panel"><h2><a href={url('careers/employers/')}>Employers</a></h2><p>{employers.length} organisations with official recruitment or procurement routes. Listing is not endorsement.</p></li>
+      <li class="panel"><h2><a href={url('careers/opportunities/')}>Vacancies, consultancies and tenders</a></h2><p>{g.open.length === 0 ? 'No verified opening listed right now.' : `${g.open.length} verified open now, checked against the issuer's own page.`} Applications always go to the issuer.</p></li>
+    </ul>
+    <section class="reading" aria-labelledby="contrib-h">
+      <h2 id="contrib-h">Four ways to contribute</h2>
+      {CONTRIBUTIONS.map((c) => (
+        <>
+          <h3>{c.label}</h3>
+          <ul>{pathways.filter((p) => p.data.contribution === c.id).map((p) => <li><a href={hrefFor('pathways', p.id)}>{p.data.title}</a></li>)}</ul>
+        </>
+      ))}
+    </section>
+    <section class="reading" aria-labelledby="move-h">
+      <h2 id="move-h">Coming from development work?</h2>
+      <p>Much of what development professionals already do carries over, but not all of it. The <a href={url('careers/transition/')}>transition guide</a> sets out what transfers, what you would need to add, and how to judge whether a role has real influence.</p>
+      <p class="meta">Career guidance on this site is our interpretation, drawn from how these roles are described by employers and standards. It does not promise employment, and a short course is not a substitute for professional credentials in regulated engineering, safety or legal work.</p>
+    </section>
+  </div>
+</Base>
+<style>
+  .entrances { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+  .entrances h2 { font-size: 1.25rem; margin: 0 0 0.4rem; }
+  .entrances p { margin: 0; font-family: var(--font-sans); font-size: 0.95rem; }
+</style>

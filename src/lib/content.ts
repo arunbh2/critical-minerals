@@ -64,6 +64,9 @@ export function graph(): Promise<Node[]> {
     for (const t of ['programmes', 'opportunities'] as const) {
       for (const e of await getCollection(t)) nodes.push({ type: t, id: e.id, title: e.data.title, summary: e.data.summary, href: hrefFor(t, e.id), countries: e.data.countries, minerals: e.data.minerals, issues: e.data.issues });
     }
+    for (const e of (await getCollection('pathways')).filter(published)) {
+      nodes.push({ type: 'pathways', id: e.id, title: e.data.title, summary: e.data.summary, href: hrefFor('pathways', e.id), countries: [], minerals: [], issues: e.data.issues });
+    }
     for (const e of await getCollection('awards')) {
       nodes.push({ type: 'awards', id: e.id, title: e.data.title, summary: e.data.activity, href: hrefFor('awards', e.id), countries: e.data.countries, minerals: e.data.minerals, issues: e.data.issues });
     }

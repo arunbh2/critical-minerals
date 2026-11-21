@@ -274,6 +274,27 @@ const opportunities = defineCollection({
   }),
 });
 
+// Career pathways: evergreen guidance, labelled as our interpretation. Illustrative job
+// titles are examples, not vacancies.
+const pathways = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pathways' }),
+  schema: z.object({
+    title: z.string(), shortTitle: z.string().optional(), summary: z.string().max(320), order: z.number().int(),
+    contribution: z.enum(['rights-communities', 'policy-governance', 'finance-partnerships', 'circularity-resilience']),
+    problem: z.string(), responsibilities: z.array(z.string()).min(3), employerTypes: z.array(z.string()).min(2),
+    titles: z.array(z.string()).min(2), transferable: z.array(z.string()).min(2), gaps: z.array(z.string()).min(2),
+    routes: z.object({ entry: z.string(), mid: z.string(), senior: z.string() }),
+    required: z.array(z.string()), desirable: z.array(z.string()), fieldwork: z.string(),
+    portfolio: z.array(z.string()).length(2),
+    learning: z.array(z.object({ source: z.string(), why: z.string() })).min(1),
+    employers: z.array(z.string()).default([]), issues: z.array(z.string()).default([]), lifecycle: z.array(ids('lifecycle')).default([]),
+    explorer: z.object({ experience: z.array(z.string()).min(1), interests: z.array(z.string()).min(1) }),
+    /** Warning shown where regulated credentials apply; null when none. */
+    regulated: z.string().nullable(),
+    published: date, reviewed: date, reviewDue: date, draft: z.boolean().default(false),
+  }),
+});
+
 const sources = defineCollection({
   loader: file('./src/data/sources.json'),
   schema: z.object({
@@ -316,12 +337,12 @@ const claims = defineCollection({
 });
 
 export const schemas = Object.fromEntries(
-  Object.entries({ learn, minerals, countries, issues, cases, updates, organisations, finance, policies, sources, claims, programmes, awards, opportunities })
+  Object.entries({ learn, minerals, countries, issues, cases, updates, organisations, finance, policies, sources, claims, programmes, awards, opportunities, pathways })
     .map(([k, c]) => [k, (c as any).schema]),
 ) as Record<string, z.ZodType>;
 
 export const collections = {
   learn, minerals, countries, issues, cases, updates,
   organisations, finance, policies, sources, claims,
-  programmes, awards, opportunities,
+  programmes, awards, opportunities, pathways,
 };
