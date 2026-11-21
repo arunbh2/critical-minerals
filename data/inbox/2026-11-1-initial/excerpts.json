@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-1-initial",
-  "checkedAt": "2026-11-17T06:05:09.850Z",
+  "checkedAt": "2026-11-21T19:04:13.882Z",
   "note": "Short excerpts (about 180 characters) around each found term, kept as evidence. Not for republication.",
   "excerpts": [
     {
@@ -165,27 +165,6 @@
       "excerpt": "li industrial park (imip) said on tuesday. the police also revised the death toll up from 13 to 18. itss operates as one of the tenants at the imip, the world's nickel production epi"
     },
     {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "morowali",
-      "matched": "morowali",
-      "excerpt": "guages: 简体中文 , 繁體中文 24 dec 2023 author: reuters, author: 新华社 tsingshan group pt indonesia morowali industrial park pt indonesia tsingshan stainless steel (itss) pt indonesia morowali indus"
-    },
-    {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "furnace",
-      "matched": "furnace",
-      "excerpt": "indonesia nickel smelter furnace fire kills 13 workers, injures 46 - business and human rights centre abuses affiliation a"
-    },
-    {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "13",
-      "matched": "13",
-      "excerpt": "indonesia nickel smelter furnace fire kills 13 workers, injures 46 - business and human rights centre abuses affiliation arrow-down arro"
-    },
-    {
       "source": "usgs-mcs-2025-cobalt",
       "claim": "c-drc-cobalt-share",
       "term": "congo",
@@ -335,13 +314,6 @@
     {
       "source": "chn-jetp-2022",
       "claim": "c-jetp-indonesia",
-      "term": "just energy transition partnership",
-      "matched": "just energy transition partnership",
-      "excerpt": "country's electricity demand instead.indonesian minister luhut pandjaitan announced the \"just energy transition partnership\" (jetp) on the sidelines of a g20 leaders summit in bali on tuesday.it is a \"groundbreaki"
-    },
-    {
-      "source": "chn-jetp-2022",
-      "claim": "c-jetp-indonesia",
       "term": "20bn",
       "matched": "20bn",
       "excerpt": "rich nations pledge $20bn for indonesia's coal-to-clean switch rich nations pledge $20bn for indonesia's coal-to-cl"
@@ -365,7 +337,7 @@
       "claim": "c-wb-csm-2019",
       "term": "climate-smart mining",
       "matched": "climate-smart mining",
-      "excerpt": "per graphite lithium nickel wind turbines. image from pixabay the world bank launched the climate-smart mining facility on friday, the first-ever fund dedicated to making mining for minerals climate-s"
+      "excerpt": "attery metals top companies wind turbines. image from pixabay the world bank launched the climate-smart mining facility on friday, the first-ever fund dedicated to making mining for minerals climate-s"
     },
     {
       "source": "miningcom-csm-2019",
@@ -386,7 +358,7 @@
       "claim": "c-wb-csm-2019",
       "term": "50",
       "matched": "50",
-      "excerpt": "coal uranium cobalt diamond zinc platinum palladium silver potash suppliers equipment top 50 usa canada australia regions africa china latin america europe asia live charts gold copp"
+      "excerpt": "suppliers & equipment top companies jobs data markets live charts gold copper silver top 50 rankings drill holes video products the northern miner tnm maps canadian mining journal b"
     },
     {
       "source": "wb-csm",

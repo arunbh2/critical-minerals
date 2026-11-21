@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-3-third-pass",
-  "checkedAt": "2026-11-17T06:06:10.965Z",
+  "checkedAt": "2026-11-21T19:05:16.539Z",
   "results": [
     {
       "source": "iwp-dmf-2025",
@@ -72,7 +72,7 @@
       "finalUrl": "https://www.nsenergybusiness.com/news/eu-endorses-13-overseas-strategic-projects-for-raw-material-access/",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 9906,
+      "textLength": 9862,
       "error": null,
       "checks": [
         {

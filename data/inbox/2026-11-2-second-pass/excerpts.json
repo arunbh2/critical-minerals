@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-2-second-pass",
-  "checkedAt": "2026-11-17T06:06:08.001Z",
+  "checkedAt": "2026-11-21T19:05:14.442Z",
   "note": "Short excerpts (about 180 characters) around each found term, kept as evidence. Not for republication.",
   "excerpts": [
     {
@@ -8,14 +8,14 @@
       "claim": "c-refining-top3-2024",
       "term": "86%",
       "matched": "86%",
-      "excerpt": "el. the average market share of the top three refined material suppliers rose from 82% to 86%, with single countries-china for cobalt, graphite and rare earths, and indonesia for nick"
+      "excerpt": "iea the average market share of the top three refined material suppliers rose from 82% to 86% between 2020 and 2024, says iea. staff writer &verbar; may 21, 2025 - 9:21 am categories:"
     },
     {
       "source": "miningcom-gcmo-2025",
       "claim": "c-refining-top3-2024",
       "term": "82%",
       "matched": "82%",
-      "excerpt": "nd nickel. the average market share of the top three refined material suppliers rose from 82% to 86%, with single countries-china for cobalt, graphite and rare earths, and indonesia f"
+      "excerpt": "forts: iea the average market share of the top three refined material suppliers rose from 82% to 86% between 2020 and 2024, says iea. staff writer &verbar; may 21, 2025 - 9:21 am cate"
     },
     {
       "source": "miningcom-gcmo-2025",
@@ -29,28 +29,21 @@
       "claim": "c-growth-single-supplier",
       "term": "nickel",
       "matched": "nickel",
-      "excerpt": "al sign in join watch company spotlight copper gold critical minerals commodities lithium nickel iron ore rare earth coal uranium cobalt diamond zinc platinum palladium silver potash sup"
+      "excerpt": "ile sign in join commodities gold copper silver --- aluminum coal cobalt diamond iron ore nickel palladium platinum potash rare earth uranium zinc country/region usa canada --- australia"
     },
     {
       "source": "miningcom-gcmo-2025",
       "claim": "c-growth-single-supplier",
       "term": "cobalt",
       "matched": "cobalt",
-      "excerpt": "copper gold critical minerals commodities lithium nickel iron ore rare earth coal uranium cobalt diamond zinc platinum palladium silver potash suppliers equipment top 50 usa canada austr"
+      "excerpt": "'s guide membership profile sign in join commodities gold copper silver --- aluminum coal cobalt diamond iron ore nickel palladium platinum potash rare earth uranium zinc country/region"
     },
     {
       "source": "miningcom-gcmo-2025",
       "claim": "c-growth-single-supplier",
       "term": "graphite",
       "matched": "graphite",
-      "excerpt": "minerals energy africa asia australia canada china europe latin america usa cobalt copper graphite lithium manganese molybdenum nickel rare earth specialty minerals tungsten graphite powde"
-    },
-    {
-      "source": "northernminer-gcmo-2025",
-      "claim": "c-growth-single-supplier",
-      "term": "indonesia",
-      "matched": "indonesia",
-      "excerpt": "dcast stock tables press releases buyer's guide tnm marco polo latest november 16, 2026 | indonesia seeks 70% of mining returns for state november 16, 2026 | brixton hits rich silver veins"
+      "excerpt": "ys iea. staff writer &verbar; may 21, 2025 - 9:21 am categories: critical minerals energy graphite powder used in industry. stock image. a new report by the international energy agency pai"
     },
     {
       "source": "northernminer-gcmo-2025",
@@ -260,7 +253,7 @@
       "claim": "c-wb-csm-2019",
       "term": "climate-smart mining",
       "matched": "climate-smart mining",
-      "excerpt": "per graphite lithium nickel wind turbines. image from pixabay the world bank launched the climate-smart mining facility on friday, the first-ever fund dedicated to making mining for minerals climate-s"
+      "excerpt": "attery metals top companies wind turbines. image from pixabay the world bank launched the climate-smart mining facility on friday, the first-ever fund dedicated to making mining for minerals climate-s"
     },
     {
       "source": "miningcom-csm-2019",
@@ -281,7 +274,7 @@
       "claim": "c-wb-csm-2019",
       "term": "50m | 50 million",
       "matched": "50 million",
-      "excerpt": "energy storage and electric vehicles. the world bank is targeting a total investment of $50 million, to be deployed over a 5-year timeframe. the fund will focus on activities around four co"
+      "excerpt": "glo set up “climate smart” mining fund the world bank is targeting a total investment of $50 million, to be deployed over a 5-year timeframe. mining.com staff writer &verbar; may 1, 2019 - 1"
     },
     {
       "source": "wb-csm",

@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-4-fourth-pass",
-  "checkedAt": "2026-11-17T06:06:44.116Z",
+  "checkedAt": "2026-11-21T19:05:36.409Z",
   "note": "Short excerpts (about 180 characters) around each found term, kept as evidence. Not for republication.",
   "excerpts": [
     {
@@ -8,28 +8,28 @@
       "claim": "c-refining-top3-2024",
       "term": "86%",
       "matched": "86%",
-      "excerpt": "el. the average market share of the top three refined material suppliers rose from 82% to 86%, with single countries-china for cobalt, graphite and rare earths, and indonesia for nick"
+      "excerpt": "iea the average market share of the top three refined material suppliers rose from 82% to 86% between 2020 and 2024, says iea. staff writer &verbar; may 21, 2025 - 9:21 am categories:"
     },
     {
       "source": "miningcom-gcmo-2025",
       "claim": "c-refining-top3-2024",
       "term": "82%",
       "matched": "82%",
-      "excerpt": "nd nickel. the average market share of the top three refined material suppliers rose from 82% to 86%, with single countries-china for cobalt, graphite and rare earths, and indonesia f"
+      "excerpt": "forts: iea the average market share of the top three refined material suppliers rose from 82% to 86% between 2020 and 2024, says iea. staff writer &verbar; may 21, 2025 - 9:21 am cate"
     },
     {
       "source": "miningcom-gcmo-2025",
       "claim": "c-refining-top3-2024",
       "term": "2020",
       "matched": "2020",
-      "excerpt": "ification of the global supply chain has seen little progress. the report highlights from 2020 to 2024, global refining capacity of critical minerals became even more concentrated, wit"
+      "excerpt": "age market share of the top three refined material suppliers rose from 82% to 86% between 2020 and 2024, says iea. staff writer &verbar; may 21, 2025 - 9:21 am categories: critical min"
     },
     {
       "source": "miningcom-gcmo-2025",
       "claim": "c-refining-top3-2024",
       "term": "2024",
       "matched": "2024",
-      "excerpt": "n of the global supply chain has seen little progress. the report highlights from 2020 to 2024, global refining capacity of critical minerals became even more concentrated, with china"
+      "excerpt": "t share of the top three refined material suppliers rose from 82% to 86% between 2020 and 2024, says iea. staff writer &verbar; may 21, 2025 - 9:21 am categories: critical minerals ene"
     },
     {
       "source": "gmr-gcmo-2026",
@@ -50,7 +50,7 @@
       "claim": "c-gcmo-2026-growth",
       "term": "2026",
       "matched": "2026",
-      "excerpt": "s marriott drilling cross lanes geothermal lithium contract inside this issue the october 2026 issue of global mining review is here, packed full of the latest mining insights on key t"
+      "excerpt": "ning review in this issue editorial comment register & subscribe from the archive october 2026 september 2026 browse all issues menu home news mining exploration & development finance"
     },
     {
       "source": "iep-cm-2023",
@@ -296,48 +296,6 @@
       "term": "2023",
       "matched": "2023",
       "excerpt": "calls for regular audits. nur janti (the jakarta post) premium jakarta wed, december 27, 2023 published on dec. 26, 2023 published on 2023-12-26t18:10:02+07:00 share this article face"
-    },
-    {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "morowali",
-      "matched": "morowali",
-      "excerpt": "guages: 简体中文 , 繁體中文 24 dec 2023 author: reuters, author: 新华社 tsingshan group pt indonesia morowali industrial park pt indonesia tsingshan stainless steel (itss) pt indonesia morowali indus"
-    },
-    {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "furnace",
-      "matched": "furnace",
-      "excerpt": "indonesia nickel smelter furnace fire kills 13 workers, injures 46 - business and human rights centre abuses affiliation a"
-    },
-    {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "13",
-      "matched": "13",
-      "excerpt": "indonesia nickel smelter furnace fire kills 13 workers, injures 46 - business and human rights centre abuses affiliation arrow-down arro"
-    },
-    {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "18",
-      "matched": "18",
-      "excerpt": "dly nickel explosion; workers face retaliation for speaking out; incl. co. comments date: 18 nov 2024 content type: article investigation reveals how workers at indonesia&#x27;s larg"
-    },
-    {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "death toll",
-      "matched": "death toll",
-      "excerpt": "d to investigate, and promised to cover victims' treatment costs. by january 3, 2024, the death toll rose to 20, with 29 critically injured. companies pt indonesia tsingshan stainless steel"
-    },
-    {
-      "source": "bhrrc-morowali-2023",
-      "claim": "c-morowali-2023",
-      "term": "2023",
-      "matched": "2023",
-      "excerpt": "email lists the content is also available in the following languages: 简体中文 , 繁體中文 24 dec 2023 author: reuters, author: 新华社 tsingshan group pt indonesia morowali industrial park pt ind"
     },
     {
       "source": "usgs-mcs-2025-cobalt",
@@ -727,13 +685,6 @@
     {
       "source": "chn-jetp-2022",
       "claim": "c-jetp-indonesia",
-      "term": "just energy transition partnership",
-      "matched": "just energy transition partnership",
-      "excerpt": "country's electricity demand instead.indonesian minister luhut pandjaitan announced the \"just energy transition partnership\" (jetp) on the sidelines of a g20 leaders summit in bali on tuesday.it is a \"groundbreaki"
-    },
-    {
-      "source": "chn-jetp-2022",
-      "claim": "c-jetp-indonesia",
       "term": "20bn | 20 billion",
       "matched": "20bn",
       "excerpt": "rich nations pledge $20bn for indonesia's coal-to-clean switch rich nations pledge $20bn for indonesia's coal-to-cl"
@@ -764,7 +715,7 @@
       "claim": "c-wb-csm-2019",
       "term": "climate-smart mining",
       "matched": "climate-smart mining",
-      "excerpt": "per graphite lithium nickel wind turbines. image from pixabay the world bank launched the climate-smart mining facility on friday, the first-ever fund dedicated to making mining for minerals climate-s"
+      "excerpt": "attery metals top companies wind turbines. image from pixabay the world bank launched the climate-smart mining facility on friday, the first-ever fund dedicated to making mining for minerals climate-s"
     },
     {
       "source": "miningcom-csm-2019",
@@ -792,7 +743,7 @@
       "claim": "c-wb-csm-2019",
       "term": "2019",
       "matched": "2019",
-      "excerpt": "ermany, rio and anglo set up “climate smart” mining fund mining.com staff writer | may 1, 2019 | 1:39 pm base metals battery metals top companies africa asia australia canada europe la"
+      "excerpt": "million, to be deployed over a 5-year timeframe. mining.com staff writer &verbar; may 1, 2019 - 1:39 pm categories: base metals battery metals top companies wind turbines. image from"
     },
     {
       "source": "wb-csm",

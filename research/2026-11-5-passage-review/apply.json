@@ -1,0 +1,71 @@
+{
+  "batch": "2026-11-5-passage-review",
+  "appliedAt": "2026-11-21T19:05:40.623Z",
+  "changes": [
+    {
+      "claim": "c-india-ncmm-scope",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "tribune-ncmm-2025"
+      ]
+    },
+    {
+      "claim": "c-india-mmdr-2023",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "prs-mmdr-2023"
+      ]
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "aljazeera-nickel-2019"
+      ]
+    },
+    {
+      "claim": "c-morowali-2023",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "jakpost-morowali-2023-12-24",
+        "jakpost-morowali-2023-12-27"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "kitco-drc-quotas-2025"
+      ]
+    },
+    {
+      "claim": "c-china-graphite-2023",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "orf-china-controls"
+      ]
+    },
+    {
+      "claim": "c-eu-crma",
+      "from": "secondary",
+      "to": "secondary",
+      "evidenceSources": [
+        "nrf-crma-2024"
+      ]
+    },
+    {
+      "claim": "c-un-panel-2024",
+      "from": "original-checked",
+      "to": "original-checked",
+      "evidenceSources": [
+        "un-panel-cetm"
+      ]
+    }
+  ]
+}
