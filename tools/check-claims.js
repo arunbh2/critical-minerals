@@ -6,10 +6,11 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { normalise, ROOT } from './research-lib.js';
+import { isPublishable } from './evidence-gate.js';
 
 const errors = [];
 const claims = JSON.parse(readFileSync(join(ROOT, 'src/data/claims.json'), 'utf8'));
-const published = claims.filter((c) => c.verification !== 'not-verified');
+const published = claims.filter((c) => isPublishable(c));
 const termsFor = (c) => JSON.parse(readFileSync(join(ROOT, 'research', c.batch, 'claims.json'), 'utf8')).claims.find((x) => x.id === c.id)?.terms ?? [];
 const numbers = (s) => [...normalise(s).matchAll(/(?<![a-z0-9])\d[\d.]*%?/g)].map((m) => m[0].replace(/\.$/, ''));
 

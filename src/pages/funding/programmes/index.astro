@@ -1,0 +1,48 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FilterShell from '../../../components/FilterShell.astro';
+import { fundingData } from '../../../lib/funding';
+import { hrefFor, vocabLabel } from '../../../lib/content';
+import { formatMoney } from '../../../lib/opportunity.js';
+import { url } from '../../../lib/url';
+import vocab from '../../../data/vocab.json';
+const { programmes, finance, name } = await fundingData();
+const list = [...programmes].sort((a, b) => a.data.title.localeCompare(b.data.title));
+const statusLabel: Record<string, string> = { active: 'Active programme', paused: 'Paused', closed: 'Closed', unknown: 'Status not established' };
+const filters = [
+  { name: 'relevance', label: 'Mineral relevance', options: vocab.relevance.map((r) => ({ value: r.id, label: r.label })) },
+  { name: 'instrument', label: 'Instrument', options: vocab.instruments.filter((i) => list.some((p) => p.data.instruments.includes(i.id))).map((i) => ({ value: i.id, label: i.label })) },
+  { name: 'lifecycle', label: 'Lifecycle stage', options: vocab.lifecycle.map((l) => ({ value: l.id, label: l.label })) },
+  { name: 'theme', label: 'What it supports', options: vocab.financeSupports.map((s) => ({ value: s.id, label: s.label })) },
+  { name: 'pstatus', label: 'Programme status', options: Object.entries(statusLabel).map(([value, label]) => ({ value, label })) },
+  { name: 'country', label: 'Benefits', options: [{ value: 'india', label: 'India' }, { value: 'indonesia', label: 'Indonesia' }, { value: 'multi', label: 'Other or multi-country' }] },
+];
+---
+<Base title="Funding programmes" shortTitle="Funding programmes" searchType="Funding" description="Defined funding programmes relevant to critical minerals, with funder, administrator, instrument, amounts in original currency, eligibility and access route.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Funding', href: url('funding/') }, { label: 'Programmes' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Funding</p>
+      <h1>Programmes</h1>
+      <p class="standfirst">A programme sets up an instrument with objectives and rules. It is not the same as an open call: most programmes are closed, paused or restricted most of the time.</p>
+    </header>
+    <FilterShell filters={filters} noun="programmes">
+      <ul class="record-list">
+        {list.map((p) => { const d = p.data; return (
+          <li data-filter-item data-relevance={d.relevance} data-instrument={d.instruments.join(' ')} data-lifecycle={d.lifecycle.join(' ')} data-theme={d.themes.join(' ')} data-pstatus={d.programmeStatus} data-country={d.countries.length ? d.countries.join(' ') : 'multi'}>
+            <h3><a href={hrefFor('programmes', p.id)}>{d.title}</a></h3>
+            <p class="meta">{statusLabel[d.programmeStatus]} · {vocabLabel('relevance', d.relevance)} relevance · Funder: {d.funders.map(name).join(', ') || 'not disclosed'}{d.administrators.length ? ` · Administrator: ${d.administrators.map(name).join(', ')}` : ''}</p>
+            <p>{d.summary}</p>
+            <p class="meta">{d.envelope ? `Envelope ${formatMoney(d.envelope)}` : 'Envelope not stated'}{d.perAward ? ` · ${vocabLabel('amountBases', d.perAward.basis)}: ${formatMoney(d.perAward)}` : ''}</p>
+          </li>
+        ); })}
+      </ul>
+    </FilterShell>
+    <section class="reading">
+      <h2>Earlier finance records</h2>
+      <p>These records from the first release cover national missions, statutory funds and partnership envelopes. They use the earlier record format and stay at their original addresses.</p>
+      <ul>{finance.map((f) => <li><a href={hrefFor('finance', f.id)}>{f.data.title}</a> <span class="meta">({f.data.provider})</span></li>)}</ul>
+    </section>
+  </div>
+</Base>

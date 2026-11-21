@@ -1,0 +1,113 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { EXPERIENCE, INTERESTS, CONTRIBUTIONS } from '../../../lib/careers';
+import { hrefFor } from '../../../lib/content';
+import { url } from '../../../lib/url';
+const pathways = (await getCollection('pathways')).filter((p) => !p.data.draft).sort((a, b) => a.data.order - b.data.order);
+const data = pathways.map((p) => ({ id: p.id, title: p.data.title, href: hrefFor('pathways', p.id), summary: p.data.summary, experience: p.data.explorer.experience, interests: p.data.explorer.interests, contribution: p.data.contribution, gaps: p.data.gaps.slice(0, 3) }));
+const labels = Object.fromEntries([...EXPERIENCE, ...INTERESTS, ...CONTRIBUTIONS].map((x) => [x.id, x.label]));
+---
+<Base title="Find where your skills fit" shortTitle="Skills explorer" searchType="Careers" description="A transparent, rule-based explorer that matches your experience and interests to career pathways in the mineral transition, with reasons and learning gaps.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Careers', href: url('careers/') }, { label: 'Skills explorer' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Careers</p>
+      <h1>Find where your skills fit</h1>
+      <p class="standfirst">Tick what you have done and what draws you. The explorer shows which pathways use those skills, why, and what you would need to learn. It is a way to explore, not a rating of you.</p>
+    </header>
+    <div class="reading">
+      <p class="meta">Nothing you select is stored or sent anywhere. Your choices appear in the page address, so you can bookmark, print or share the result.</p>
+      <form class="panel-data explorer" data-explorer method="get" aria-describedby="how">
+        <fieldset>
+          <legend>Experience you have</legend>
+          <div class="checks">{EXPERIENCE.map((e) => <label class="check"><input type="checkbox" name="x" value={e.id} /> {e.label}</label>)}</div>
+        </fieldset>
+        <fieldset>
+          <legend>What draws you</legend>
+          <div class="checks">{INTERESTS.map((e) => <label class="check"><input type="checkbox" name="i" value={e.id} /> {e.label}</label>)}</div>
+        </fieldset>
+        <fieldset>
+          <legend>How you would most like to contribute</legend>
+          <div class="checks">
+            <label class="check"><input type="radio" name="c" value="" checked /> No preference</label>
+            {CONTRIBUTIONS.map((e) => <label class="check"><input type="radio" name="c" value={e.id} /> {e.label}</label>)}
+          </div>
+        </fieldset>
+        <p class="actions"><button class="btn btn-primary" type="submit">Show matching pathways</button> <a href="?" class="btn btn-quiet" data-reset>Clear</a></p>
+      </form>
+      <section aria-labelledby="results-h" data-results-wrap hidden>
+        <h2 id="results-h" tabindex="-1">Pathways that match</h2>
+        <div data-results aria-live="polite"></div>
+      </section>
+      <section aria-labelledby="how" class="how">
+        <h2 id="how">How the matching works</h2>
+        <p>Each pathway lists the kinds of experience and interest it draws on, and one main way of contributing. A pathway appears if it shares at least one of your selections, and pathways that share more appear first. The reasons shown are exactly the selections that matched. There is no hidden weighting, no score and no prediction of your chances.</p>
+      </section>
+      <section aria-labelledby="all-h">
+        <h2 id="all-h">All pathways and what they draw on</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>The rules the explorer uses</caption>
+            <thead><tr><th scope="col">Pathway</th><th scope="col">Experience</th><th scope="col">Interests</th></tr></thead>
+            <tbody>{data.map((p) => <tr><th scope="row"><a href={p.href}>{p.title}</a></th><td>{p.experience.map((x) => labels[x]).join('; ')}</td><td>{p.interests.map((x) => labels[x]).join('; ')}</td></tr>)}</tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script type="application/json" id="explorer-data" set:html={JSON.stringify({ pathways: data, labels }).replace(/</g, '\\u003c')} />
+</Base>
+<script>
+  type P = { id: string; title: string; href: string; summary: string; experience: string[]; interests: string[]; contribution: string; gaps: string[] };
+  const { pathways, labels } = JSON.parse(document.getElementById('explorer-data')?.textContent ?? '{}') as { pathways: P[]; labels: Record<string, string> };
+  const form = document.querySelector('[data-explorer]') as HTMLFormElement;
+  const wrap = document.querySelector('[data-results-wrap]') as HTMLElement;
+  const out = document.querySelector('[data-results]') as HTMLElement;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } as Record<string, string>)[c]);
+  function fromUrl() {
+    const p = new URLSearchParams(location.search);
+    const xs = p.getAll('x'), is = p.getAll('i'), c = p.get('c') ?? '';
+    form.querySelectorAll<HTMLInputElement>('input').forEach((el) => {
+      if (el.name === 'x') el.checked = xs.includes(el.value);
+      if (el.name === 'i') el.checked = is.includes(el.value);
+      if (el.name === 'c') el.checked = el.value === c;
+    });
+    return { xs, is, c };
+  }
+  function render({ xs, is, c }: { xs: string[]; is: string[]; c: string }, focus: boolean) {
+    if (!xs.length && !is.length && !c) { wrap.hidden = true; return; }
+    const scored = pathways.map((p) => {
+      const why = [...p.experience.filter((x) => xs.includes(x)), ...p.interests.filter((x) => is.includes(x)), ...(c && p.contribution === c ? [c] : [])];
+      return { p, why };
+    }).filter((r) => r.why.length).sort((a, b) => b.why.length - a.why.length);
+    wrap.hidden = false;
+    out.innerHTML = scored.length ? `<p class="meta">${scored.length} of ${pathways.length} pathways share at least one of your selections.</p><ol class="record-list">${scored.map(({ p, why }) => `<li><h3><a href="${p.href}">${esc(p.title)}</a></h3><p>${esc(p.summary)}</p><p class="meta"><strong>Why it appears:</strong> ${why.map((w) => esc(labels[w])).join('; ')}.</p><p class="meta"><strong>Likely gaps to fill:</strong> ${p.gaps.map(esc).join('; ')}.</p></li>`).join('')}</ol>`
+      : `<div class="notice" role="status"><p><strong>No pathway shares these selections.</strong> Try adding an interest, or <a href="${location.pathname}">browse all pathways</a> in the table below.</p></div>`;
+    if (focus) document.getElementById('results-h')?.focus();
+  }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const p = new URLSearchParams();
+    for (const [k, v] of fd) if (v) p.append(k, String(v));
+    history.pushState(null, '', p.toString() ? `?${p}` : location.pathname);
+    render(fromUrl(), true);
+  });
+  document.querySelector('[data-reset]')?.addEventListener('click', (e) => { e.preventDefault(); history.pushState(null, '', location.pathname); render(fromUrl(), false); });
+  window.addEventListener('popstate', () => render(fromUrl(), false));
+  render(fromUrl(), false);
+</script>
+<style>
+  .explorer { margin: 1rem 0 1.5rem; }
+  .checks { display: grid; gap: 4px 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+  .check { display: flex; gap: 8px; align-items: flex-start; font-weight: 400; min-height: 32px; padding: 4px 0; font-family: var(--font-sans); }
+  .check input { width: 24px; height: 24px; flex: none; margin: 0; }
+  .how { margin-top: 2rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .actions .btn { white-space: normal; max-width: 100%; }
+  .explorer, .explorer fieldset, .checks, .check { min-width: 0; }
+  .check { overflow-wrap: anywhere; }
+  @media print { .explorer { display: none; } }
+</style>

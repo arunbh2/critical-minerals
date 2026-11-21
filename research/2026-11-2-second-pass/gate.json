@@ -1,7 +1,7 @@
 {
   "batch": "2026-11-2-second-pass",
-  "gatedAt": "2026-11-17T06:06:08.035Z",
-  "checkedAt": "2026-11-17T06:06:08.001Z",
+  "gatedAt": "2026-11-21T19:05:14.485Z",
+  "checkedAt": "2026-11-21T19:05:14.442Z",
   "results": [
     {
       "claim": "c-refining-top3-2024",
@@ -51,8 +51,7 @@
         {
           "term": "indonesia",
           "foundIn": [
-            "miningcom-gcmo-2025",
-            "northernminer-gcmo-2025"
+            "miningcom-gcmo-2025"
           ]
         },
         {

@@ -1,0 +1,98 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import OpStatus from '../../components/funding/OpStatus.astro';
+import { fundingData, groupOpportunities, audienceOf } from '../../lib/funding';
+import { formatMoney, formatPeriod } from '../../lib/opportunity.js';
+import { formatDate } from '../../lib/status.js';
+import { hrefFor } from '../../lib/content';
+import { url } from '../../lib/url';
+import screening from '../../data/screening.json';
+const { orgs, programmes, awards, opportunities, finance, name, fullName } = await fundingData();
+const funders = orgs.filter((o) => o.data.roles.some((r) => r === 'funder' || r === 'administrator'));
+const fundingOps = opportunities.filter((o) => audienceOf(o.data.type) === 'funding');
+const g = groupOpportunities(fundingOps);
+const asOf = new Date().toISOString().slice(0, 10);
+const award = awards.find((a) => a.id === 'quadrature-nrgi-2024')!;
+const mech = programmes.find((p) => p.id === 'a2d-facility')!;
+const nrgiScreen = screening.find((s) => s.source === 'nrgi-funders')!;
+---
+<Base title="Follow the money. Understand what it can actually support." shortTitle="Funding overview" searchType="Funding" description="Who funds work on critical minerals and communities, through which mechanisms, what has actually been awarded, and which opportunities are genuinely open.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Funding' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Funding</p>
+      <h1>Follow the money. Understand what it can actually support.</h1>
+      <p class="standfirst">Who supplies the money, who manages it, who has received it, and whether anyone can apply now. These are different questions, and the answers are often different organisations.</p>
+    </header>
+
+    <ul class="entrances grid grid-3" role="list">
+      <li class="panel">
+        <h2><a href={url('funding/funders/')}>Explore funders</a></h2>
+        <p>{funders.length} funder and administrator profiles: what each finances, where, through which instruments, and whether there is any route in.</p>
+      </li>
+      <li class="panel">
+        <h2><a href={url('funding/awards/')}>See what has been funded</a></h2>
+        <p>{awards.length} disclosed awards, traced from funder to recipient, and {programmes.length + finance.length} programmes and finance records.</p>
+      </li>
+      <li class="panel">
+        <h2><a href={url('funding/opportunities/')}>Find accessible opportunities</a></h2>
+        <p data-open-count>{g.open.length === 0 ? 'No verified open funding opportunity is listed right now.' : `${g.open.length} verified open now.`} Closed calls are kept as precedents.</p>
+      </li>
+    </ul>
+
+    <section class="reading" aria-labelledby="now-h">
+      <h2 id="now-h">Three things worth knowing</h2>
+      <ol class="record-list insights">
+        <li>
+          <p class="kicker">An actual award</p>
+          <h3><a href={hrefFor('awards', award.id)}>{formatMoney(award.data.amount)} from {name(award.data.funder)} to {name(award.data.recipient)}, {formatPeriod(award.data.period)}</a></h3>
+          <p>{award.data.activity} It is a precedent, not a call: it shows that a philanthropic funder has backed mineral-governance work, not that you can apply.</p>
+        </li>
+        <li>
+          <p class="kicker">A mechanism</p>
+          <h3><a href={hrefFor('programmes', mech.id)}>{mech.data.title}: British money, UN administration</a></h3>
+          <p>{mech.data.summary} Applicants deal with {fullName(mech.data.administrators[0])} (UNIDO), not the donor. Its 2026 call closed on 18 June 2026.</p>
+        </li>
+        <li>
+          <p class="kicker">Open opportunities</p>
+          {g.open.length === 0 ? (
+            <>
+              <h3>No verified open funding call, as of <time datetime={asOf}>{formatDate(asOf)}</time></h3>
+              <p>That is an honest state, not a gap to fill. {g.upcoming.length > 0 && <>One window is forecast: <a href={hrefFor('opportunities', g.upcoming[0].o.id)}>{g.upcoming[0].o.data.title}</a>, which has no stated mineral purpose.</>} Consulting tenders and jobs are listed under <a href={url('careers/opportunities/')}>Careers</a>.</p>
+            </>
+          ) : (
+            <ul>{g.open.map(({ o }) => <li><a href={hrefFor('opportunities', o.id)}>{o.data.title}</a> <OpStatus op={o.data} /></li>)}</ul>
+          )}
+        </li>
+      </ol>
+    </section>
+
+    <section class="reading" aria-labelledby="diff-h">
+      <h2 id="diff-h">Six things that are easy to confuse</h2>
+      <dl class="facts">
+        <dt>Funder</dt><dd>Supplies the money: a government, a development bank, a foundation.</dd>
+        <dt>Administrator</dt><dd>Manages a mechanism on the funder&rsquo;s behalf. You apply to the administrator, who may not be the original donor.</dd>
+        <dt>Programme</dt><dd>Sets up an instrument with objectives and rules. It is not a call you can apply to.</dd>
+        <dt>Award</dt><dd>Records a recipient and an agreed amount. A recipient can fund others in turn.</dd>
+        <dt>Opportunity</dt><dd>A current route to apply or bid, with a source that says it is open.</dd>
+        <dt>Policy announcement</dt><dd>States intent. It is none of the above until a mechanism exists.</dd>
+      </dl>
+      <p class="sans"><a class="link-arrow" href={url('funding/guide/')}>Instruments and how to read amounts</a></p>
+    </section>
+
+    <section class="reading" aria-labelledby="screen-h">
+      <h2 id="screen-h">How records are chosen</h2>
+      <p>We include a funding record only when an official or issuing-organisation source names minerals, mining, a mineral sector or the extractive sector as a purpose, or when it is adjacent and we say why. Most climate or governance money is not mineral finance. For example, of {nrgiScreen.included + nrgiScreen.excluded} entries in one recipient&rsquo;s funder disclosure, {nrgiScreen.included} were included and {nrgiScreen.excluded} left out because they concern oil and gas, methane or general support.</p>
+      <p>Amounts keep their original currency and are never added together. Commitment, award, disbursement and spending are different things.</p>
+      <p class="sans"><a class="link-arrow" href={url('finance/')}>Earlier finance records</a> &nbsp; <a class="link-arrow" href={url('policies/')}>Policy records</a> &nbsp; <a href={url('data/')}>Open data</a></p>
+    </section>
+  </div>
+</Base>
+<style>
+  .entrances { list-style: none; padding: 0; margin: 1.5rem 0 2rem; align-items: stretch; }
+  .entrances > li { margin: 0; }
+  .entrances h2 { font-size: 1.25rem; margin: 0 0 0.4rem; }
+  .entrances p { margin: 0; font-family: var(--font-sans); font-size: 0.95rem; }
+  .insights > li { padding: 16px 0; }
+</style>

@@ -28,7 +28,7 @@ Most nickel goes into stainless steel. A growing share goes into battery cathode
 
 ## Lifecycle and geography
 
-Laterite ore can be smelted into nickel pig iron or ferronickel for steel, or processed by high-pressure acid leaching into intermediates suitable for batteries. Indonesia is the largest producer of mined nickel. Since 2020 it has prohibited exports of unprocessed ore so that processing happens in the country.
+Laterite ore can be smelted into nickel pig iron or ferronickel for steel, or processed by high-pressure acid leaching into intermediates suitable for batteries. Indonesia announced a ban on nickel ore exports from January 2020, so that processing would happen in the country.
 
 ## Development questions
 

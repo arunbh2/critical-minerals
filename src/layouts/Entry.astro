@@ -7,6 +7,7 @@ import SourceList from '../components/SourceList.astro';
 import Related from '../components/Related.astro';
 import Tags from '../components/Tags.astro';
 import { claimsById, TYPE_LABEL, type EntityType } from '../lib/content';
+import { isPublishable } from '../../tools/evidence-gate.js';
 import { absoluteUrl } from '../lib/url';
 
 interface Props {
@@ -20,7 +21,7 @@ interface Props {
 }
 const { type, id, kicker, data, crumbs, minutes, lead } = Astro.props;
 // Sources shown = sources named on the record plus sources behind its claims.
-const claimSources = (await claimsById(data.claims ?? [])).filter((c) => c.data.verification !== 'not-verified').flatMap((c) => c.data.evidenceSources.length ? c.data.evidenceSources : c.data.sources);
+const claimSources = (await claimsById(data.claims ?? [])).filter((c) => isPublishable(c)).flatMap((c) => c.data.evidenceSources.length ? c.data.evidenceSources : c.data.sources);
 const allSources = [...new Set([...(data.sources ?? []), ...claimSources])];
 const jsonld = [{
   '@context': 'https://schema.org',

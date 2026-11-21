@@ -10,7 +10,7 @@ import { start } from '../tests/e2e/pages-server.mjs';
 
 const PORT = Number(process.env.PORT ?? 4340);
 const BASE = (process.env.BASE_PATH ?? '/critical-minerals').replace(/\/$/, '') + '/';
-const PAGES = ['', 'start-here/', 'learn/the-lifecycle/', 'countries/india/', 'minerals/nickel/', 'issues/decent-work-safety/', 'finance/', 'policies/', 'landscape/', 'practice/india-district-mineral-foundations/', 'tools/community-benefit/', 'search/', 'sources/', 'for-ai/', 'use-with-ai/', 'cite/', 'growing/', 'about/'];
+const PAGES = ['', 'start-here/', 'learn/the-lifecycle/', 'countries/india/', 'minerals/nickel/', 'issues/decent-work-safety/', 'finance/', 'policies/', 'landscape/', 'practice/india-district-mineral-foundations/', 'tools/community-benefit/', 'search/', 'sources/', 'for-ai/', 'use-with-ai/', 'cite/', 'growing/', 'about/', 'funding/', 'funding/funders/', 'funding/programmes/', 'funding/programmes/fair-focus-on-trade/', 'funding/awards/', 'funding/awards/fcdo-nrgi-emerge/', 'funding/opportunities/', 'opportunities/eiti-kazakhstan-independent-administrator-2026/', 'organisations/rvo/', 'careers/', 'careers/pathways/', 'careers/pathways/finance-partnerships/', 'careers/transition/', 'careers/employers/', 'careers/opportunities/', 'careers/explorer/', 'evidence/', 'methodology/'];
 const server = await start(PORT);
 const browser = await chromium.launch();
 const errors = [];

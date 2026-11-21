@@ -1,0 +1,426 @@
+{
+  "checkedAt": "2026-11-21T19:05:44.648Z",
+  "note": "Technical check of recorded passages. Not an editorial review; never changes record status.",
+  "sources": [
+    {
+      "source": "eiti-consultancies",
+      "url": "https://eiti.org/consultancy-opportunities",
+      "status": 403,
+      "error": null,
+      "textLength": 0,
+      "readable": false,
+      "textHash": null,
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "eiti",
+          "quote": "The EITI International Secretariat administers entrusted funds on behalf of its donors",
+          "located": null
+        },
+        {
+          "file": "opportunities",
+          "record": "eiti-kazakhstan-independent-administrator-2026",
+          "quote": "The following opportunities are currently open for applications or bids.",
+          "located": null
+        }
+      ]
+    },
+    {
+      "source": "nrgi-jobs",
+      "url": "https://resourcegovernance.org/working-nrgi",
+      "status": 200,
+      "error": null,
+      "textLength": 3732,
+      "readable": true,
+      "textHash": "8522a40ebe9ddf6b",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "nrgi",
+          "quote": "in total we are approximately 80 team members based in 19 countries",
+          "located": true
+        }
+      ]
+    },
+    {
+      "source": "irma-jobs",
+      "url": "https://responsiblemining.net/about/jobs/",
+      "status": 200,
+      "error": null,
+      "textLength": 2174,
+      "readable": true,
+      "textHash": "2b197db645d188e7",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "irma",
+          "quote": "We currently do not have any open positions",
+          "located": true
+        }
+      ]
+    },
+    {
+      "source": "nrgi-funders",
+      "url": "https://resourcegovernance.org/funders",
+      "status": 200,
+      "error": null,
+      "textLength": 5854,
+      "readable": true,
+      "textHash": "930374532b5651de",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "world-bank",
+          "quote": "Support for Citizen Engagement for Accountability and Transparency in the Extractive Sector",
+          "located": true
+        },
+        {
+          "file": "organisations",
+          "record": "fcdo",
+          "quote": "Ensuring Minerals Enable Responsible Growth and Economic Development (EMERGE): Supporting sustainable economic development in Africa and the resilience of global supply chains.",
+          "located": true
+        },
+        {
+          "file": "organisations",
+          "record": "quadrature",
+          "quote": "To advance efforts by citizens and governments to drive systemic change in the responsible scale up of transition mineral production",
+          "located": true
+        },
+        {
+          "file": "organisations",
+          "record": "moore-foundation",
+          "quote": "To develop a playbook for nature positive mining - Design Phase: Benefits Realization Planning – Shifting Regulatory Regimes",
+          "located": true
+        },
+        {
+          "file": "organisations",
+          "record": "rockefeller-foundation",
+          "quote": "advancing equitable mineral development in low- and middle-income countries",
+          "located": true
+        },
+        {
+          "file": "organisations",
+          "record": "norad",
+          "quote": "Resources to Revenues: Civil Society Driving Just Transitions in Africa",
+          "located": true
+        },
+        {
+          "file": "organisations",
+          "record": "ecf",
+          "quote": "monitor Mongolia’s copper sector value addition efforts",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "egps-trust-fund",
+          "quote": "World Bank - Extractives Global Programmatic Support (EGPS) Multi-Donor Trust Fund",
+          "located": true
+        },
+        {
+          "file": "awards",
+          "record": "fcdo-nrgi-emerge",
+          "quote": "£3,258,348",
+          "located": true
+        },
+        {
+          "file": "awards",
+          "record": "fcdo-nrgi-emerge",
+          "quote": "September 2024 - September 2026",
+          "located": true
+        },
+        {
+          "file": "awards",
+          "record": "quadrature-nrgi-2024",
+          "quote": "August 2024 - July 2027",
+          "located": true
+        },
+        {
+          "file": "awards",
+          "record": "rockefeller-nrgi-2025",
+          "quote": "September 2025 - November 2026",
+          "located": true
+        },
+        {
+          "file": "awards",
+          "record": "moore-nrgi-2026",
+          "quote": "July 2026 - March 2027",
+          "located": true
+        },
+        {
+          "file": "awards",
+          "record": "ecf-nrgi-mongolia",
+          "quote": "October 2025 - October 2026",
+          "located": true
+        },
+        {
+          "file": "awards",
+          "record": "norad-nrgi-2026",
+          "quote": "NOK 31,500,000",
+          "located": true
+        },
+        {
+          "file": "awards",
+          "record": "egps-nrgi-2025",
+          "quote": "January 2025 - July 2026",
+          "located": true
+        }
+      ]
+    },
+    {
+      "source": "govuk-a2d-2026",
+      "url": "https://www.gov.uk/government/news/un-funding-available-for-clean-energy-and-decarbonisation-projects-in-developing-countries",
+      "status": 200,
+      "error": null,
+      "textLength": 6062,
+      "readable": true,
+      "textHash": "1da307b4a7a7181b",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "unido",
+          "quote": "The United Nations Industrial Development Organization (UNIDO), with support from the UK Department for Energy Security & Net Zero, has launched a new global call for proposals",
+          "located": true
+        },
+        {
+          "file": "organisations",
+          "record": "desnz",
+          "quote": "Delivered by UNIDO and funded by the UK Government’s Ayrton Fund, the A2D Facility offers grants from $1–5 million",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "a2d-facility",
+          "quote": "Low‑carbon solutions to recover and recycle critical minerals from waste streams",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "a2d-facility",
+          "quote": "A2D does not support projects at the planning stage, research and development, or early‑stage pilot testing.",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "a2d-facility",
+          "quote": "All supported activities must be completed no later than 14 December 2030.",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "a2d-call-2026",
+          "quote": "The deadline for submissions is 3pm UK time on 18 June 2026.",
+          "located": true
+        }
+      ]
+    },
+    {
+      "source": "pib-recycling-2025",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2163454",
+      "status": 403,
+      "error": null,
+      "textLength": 0,
+      "readable": false,
+      "textHash": null,
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "ministry-of-mines-india",
+          "quote": "approved a Rs.1,500 crore Incentive Scheme to develop recycling capacity in the country for the separation and production of critical minerals from secondary sources",
+          "located": null
+        },
+        {
+          "file": "programmes",
+          "record": "india-recycling-incentive",
+          "quote": "total incentive (Capex plus Opex subsidy) per entity will be subject to an overall ceiling of Rs.50 crore for large entities and Rs.25 crore for small entities",
+          "located": null
+        },
+        {
+          "file": "programmes",
+          "record": "india-recycling-incentive",
+          "quote": "a tenure of six years from FY 2025-26 to FY 2030-31",
+          "located": null
+        }
+      ]
+    },
+    {
+      "source": "rvo-fft",
+      "url": "https://english.rvo.nl/subsidies-financing/fair-focus-trade",
+      "status": 200,
+      "error": null,
+      "textLength": 13995,
+      "readable": true,
+      "textHash": "176440a50abe5687",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "nl-mfa",
+          "quote": "Commissioned by: Ministry of Foreign Affairs",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "fair-focus-on-trade",
+          "quote": "This subsidy is closed. You can no longer apply for this programme. It will not reopen.",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "fair-focus-on-trade",
+          "quote": "mining and critical raw materials (CRM)",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "fair-focus-on-trade",
+          "quote": "Each selected project can receive between 10 and 22 million euros. We will select a maximum of 8 projects.",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "fair-focus-on-trade-2026",
+          "quote": "The application period was from 30 June 2026, 12:00 CEST until 11 August 2026, 12:00 CEST.",
+          "located": true
+        }
+      ]
+    },
+    {
+      "source": "rvo-ddp",
+      "url": "https://english.rvo.nl/subsidies-financing/ddp",
+      "status": 200,
+      "error": null,
+      "textLength": 16277,
+      "readable": true,
+      "textHash": "add173236eff278c",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "rvo",
+          "quote": "The content of this page has been checked on 19 November 2026",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "dutch-diamonds-partnerships",
+          "quote": "The minimum subsidy amount that can be applied for is 500,000 euros per application. The maximum is 3 million euros per application.",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "dutch-diamonds-partnerships",
+          "quote": "Temporarily closed for application",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "dutch-diamonds-partnerships-2026-27",
+          "quote": "The application period for DDP subsidies will open and close a few weeks later than planned.",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "dutch-diamonds-partnerships-2026-27",
+          "quote": "Monday 7 December 2026",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "dutch-diamonds-partnerships-2026-27",
+          "quote": "Monday 15 February 2027",
+          "located": true
+        }
+      ]
+    },
+    {
+      "source": "cw-minerals",
+      "url": "https://www.climateworks.org/programs/transportation/road-transportation/minerals-for-the-energy-transition/",
+      "status": 200,
+      "error": null,
+      "textLength": 7420,
+      "readable": true,
+      "textHash": "bbcf98f52c074acd",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "organisations",
+          "record": "climateworks",
+          "quote": "With our grantees, we work to ensure a reliable, responsible, and equitable supply of minerals for clean technologies",
+          "located": true
+        }
+      ]
+    },
+    {
+      "source": "rvo-eprm",
+      "url": "https://english.rvo.nl/subsidies-financing/eprm",
+      "status": 200,
+      "error": null,
+      "textLength": 6694,
+      "readable": true,
+      "textHash": "feeba84d8d2f5b05",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "programmes",
+          "record": "eprm",
+          "quote": "EPRM was established to create better social and economic conditions for mine workers and local mining communities.",
+          "located": true
+        },
+        {
+          "file": "programmes",
+          "record": "eprm",
+          "quote": "In 2023, EPRM focuses on tin, tantalum, tungsten, lithium, natural graphite, cobalt, copper and nickel.",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "eprm-call-2023",
+          "quote": "Temporarily closed for application",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "eprm-call-2023",
+          "quote": "Friday 1 September 2023",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "eprm-call-2023",
+          "quote": "Thursday 30 November 2023",
+          "located": true
+        }
+      ]
+    },
+    {
+      "source": "eiti-kz-ia-2026",
+      "url": "https://eiti.org/call-for-proposals/consultancy-opportunity-independent-administrator-kazakhstan-eiti-reporting",
+      "status": 200,
+      "error": null,
+      "textLength": 5637,
+      "readable": true,
+      "textHash": "f74ece1b93f05e1a",
+      "changedSinceLastCheck": false,
+      "passages": [
+        {
+          "file": "opportunities",
+          "record": "eiti-kazakhstan-independent-administrator-2026",
+          "quote": "seeking an independent, credible and technically qualified auditing company to serve as Independent Administrator",
+          "located": true
+        },
+        {
+          "file": "opportunities",
+          "record": "eiti-kazakhstan-independent-administrator-2026",
+          "quote": "by the close of 31 December 2026",
+          "located": true
+        }
+      ]
+    }
+  ]
+}

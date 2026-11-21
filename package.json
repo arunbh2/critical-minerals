@@ -14,7 +14,9 @@
     "ci": "npm run build && npm run check:fast",
     "check": "node tools/check-all.js",
     "check:fast": "node tools/check-all.js --fast",
-    "check:ui": "node tools/check-ui.js"
+    "check:ui": "node tools/check-ui.js",
+    "health": "node tools/content-health.js",
+    "check:passages": "node tools/check-record-passages.js"
   },
   "dependencies": {
     "@fontsource-variable/source-sans-3": "5.3.1",

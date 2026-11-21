@@ -1,0 +1,44 @@
+name: Content health
+
+# Weekly review queue for the editor. Re-locates the passages recorded on funding and
+# careers records, then lists opportunities to re-check, deadlines close at hand,
+# passages not found, sources that changed or refused automated requests, reviews due
+# and claims held back. It opens or updates one issue when there is something to do.
+# It never edits records, never changes a status and never publishes anything.
+on:
+  schedule:
+    - cron: '23 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Re-locate recorded passages (technical check; no record is changed)
+        run: node tools/check-record-passages.js
+      - name: Build the review queue
+        id: report
+        run: |
+          node tools/content-health.js > health.md
+          cat health.md >> "$GITHUB_STEP_SUMMARY"
+          if node tools/content-health.js --strict > /dev/null; then echo "action=no" >> "$GITHUB_OUTPUT"; else echo "action=yes" >> "$GITHUB_OUTPUT"; fi
+      - name: Open or update the content-health issue
+        if: steps.report.outputs.action == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create content-health --color FEE1CD --description "Weekly editorial review queue" 2>/dev/null || true
+          n=$(gh issue list --label content-health --state open --json number --jq '.[0].number')
+          if [ -n "$n" ]; then gh issue comment "$n" --body-file health.md; else gh issue create --title "Content health: review queue" --label content-health --body-file health.md; fi

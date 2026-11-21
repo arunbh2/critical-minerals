@@ -29,7 +29,7 @@ const isHome = pathname === url('');
     <ul class="wrap">
       {NAV.map((item) => (
         <li>
-          <a href={url(item.href)} aria-current={isCurrent(pathname, item.href) ? 'page' : undefined}>{item.label}</a>
+          <a href={url(item.href)} aria-current={pathname === url(item.href) ? 'page' : item.match.some((m) => isCurrent(pathname, m)) ? 'true' : undefined}>{item.label}</a>
         </li>
       ))}
     </ul>
@@ -109,7 +109,7 @@ const isHome = pathname === url('');
   }
   .site-nav li:first-child a { padding-left: 0; }
   .site-nav a:hover { text-decoration: underline; text-underline-offset: 0.25em; }
-  .site-nav a[aria-current='page'] { border-bottom-color: var(--color-signature-on-dark); }
+  .site-nav a[aria-current] { border-bottom-color: var(--color-signature-on-dark); }
   .site-nav a:focus-visible { outline: 3px solid var(--london-100); outline-offset: -3px; }
 
   @media (max-width: 860px) { .descriptor { display: none; } }
@@ -120,7 +120,7 @@ const isHome = pathname === url('');
     .site-nav ul { flex-direction: column; padding-top: 4px; padding-bottom: 8px; }
     .site-nav li:first-child a { padding-left: 0; }
     .site-nav a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.18); }
-    .site-nav a[aria-current='page'] { border-bottom: 1px solid rgba(255,255,255,0.18); box-shadow: inset 4px 0 0 var(--color-signature-on-dark); padding-left: 12px; }
+    .site-nav a[aria-current] { border-bottom: 1px solid rgba(255,255,255,0.18); box-shadow: inset 4px 0 0 var(--color-signature-on-dark); padding-left: 12px; }
     .site-nav.is-collapsible:not(.is-open) { display: none; }
   }
   @media print {

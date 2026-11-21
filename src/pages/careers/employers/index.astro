@@ -1,0 +1,45 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FilterShell from '../../../components/FilterShell.astro';
+import { fundingData } from '../../../lib/funding';
+import { hrefFor, vocabLabel } from '../../../lib/content';
+import { formatDate } from '../../../lib/status.js';
+import { url } from '../../../lib/url';
+import vocab from '../../../data/vocab.json';
+const { orgs, opportunities } = await fundingData();
+const list = orgs.filter((o) => o.data.roles.some((r) => r === 'employer' || r === 'procurer') || o.data.careersUrl || o.data.procurementUrl).sort((a, b) => a.data.name.localeCompare(b.data.name));
+const filters = [
+  { name: 'family', label: 'Role family', options: vocab.roleFamilies.map((r) => ({ value: r.id, label: r.label })) },
+  { name: 'route', label: 'Official route', options: [{ value: 'jobs', label: 'Jobs page' }, { value: 'procurement', label: 'Consultancies and tenders' }] },
+  { name: 'type', label: 'Kind of organisation', options: vocab.orgTypes.filter((t) => list.some((o) => o.data.type === t.id)).map((t) => ({ value: t.id, label: t.label })) },
+];
+---
+<Base title="Employers in the mineral transition" shortTitle="Mineral transition employers" searchType="Careers" description="Organisations working on minerals and their social and environmental effects, with their official recruitment and procurement routes and typical functions.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Careers', href: url('careers/') }, { label: 'Employers' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Careers</p>
+      <h1>Employers</h1>
+      <p class="standfirst">Organisations whose work touches minerals, with links to their own recruitment and procurement pages. A profile describes an organisation&rsquo;s role; it is not an endorsement, and an empty jobs list is normal.</p>
+    </header>
+    <p class="notice reading">We have started with international organisations whose pages we could read and check. Local and regional institutions, worker organisations and community groups will be added as their routes are verified. We do not publish individual activists&rsquo; contact details.</p>
+    <FilterShell filters={filters} noun="employers">
+      <ul class="record-list">
+        {list.map((o) => { const d = o.data; const ops = opportunities.filter((x) => x.data.organisation === o.id).length; return (
+          <li data-filter-item data-family={d.functions.join(' ')} data-route={[d.careersUrl ? 'jobs' : '', d.procurementUrl ? 'procurement' : ''].join(' ').trim()} data-type={d.type}>
+            <h3><a href={hrefFor('organisations', o.id)}>{d.name}</a></h3>
+            <p class="meta">{vocabLabel('orgTypes', d.type)} · {d.geography}</p>
+            <p>{d.role}</p>
+            <dl class="facts compact">
+              <dt>Typical functions</dt><dd>{d.functions.length ? d.functions.map((f) => vocabLabel('roleFamilies', f)).join('; ') : 'Not yet assessed'}</dd>
+              <dt>Official routes</dt><dd>{d.careersUrl && <a href={d.careersUrl} rel="noopener">Jobs</a>}{d.careersUrl && d.procurementUrl && ' · '}{d.procurementUrl && <a href={d.procurementUrl} rel="noopener">Consultancies and tenders</a>}{!d.careersUrl && !d.procurementUrl && 'Not yet verified'}</dd>
+              <dt>At our last check</dt><dd>{d.employerNote ?? 'No note'} ({formatDate(d.reviewed)}){ops ? ` · ${ops} listed on this site` : ''}</dd>
+            </dl>
+          </li>
+        ); })}
+      </ul>
+    </FilterShell>
+  </div>
+</Base>
+<style>.compact { font-size: 0.9rem; margin-top: 6px; }</style>

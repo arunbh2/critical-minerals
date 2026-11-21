@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import RecordMeta from '../../../components/RecordMeta.astro';
+import Tags from '../../../components/Tags.astro';
+import Related from '../../../components/Related.astro';
+import SourceList from '../../../components/SourceList.astro';
+import Passages from '../../../components/funding/Passages.astro';
+import Interpretation from '../../../components/funding/Interpretation.astro';
+import OpStatus from '../../../components/funding/OpStatus.astro';
+import { fundingData } from '../../../lib/funding';
+import { hrefFor, vocabLabel } from '../../../lib/content';
+import { formatMoney, formatPeriod } from '../../../lib/opportunity.js';
+import { url } from '../../../lib/url';
+export async function getStaticPaths() {
+  return (await getCollection('programmes')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { awards, opportunities, name } = await fundingData();
+const calls = opportunities.filter((o) => o.data.programme === entry.id);
+const funded = awards.filter((a) => a.data.programme === entry.id);
+const statusLabel: Record<string, string> = { active: 'Active programme', paused: 'Paused: no reopening date', closed: 'Closed', unknown: 'Status not established' };
+const orgLink = (id: string) => ({ id, label: name(id) });
+---
+<Base title={d.title} shortTitle={d.shortTitle} description={d.summary} type="article" searchType="Funding programme"
+  jsonld={[{ '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.summary, datePublished: d.published, dateModified: d.lastChecked, isAccessibleForFree: true }]}>
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Funding', href: url('funding/') }, { label: 'Programmes', href: url('funding/programmes/') }, { label: d.shortTitle ?? d.title }]} />
+    <article class="reading">
+      <p class="kicker red-rule">Funding programme · {vocabLabel('relevance', d.relevance)} mineral relevance</p>
+      <h1>{d.title}</h1>
+      <p class="standfirst">{d.summary}</p>
+      <RecordMeta reviewed={d.lastChecked} reviewDue={d.reviewDue} checkedLabel="Sources checked" />
+      <Tags countries={d.countries} minerals={d.minerals} issues={d.issues} />
+      <p><span class="status">{statusLabel[d.programmeStatus]}</span></p>
+      <div class="panel-data">
+        <dl class="facts">
+          <dt>Funder</dt><dd>{d.funders.length ? d.funders.map((f, i) => <>{i > 0 && ', '}<a href={hrefFor('organisations', f)}>{name(f)}</a></>) : 'Not disclosed in our sources'}</dd>
+          <dt>Administrator</dt><dd>{d.administrators.length ? d.administrators.map((f, i) => <>{i > 0 && ', '}<a href={hrefFor('organisations', f)}>{name(f)}</a></>) : 'None separate from the funder, or not established'}</dd>
+          <dt>Instrument</dt><dd>{d.instruments.map((i) => vocabLabel('instruments', i)).join(', ')}</dd>
+          <dt>Objectives</dt><dd>{d.objectives}</dd>
+          <dt>Mineral scope</dt><dd>{d.mineralScope}</dd>
+          <dt>Geography</dt><dd>{d.geography}</dd>
+          <dt>Total envelope</dt><dd>{d.envelope ? formatMoney(d.envelope) : 'Not stated'}</dd>
+          <dt>Per award</dt><dd>{d.perAward ? `${formatMoney(d.perAward)} (${vocabLabel('amountBases', d.perAward.basis).toLowerCase()})` : 'Not stated'}</dd>
+          <dt>Period</dt><dd>{d.period ?? 'Not stated'}</dd>
+          <dt>Who can apply</dt><dd>{d.applicants ?? 'Not established'}</dd>
+          <dt>Exclusions</dt><dd>{d.exclusions ?? 'None stated in our sources'}</dd>
+          <dt>Access route</dt><dd>{d.accessRoute}</dd>
+        </dl>
+      </div>
+      {calls.length > 0 && (
+        <section aria-labelledby="calls-h">
+          <h2 id="calls-h">Calls and application windows</h2>
+          <ul class="record-list">{calls.map((c) => <li data-op-scope><h3><a href={hrefFor('opportunities', c.id)}>{c.data.title}</a></h3><OpStatus op={c.data} /></li>)}</ul>
+        </section>
+      )}
+      {funded.length > 0 && (
+        <section aria-labelledby="aw-h">
+          <h2 id="aw-h">Awards recorded under this programme</h2>
+          <ul>{funded.map((a) => <li><a href={hrefFor('awards', a.id)}>{a.data.title}</a>: {formatMoney(a.data.amount)}, {formatPeriod(a.data.period)}</li>)}</ul>
+        </section>
+      )}
+      <Interpretation why={d.whyItMatters} notEstablished={d.notEstablished} />
+      <Passages passages={d.passages} />
+      <SourceList ids={d.sources} />
+    </article>
+    <Related type="programmes" id={entry.id} refs={{ countries: d.countries, minerals: d.minerals, issues: d.issues }} />
+  </div>
+</Base>

@@ -3,10 +3,11 @@ import { relatedTo, TYPE_LABEL, type EntityType } from '../lib/content';
 interface Props { type: EntityType; id: string; refs: { countries?: string[]; minerals?: string[]; issues?: string[] } }
 const { type, id, refs } = Astro.props;
 const groups = await relatedTo(type, id, refs);
-const order: EntityType[] = ['countries', 'minerals', 'issues', 'learn', 'policies', 'finance', 'organisations', 'cases', 'updates'];
+const order: EntityType[] = ['countries', 'minerals', 'issues', 'learn', 'policies', 'finance', 'programmes', 'awards', 'opportunities', 'pathways', 'organisations', 'cases', 'updates'];
 const plural: Record<EntityType, string> = {
   learn: 'Explainers', minerals: 'Minerals', countries: 'Countries', issues: 'Issues', cases: 'Case studies',
   updates: 'Updates', organisations: 'Organisations', finance: 'Finance records', policies: 'Policy records',
+  programmes: 'Funding programmes', awards: 'Awards', opportunities: 'Opportunities', pathways: 'Career pathways',
 };
 const present = order.filter((k) => groups[k]?.length);
 ---

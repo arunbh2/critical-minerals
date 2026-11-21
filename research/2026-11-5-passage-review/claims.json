@@ -1,0 +1,125 @@
+{
+  "batch": "2026-11-5-passage-review",
+  "created": "2026-11-21",
+  "note": "Passage review. Each published claim was read against the passage that its terms located. Where the passage supported only part of a claim, the claim was narrowed to what the passage supports and re-checked here. Term matches had hidden three problems: a year found in an advertisement, a \"ban\" that referred to banning exporters rather than exports, and a \"state government\" that granted licences rather than received revenue.",
+  "claims": [
+    {
+      "id": "c-india-ncmm-scope",
+      "text": "The Mission covers exploration, mining, beneficiation, processing and recovery from end-of-life products. It also covers acquiring mineral assets abroad and proposes a stockpile of critical minerals within the country.",
+      "terms": [
+        "exploration",
+        "beneficiation",
+        "end-of-life",
+        "abroad",
+        "stockpile"
+      ],
+      "sources": [
+        "pmindia-ncmm-2025",
+        "tribune-ncmm-2025"
+      ]
+    },
+    {
+      "id": "c-india-mmdr-2023",
+      "text": "A 2023 amendment to India's mining law provides for the central government to auction mining leases and composite licences for specified critical and strategic minerals, and creates an exploration licence that state governments grant through competitive bidding.",
+      "terms": [
+        "critical and strategic minerals",
+        "central government",
+        "exploration licence",
+        "competitive bidding",
+        "2023"
+      ],
+      "sources": [
+        "prs-mmdr-2023",
+        "iea-policy-mmdr-2023"
+      ]
+    },
+    {
+      "id": "c-indonesia-ore-ban",
+      "text": "Indonesia announced a ban on nickel ore exports to take effect in January 2020.",
+      "terms": [
+        "nickel ore",
+        "bans exports | ban on exports | export ban",
+        "january 2020 | 1 january 2020"
+      ],
+      "sources": [
+        "iea-policy-indonesia-nickel",
+        "aljazeera-nickel-2019",
+        "nrf-nickel-regulation"
+      ]
+    },
+    {
+      "id": "c-morowali-2023",
+      "text": "In December 2023 a furnace explosion at a nickel smelter in the Indonesia Morowali Industrial Park killed workers and injured dozens. Initial reports gave 13 deaths; police later revised the death toll up from 13 to 18.",
+      "terms": [
+        "morowali",
+        "furnace",
+        "13",
+        "18",
+        "death toll",
+        "2023"
+      ],
+      "sources": [
+        "jakpost-morowali-2023-12-24",
+        "jakpost-morowali-2023-12-27",
+        "bhrrc-morowali-2023"
+      ]
+    },
+    {
+      "id": "c-drc-export-2025",
+      "text": "In 2025 the Democratic Republic of the Congo introduced quotas on cobalt exports.",
+      "terms": [
+        "cobalt",
+        "quota*",
+        "2025"
+      ],
+      "sources": [
+        "iea-policy-drc-cobalt",
+        "kitco-drc-quotas-2025",
+        "mw-drc-quotas-2025",
+        "spg-drc-quotas-2025"
+      ]
+    },
+    {
+      "id": "c-china-graphite-2023",
+      "text": "China introduced licensing requirements for graphite exports, in effect from December 2023.",
+      "terms": [
+        "graphite",
+        "december 2023"
+      ],
+      "sources": [
+        "orf-china-controls"
+      ]
+    },
+    {
+      "id": "c-eu-crma",
+      "text": "The EU Critical Raw Materials Act, adopted in 2024, sets 2030 benchmarks for the share of the EU's annual consumption of strategic raw materials that comes from EU extraction (10%), EU processing (40%) and recycling (25%).",
+      "terms": [
+        "10%",
+        "40%",
+        "25%",
+        "2030",
+        "2024"
+      ],
+      "sources": [
+        "council-crma",
+        "nrf-crma-2024",
+        "te-crma-2024"
+      ]
+    },
+    {
+      "id": "c-un-panel-2024",
+      "text": "In 2024 the UN Secretary-General's Panel on Critical Energy Transition Minerals published seven guiding principles and five actionable recommendations to embed equity and justice in mineral value chains.",
+      "terms": [
+        "seven",
+        "guiding principles",
+        "five actionable recommendations",
+        "equity and justice",
+        "2024"
+      ],
+      "sources": [
+        "un-panel-cetm",
+        "iisd-un-panel-2024"
+      ]
+    }
+  ]
+}

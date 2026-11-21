@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { SITE, OWNERSHIP, STANDARDS, AGENT_DO, AGENT_AVOID, HOST_LIMITS, EVIDENCE_LABELS, CONTENT_SIGNALS, AI_USE, ASSISTANT_WARNING, citation } from '../../tools/site-text.js';
+import { SITE, OWNERSHIP, STANDARDS, AGENT_DO, AGENT_AVOID, HOST_LIMITS, EVIDENCE_LABELS, EVIDENCE_STEPS, REVIEW_STATUS, TASK_EXAMPLES, CONTENT_SIGNALS, AI_USE, ASSISTANT_WARNING, citation } from '../../tools/site-text.js';
 import counts from '../data/site/counts.json';
 import { endpoints } from '../lib/ai';
 
@@ -14,7 +14,10 @@ export const GET: APIRoute = ({ site }) => {
     counts,
     authentication: 'None. Everything is public and read-only.',
     contentSignals: CONTENT_SIGNALS,
+    howClaimsAreChecked: EVIDENCE_STEPS,
     evidenceLabels: EVIDENCE_LABELS,
+    reviewStatus: REVIEW_STATUS,
+    taskExamples: TASK_EXAMPLES,
     standards: STANDARDS,
     howAiIsUsed: AI_USE,
     please: { do: AGENT_DO, avoid: AGENT_AVOID },

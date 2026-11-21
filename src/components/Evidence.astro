@@ -3,12 +3,13 @@ import { claimsById } from '../lib/content';
 import { formatDate } from '../lib/status.js';
 import { url } from '../lib/url';
 import vocab from '../data/vocab.json';
+import { isPublishable } from '../../tools/evidence-gate.js';
 interface Props { claims?: string[]; meaning?: string[]; unclear?: string[]; level?: 2 | 3 }
 const { claims = [], meaning = [], unclear = [], level = 2 } = Astro.props;
 // The evidence gate: claims that did not pass never render.
-const items = (await claimsById(claims)).filter((c) => c.data.verification !== 'not-verified');
+const items = (await claimsById(claims)).filter((c) => isPublishable(c));
 const H = level === 2 ? 'h2' : 'h3';
-const vlabel = (id: string) => vocab.verification.find((v) => v.id === id)?.label ?? id;
+const L = (k: 'verification' | 'claimKinds' | 'reviewOutcomes' | 'reviewers', id: string | null) => (vocab[k] as { id: string; label: string }[]).find((v) => v.id === id)?.label ?? id ?? '';
 ---
 {items.length > 0 && (
   <section class="evidence evidence-known" aria-labelledby="known-h">
@@ -17,9 +18,11 @@ const vlabel = (id: string) => vocab.verification.find((v) => v.id === id)?.labe
       {items.map((c) => (
         <li id={`claim-${c.id}`}>
           {c.data.text}
-          <span class="claim-cite"> As of {c.data.asOf}. Sources:{' '}
+          <span class="claim-cite"> <strong>{L('claimKinds', c.data.kind)}</strong>, as of {c.data.asOf}. Sources:{' '}
             {c.data.sources.map((s, i) => (<><a href={url(`sources/#${s}`)}>{s}</a>{i < c.data.sources.length - 1 ? ', ' : ''}</>))}.
-            {' '}<strong>{vlabel(c.data.verification)}</strong>{c.data.checkedAt && <> (automated check <time datetime={c.data.checkedAt}>{formatDate(c.data.checkedAt)}</time>)</>}.
+            {' '}{L('verification', c.data.verification)}{c.data.checkedAt && <> (automated, <time datetime={c.data.checkedAt}>{formatDate(c.data.checkedAt)}</time>)</>}.
+            {' '}<strong>{L('reviewOutcomes', c.data.review.outcome)}</strong>{c.data.review.qualification ? <>: {c.data.review.qualification}</> : '.'}
+            {c.data.review.reviewer && <> {L('reviewers', c.data.review.reviewer)}{c.data.review.reviewedAt && <>, <time datetime={c.data.review.reviewedAt}>{formatDate(c.data.review.reviewedAt)}</time></>}.</>}
           </span>
         </li>
       ))}

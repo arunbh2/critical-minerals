@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { EVIDENCE_STEPS } from '../../../tools/site-text.js';
+import counts from '../../data/site/counts.json';
+import { hrefFor } from '../../lib/content';
+import { url } from '../../lib/url';
+const cases = (await getCollection('cases')).filter((c) => !c.data.draft);
+---
+<Base title="Evidence and tools" shortTitle="Evidence and tools" searchType="Page" description="How claims on this site are checked, the practice cases, the source register, open data, the community-benefit worksheet and ways to use the guide with AI.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Evidence & tools' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Evidence & tools</p>
+      <h1>Trace a claim. Test a proposition.</h1>
+      <p class="standfirst">Everything here is built so you can follow an assertion back to its source, see how it was checked, and reuse the records yourself.</p>
+    </header>
+    <div class="grid grid-2">
+      <section class="panel">
+        <h2><a href={url('practice/')}>Practice cases</a></h2>
+        <p>{cases.length} cases of interventions in mineral value chains, with the money, the mechanism, what is documented and what is not.</p>
+      </section>
+      <section class="panel">
+        <h2><a href={url('methodology/')}>How claims are checked</a></h2>
+        <p>{counts.claimsPublished} reported facts are published, each with its supporting passage located and read. {counts.claimsHeldBack} are held back.</p>
+      </section>
+      <section class="panel">
+        <h2><a href={url('sources/')}>Source register</a></h2>
+        <p>{counts.sources} sources, with publication and retrieval dates and the latest automated check.</p>
+      </section>
+      <section class="panel">
+        <h2><a href={url('tools/community-benefit/')}>Community-benefit worksheet</a></h2>
+        <p>Assess a benefit proposition for a specific place. It separates documented, assumed and missing information. No score, no verdict; your answers stay in your browser.</p>
+      </section>
+      <section class="panel">
+        <h2><a href={url('data/')}>Open data</a></h2>
+        <p>Every record as JSON and CSV, with schemas. Static files, not a live server API.</p>
+      </section>
+      <section class="panel">
+        <h2><a href={url('use-with-ai/')}>Use with an AI assistant</a></h2>
+        <p>Evidence packs that keep each claim&rsquo;s label, review status and sources attached. Also: <a href={url('cite/')}>how to cite</a> and <a href={url('for-ai/')}>information for AI systems</a>.</p>
+      </section>
+    </div>
+    <section class="reading" aria-labelledby="steps-h">
+      <h2 id="steps-h">Five steps for every reported fact</h2>
+      <ol>{EVIDENCE_STEPS.map((s) => <li><strong>{s.step}.</strong> {s.explain}</li>)}</ol>
+      <p class="sans"><a href={url('corrections/')}>Report an error</a> · <a href={url('growing/')}>What has changed</a></p>
+    </section>
+  </div>
+</Base>
+<style>.panel h2 { font-size: 1.25rem; margin-top: 0; } .grid { margin: 1.5rem 0 2rem; }</style>

@@ -1,13 +1,17 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import Lifecycle from '../components/Lifecycle.astro';
 import { url } from '../lib/url';
 import { hrefFor } from '../lib/content';
 import { formatDate } from '../lib/status.js';
+import { formatMoney, formatPeriod } from '../lib/opportunity.js';
+import { fundingData, groupOpportunities, audienceOf } from '../lib/funding';
+import { publishedClaims } from '../lib/published';
+import { CONTRIBUTIONS } from '../lib/careers';
 import { SITE } from '../site.config';
 import { OWNERSHIP } from '../../tools/site-text.js';
 import { absoluteUrl } from '../lib/url';
+import counts from '../data/site/counts.json';
 const home = absoluteUrl('', Astro.site);
 const jsonld = [
   { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${home}#website`, name: SITE.name, description: SITE.description, url: home, inLanguage: SITE.language, publisher: { '@id': `${home}#project` } },
@@ -15,93 +19,157 @@ const jsonld = [
   { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${home}#project`, name: SITE.name, url: home, description: OWNERSHIP, logo: absoluteUrl('brand/avatar-512.png', Astro.site) },
 ];
 const countries = await getCollection('countries');
-const updates = (await getCollection('updates')).sort((a, b) => b.data.eventDate.localeCompare(a.data.eventDate)).slice(0, 3);
-const counts = {
-  learn: (await getCollection('learn')).length,
-  minerals: (await getCollection('minerals')).length,
-  issues: (await getCollection('issues')).length,
-  orgs: (await getCollection('organisations')).length,
-  policies: (await getCollection('policies')).length,
-  finance: (await getCollection('finance')).length,
-  cases: (await getCollection('cases')).length,
-};
+const claims = await publishedClaims();
+const lead = claims.find((c) => c.id === 'c-morowali-2023');
+const { awards, programmes, opportunities, name } = await fundingData();
+const award = awards.find((a) => a.id === 'quadrature-nrgi-2024')!;
+const mech = programmes.find((p) => p.id === 'a2d-facility')!;
+const g = groupOpportunities(opportunities.filter((o) => audienceOf(o.data.type) === 'funding'));
+const pathways = (await getCollection('pathways')).filter((p) => !p.data.draft).sort((a, b) => a.data.order - b.data.order);
+const featured = (await getCollection('cases')).find((c) => c.id === 'india-district-mineral-foundations')!;
+const featuredClaim = claims.find((c) => featured.data.claims.includes(c.id));
+const asOf = new Date().toISOString().slice(0, 10);
 ---
 <Base title={SITE.name} shortTitle="People, value, fair transition" jsonld={jsonld}>
   <div class="wrap">
     <section class="hero" aria-labelledby="hero-h">
       <div class="reading">
         <h1 id="hero-h" class="red-rule">Critical minerals. Lasting benefits for people and places.</h1>
-        <p class="standfirst">As mineral investment reshapes economies, what decides whether workers, communities and the environment benefit? This guide connects mineral development with the people, policies, finance and evidence that answer that question.</p>
+        <p class="standfirst">Who captures the value, who bears the risks, and what would make the transition work better for workers and communities? This guide helps you understand the field, find credible funding and opportunities, and see where your skills fit.</p>
         <p class="hero-actions">
-          <a class="btn btn-primary" href={url('start-here/')}>Start with the basics</a>
-          <a class="btn btn-secondary" href={url('explore/')}>Explore the landscape</a>
+          <a class="btn btn-primary" href={url('start-here/')}>Understand the field</a>
+          <a class="btn btn-secondary" href={url('funding/')}>Find funding and opportunities</a>
+          <a class="quiet-link" href={url('careers/')}>Explore careers</a>
         </p>
       </div>
     </section>
 
-    <section class="why" aria-labelledby="why-h">
-      <h2 id="why-h">Why this matters</h2>
-      <div class="grid grid-3 why-grid">
-        <p>Copper, lithium, nickel, cobalt, graphite and rare earths link everyday technology and clean energy to mines, refineries, factories and recycling yards.</p>
-        <p>Governments call them critical and compete to secure them. Announcements and investment are growing fast. On their own, they do not show who benefits.</p>
-        <p>The development questions are about relationships: who decides, who captures value, who bears the risk, who pays, and whether promises become practice.</p>
-      </div>
-    </section>
+    {lead && (
+      <section class="lead" aria-labelledby="lead-h">
+        <p class="kicker red-rule">Editorial lead · reported December 2023 · reviewed {formatDate(lead.data.review.reviewedAt ?? lead.data.checkedAt ?? '')}</p>
+        <h2 id="lead-h">When a smelter is one tenant among many, who is responsible for keeping workers safe?</h2>
+        <div class="grid grid-2">
+          <div>
+            <p><strong>What was reported.</strong> {lead.data.text}</p>
+            <p class="meta">Reported fact. Sources: {lead.data.sources.map((s, i) => <>{i > 0 && ', '}<a href={url(`sources/#${s}`)}>{s}</a></>)}.</p>
+          </div>
+          <div>
+            <p><strong>Our interpretation.</strong> Industrial parks spread responsibility across the park operator, tenant companies, contractors and regulators, and each can point to another. For anyone designing support, the useful questions are who inspects, where workers can report hazards without retaliation, and who pays when things go wrong.</p>
+            <p class="sans"><a class="link-arrow" href={url('issues/decent-work-safety/')}>Decent work and safety</a> <a class="link-arrow" href={url('careers/pathways/worker-protection/')}>Worker protection careers</a> <a class="link-arrow" href={url('funding/programmes/eprm/')}>A funding precedent for mine workers</a></p>
+          </div>
+        </div>
+      </section>
+    )}
 
-    <section aria-labelledby="entr-h">
-      <h2 id="entr-h">Where do you want to begin?</h2>
-      <div class="grid grid-3 entrances">
-        <a class="entrance" href={url('start-here/')}><span class="kicker">Understand the field</span><span class="entrance-q">What makes a mineral “critical”, and why should development colleagues care?</span><span class="link-arrow">Six-part learning journey</span></a>
-        <a class="entrance" href={url('issues/')}><span class="kicker">Examine a place or issue</span><span class="entrance-q">Who protects the contract worker, the fishing village, the informal recycler?</span><span class="link-arrow">People & environment</span></a>
-        <a class="entrance" href={url('finance/')}><span class="kicker">Follow policy and finance</span><span class="entrance-q">Is that funding announcement a strategy, a programme or an open call?</span><span class="link-arrow">Finance & policy</span></a>
-      </div>
-    </section>
-
-    <section aria-labelledby="lc-h">
-      <h2 id="lc-h">The lifecycle, and who is involved at each stage</h2>
-      <Lifecycle />
+    <section aria-labelledby="sys-h">
+      <h2 id="sys-h">How the pieces connect</h2>
+      <figure class="system">
+        <svg viewBox="0 0 720 230" role="img" aria-labelledby="sys-title sys-desc" preserveAspectRatio="xMidYMid meet">
+          <title id="sys-title">Demand and investment, decisions and institutions, and the distribution of benefits and harms, with feedback</title>
+          <desc id="sys-desc">Three stages in a row with arrows between them, and a return arrow from the third to the first showing that harms, conflict and benefits feed back into supply, investment and policy.</desc>
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="currentColor"/></marker></defs>
+          <g font-family="Source Sans 3 Variable, sans-serif" font-size="15" fill="currentColor">
+            <rect x="8" y="40" width="200" height="96" rx="2" class="box"/>
+            <text x="108" y="74" text-anchor="middle" font-weight="700">Demand and investment</text>
+            <text x="108" y="98" text-anchor="middle">clean energy, security,</text><text x="108" y="118" text-anchor="middle">industrial strategy</text>
+            <rect x="260" y="40" width="200" height="96" rx="2" class="box"/>
+            <text x="360" y="74" text-anchor="middle" font-weight="700">Decisions and institutions</text>
+            <text x="360" y="98" text-anchor="middle">licences, tax, standards,</text><text x="360" y="118" text-anchor="middle">finance, enforcement</text>
+            <rect x="512" y="40" width="200" height="96" rx="2" class="box"/>
+            <text x="612" y="74" text-anchor="middle" font-weight="700">Benefits and harms</text>
+            <text x="612" y="98" text-anchor="middle">jobs, revenue, safety,</text><text x="612" y="118" text-anchor="middle">water, rights, remedy</text>
+            <path d="M210 88h46" stroke="currentColor" stroke-width="2" marker-end="url(#ah)"/>
+            <path d="M462 88h46" stroke="currentColor" stroke-width="2" marker-end="url(#ah)"/>
+            <path d="M612 140v40H108v-40" fill="none" stroke="var(--red-base)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+            <text x="360" y="205" text-anchor="middle">Conflict, harm and shared gains feed back into supply risk, investment and policy</text>
+          </g>
+        </svg>
+        <figcaption>
+          <p class="sans"><strong>In words:</strong></p>
+          <ol class="sans">
+            <li><strong>Demand and investment.</strong> Clean energy, security concerns and industrial strategy drive demand and money towards minerals.</li>
+            <li><strong>Decisions and institutions.</strong> Licences, tax rules, standards, finance terms and enforcement decide how that money lands.</li>
+            <li><strong>Benefits and harms.</strong> Jobs, revenue, safety, water and rights are distributed unevenly between places and people.</li>
+            <li><strong>Feedback.</strong> Harms and conflict disrupt supply and change policy; shared gains build consent. Nothing in this chain is inevitable.</li>
+          </ol>
+        </figcaption>
+      </figure>
     </section>
 
     <section aria-labelledby="ctry-h">
       <h2 id="ctry-h">In depth: India and Indonesia</h2>
+      <p class="meta">Deeper coverage begins with these two countries. Limited coverage elsewhere does not mean nothing relevant is happening there.</p>
       <div class="grid grid-2">
         {countries.map((c) => (
           <article class="feature">
             <p class="kicker red-rule">Country dossier · {c.data.region}</p>
             <h3><a href={hrefFor('countries', c.id)}>{c.data.title}</a></h3>
             <p class="feature-q">{c.data.leadQuestion}</p>
-            <p>{c.data.summary}</p>
           </article>
         ))}
       </div>
     </section>
 
-    <section aria-labelledby="up-h">
-      <h2 id="up-h">Selected developments</h2>
-      <ul class="record-list">
-        {updates.map((u) => <li><p class="kicker"><time datetime={u.data.eventDate}>{formatDate(u.data.eventDate)}</time></p><h3><a href={hrefFor('updates', u.id)}>{u.data.title}</a></h3><p>{u.data.whyItMatters}</p></li>)}
-      </ul>
-      <p><a class="link-arrow" href={url('updates/')}>All updates</a></p>
+    <section aria-labelledby="fund-h">
+      <h2 id="fund-h">Follow the money</h2>
+      <div class="grid grid-3 trio">
+        <article>
+          <p class="kicker">An actual award</p>
+          <h3><a href={hrefFor('awards', award.id)}>{formatMoney(award.data.amount)} from {name(award.data.funder)} to {name(award.data.recipient)}</a></h3>
+          <p>{formatPeriod(award.data.period)}, for responsible scale-up of transition mineral production. A precedent, not a call.</p>
+        </article>
+        <article>
+          <p class="kicker">A mechanism</p>
+          <h3><a href={hrefFor('programmes', mech.id)}>{mech.data.shortTitle}: UK money, UN administration</a></h3>
+          <p>Grants for industrial-scale demonstration, including critical-mineral recycling. Applicants deal with the administrator, not the donor.</p>
+        </article>
+        <article>
+          <p class="kicker">Open opportunities</p>
+          {g.open.length ? <h3><a href={url('funding/opportunities/')}>{g.open.length} verified open</a></h3> : <h3><a href={url('funding/opportunities/')}>None verified open as of <time datetime={asOf}>{formatDate(asOf)}</time></a></h3>}
+          <p>We say so when nothing is open, rather than filling the space. Closed calls stay as precedents.</p>
+        </article>
+      </div>
+      <p><a class="link-arrow" href={url('funding/')}>Funding: funders, programmes, awards and opportunities</a></p>
     </section>
 
-    <section class="tool-promo" aria-labelledby="tool-h">
-      <div class="reading">
-        <p class="kicker">Tool</p>
-        <h2 id="tool-h">Assess a community-benefit proposition</h2>
-        <p>A guided worksheet for a specific place and project. It separates what is documented from what is assumed and what is missing, and ends with the questions still to investigate. It gives no score and no verdict. Your answers stay in your browser.</p>
-        <p><a class="btn btn-inverse" href={url('tools/community-benefit/')}>Open the worksheet</a></p>
+    <section aria-labelledby="car-h">
+      <h2 id="car-h">The mineral transition needs more than mining expertise</h2>
+      <div class="grid grid-2 contrib">
+        {CONTRIBUTIONS.map((c) => (
+          <div>
+            <h3>{c.label}</h3>
+            <ul>{pathways.filter((p) => p.data.contribution === c.id).map((p) => <li><a href={hrefFor('pathways', p.id)}>{p.data.shortTitle ?? p.data.title}</a></li>)}</ul>
+          </div>
+        ))}
+      </div>
+      <p><a class="link-arrow" href={url('careers/explorer/')}>Find where your skills fit</a></p>
+    </section>
+
+    <section class="practice" aria-labelledby="prac-h">
+      <p class="kicker red-rule">Evidence and practice</p>
+      <h2 id="prac-h"><a href={hrefFor('cases', featured.id)}>{featured.data.title}</a></h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>What is known</h3>
+          {featuredClaim ? <p>{featuredClaim.data.text} <span class="meta">Reported fact. {featuredClaim.data.review.qualification}</span></p> : <p>{featured.data.summary}</p>}
+        </div>
+        <div>
+          <h3>What remains unresolved</h3>
+          <ul>{featured.data.unclear.map((u) => <li>{u}</li>)}</ul>
+        </div>
       </div>
     </section>
 
     <section class="coverage" aria-labelledby="cov-h">
-      <h2 id="cov-h">What this guide covers, and how</h2>
+      <h2 id="cov-h">What this guide covers, and how it is kept current</h2>
       <div class="grid grid-2">
         <div>
-          <p><strong>Coverage.</strong> {SITE.coverage} This first release has {counts.learn} explainers, {counts.minerals} mineral profiles, {counts.issues} issue explainers, {counts.policies} policy records, {counts.finance} finance records, {counts.orgs} organisation profiles and {counts.cases} case studies.</p>
-          <p><strong>What is not here yet.</strong> First-hand community and worker perspectives, local-language material, and coverage of other producing countries.</p>
+          <p><strong>Coverage.</strong> {SITE.coverage} {counts.explainers} explainers, {counts.minerals} mineral profiles, {counts.issues} issues, {counts.policies} policy records, {counts.funders} funder profiles, {counts.awards} awards, {counts.programmes + counts.financeRecords} programmes and finance records, and {counts.cases} practice cases.</p>
+          <p><strong>Not here yet.</strong> First-hand community and worker perspectives, local-language material, and other producing countries.</p>
         </div>
         <div>
-          <p><strong>Evidence.</strong> Every page separates what we know, what it may mean and what remains unclear. Facts carry dated sources. Where a primary document has not yet been checked, we say so.</p>
+          <p><strong>Evidence.</strong> Each reported fact&rsquo;s passage is located automatically and then read against the claim; automation alone is never treated as verification. {counts.claimsPublished} facts are published and {counts.claimsHeldBack} held back.</p>
+          <p><strong>Maintenance.</strong> Opportunities are re-checked weekly, programmes and funders quarterly, explainers every six months. Every page shows its own review dates.</p>
           <p><a href={url('methodology/')}>Methodology</a> · <a href={url('sources/')}>Sources</a> · <a href={url('about/')}>About and ownership</a> · <a href={url('corrections/')}>Corrections</a></p>
         </div>
       </div>
@@ -129,4 +197,18 @@ const counts = {
   .tool-promo .kicker { color: var(--losangeles-85); }
   .coverage { border-top: 2px solid var(--london-20); padding-top: 0.5rem; }
   .coverage p { font-size: 0.98rem; }
+  .quiet-link { align-self: center; font-family: var(--font-sans); font-weight: 600; padding: 10px 4px; }
+  .lead { border-top: 2px solid var(--london-20); padding-top: 0.75rem; }
+  .lead h2 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); max-width: 30ch; }
+  .system { margin: 0; }
+  .system svg { width: 100%; height: auto; max-width: 760px; color: var(--color-heading); }
+  .system .box { fill: var(--color-surface); stroke: var(--chicago-30); stroke-width: 2; }
+  .system figcaption ol { padding-left: 1.2em; font-size: 0.95rem; }
+  @media (max-width: 600px) { .system svg { display: none; } }
+  .trio article { border-top: 3px solid var(--chicago-30); padding-top: 0.5rem; }
+  .trio h3 { font-size: 1.2rem; margin: 0.2rem 0 0.4rem; }
+  .contrib h3 { font-size: 1.15rem; margin-bottom: 0.3rem; }
+  .practice { background: var(--color-surface); border: 1px solid var(--color-rule); padding: 1rem 1.25rem; }
+  .practice h2 { margin-top: 0.2rem; }
+  .practice h3 { font-size: 1.1rem; }
 </style>

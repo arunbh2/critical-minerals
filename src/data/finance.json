@@ -137,11 +137,12 @@
     "closes": null,
     "sources": [
       "chn-jetp-2022",
-      "eeas-jetp-cipp"
+      "eeas-jetp-cipp",
+      "jetp-id"
     ],
     "lastVerified": "2026-11-17",
     "verification": "secondary",
-    "uncertainties": "This is an energy-sector programme, included because power supply for nickel processing affects emissions and local exposure. How captive power for industrial parks is treated, what share of the package is grant or loan, and how much has been disbursed have not been verified.",
+    "uncertainties": "This is an energy-sector programme, included because power supply for nickel processing affects emissions and local exposure. How captive power for industrial parks is treated, what share of the package is grant or loan, and how much has been disbursed have not been verified. The secretariat's website describes the envelope and the investment plan; when we checked in November 2026 we found no mechanism there aimed at mineral-producing communities. Its relevance to minerals is adjacent: it shapes the power supply of processing industries, but it is not money available for mineral-community projects.",
     "reviewDue": "2026-12-17",
     "shortTitle": "Indonesia JETP finance"
   },

@@ -4,16 +4,19 @@ import { url } from './url';
 
 export type EntityType =
   | 'learn' | 'minerals' | 'countries' | 'issues' | 'cases' | 'updates'
-  | 'organisations' | 'finance' | 'policies';
+  | 'organisations' | 'finance' | 'policies'
+  | 'programmes' | 'awards' | 'opportunities' | 'pathways';
 
 export const TYPE_LABEL: Record<EntityType, string> = {
   learn: 'Explainer', minerals: 'Mineral', countries: 'Country', issues: 'Issue', cases: 'Case study',
   updates: 'Update', organisations: 'Organisation', finance: 'Finance record', policies: 'Policy record',
+  programmes: 'Funding programme', awards: 'Award', opportunities: 'Opportunity', pathways: 'Career pathway',
 };
 
 const ROUTE: Record<EntityType, string> = {
   learn: 'learn', minerals: 'minerals', countries: 'countries', issues: 'issues', cases: 'practice',
   updates: 'updates', organisations: 'organisations', finance: 'finance', policies: 'policies',
+  programmes: 'funding/programmes', awards: 'funding/awards', opportunities: 'opportunities', pathways: 'careers/pathways',
 };
 
 export function hrefFor(type: EntityType, id: string) {
@@ -57,6 +60,15 @@ export function graph(): Promise<Node[]> {
     }
     for (const e of await getCollection('policies')) {
       nodes.push({ type: 'policies', id: e.id, title: e.data.title, summary: e.data.summary, href: hrefFor('policies', e.id), countries: e.data.countries, minerals: e.data.minerals, issues: e.data.issues });
+    }
+    for (const t of ['programmes', 'opportunities'] as const) {
+      for (const e of await getCollection(t)) nodes.push({ type: t, id: e.id, title: e.data.title, summary: e.data.summary, href: hrefFor(t, e.id), countries: e.data.countries, minerals: e.data.minerals, issues: e.data.issues });
+    }
+    for (const e of (await getCollection('pathways')).filter(published)) {
+      nodes.push({ type: 'pathways', id: e.id, title: e.data.title, summary: e.data.summary, href: hrefFor('pathways', e.id), countries: [], minerals: [], issues: e.data.issues });
+    }
+    for (const e of await getCollection('awards')) {
+      nodes.push({ type: 'awards', id: e.id, title: e.data.title, summary: e.data.activity, href: hrefFor('awards', e.id), countries: e.data.countries, minerals: e.data.minerals, issues: e.data.issues });
     }
     return nodes;
   })();

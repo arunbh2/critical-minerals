@@ -29,7 +29,7 @@ Battery cathodes are now the largest use. Cobalt also goes into superalloys for 
 
 ## Lifecycle and geography
 
-The Democratic Republic of the Congo produced roughly three-quarters of the world's mined cobalt in 2024. Much refining takes place elsewhere. In 2025 the DRC suspended cobalt exports and then introduced export quotas, a clear example of a producer government using market position.
+The Democratic Republic of the Congo produced roughly three-quarters of the world's mined cobalt in 2024. Much refining takes place elsewhere. In 2025 the DRC introduced quotas on cobalt exports, an example of a producer government using its market position.
 
 ## Development questions
 

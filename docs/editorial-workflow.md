@@ -53,3 +53,15 @@ Corrections arrive as public GitHub issues. Fix, reset the review date, and reco
 
 ## Automation
 If automated ingestion is added later, it must propose changes into review. It must never publish allegations, eligibility rules, amounts or legal interpretation directly.
+
+## Claims: locate, then review
+
+1. Stage the claim with its sources and locating terms in a new `research/YYYY-MM-N-label/claims.json`.
+2. Push. The Verify sources workflow locates passages and commits the excerpts.
+3. Read each excerpt against the claim. Record the outcome, passages, any qualification and the reviewer in `research/<batch>/review.json`. If the passage supports only part of the claim, narrow the claim in a new batch and explain in `history`.
+4. Rewording a claim resets its review. Pages say whether a review was AI-assisted or done by a named editor; no claim is marked editor-reviewed until a named editor has checked it.
+
+## Funding and careers records
+
+Follow [`templates/funding-careers.md`](templates/funding-careers.md). Read the issuer's own page, copy short passages for every amount, date, eligibility rule and status, write unknowns as unknown, and set `lastChecked` to the day you read it. The weekly content-health issue lists what to re-check. When a call or job closes, set its status to `closed` and keep it as a precedent.
+

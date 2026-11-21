@@ -11,7 +11,7 @@ const walk = (d, re) => { for (const f of readdirSync(d)) { const p = join(d, f)
 walk(join(root, 'src/content'), /\.md$/);
 walk(join(root, 'src/pages'), /\.(astro|ts)$/);
 walk(join(root, 'src/components'), /\.astro$/);
-for (const f of ['organisations', 'finance', 'policies', 'claims', 'changelog']) files.push(join(root, `src/data/${f}.json`));
+for (const f of ['organisations', 'finance', 'policies', 'claims', 'changelog', 'programmes', 'awards', 'opportunities']) files.push(join(root, `src/data/${f}.json`));
 files.push(join(root, 'tools/site-text.js'), join(root, 'src/lib/worksheet.js'));
 
 const rules = [

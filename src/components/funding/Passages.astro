@@ -1,0 +1,39 @@
+---
+// Short verbatim passages behind a record's amounts, dates, eligibility and status.
+import { getCollection } from 'astro:content';
+import { passageCheck } from '../../lib/record-checks';
+import { formatDate } from '../../lib/status.js';
+import { url } from '../../lib/url';
+interface Props { passages: { source: string; quote: string }[]; heading?: string }
+const { passages, heading = 'Source passages' } = Astro.props;
+const sources = new Map((await getCollection('sources')).map((s) => [s.id, s.data]));
+---
+{passages.length > 0 && (
+  <section class="passages" aria-labelledby="passages-h">
+    <h2 id="passages-h">{heading}</h2>
+    <p class="meta">Short quotations from the cited sources that support the facts above. &ldquo;Found again automatically&rdquo; means the latest automated fetch located the same words; it is a technical check, not an editorial review.</p>
+    <ul class="passage-list">
+      {passages.map((p) => {
+        const s = sources.get(p.source);
+        const c = passageCheck(p.source, p.quote);
+        return (
+          <li>
+            <blockquote lang="en">{p.quote}</blockquote>
+            <p class="meta">
+              <a href={s?.url} rel="noopener">{s?.title ?? p.source}</a>, {s?.publisher}. <a href={url(`sources/#${p.source}`)}>Source record</a>.{' '}
+              {c.state === 'located' && <span>Found again automatically on <time datetime={(c.checkedAt ?? '')}>{formatDate((c.checkedAt ?? ''))}</time>{c.changed ? '; the source page has changed since the previous check' : ''}.</span>}
+              {c.state === 'unavailable' && <span>The source could not be read automatically on <time datetime={(c.checkedAt ?? '')}>{formatDate((c.checkedAt ?? ''))}</time>{c.status ? ` (HTTP ${c.status})` : ''}. This does not mean anything has changed or closed.</span>}
+              {c.state === 'missing' && <span class="status status-review">Not found on the latest automated check; needs review</span>}
+              {c.state === 'unchecked' && <span>Not yet checked automatically.</span>}
+            </p>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+)}
+<style>
+  .passage-list { list-style: none; padding: 0; margin: 0; }
+  .passage-list li { margin: 0 0 1rem; }
+  .passage-list blockquote { margin: 0 0 4px; font-size: 1rem; }
+</style>

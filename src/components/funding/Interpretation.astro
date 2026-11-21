@@ -1,0 +1,14 @@
+---
+// A labelled interpretation, always paired with what the evidence does not establish.
+interface Props { why: string; notEstablished: string; question?: string }
+const { why, notEstablished, question = 'Why a development organisation might pay attention' } = Astro.props;
+---
+<section class="evidence evidence-meaning" aria-labelledby="why-h">
+  <h2 id="why-h">{question}</h2>
+  <p class="meta">Our interpretation, not established fact.</p>
+  <p>{why}</p>
+</section>
+<section class="evidence evidence-unclear" aria-labelledby="not-h">
+  <h2 id="not-h">What the evidence does not establish</h2>
+  <p>{notEstablished}</p>
+</section>

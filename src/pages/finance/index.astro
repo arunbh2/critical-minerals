@@ -19,16 +19,16 @@ const filters = [
 ---
 <Base title="Finance" shortTitle="Finance records" description="Funding mechanisms connected to critical minerals, with record state, instrument, verification date and uncertainties shown for each.">
   <div class="wrap">
-    <Breadcrumbs items={[{ label: 'Finance & policy' }]} />
+    <Breadcrumbs items={[{ label: 'Funding', href: url('funding/') }, { label: 'Finance records' }]} />
     <header class="reading">
-      <p class="kicker red-rule">Finance & policy</p>
+      <p class="kicker red-rule">Funding · finance records</p>
       <h1>Follow the money</h1>
       <p class="standfirst">Who pays, through what mechanism, at what stage? These records separate strategic interest, defined programmes, open opportunities and actual awards, so ambition is not mistaken for access.</p>
     </header>
     <div class="notice reading">
       <p><strong>No record here is currently an open opportunity.</strong> We have not verified any open call for applications in this release. A programme is a defined funding effort. It is not a call you can apply to. Amounts are never added together, because pledges, targets and disbursements are different things.</p>
     </div>
-    <p class="sans"><a href={url('policies/')} class="link-arrow">Policy records</a> &nbsp; <a href={url('data/finance.json')}>Download finance records (JSON)</a></p>
+    <p class="sans"><a href={url('funding/')} class="link-arrow">Funding: funders, programmes, awards and opportunities</a> &nbsp; <a href={url('policies/')} class="link-arrow">Policy records</a> &nbsp; <a href={url('data/finance.json')}>Download finance records (JSON)</a></p>
 
     <h2>Browse by what the money supports</h2>
     <ul class="chips">{vocab.financeSupports.map((s) => <li><a class="chip" href={`?supports=${s.id}`}>{s.label}</a></li>)}</ul>

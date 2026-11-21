@@ -1,0 +1,58 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FilterShell from '../../../components/FilterShell.astro';
+import { fundingData } from '../../../lib/funding';
+import { hrefFor, vocabLabel } from '../../../lib/content';
+import { formatMoney, formatPeriod } from '../../../lib/opportunity.js';
+import { url } from '../../../lib/url';
+import vocab from '../../../data/vocab.json';
+const { awards, name } = await fundingData();
+const list = [...awards].sort((a, b) => b.data.period.start.localeCompare(a.data.period.start));
+const funders = [...new Set(list.map((a) => a.data.funder))];
+const currencies = [...new Set(list.map((a) => a.data.amount.currency))];
+const filters = [
+  { name: 'relevance', label: 'Mineral relevance', options: vocab.relevance.map((r) => ({ value: r.id, label: r.label })) },
+  { name: 'funder', label: 'Funder', options: funders.map((f) => ({ value: f, label: name(f) })) },
+  { name: 'issue', label: 'Issue', options: [...new Set(list.flatMap((a) => a.data.issues))].map((i) => ({ value: i, label: i.replace(/-/g, ' ') })) },
+];
+---
+<Base title="Award ledger" shortTitle="Award ledger" searchType="Funding" description="Disclosed awards relevant to critical minerals, traced from funder to administrator to recipient, with activity, geography, period and amount in original currency.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Funding', href: url('funding/') }, { label: 'Award ledger' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Funding</p>
+      <h1>Award ledger</h1>
+      <p class="standfirst">What has actually been funded: who gave, who managed it, who received it, for what, where and when. Links are left blank where the source does not establish them.</p>
+    </header>
+    <div class="notice reading">
+      <p><strong>These are precedents, not opportunities.</strong> An award shows what a funder has supported; it does not mean the funder is accepting applications.</p>
+      <p>Amounts are in original currency ({currencies.join(', ')}) and are never added up: they differ in currency, period and basis, and a trust-fund contribution and its downstream award would otherwise be counted twice. All {list.length} awards here come from recipient disclosures, so they show one recipient&rsquo;s funding, not a funder&rsquo;s whole portfolio.</p>
+    </div>
+    <FilterShell filters={filters} noun="awards">
+      <ol class="record-list ledger">
+        {list.map((a) => { const d = a.data; return (
+          <li data-filter-item data-relevance={d.relevance} data-funder={d.funder} data-issue={d.issues.join(' ')}>
+            <p class="flow sans" aria-label={`Funder ${name(d.funder)}, administrator ${d.administrator ? name(d.administrator) : 'not separate'}, recipient ${name(d.recipient)}`}>
+              <a href={hrefFor('organisations', d.funder)}>{name(d.funder)}</a>
+              <span aria-hidden="true"> → </span>{d.administrator && d.administrator !== d.funder ? <><a href={hrefFor('organisations', d.administrator)}>{name(d.administrator)}</a><span aria-hidden="true"> → </span></> : d.programme ? <><a href={hrefFor('programmes', d.programme)}>trust fund</a><span aria-hidden="true"> → </span></> : null}
+              <a href={hrefFor('organisations', d.recipient)}>{name(d.recipient)}</a>
+            </p>
+            <h3><a href={hrefFor('awards', a.id)}>{formatMoney(d.amount)}</a> <span class="meta">{vocabLabel('amountBases', d.amount.basis).toLowerCase()} · {formatPeriod(d.period)}</span></h3>
+            <p>{d.activity}</p>
+            <p class="meta">{d.geography} · {vocabLabel('relevance', d.relevance)} relevance · Results evidence: {d.resultsEvidence ?? 'none located'}</p>
+          </li>
+        ); })}
+      </ol>
+    </FilterShell>
+    <section class="reading">
+      <h2>Commitment, award, disbursement, spending, results</h2>
+      <p>These are five different stages. A commitment is a promise; an award names a recipient and an amount; a disbursement is money transferred; spending is money used; results are what changed. Every amount here is labelled with its stage. None of these records yet has evidence of results, which is not evidence of failure: most of these awards are still running.</p>
+    </section>
+  </div>
+</Base>
+<style>
+  .flow { margin: 0 0 4px; font-weight: 600; font-size: 0.95rem; }
+  .ledger h3 { font-size: 1.2rem; }
+  .ledger h3 a { text-decoration: underline; text-underline-offset: 0.15em; }
+</style>

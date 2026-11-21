@@ -1,6 +1,6 @@
 ---
 import Page from '../layouts/Page.astro';
-import { SITE, OWNERSHIP, STANDARDS, AGENT_DO, AGENT_AVOID, HOST_LIMITS, EVIDENCE_LABELS, CONTENT_SIGNALS, AI_USE } from '../../tools/site-text.js';
+import { SITE, OWNERSHIP, STANDARDS, AGENT_DO, AGENT_AVOID, HOST_LIMITS, EVIDENCE_LABELS, CONTENT_SIGNALS, AI_USE, REVIEW_STATUS, TASK_EXAMPLES } from '../../tools/site-text.js';
 import counts from '../data/site/counts.json';
 import { endpoints } from '../lib/ai';
 const e = endpoints(Astro.site);
@@ -11,9 +11,13 @@ const e = endpoints(Astro.site);
   <h2>What this site is</h2>
   <p>{SITE.description} {SITE.coverage}</p>
   <p>{OWNERSHIP}</p>
-  <p class="sans">It currently publishes {counts.claimsPublished} claims: {counts.claimsOriginalChecked} checked against an original and {counts.claimsSecondary} reported by secondary sources. {counts.claimsHeldBack} further claims are held back until their evidence can be checked. It lists {counts.openOpportunities} open funding opportunities.</p>
+  <p class="sans">It currently publishes {counts.claimsPublished} reported facts. Each passage was located automatically ({counts.claimsOriginalChecked} in official sources, {counts.claimsSecondary} in secondary reporting) and then read against the claim. Reviews so far: {counts.claimsReviewedAssisted} with AI assistance, {counts.claimsReviewedEditor} by a named editor. {counts.claimsHeldBack} further claims are held back. Automated checks are not independent verification. It lists {counts.openOpportunities} open funding opportunities.</p>
   <h2>Evidence labels</h2>
   <dl class="facts">{EVIDENCE_LABELS.map((l) => <><dt>{l.label}</dt><dd>{l.explain}</dd></>)}</dl>
+  <h2>Review status</h2>
+  <dl class="facts">{REVIEW_STATUS.map((l) => <><dt>{l.label}</dt><dd>{l.explain}</dd></>)}</dl>
+  <h2>Task examples</h2>
+  <dl class="facts">{TASK_EXAMPLES.map((t) => <><dt>{t.task}</dt><dd>{t.how}</dd></>)}</dl>
   <h2>Please do</h2>
   <ul>{AGENT_DO.map((s) => <li>{s}</li>)}</ul>
   <h2>Please avoid</h2>

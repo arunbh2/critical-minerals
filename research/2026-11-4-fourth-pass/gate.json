@@ -1,7 +1,7 @@
 {
   "batch": "2026-11-4-fourth-pass",
-  "gatedAt": "2026-11-17T06:06:44.149Z",
-  "checkedAt": "2026-11-17T06:06:44.116Z",
+  "gatedAt": "2026-11-21T19:05:36.456Z",
+  "checkedAt": "2026-11-21T19:05:36.409Z",
   "results": [
     {
       "claim": "c-refining-top3-2024",
@@ -266,46 +266,40 @@
           "term": "morowali",
           "foundIn": [
             "jakpost-morowali-2023-12-24",
-            "jakpost-morowali-2023-12-27",
-            "bhrrc-morowali-2023"
+            "jakpost-morowali-2023-12-27"
           ]
         },
         {
           "term": "furnace",
           "foundIn": [
             "jakpost-morowali-2023-12-24",
-            "jakpost-morowali-2023-12-27",
-            "bhrrc-morowali-2023"
+            "jakpost-morowali-2023-12-27"
           ]
         },
         {
           "term": "13",
           "foundIn": [
             "jakpost-morowali-2023-12-24",
-            "jakpost-morowali-2023-12-27",
-            "bhrrc-morowali-2023"
+            "jakpost-morowali-2023-12-27"
           ]
         },
         {
           "term": "18",
           "foundIn": [
-            "jakpost-morowali-2023-12-27",
-            "bhrrc-morowali-2023"
+            "jakpost-morowali-2023-12-27"
           ]
         },
         {
           "term": "death toll",
           "foundIn": [
-            "jakpost-morowali-2023-12-27",
-            "bhrrc-morowali-2023"
+            "jakpost-morowali-2023-12-27"
           ]
         },
         {
           "term": "2023",
           "foundIn": [
             "jakpost-morowali-2023-12-24",
-            "jakpost-morowali-2023-12-27",
-            "bhrrc-morowali-2023"
+            "jakpost-morowali-2023-12-27"
           ]
         }
       ],
@@ -639,7 +633,6 @@
         {
           "term": "just energy transition partnership",
           "foundIn": [
-            "chn-jetp-2022",
             "eeas-jetp-cipp"
           ]
         },

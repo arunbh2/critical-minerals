@@ -1,7 +1,9 @@
 name: Verify sources
 
-# Fetches every staged source (HTML or PDF), records which claim terms it contains,
-# gates claims, applies the labels and writes the ledger. Run manually on a branch to
+# Fetches every staged source (HTML or PDF) and records which locating terms it contains,
+# then applies recorded passage reviews and writes the ledger. Finding terms only
+# locates a passage; a claim is published only after review judges that the passage
+# supports it (tools/evidence-gate.js). Run manually on a branch to
 # commit the results there; the monthly run on main only reports, so evidence that
 # has gone missing (link rot, changed pages) is noticed without changing the site.
 on:
@@ -20,6 +22,11 @@ on:
       - 'research/*/claims.json'
       - 'tools/verify-sources.js'
       - 'tools/research-*.js'
+      - 'research/*/review.json'
+      - 'src/data/programmes.json'
+      - 'src/data/awards.json'
+      - 'src/data/opportunities.json'
+      - 'tools/check-record-passages.js'
       - '.github/workflows/verify-sources.yml'
   schedule:
     - cron: '17 3 7 * *'
@@ -49,9 +56,14 @@ jobs:
             node tools/verify-sources.js "$b"
             node tools/research-gate.js "$b"
             node tools/research-apply.js "$b"
+            node tools/research-review.js "$b"
             node tools/research-ledger.js "$b"
             echo "::endgroup::"
           done
+      - name: Re-locate the passages recorded on funding, careers and organisation records
+        # Technical check only: reports passages not found and sources that changed or
+        # could not be read. It never changes a record's status, amounts or deadlines.
+        run: node tools/check-record-passages.js
       - name: Summary
         run: cat research/*/ledger.md >> "$GITHUB_STEP_SUMMARY"
       - name: Commit results to this branch (never on main)
@@ -59,7 +71,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/inbox research src/data/claims.json
+          git add data/inbox research src/data/claims.json src/data/site/counts.json
           if git diff --cached --quiet; then echo "No changes."; exit 0; fi
           git commit -m "Record source verification results"
           git push

@@ -6,13 +6,26 @@ import SourceList from '../../components/SourceList.astro';
 import Related from '../../components/Related.astro';
 import Tags from '../../components/Tags.astro';
 import RecordMeta from '../../components/RecordMeta.astro';
-import { vocabLabel } from '../../lib/content';
+import { vocabLabel, hrefFor } from '../../lib/content';
+import Passages from '../../components/funding/Passages.astro';
+import Interpretation from '../../components/funding/Interpretation.astro';
+import OpStatus from '../../components/funding/OpStatus.astro';
+import { fundingData } from '../../lib/funding';
+import vocab from '../../data/vocab.json';
+import { formatMoney, formatPeriod } from '../../lib/opportunity.js';
 import { url } from '../../lib/url';
 export async function getStaticPaths() {
   return (await getCollection('organisations')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props;
 const d = entry.data;
+const { programmes, awards, opportunities, name } = await fundingData();
+const progs = programmes.filter((p) => p.data.funders.includes(entry.id) || p.data.administrators.includes(entry.id));
+const given = awards.filter((a) => a.data.funder === entry.id || a.data.administrator === entry.id);
+const received = awards.filter((a) => a.data.recipient === entry.id);
+const ops = opportunities.filter((o) => o.data.organisation === entry.id || o.data.administrator === entry.id);
+const isFunder = d.roles.some((r) => r === 'funder' || r === 'administrator');
+const isEmployer = d.roles.some((r) => r === 'employer' || r === 'procurer');
 ---
 <Base title={d.name} shortTitle={d.shortTitle} description={d.role} searchType="Organisation">
   <div class="wrap">
@@ -29,14 +42,53 @@ const d = entry.data;
           <dt>Geography</dt><dd>{d.geography}</dd>
           <dt>Relevant initiative</dt><dd>{d.initiative}</dd>
           <dt>Delivery model</dt><dd>{d.deliveryModel}</dd>
-          <dt>Public website</dt><dd><a href={d.url} rel="noopener">{d.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a></dd>
+          <dt>Public website</dt><dd>{d.url ? <a href={d.url} rel="noopener">{d.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a> : 'Not yet verified'}</dd>
+          {d.roles.length > 0 && <><dt>Roles on this site</dt><dd>{d.roles.map((r) => vocabLabel('fundingRoles', r)).join(', ')}</dd></>}
         </dl>
       </div>
+      {isFunder && (
+        <section aria-labelledby="fund-h">
+          <h2 id="fund-h">As a funder or administrator</h2>
+          <dl class="facts">
+            <dt>Mineral relevance</dt><dd>{d.mineralRelevance ? `${vocabLabel('relevance', d.mineralRelevance)}: ${vocab.relevance.find((r) => r.id === d.mineralRelevance)?.explain}` : 'Not assessed'}</dd>
+            <dt>Headquarters</dt><dd>{d.headquarters ?? 'Not established'}</dd>
+            <dt>Finances work in</dt><dd>{d.fundsWhere ?? 'Not established'}</dd>
+            <dt>Instruments</dt><dd>{d.instruments.length ? d.instruments.map((i) => vocabLabel('instruments', i)).join(', ') : 'Not established'}</dd>
+            <dt>Route in</dt><dd>{d.accessRoute ?? 'No access route found in our sources. This does not mean none exists.'}</dd>
+            {d.restrictions && <><dt>Restrictions</dt><dd>{d.restrictions}</dd></>}
+            <dt>Evidence on outcomes</dt><dd>None recorded. Profiles describe mandates and transactions, not results.</dd>
+          </dl>
+          {progs.length > 0 && <><h3>Programmes</h3><ul>{progs.map((p) => <li><a href={hrefFor('programmes', p.id)}>{p.data.title}</a> ({p.data.funders.includes(entry.id) ? 'funder' : 'administrator'})</li>)}</ul></>}
+          {given.length > 0 && <><h3>Awards made or administered</h3><ul>{given.map((a) => <li><a href={hrefFor('awards', a.id)}>{formatMoney(a.data.amount)} to {name(a.data.recipient)}</a>, {formatPeriod(a.data.period)}</li>)}</ul></>}
+        </section>
+      )}
+      {received.length > 0 && (
+        <section aria-labelledby="rec-h">
+          <h2 id="rec-h">Disclosed awards received</h2>
+          <p class="meta">Mineral-relevant awards only; amounts in original currency, not totalled.</p>
+          <ul>{received.map((a) => <li><a href={hrefFor('awards', a.id)}>{formatMoney(a.data.amount)} from {name(a.data.funder)}</a>, {formatPeriod(a.data.period)}</li>)}</ul>
+        </section>
+      )}
+      {(isEmployer || d.careersUrl || d.procurementUrl) && (
+        <section aria-labelledby="emp-h">
+          <h2 id="emp-h">Working with this organisation</h2>
+          <dl class="facts">
+            {d.careersUrl && <><dt>Jobs</dt><dd><a href={d.careersUrl} rel="noopener">Official recruitment page</a></dd></>}
+            {d.procurementUrl && <><dt>Consultancies and tenders</dt><dd><a href={d.procurementUrl} rel="noopener">Official procurement page</a></dd></>}
+            {d.functions.length > 0 && <><dt>Typical functions</dt><dd>{d.functions.map((f, i) => <>{i > 0 && ', '}<a href={url(`careers/pathways/${f}/`)}>{vocabLabel('roleFamilies', f)}</a></>)}</dd></>}
+            {d.employerNote && <><dt>At our last check</dt><dd>{d.employerNote}</dd></>}
+          </dl>
+          {ops.length > 0 && <ul class="record-list">{ops.map((o) => <li data-op-scope><a href={hrefFor('opportunities', o.id)}>{o.data.title}</a> <OpStatus op={o.data} /></li>)}</ul>}
+          <p class="meta">An employer profile describes the organisation&rsquo;s role. It is not an endorsement, and an empty list does not mean the organisation never hires.</p>
+        </section>
+      )}
+      {d.whyItMatters && d.notEstablished && <Interpretation why={d.whyItMatters} notEstablished={d.notEstablished} />}
       <section class="evidence evidence-unclear" aria-labelledby="ev-h">
         <h2 id="ev-h">Evidence and limits</h2>
         <p>{d.evidenceNote}</p>
         <p>Listing is not endorsement or partnership.</p>
       </section>
+      <Passages passages={d.passages} />
       <SourceList ids={d.sources} heading="Sources that mention this organisation" />
     </article>
     <Related type="organisations" id={entry.id} refs={{ countries: d.countries, minerals: d.minerals, issues: d.issues }} />

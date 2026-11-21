@@ -1,0 +1,34 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import OpportunityList from '../../../components/funding/OpportunityList.astro';
+import { fundingData, audienceOf } from '../../../lib/funding';
+import { url } from '../../../lib/url';
+import screening from '../../../data/screening.json';
+import { formatDate } from '../../../lib/status.js';
+const { opportunities, name } = await fundingData();
+const ops = opportunities.filter((o) => audienceOf(o.data.type) === 'careers');
+const screens = screening.filter((s) => ['nrgi-consultancies', 'cw-careers', 'eiti-jobs', 'irma-jobs', 'eiti-consultancies'].includes(s.source));
+const sources = (await import('../../../data/sources.json')).default;
+---
+<Base title="Vacancies, consultancies and tenders" shortTitle="Jobs and assignments" searchType="Careers" description="Verified jobs, individual consultancies, firm tenders and fellowships relevant to minerals and their social effects, linked to the issuer's own page.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Careers', href: url('careers/') }, { label: 'Opportunities' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Careers</p>
+      <h1>Vacancies, consultancies and tenders</h1>
+      <p class="standfirst">Employment, individual consultancies, tenders for firms, fellowships and internships, each checked against the issuer&rsquo;s own page. We summarise and link; applications go to the issuer.</p>
+    </header>
+    <div class="reading">
+      <p class="notice">Jobs often close early. A listing here shows its last check date, its status is recomputed in your browser from the stated deadline, and listings not re-checked within 14 days stop counting as verified. Pay, visa sponsorship, remote access and deadlines are shown only when the source states them.</p>
+      <OpportunityList ops={ops} noun="vacancies or assignments" name={name}
+        emptyNext="The employer directory links to each organisation's own recruitment page." />
+      <section aria-labelledby="screen-h">
+        <h2 id="screen-h">What we checked and left out</h2>
+        <p class="meta">Pages we read for this list, and why listings were excluded. Many sector organisations also work on oil and gas, so each listing is screened for mineral relevance.</p>
+        <ul>{screens.map((s) => { const src = sources.find((x: any) => x.id === s.source); return <li><a href={src?.url} rel="noopener">{src?.title}</a> ({src?.publisher}), {formatDate(s.checked)}: {s.note}</li>; })}</ul>
+      </section>
+      <p class="sans"><a class="link-arrow" href={url('careers/employers/')}>Employer directory</a> &nbsp; <a href={url('data/opportunities.json')}>JSON</a> · <a href={url('data/opportunities.csv')}>CSV</a></p>
+    </div>
+  </div>
+</Base>

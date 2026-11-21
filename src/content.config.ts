@@ -89,6 +89,28 @@ const updates = defineCollection({
   schema: z.object({ ...shared, eventDate: date, whyItMatters: z.string() }),
 });
 
+/** A short verbatim passage from a cited source, for traceability. */
+const passage = z.object({ source: z.string(), quote: z.string().max(400) });
+/** Native amount: never converted, never summed across bases. */
+const money = z.object({
+  value: z.number().nullable().optional(),
+  min: z.number().optional(),
+  max: z.number().optional(),
+  currency: z.string().regex(/^[A-Z]{3}$/),
+  basis: ids('amountBases'),
+  /** Optional display string in the source's own convention (e.g. "₹1,500 crore"). */
+  display: z.string().optional(),
+  reported: z.array(z.object({ value: z.number(), currency: z.string(), note: z.string() })).default([]),
+});
+/** A date with optional time. utcOffset only when the source states a timezone. */
+const moment = z.object({
+  date,
+  time: z.string().regex(/^\d{2}:\d{2}$/).nullable(),
+  utcOffset: z.string().regex(/^[+-]\d{2}:\d{2}$/).nullable(),
+  /** The deadline exactly as the source words it. */
+  stated: z.string(),
+}).refine((m) => m.time !== null || m.utcOffset === null, { message: 'utcOffset without a time' });
+
 const organisations = defineCollection({
   loader: file('./src/data/organisations.json'),
   schema: z.object({
@@ -100,14 +122,34 @@ const organisations = defineCollection({
     initiative: z.string(),
     deliveryModel: z.string(),
     evidenceNote: z.string(),
-    url: z.string().url(),
+    /** Official website; null when we have not verified one. */
+    url: z.string().url().nullable(),
     countries: z.array(z.string()).default([]),
     minerals: z.array(z.string()).default([]),
     issues: z.array(z.string()).default([]),
     sources: z.array(z.string()).default([]),
     reviewed: date,
     reviewDue: date,
-  }),
+    // Funding and employer roles. Roles describe what an organisation does in specific
+    // transactions (see programmes and awards), not a permanent label.
+    roles: z.array(ids('fundingRoles')).default([]),
+    headquarters: z.string().nullable().optional(),
+    mineralRelevance: ids('relevance').optional(),
+    fundsWhere: z.string().optional(),
+    instruments: z.array(ids('instruments')).default([]),
+    /** null = no access route found in our sources (shown as such). */
+    accessRoute: z.string().nullable().optional(),
+    restrictions: z.string().nullable().optional(),
+    /** Labelled editorial interpretation. */
+    whyItMatters: z.string().optional(),
+    /** What the evidence does not establish. Required whenever whyItMatters is given. */
+    notEstablished: z.string().optional(),
+    careersUrl: z.string().url().nullable().optional(),
+    procurementUrl: z.string().url().nullable().optional(),
+    functions: z.array(ids('roleFamilies')).default([]),
+    employerNote: z.string().nullable().optional(),
+    passages: z.array(passage).default([]),
+  }).refine((o) => !o.whyItMatters || o.notEstablished, { message: 'whyItMatters needs a notEstablished statement beside it' }),
 });
 
 const amount = z.object({
@@ -178,6 +220,81 @@ const policies = defineCollection({
   }),
 });
 
+const programmes = defineCollection({
+  loader: file('./src/data/programmes.json'),
+  schema: z.object({
+    title: z.string(), shortTitle: z.string().optional(), published: date, summary: z.string().max(400),
+    funders: z.array(z.string()), administrators: z.array(z.string()),
+    instruments: z.array(ids('instruments')).min(1), relevance: ids('relevance'),
+    lifecycle: z.array(ids('lifecycle')).default([]), themes: z.array(ids('financeSupports')).default([]),
+    geography: z.string(), countries: z.array(z.string()).default([]), minerals: z.array(z.string()).default([]), issues: z.array(z.string()).default([]),
+    objectives: z.string(), mineralScope: z.string(),
+    envelope: money.nullable(), perAward: money.nullable(), period: z.string().nullable(),
+    applicants: z.string().nullable(), exclusions: z.string().nullable(), accessRoute: z.string(),
+    programmeStatus: z.enum(['active', 'paused', 'closed', 'unknown']),
+    whyItMatters: z.string(), notEstablished: z.string(),
+    sources: z.array(z.string()).min(1), passages: z.array(passage).min(1),
+    lastChecked: date, reviewDue: date,
+  }),
+});
+
+const awards = defineCollection({
+  loader: file('./src/data/awards.json'),
+  schema: z.object({
+    title: z.string(), shortTitle: z.string().optional(), published: date, funder: z.string(), administrator: z.string().nullable(), recipient: z.string(), programme: z.string().nullable(),
+    instrument: ids('instruments'),
+    period: z.object({ start: z.string().regex(/^\d{4}-\d{2}$/), end: z.string().regex(/^\d{4}-\d{2}$/).nullable() }),
+    amount: money, activity: z.string(), geography: z.string(), relevance: ids('relevance'),
+    intendedOutcomes: z.string(), resultsEvidence: z.string().nullable(),
+    countries: z.array(z.string()).default([]), minerals: z.array(z.string()).default([]), issues: z.array(z.string()).default([]),
+    sources: z.array(z.string()).min(1), passages: z.array(passage).min(1), lastChecked: date, reviewDue: date,
+  }),
+});
+
+const opportunities = defineCollection({
+  loader: file('./src/data/opportunities.json'),
+  schema: z.object({
+    title: z.string(), shortTitle: z.string().optional(), summary: z.string().max(400),
+    type: ids('opportunityTypes'), organisation: z.string(), programme: z.string().nullable(), administrator: z.string().nullable(),
+    instrument: ids('instruments').nullable(), relevance: ids('relevance'),
+    /** Status as recorded at lastChecked. Pages also apply deadline and freshness rules. */
+    status: ids('opportunityStatus'), statusBasis: z.string(),
+    eligibleApplicants: z.string(), applicantLocation: z.string(), beneficiaryGeography: z.string(),
+    exclusions: z.string().nullable(), funding: money.nullable(), fee: z.string().nullable(),
+    partnership: z.string().nullable(), coFinancing: z.string().nullable(),
+    opens: moment.nullable(), deadline: moment.nullable(),
+    applicationSteps: z.string().nullable(), documents: z.string().nullable(), questions: z.array(z.string()).default([]),
+    /** Publication date only when the source states it. */
+    published: date.nullable().default(null),
+    roleFamilies: z.array(ids('roleFamilies')).default([]), seniority: z.string().nullable(), location: z.string().nullable(),
+    remote: z.string().nullable(), duration: z.string().nullable(), workAuthorisation: z.string().nullable(),
+    lifecycle: z.array(ids('lifecycle')).default([]),
+    countries: z.array(z.string()).default([]), minerals: z.array(z.string()).default([]), issues: z.array(z.string()).default([]),
+    sources: z.array(z.string()).min(1), passages: z.array(passage).min(1), lastChecked: date, reviewDue: date,
+  }),
+});
+
+// Career pathways: evergreen guidance, labelled as our interpretation. Illustrative job
+// titles are examples, not vacancies.
+const pathways = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pathways' }),
+  schema: z.object({
+    title: z.string(), shortTitle: z.string().optional(), summary: z.string().max(320), order: z.number().int(),
+    contribution: z.enum(['rights-communities', 'policy-governance', 'finance-partnerships', 'circularity-resilience']),
+    problem: z.string(), responsibilities: z.array(z.string()).min(3), employerTypes: z.array(z.string()).min(2),
+    titles: z.array(z.string()).min(2), transferable: z.array(z.string()).min(2), gaps: z.array(z.string()).min(2),
+    routes: z.object({ entry: z.string(), mid: z.string(), senior: z.string() }),
+    required: z.array(z.string()), desirable: z.array(z.string()), fieldwork: z.string(),
+    portfolio: z.array(z.string()).length(2),
+    learning: z.array(z.object({ source: z.string(), why: z.string() })).min(1),
+    employers: z.array(z.string()).default([]), issues: z.array(z.string()).default([]), lifecycle: z.array(ids('lifecycle')).default([]),
+    explorer: z.object({ experience: z.array(z.string()).min(1), interests: z.array(z.string()).min(1) }),
+    /** Warning shown where regulated credentials apply; null when none. */
+    regulated: z.string().nullable(),
+    published: date, reviewed: date, reviewDue: date, draft: z.boolean().default(false),
+  }),
+});
+
 const sources = defineCollection({
   loader: file('./src/data/sources.json'),
   schema: z.object({
@@ -204,15 +321,28 @@ const claims = defineCollection({
     checkedAt: date.optional(),
     batch: z.string().optional(),
     evidenceSources: z.array(z.string()).default([]),
+    /** Reported fact, our interpretation, or hypothesis to test. */
+    kind: ids('claimKinds').default('reported-fact'),
+    /** Whether the located passage supports the claim as worded (tools/research-review.js). */
+    review: z.object({
+      outcome: ids('reviewOutcomes'),
+      reviewer: ids('reviewers').nullable(),
+      reviewedAt: date.nullable(),
+      batch: z.string(),
+      qualification: z.string().nullable(),
+      history: z.string().nullable(),
+      passages: z.array(z.object({ source: z.string(), locatedBy: z.string(), passage: z.string() })),
+    }).default({ outcome: 'not-reviewed', reviewer: null, reviewedAt: null, batch: '', qualification: null, history: null, passages: [] }),
   }),
 });
 
 export const schemas = Object.fromEntries(
-  Object.entries({ learn, minerals, countries, issues, cases, updates, organisations, finance, policies, sources, claims })
+  Object.entries({ learn, minerals, countries, issues, cases, updates, organisations, finance, policies, sources, claims, programmes, awards, opportunities, pathways })
     .map(([k, c]) => [k, (c as any).schema]),
 ) as Record<string, z.ZodType>;
 
 export const collections = {
   learn, minerals, countries, issues, cases, updates,
   organisations, finance, policies, sources, claims,
+  programmes, awards, opportunities, pathways,
 };

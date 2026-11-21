@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-1-initial",
-  "checkedAt": "2026-11-17T06:05:09.850Z",
+  "checkedAt": "2026-11-21T19:04:13.882Z",
   "results": [
     {
       "source": "iea-gcmo-2025",
@@ -187,7 +187,7 @@
       "finalUrl": "https://mines.gov.in/",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 50,
+      "textLength": 54,
       "error": null,
       "checks": [
         {
@@ -271,7 +271,7 @@
       "finalUrl": "https://www.tribuneindia.com/news/business/cabinet-approves-national-critical-mineral-mission-to-build-a-resilient-value-chain-with-an-outlay-of-rs-34300-cr-over-seven-years",
       "status": 200,
       "contentType": "text/html; charset=utf-8",
-      "textLength": 9818,
+      "textLength": 9846,
       "error": null,
       "checks": [
         {
@@ -536,7 +536,7 @@
       "finalUrl": "https://www.thejakartapost.com/indonesia/2023/12/24/indonesia-nickel-smelter-furnace-blast-kills-13-workers-wounds-38",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 9764,
+      "textLength": 9756,
       "error": null,
       "checks": [
         {
@@ -556,7 +556,7 @@
       "finalUrl": "https://www.thejakartapost.com/business/2023/12/27/as-death-toll-rises-morowali-blast-brings-work-safety-squarely-into-focus",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 9653,
+      "textLength": 9775,
       "error": null,
       "checks": [
         {
@@ -573,20 +573,20 @@
     {
       "source": "bhrrc-morowali-2023",
       "url": "https://business-humanrights.org/en/latest-news/indonesia-nickel-smelter-furnace-fire-kills-13-workers-injures-46",
-      "finalUrl": "https://www.business-humanrights.org/en/latest-news/indonesia-nickel-smelter-furnace-fire-kills-13-workers-injures-46/",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "textLength": 14302,
+      "finalUrl": "https://www.business-humanrights.org/en/latest-news/indonesia-nickel-smelter-furnace-fire-kills-13-workers-injures-46",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "textLength": 0,
       "error": null,
       "checks": [
         {
           "claim": "c-morowali-2023",
-          "found": [
+          "found": [],
+          "missing": [
             "morowali",
             "furnace",
             "13"
-          ],
-          "missing": []
+          ]
         }
       ]
     },
@@ -688,7 +688,7 @@
       "finalUrl": "https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 16508,
+      "textLength": 16524,
       "error": null,
       "checks": [
         {
@@ -836,16 +836,16 @@
       "finalUrl": "https://www.climatechangenews.com/2022/11/15/rich-nations-banks-pledge-20bn-for-indonesias-coal-to-clean-switch/",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 12564,
+      "textLength": 9626,
       "error": null,
       "checks": [
         {
           "claim": "c-jetp-indonesia",
           "found": [
-            "just energy transition partnership",
             "20bn"
           ],
           "missing": [
+            "just energy transition partnership",
             "comprehensive investment and policy plan"
           ]
         }
@@ -878,7 +878,7 @@
       "finalUrl": "https://www.mining.com/world-bank-germany-rio-anglo-set-climate-smart-mining-fund/",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 6010,
+      "textLength": 6326,
       "error": null,
       "checks": [
         {

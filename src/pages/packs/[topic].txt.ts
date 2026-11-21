@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { PACKS, SITE, ASSISTANT_WARNING, EVIDENCE_LABELS } from '../../../tools/site-text.js';
 import { graph } from '../../lib/content';
 import { publishedClaims } from '../../lib/published';
+import vocab from '../../data/vocab.json';
 
 export const getStaticPaths: GetStaticPaths = () => PACKS.map((p) => ({ params: { topic: p.id } }));
 
@@ -19,13 +20,15 @@ export const GET: APIRoute = async ({ params, site }) => {
     if (f.countries) return f.countries.some((c) => n.countries.includes(c) || (n.type === 'countries' && n.id === c));
     return false;
   });
-  const label = (v: string) => EVIDENCE_LABELS.find((l) => l.id === v)?.label ?? v;
+  const kindLabel = (v: string) => EVIDENCE_LABELS.find((l) => l.id === v)?.label ?? v;
+  const locLabel = (v: string) => vocab.verification.find((l) => l.id === v)?.label ?? v;
+  const outLabel = (v: string) => vocab.reviewOutcomes.find((l) => l.id === v)?.label ?? v;
   const out: string[] = [
     `${SITE.name} evidence pack: ${pack.title}`,
     `Generated from the published site. Source: ${new URL('use-with-ai/', new URL(import.meta.env.BASE_URL, site)).toString()}`,
     '',
     `WARNING: ${ASSISTANT_WARNING}`,
-    'Only claims that passed the automated source check are included. Each carries its evidence label and dated sources.',
+    'Only reported facts whose supporting passage was located and then read against the claim are included. Each carries its label, how its passage was located, its review outcome and any qualification, and dated sources. Reviews so far were done with AI assistance and have not yet been checked by a named editor.',
     '',
     'Starter questions:',
     ...pack.questions.map((q, i) => `${i + 1}. ${q}`),
@@ -37,7 +40,7 @@ export const GET: APIRoute = async ({ params, site }) => {
     const cs = claims.filter((c) => (d.claims ?? []).includes(c.id));
     if (cs.length) {
       out.push('', 'What we know:');
-      for (const c of cs) out.push(`- ${c.data.text} [${label(c.data.verification)}; as of ${c.data.asOf}; sources: ${c.data.sources.map((s) => `${sources.get(s)?.publisher}, ${sources.get(s)?.url}`).join(' | ')}]`);
+      for (const c of cs) out.push(`- ${c.data.text} [${kindLabel(c.data.kind)}; ${locLabel(c.data.verification)}; ${outLabel(c.data.review.outcome)}${c.data.review.qualification ? ` (${c.data.review.qualification})` : ''}; as of ${c.data.asOf}; sources: ${c.data.sources.map((s) => `${sources.get(s)?.publisher}, ${sources.get(s)?.url}`).join(' | ')}]`);
     }
     if (d.meaning?.length) out.push('', 'What this may mean (interpretation):', ...d.meaning.map((m: string) => `- ${m}`));
     if (d.unclear?.length) out.push('', 'What remains unclear:', ...d.unclear.map((m: string) => `- ${m}`));

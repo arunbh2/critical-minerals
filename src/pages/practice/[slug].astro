@@ -11,7 +11,7 @@ const { Content } = await render(entry);
 const d = entry.data;
 ---
 <Entry type="cases" id={entry.id} kicker="Case study" data={d}
-  crumbs={[{ label: 'Evidence & practice', href: url('practice/') }, { label: d.title }]}>
+  crumbs={[{ label: 'Evidence & tools', href: url('evidence/') }, { label: 'Practice', href: url('practice/') }, { label: d.title }]}>
   <section slot="facts" class="panel-data reading case-facts" aria-labelledby="case-h">
     <h2 id="case-h" class="kicker">Case record</h2>
     <dl class="facts">

@@ -1,0 +1,319 @@
+[
+  {
+    "administrator": null,
+    "programme": null,
+    "recipient": "nrgi",
+    "instrument": "grant",
+    "resultsEvidence": null,
+    "sources": [
+      "nrgi-funders"
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing"
+    ],
+    "id": "fcdo-nrgi-emerge",
+    "title": "FCDO support to NRGI for EMERGE",
+    "funder": "fcdo",
+    "period": {
+      "start": "2024-09",
+      "end": "2026-09"
+    },
+    "amount": {
+      "value": 3258348,
+      "currency": "GBP",
+      "basis": "award",
+      "reported": [
+        {
+          "value": 4300000,
+          "currency": "USD",
+          "note": "USD figure as given by the recipient"
+        }
+      ]
+    },
+    "activity": "Ensuring Minerals Enable Responsible Growth and Economic Development (EMERGE): supporting sustainable economic development in Africa and the resilience of global supply chains.",
+    "geography": "Africa",
+    "relevance": "direct",
+    "intendedOutcomes": "Sustainable economic development in Africa and more resilient global supply chains, as stated in the purpose.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "£3,258,348"
+      },
+      {
+        "source": "nrgi-funders",
+        "quote": "September 2024 - September 2026"
+      }
+    ],
+    "shortTitle": "FCDO EMERGE award",
+    "published": "2026-11-21"
+  },
+  {
+    "administrator": null,
+    "programme": null,
+    "recipient": "nrgi",
+    "instrument": "grant",
+    "resultsEvidence": null,
+    "sources": [
+      "nrgi-funders"
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "countries": [],
+    "minerals": [],
+    "issues": [],
+    "id": "quadrature-nrgi-2024",
+    "title": "Quadrature Charitable Foundation grant to NRGI",
+    "funder": "quadrature",
+    "period": {
+      "start": "2024-08",
+      "end": "2027-07"
+    },
+    "amount": {
+      "value": 3000000,
+      "currency": "USD",
+      "basis": "award",
+      "reported": []
+    },
+    "activity": "To advance efforts by citizens and governments to drive systemic change in the responsible scale-up of transition mineral production.",
+    "geography": "Not stated",
+    "relevance": "direct",
+    "intendedOutcomes": "Systemic change in how transition mineral production is scaled up, as stated in the purpose.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "August 2024 - July 2027"
+      }
+    ],
+    "shortTitle": "Quadrature award, 2024",
+    "published": "2026-11-21"
+  },
+  {
+    "administrator": null,
+    "programme": null,
+    "recipient": "nrgi",
+    "instrument": "grant",
+    "resultsEvidence": null,
+    "sources": [
+      "nrgi-funders"
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing"
+    ],
+    "id": "rockefeller-nrgi-2025",
+    "title": "Rockefeller Foundation grant to NRGI",
+    "funder": "rockefeller-foundation",
+    "period": {
+      "start": "2025-09",
+      "end": "2026-11"
+    },
+    "amount": {
+      "value": 600000,
+      "currency": "USD",
+      "basis": "award",
+      "reported": []
+    },
+    "activity": "Establishing an educational platform and forum for researchers and policy stakeholders to build capacity and share practice on equitable mineral development in low- and middle-income countries.",
+    "geography": "Low- and middle-income countries",
+    "relevance": "direct",
+    "intendedOutcomes": "Capacity and shared practice among researchers and policy stakeholders.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "September 2025 - November 2026"
+      }
+    ],
+    "shortTitle": "Rockefeller award, 2025",
+    "published": "2026-11-21"
+  },
+  {
+    "administrator": null,
+    "programme": null,
+    "recipient": "nrgi",
+    "instrument": "grant",
+    "resultsEvidence": null,
+    "sources": [
+      "nrgi-funders"
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "water-climate-risk"
+    ],
+    "id": "moore-nrgi-2026",
+    "title": "Moore Foundation grant to NRGI",
+    "funder": "moore-foundation",
+    "period": {
+      "start": "2026-07",
+      "end": "2027-03"
+    },
+    "amount": {
+      "value": 500000,
+      "currency": "USD",
+      "basis": "award",
+      "reported": []
+    },
+    "activity": "Developing a playbook for nature-positive mining (design phase): benefits realisation planning and shifting regulatory regimes.",
+    "geography": "Not stated",
+    "relevance": "direct",
+    "intendedOutcomes": "A playbook design for nature-positive mining.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "July 2026 - March 2027"
+      }
+    ],
+    "shortTitle": "Moore Foundation award",
+    "published": "2026-11-21"
+  },
+  {
+    "administrator": null,
+    "programme": null,
+    "recipient": "nrgi",
+    "instrument": "grant",
+    "resultsEvidence": null,
+    "sources": [
+      "nrgi-funders"
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "countries": [],
+    "minerals": [
+      "copper"
+    ],
+    "issues": [
+      "value-sharing"
+    ],
+    "id": "ecf-nrgi-mongolia",
+    "title": "European Climate Foundation grant to NRGI on Mongolia's copper sector",
+    "funder": "ecf",
+    "period": {
+      "start": "2025-10",
+      "end": "2026-10"
+    },
+    "amount": {
+      "value": 50000,
+      "currency": "USD",
+      "basis": "award",
+      "reported": []
+    },
+    "activity": "Building the capacity of non-governmental actors to influence policy on equitable value addition and to monitor value-addition efforts in Mongolia's copper sector.",
+    "geography": "Mongolia",
+    "relevance": "direct",
+    "intendedOutcomes": "Non-governmental actors able to influence and monitor copper-sector value-addition policy.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "October 2025 - October 2026"
+      }
+    ],
+    "shortTitle": "Mongolia copper award",
+    "published": "2026-11-21"
+  },
+  {
+    "administrator": null,
+    "programme": null,
+    "recipient": "nrgi",
+    "instrument": "grant",
+    "resultsEvidence": null,
+    "sources": [
+      "nrgi-funders"
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing",
+      "accountability-remedy"
+    ],
+    "id": "norad-nrgi-2026",
+    "title": "Norad grant to NRGI: Resources to Revenues",
+    "funder": "norad",
+    "period": {
+      "start": "2026-01",
+      "end": "2028-12"
+    },
+    "amount": {
+      "value": 31500000,
+      "currency": "NOK",
+      "basis": "award",
+      "reported": [
+        {
+          "value": 3160000,
+          "currency": "USD",
+          "note": "USD figure as given by the recipient"
+        }
+      ]
+    },
+    "activity": "Resources to Revenues: civil society driving just transitions in Africa.",
+    "geography": "Africa",
+    "relevance": "adjacent",
+    "intendedOutcomes": "Not stated beyond the title.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "NOK 31,500,000"
+      }
+    ],
+    "shortTitle": "Norad Resources to Revenues",
+    "published": "2026-11-21"
+  },
+  {
+    "administrator": "world-bank",
+    "programme": "egps-trust-fund",
+    "recipient": "nrgi",
+    "instrument": "grant",
+    "resultsEvidence": null,
+    "sources": [
+      "nrgi-funders"
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "accountability-remedy"
+    ],
+    "id": "egps-nrgi-2025",
+    "title": "World Bank EGPS trust fund grant to NRGI",
+    "funder": "world-bank",
+    "period": {
+      "start": "2025-01",
+      "end": "2026-07"
+    },
+    "amount": {
+      "value": 999999,
+      "currency": "USD",
+      "basis": "award",
+      "reported": [
+        {
+          "value": 999000,
+          "currency": "USD",
+          "note": "The disclosure's USD column gives $999,000 while its original-currency column gives $999,999. We show the original-currency figure and flag the difference."
+        }
+      ]
+    },
+    "activity": "Support for citizen engagement for accountability and transparency in the extractive sector.",
+    "geography": "Not stated",
+    "relevance": "adjacent",
+    "intendedOutcomes": "Citizen engagement for accountability and transparency.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "January 2025 - July 2026"
+      }
+    ],
+    "shortTitle": "EGPS trust fund award",
+    "published": "2026-11-21"
+  }
+]

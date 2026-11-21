@@ -8,12 +8,17 @@ const items = (await getCollection('cases')).filter((c) => !c.data.draft);
 ---
 <Base title="Evidence & practice" description="Traceable case studies of interventions in critical-minerals value chains, with evidence type, limitations and transfer conditions.">
   <div class="wrap">
-    <Breadcrumbs items={[{ label: 'Evidence & practice' }]} />
+    <Breadcrumbs items={[{ label: 'Evidence & tools', href: url('evidence/') }, { label: 'Practice' }]} />
     <header class="reading"><p class="kicker red-rule">Evidence & practice</p><h1>What has been tried, and what do we know?</h1>
       <p class="standfirst">Case studies record the intervention, the actors, the money, the mechanism and the evidence, and say clearly when a result is documented, plausible or still an untested hypothesis.</p></header>
     <ul class="record-list reading">
       {items.map((c) => <li><p class="kicker">{c.data.location} · {c.data.period}</p><h3><a href={hrefFor('cases', c.id)}>{c.data.title}</a></h3><p>{c.data.summary}</p><p class="meta"><span class="status">{vocabLabel('relationship', c.data.relationship)}</span> · {c.data.currentAsOf}</p></li>)}
     </ul>
+    <section class="reading evidence evidence-unclear" aria-labelledby="need-h">
+      <h2 id="need-h">Evidence we still need</h2>
+      <ul>{items.flatMap((c) => c.data.unclear.map((u) => <li>{u} <span class="meta">(<a href={hrefFor('cases', c.id)}>{c.data.title}</a>)</span></li>))}</ul>
+      <p>Three rules we apply when reading these gaps: the absence of an evaluation is not evidence of failure; an announced safeguard is not proof of benefit; and an organisation&rsquo;s mandate is not proof of delivery. Failed or mixed results are useful evidence, and we include them where they are documented.</p>
+    </section>
     <div class="reading">
       <h2>Using the evidence</h2>
       <ul>

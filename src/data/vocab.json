@@ -140,15 +140,18 @@
   "verification": [
     {
       "id": "original-checked",
-      "label": "Checked against an original"
+      "label": "Passage located in an official source",
+      "explain": "An automated check fetched the issuing body’s own page or document and found the terms used to locate the supporting passage. Finding terms does not show that the passage supports the claim; that is the review step."
     },
     {
       "id": "secondary",
-      "label": "Reported by secondary sources"
+      "label": "Passage located in a secondary source",
+      "explain": "The terms used to locate the passage were found, but only in news or research reporting about the original."
     },
     {
       "id": "not-verified",
-      "label": "Not verified"
+      "label": "Passage not located",
+      "explain": "At least one locating term was not found in any fetched source. This is missing evidence, not a finding that the claim is false."
     }
   ],
   "orgTypes": [
@@ -179,6 +182,14 @@
     {
       "id": "financier",
       "label": "Financier"
+    },
+    {
+      "id": "foundation",
+      "label": "Philanthropic foundation"
+    },
+    {
+      "id": "development-agency",
+      "label": "Development agency or ministry"
     }
   ],
   "sourceTypes": [
@@ -193,6 +204,10 @@
     {
       "id": "legal",
       "label": "Legal text"
+    },
+    {
+      "id": "issuer",
+      "label": "Issuing organisation's own page"
     },
     {
       "id": "research",
@@ -223,6 +238,257 @@
     {
       "id": "hypothesis",
       "label": "Untested hypothesis"
+    }
+  ],
+  "claimKinds": [
+    {
+      "id": "reported-fact",
+      "label": "Reported fact",
+      "explain": "A statement of fact attributed to a dated source."
+    },
+    {
+      "id": "interpretation",
+      "label": "Our interpretation",
+      "explain": "An editorial judgement drawn from the reported facts. Reasonable readers may disagree."
+    },
+    {
+      "id": "hypothesis",
+      "label": "Hypothesis to test",
+      "explain": "A plausible mechanism or expectation that the evidence does not yet establish."
+    }
+  ],
+  "reviewOutcomes": [
+    {
+      "id": "supported",
+      "label": "Supported by the recorded passage",
+      "publish": true
+    },
+    {
+      "id": "supported-with-qualification",
+      "label": "Supported, with a stated qualification",
+      "publish": true
+    },
+    {
+      "id": "partly-supported",
+      "label": "Only partly supported",
+      "publish": false
+    },
+    {
+      "id": "not-supported",
+      "label": "Not supported",
+      "publish": false
+    },
+    {
+      "id": "not-reviewed",
+      "label": "Not yet reviewed",
+      "publish": false
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "assisted",
+      "label": "Passage read against the claim with AI assistance; not yet checked by a named editor"
+    },
+    {
+      "id": "editor",
+      "label": "Reviewed by the editor"
+    }
+  ],
+  "opportunityStatus": [
+    {
+      "id": "announced",
+      "label": "Announced",
+      "explain": "Publicly announced, but no application route is yet published."
+    },
+    {
+      "id": "forecast",
+      "label": "Forecast",
+      "explain": "The source gives expected dates. It is not open until the source says so."
+    },
+    {
+      "id": "open",
+      "label": "Open",
+      "explain": "The source states that applications or bids are being accepted."
+    },
+    {
+      "id": "rolling",
+      "label": "Rolling",
+      "explain": "Applications are accepted without a fixed deadline, until the source says otherwise. Rolling does not mean permanent."
+    },
+    {
+      "id": "paused",
+      "label": "Paused",
+      "explain": "Temporarily closed, with no confirmed reopening date."
+    },
+    {
+      "id": "closed",
+      "label": "Closed",
+      "explain": "The deadline has passed or the source says it is closed. Kept as a precedent."
+    },
+    {
+      "id": "cancelled",
+      "label": "Cancelled",
+      "explain": "Withdrawn by the issuer."
+    },
+    {
+      "id": "awarded",
+      "label": "Awarded",
+      "explain": "The issuer has selected recipients."
+    },
+    {
+      "id": "unknown",
+      "label": "Status unknown",
+      "explain": "We could not establish the status from the source."
+    }
+  ],
+  "opportunityTypes": [
+    {
+      "id": "grant",
+      "label": "Grant call",
+      "audience": "funding"
+    },
+    {
+      "id": "challenge-fund",
+      "label": "Challenge fund",
+      "audience": "funding"
+    },
+    {
+      "id": "technical-assistance-call",
+      "label": "Technical assistance call",
+      "audience": "funding"
+    },
+    {
+      "id": "request-for-proposals",
+      "label": "Request for proposals",
+      "audience": "funding"
+    },
+    {
+      "id": "firm-tender",
+      "label": "Tender for firms",
+      "audience": "careers"
+    },
+    {
+      "id": "individual-consultancy",
+      "label": "Individual consultancy",
+      "audience": "careers"
+    },
+    {
+      "id": "employment",
+      "label": "Employment",
+      "audience": "careers"
+    },
+    {
+      "id": "fellowship",
+      "label": "Fellowship",
+      "audience": "careers"
+    },
+    {
+      "id": "internship",
+      "label": "Internship",
+      "audience": "careers"
+    }
+  ],
+  "fundingRoles": [
+    {
+      "id": "funder",
+      "label": "Funder",
+      "explain": "Supplies the money."
+    },
+    {
+      "id": "administrator",
+      "label": "Administrator",
+      "explain": "Manages a mechanism on behalf of funders; may not be the original donor."
+    },
+    {
+      "id": "recipient",
+      "label": "Recipient",
+      "explain": "Receives an award. A recipient can also fund others."
+    },
+    {
+      "id": "procurer",
+      "label": "Procurer",
+      "explain": "Buys services through tenders or consultancies."
+    },
+    {
+      "id": "employer",
+      "label": "Employer",
+      "explain": "Hires staff."
+    }
+  ],
+  "relevance": [
+    {
+      "id": "direct",
+      "label": "Direct",
+      "explain": "The source names minerals, mining or mineral supply chains as a purpose."
+    },
+    {
+      "id": "adjacent",
+      "label": "Adjacent",
+      "explain": "Relevant to mineral work through a related purpose (energy transition, extractives governance, trade), but minerals are not a stated purpose."
+    }
+  ],
+  "amountBases": [
+    {
+      "id": "award",
+      "label": "Award to one recipient"
+    },
+    {
+      "id": "commitment",
+      "label": "Commitment"
+    },
+    {
+      "id": "disbursement",
+      "label": "Disbursed"
+    },
+    {
+      "id": "expenditure",
+      "label": "Spent"
+    },
+    {
+      "id": "envelope",
+      "label": "Total envelope for a programme or call"
+    },
+    {
+      "id": "per-award-range",
+      "label": "Range available per award"
+    },
+    {
+      "id": "ceiling-per-recipient",
+      "label": "Ceiling per recipient"
+    }
+  ],
+  "roleFamilies": [
+    {
+      "id": "community-rights",
+      "label": "Community engagement, rights and social performance"
+    },
+    {
+      "id": "policy-governance",
+      "label": "Public policy, resource governance and accountability"
+    },
+    {
+      "id": "responsible-sourcing",
+      "label": "Responsible sourcing, due diligence and traceability"
+    },
+    {
+      "id": "worker-protection",
+      "label": "Worker protection, occupational health and labour inclusion"
+    },
+    {
+      "id": "climate-water-environment",
+      "label": "Climate resilience, water and environmental management"
+    },
+    {
+      "id": "circularity",
+      "label": "Circularity, battery recovery and informal-enterprise inclusion"
+    },
+    {
+      "id": "finance-partnerships",
+      "label": "Development finance, grants, partnerships and programme management"
+    },
+    {
+      "id": "research-data",
+      "label": "Research, data, evidence and public communication"
     }
   ]
 }

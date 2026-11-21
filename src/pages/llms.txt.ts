@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { graph } from '../lib/content';
 import { endpoints } from '../lib/ai';
-import { SITE, AGENT_DO, AGENT_AVOID } from '../../tools/site-text.js';
+import { SITE, AGENT_DO, AGENT_AVOID, TASK_EXAMPLES } from '../../tools/site-text.js';
 import counts from '../data/site/counts.json';
 
 export const GET: APIRoute = async ({ site }) => {
@@ -11,7 +11,7 @@ export const GET: APIRoute = async ({ site }) => {
   const lines = [
     `# ${SITE.name}`, '',
     `> ${SITE.description}`, '',
-    `For: ${SITE.audience} Coverage: ${SITE.coverage} ${counts.claimsPublished} published claims, each with an evidence label and dated sources.`, '',
+    `For: ${SITE.audience} Coverage: ${SITE.coverage} ${counts.claimsPublished} published reported facts, each with its supporting passage located and read, a review status and dated sources. Automated checks locate passages; they are not independent verification.`, '',
     '## Start here',
     `- [Information for AI systems](${e.forAiPage}) ([JSON](${e.forAiJson}), [text](${e.forAiTxt}))`,
     `- [Full text of the site](${e.llmsFull})`,
@@ -26,6 +26,17 @@ export const GET: APIRoute = async ({ site }) => {
     '## Countries', ...key('countries'), '',
     '## Minerals', ...key('minerals'), '',
     '## Issues', ...key('issues'), '',
+    '## Funding',
+    `- [Funding overview](${new URL('funding/', e.home).toString()}): funders, administrators, programmes, awards and opportunities kept apart.`,
+    `- [Award ledger](${new URL('funding/awards/', e.home).toString()}): disclosed awards, funder to recipient, amounts in original currency.`,
+    `- [Opportunities](${new URL('funding/opportunities/', e.home).toString()}): verified open calls separated from forecasts and closed precedents.`,
+    ...key('programmes'), '',
+    '## Careers',
+    `- [Careers overview](${new URL('careers/', e.home).toString()})`,
+    `- [Jobs, consultancies and tenders](${new URL('careers/opportunities/', e.home).toString()})`,
+    ...key('pathways'), '',
+    '## Task examples',
+    ...TASK_EXAMPLES.map((t) => `- ${t.task}: ${t.how}`), '',
     '## Optional',
     ...key('cases'), ...key('policies'), ...key('finance'),
     `- [Organisations](${new URL('landscape/', e.home).toString()})`,

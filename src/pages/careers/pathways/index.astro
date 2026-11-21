@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { hrefFor } from '../../../lib/content';
+import { CONTRIBUTIONS } from '../../../lib/careers';
+import { url } from '../../../lib/url';
+const pathways = (await getCollection('pathways')).filter((p) => !p.data.draft).sort((a, b) => a.data.order - b.data.order);
+---
+<Base title="Career pathways" shortTitle="Career pathways" searchType="Careers" description="Eight role families in the mineral transition, from community rights to finance and research, with responsibilities, transferable skills, gaps and routes in.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Careers', href: url('careers/') }, { label: 'Pathways' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Careers</p>
+      <h1>Career pathways</h1>
+      <p class="standfirst">Eight families of roles. Each guide covers the problem the work addresses, what people actually do, who hires them, which skills transfer and which specialist knowledge you would need to add.</p>
+    </header>
+    <ol class="record-list reading">
+      {pathways.map((p) => (
+        <li>
+          <h2 class="h3"><a href={hrefFor('pathways', p.id)}>{p.data.title}</a></h2>
+          <p class="meta">{CONTRIBUTIONS.find((c) => c.id === p.data.contribution)?.label}</p>
+          <p>{p.data.summary}</p>
+        </li>
+      ))}
+    </ol>
+    <p class="reading sans"><a class="link-arrow" href={url('careers/explorer/')}>Not sure which fits? Use the explorer</a></p>
+  </div>
+</Base>
+<style>.h3 { font-size: 1.2rem; margin: 0 0 4px; } .h3 a { text-decoration: none; }</style>
