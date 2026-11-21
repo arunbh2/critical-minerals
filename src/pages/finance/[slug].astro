@@ -20,7 +20,7 @@ const vlabel = vocab.verification.find((v) => v.id === d.verification)?.label;
 ---
 <Base title={d.title} shortTitle={d.shortTitle} description={d.purpose} searchType="Finance record">
   <div class="wrap">
-    <Breadcrumbs items={[{ label: 'Finance', href: url('finance/') }, { label: d.title }]} />
+    <Breadcrumbs items={[{ label: 'Funding', href: url('funding/') }, { label: 'Finance records', href: url('finance/') }, { label: d.title }]} />
     <article class="reading">
       <p class="kicker red-rule">Finance record · {vocabLabel('recordStates', d.recordState)}</p>
       <h1>{d.title}</h1>

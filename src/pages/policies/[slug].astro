@@ -21,7 +21,7 @@ const dates = Object.entries(d.dates).filter(([, v]) => v) as [string, string][]
 ---
 <Base title={d.title} shortTitle={d.shortTitle} description={d.summary} searchType="Policy record">
   <div class="wrap">
-    <Breadcrumbs items={[{ label: 'Policies', href: url('policies/') }, { label: d.title }]} />
+    <Breadcrumbs items={[{ label: 'Explore', href: url('explore/') }, { label: 'Policies', href: url('policies/') }, { label: d.title }]} />
     <article class="reading">
       <p class="kicker red-rule">Policy record · {d.jurisdiction}</p>
       <h1>{d.title}</h1>
