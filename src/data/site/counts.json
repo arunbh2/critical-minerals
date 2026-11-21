@@ -14,5 +14,9 @@
   "claimsPublished": 20,
   "claimsOriginalChecked": 4,
   "claimsSecondary": 16,
+  "claimsQualified": 6,
+  "claimsReviewedAssisted": 20,
+  "claimsReviewedEditor": 0,
+  "claimsNarrowedOnReview": 7,
   "claimsHeldBack": 5
 }

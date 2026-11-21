@@ -35,7 +35,7 @@ Minerals are finite. The value they generate, through profits, wages, taxes, roy
 - **Fiscal:** royalties, taxes, dividends from state-owned firms.
 - **Employment:** direct and contracted jobs, and their quality.
 - **Local enterprise:** procurement of goods and services from local businesses.
-- **Processing:** adding value in the country, as Indonesia's nickel ore export ban since 2020 seeks to do.
+- **Processing:** adding value in the country, as Indonesia's nickel ore export ban, announced for January 2020, seeks to do.
 - **Earmarked funds:** for example India's District Mineral Foundations, financed by levies on mining leaseholders, which had collected more than ₹1 lakh crore by early 2025.
 - **Agreements:** benefit-sharing or community development agreements.
 

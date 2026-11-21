@@ -55,7 +55,7 @@
       "Communities in mineral-bearing areas"
     ],
     "mechanism": "Central auctions of mining leases and composite licences for listed critical minerals; a new exploration licence for critical and deep-seated minerals.",
-    "funding": "Auction revenue accrues to state governments.",
+    "funding": null,
     "summary": "The amendment lets the central government auction concessions for listed critical minerals and creates an exploration licence intended to draw private investment into exploration.",
     "implications": "Moving auctions to the centre changes who decides on concessions while revenue stays with states. How affected communities are informed and consulted before auction is a question to examine block by block.",
     "countries": [
@@ -99,7 +99,7 @@
       "Private companies",
       "Recyclers"
     ],
-    "mechanism": "Seven-year mission spanning exploration, processing, overseas acquisition, stockpiling, processing parks and recycling.",
+    "mechanism": "Seven-year mission covering exploration, mining, beneficiation, processing, recovery from end-of-life products, acquiring mineral assets abroad and a proposed national stockpile.",
     "funding": "₹16,300 crore government outlay; ₹18,000 crore expected from PSUs and others.",
     "summary": "India's Cabinet approved a seven-year mission to build supply chains for critical minerals across the lifecycle.",
     "implications": "The mission is mainly about supply security. Whether it includes requirements on worker safety, community participation or benefit sharing has not been verified and should be checked in the guidelines.",
@@ -223,7 +223,7 @@
       "Third-country suppliers",
       "Recyclers"
     ],
-    "mechanism": "Lists of critical and strategic raw materials, non-binding 2030 benchmarks, strategic project designation and supply monitoring.",
+    "mechanism": "Lists of critical and strategic raw materials, 2030 benchmarks, strategic project designation and supply monitoring.",
     "funding": "No dedicated fund; strategic projects receive coordinated help to access finance.",
     "summary": "The Act aims to diversify EU supply of critical raw materials through domestic extraction, processing and recycling, and through partnerships with third countries.",
     "implications": "For producing countries the Act creates both demand and expectations. Whether partnerships deliver local processing, decent work and community benefit depends on terms negotiated project by project.",
@@ -366,7 +366,7 @@
     ],
     "mechanism": "Temporary export suspension, replaced by export quotas.",
     "funding": null,
-    "summary": "The DRC suspended cobalt exports in February 2025 and replaced the suspension with quotas in October 2025.",
+    "summary": "The DRC introduced quotas on cobalt exports in 2025.",
     "implications": "Supply management by the dominant producer shows producer governments using market power. Effects on artisanal miners' incomes and safety deserve separate attention.",
     "countries": [],
     "minerals": [

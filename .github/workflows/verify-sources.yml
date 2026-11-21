@@ -1,7 +1,9 @@
 name: Verify sources
 
-# Fetches every staged source (HTML or PDF), records which claim terms it contains,
-# gates claims, applies the labels and writes the ledger. Run manually on a branch to
+# Fetches every staged source (HTML or PDF) and records which locating terms it contains,
+# then applies recorded passage reviews and writes the ledger. Finding terms only
+# locates a passage; a claim is published only after review judges that the passage
+# supports it (tools/evidence-gate.js). Run manually on a branch to
 # commit the results there; the monthly run on main only reports, so evidence that
 # has gone missing (link rot, changed pages) is noticed without changing the site.
 on:
@@ -20,6 +22,7 @@ on:
       - 'research/*/claims.json'
       - 'tools/verify-sources.js'
       - 'tools/research-*.js'
+      - 'research/*/review.json'
       - '.github/workflows/verify-sources.yml'
   schedule:
     - cron: '17 3 7 * *'
@@ -49,6 +52,7 @@ jobs:
             node tools/verify-sources.js "$b"
             node tools/research-gate.js "$b"
             node tools/research-apply.js "$b"
+            node tools/research-review.js "$b"
             node tools/research-ledger.js "$b"
             echo "::endgroup::"
           done

@@ -5,6 +5,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, basename } from 'node:path';
 import { parse } from 'yaml';
+import { isPublishable } from './evidence-gate.js';
 
 const root = new URL('..', import.meta.url).pathname;
 const read = (p) => readFileSync(join(root, p), 'utf8');
@@ -99,7 +100,7 @@ for (const f of js.finance) {
 
 // Every claim used somewhere; every source used somewhere (orphans are a smell).
 const usedClaims = new Set(Object.values(md).flat().flatMap((e) => e.data.claims ?? []));
-for (const c of js.claims) if (c.data.verification !== 'not-verified' && !usedClaims.has(c.id)) err(`claims/${c.id}: published claim not used on any page. Fix: cite it in a page's claims list, or remove it.`);
+for (const c of js.claims) if (isPublishable(c.data) && !usedClaims.has(c.id)) err(`claims/${c.id}: published claim not used on any page. Fix: cite it in a page's claims list, or remove it.`);
 const usedSources = new Set([
   ...Object.values(md).flat().flatMap((e) => e.data.sources ?? []),
   ...js.claims.flatMap((c) => c.data.sources),

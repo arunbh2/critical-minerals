@@ -33,7 +33,7 @@ Every mineral value chain is a set of relationships. Following them answers the 
 
 **1. Who decides?** Who granted the licence, and through what process? India's 2023 amendment to its mining law, for example, allows the central government to auction concessions for listed critical minerals, changing which level of government makes that decision. Ask where affected people had a voice, and whether that voice could change the outcome.
 
-**2. Who captures value?** Look at taxes, royalties, profits, wages, local procurement and processing. Indonesia's ban on nickel ore exports since 2020 is a deliberate attempt to keep more processing value in the country. Whether that value reaches workers and nearby communities is a separate question.
+**2. Who captures value?** Look at taxes, royalties, profits, wages, local procurement and processing. Indonesia's nickel ore export ban, announced to take effect in January 2020, is a deliberate attempt to keep more processing value in the country. Whether that value reaches workers and nearby communities is a separate question.
 
 **3. Who bears the costs and risks?** These include environmental damage, health and safety hazards, loss of land or livelihoods, and the financial risk if a project fails or prices collapse. Costs that fall on people without a say are the clearest warning sign.
 

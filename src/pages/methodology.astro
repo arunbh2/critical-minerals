@@ -2,7 +2,7 @@
 import Page from '../layouts/Page.astro';
 import { url } from '../lib/url';
 import vocab from '../data/vocab.json';
-import { EVIDENCE_LABELS, AI_USE } from '../../tools/site-text.js';
+import { EVIDENCE_LABELS, EVIDENCE_STEPS, REVIEW_STATUS, AI_USE } from '../../tools/site-text.js';
 import counts from '../data/site/counts.json';
 ---
 <Page title="Methodology" shortTitle="Editorial methodology" kicker="How we work" description="How Critical Minerals selects, verifies, labels and reviews evidence, and how it keeps facts, interpretation and open questions apart."
@@ -15,10 +15,17 @@ import counts from '../data/site/counts.json';
     <li><strong>What remains unclear:</strong> open questions, contested points and gaps in the evidence.</li>
   </ul>
   <p>We do not give a single confidence score to every kind of claim. A production statistic, a legal date and an alleged harm need different kinds of evidence.</p>
-  <h2>Evidence labels and the automated source check</h2>
-  <p>Each claim is staged with the exact terms it rests on. A workflow fetches every cited page or PDF and records which terms it found. A claim reaches a page only when every term was found. Opening a page is not evidence.</p>
+  <h2 id="evidence">How a claim is checked</h2>
+  <p>Finding the right words in a source does not show that the source supports a claim. A page can mention every term while contradicting the claim, describing another country or reporting an allegation. So we treat automated matching as a way to find the passage, and then read it.</p>
+  <ol>{EVIDENCE_STEPS.map((s) => <li><strong>{s.step}.</strong> {s.explain}</li>)}</ol>
+  <h3>Evidence labels</h3>
+  <p>The label says what kind of statement a claim is. It is assigned to each claim, not to a whole page or case: one case can hold a documented policy fact and an uncertain outcome side by side.</p>
   <dl class="facts">{EVIDENCE_LABELS.map((l) => <><dt>{l.label}</dt><dd>{l.explain}</dd></>)}</dl>
-  <p class="sans">Currently: {counts.claimsOriginalChecked} checked against an original, {counts.claimsSecondary} reported by secondary sources, and {counts.claimsHeldBack} not verified and held back. Each research batch keeps a public ledger of what was used, what was held back and why, in the <a href="https://github.com/arunbh2/critical-minerals/tree/main/research">research folder</a> of the site&rsquo;s repository.</p>
+  <h3>Review status</h3>
+  <dl class="facts">{REVIEW_STATUS.map((l) => <><dt>{l.label}</dt><dd>{l.explain}</dd></>)}</dl>
+  <p class="sans">Currently {counts.claimsPublished} reported facts are published. For {counts.claimsOriginalChecked} the passage was located in an official source, and for {counts.claimsSecondary} in secondary reporting. {counts.claimsQualified} carry a stated qualification. {counts.claimsReviewedAssisted} were read with AI assistance and {counts.claimsReviewedEditor} by a named editor. {counts.claimsNarrowedOnReview} were narrowed on review because the passage supported only part of the original wording. {counts.claimsHeldBack} are held back. Each research batch keeps a public ledger in the <a href="https://github.com/arunbh2/critical-minerals/tree/main/research">research folder</a> of the site&rsquo;s repository.</p>
+  <h3>What review found the first time</h3>
+  <p>When the first published claims were read against their passages, three term matches turned out to locate nothing relevant: a year found in an advertisement, a &ldquo;ban&rdquo; that referred to banning exporters rather than exports, and a &ldquo;state government&rdquo; that granted licences rather than received revenue. The affected claims were narrowed to what their passages support. This is why automated checks are never described here as verification.</p>
   <h2>Sources</h2>
   <p>Each source records its title, publisher, URL, publication date where available, retrieval date, a locator where relevant, and reuse terms. Retrieval date is not publication date. We link to and summarise sources rather than republishing them. We use primary sources for policy, deadlines, eligibility and finance where possible, and triangulate contested or consequential claims.</p>
   <h2>Allegations, responses and findings</h2>
@@ -37,7 +44,7 @@ import counts from '../data/site/counts.json';
   </ul>
   <p>These are editorial operating standards, not automated processes. Each page shows when it was last reviewed and when its next review is due. A page past its review date is marked as overdue.</p>
   <h2>Editorial workflow</h2>
-  <p>Research → draft → source check → substantive review → publish → scheduled review → correction or archive. Substantive changes are recorded in the public version history of the site's repository.</p>
+  <p>Research → draft → passage located → passage read against the claim → substantive review → publish → scheduled review → correction or archive. Substantive changes are recorded in the public version history of the site's repository.</p>
   <h2>AI and automation</h2>
   <ul>{AI_USE.map((x) => <li>{x}</li>)}</ul>
   <p><a href={url('corrections/')}>How to request a correction</a></p>

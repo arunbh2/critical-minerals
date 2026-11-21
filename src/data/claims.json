@@ -15,7 +15,28 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "miningcom-gcmo-2025"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported-with-qualification",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "A news report of the IEA outlook, not the IEA text itself. The passage speaks of the \"top three refined material suppliers\"; the list of minerals comes from the same report but is not in the recorded passage.",
+      "history": null,
+      "passages": [
+        {
+          "source": "miningcom-gcmo-2025",
+          "locatedBy": "86%",
+          "passage": "el. the average market share of the top three refined material suppliers rose from 82% to 86%, with single countries-china for cobalt, graphite and rare earths, and indonesia for nick"
+        },
+        {
+          "source": "miningcom-gcmo-2025",
+          "locatedBy": "2020",
+          "passage": "ification of the global supply chain has seen little progress. the report highlights from 2020 to 2024, global refining capacity of critical minerals became even more concentrated, wit"
+        }
+      ]
+    }
   },
   {
     "id": "c-mining-top3-2024",
@@ -31,7 +52,17 @@
     "asOf": "2024",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-2-second-pass",
-    "evidenceSources": []
+    "evidenceSources": [],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "not-reviewed",
+      "reviewer": null,
+      "reviewedAt": null,
+      "batch": "2026-11-5-passage-review",
+      "qualification": "No supporting passage was located automatically, so there is nothing yet to review.",
+      "history": null,
+      "passages": []
+    }
   },
   {
     "id": "c-growth-single-supplier",
@@ -50,7 +81,17 @@
     "evidenceSources": [
       "miningcom-gcmo-2025",
       "northernminer-gcmo-2025"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "not-reviewed",
+      "reviewer": null,
+      "reviewedAt": null,
+      "batch": "2026-11-5-passage-review",
+      "qualification": "No supporting passage was located automatically, so there is nothing yet to review.",
+      "history": null,
+      "passages": []
+    }
   },
   {
     "id": "c-gcmo-2026-growth",
@@ -67,7 +108,28 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "gmr-gcmo-2026"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported-with-qualification",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "The year term \"2026\" matched an advertisement on the page, so it locates nothing; the outlook year rests on the article's own publication date. The economic-security wording paraphrases the article's headline.",
+      "history": null,
+      "passages": [
+        {
+          "source": "gmr-gcmo-2026",
+          "locatedBy": "three-quarters | three quarters",
+          "passage": "iners - indonesia for nickel and china for other key energy minerals - accounted for over three-quarters of total growth in refined supply. in several markets, including for manganese, nickel, a"
+        },
+        {
+          "source": "gmr-gcmo-2026",
+          "locatedBy": "export restrictions",
+          "passage": "tel: +44 (0)1252 718 999 | email: enquiries@ globalminingreview.com supply concentration, export restrictions, and declining investment put critical mineral security at risk | global mining review ho"
+        }
+      ]
+    }
   },
   {
     "id": "c-india-cm-list-2023",
@@ -83,7 +145,28 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "iep-cm-2023"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": null,
+      "passages": [
+        {
+          "source": "iep-cm-2023",
+          "locatedBy": "30 critical minerals",
+          "passage": "unveiled india's first-ever report on “critical minerals for india” identifying a list of 30 critical minerals. india has taken a significant step towards enhancing its strategic resource security by"
+        },
+        {
+          "source": "iep-cm-2023",
+          "locatedBy": "2023",
+          "passage": "ultimedia reports and documents opinions press releases critical minerals for india 27/06/2023 ministry of mines the union minister of coal & mines has unveiled india's first-ever repo"
+        }
+      ]
+    }
   },
   {
     "id": "c-india-ncmm-2025",
@@ -98,11 +181,32 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "tribune-ncmm-2025"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "Reported by a news agency from the Cabinet announcement.",
+      "history": null,
+      "passages": [
+        {
+          "source": "tribune-ncmm-2025",
+          "locatedBy": "16,300",
+          "passage": "oved the launch of the national critical mineral mission (ncmm) with an expenditure of rs.16300 crore and expected investment of rs.18000 crore by psus, etc. according to the cabinet, a"
+        },
+        {
+          "source": "tribune-ncmm-2025",
+          "locatedBy": "34,300",
+          "passage": "'national critical mineral mission' to build a resilient value chain with an outlay of rs.34300 cr over seven years - the tribune gen z speak up ! about the tribune code of ethics downl"
+        }
+      ]
+    }
   },
   {
     "id": "c-india-ncmm-scope",
-    "text": "The Mission covers exploration, mining, beneficiation, processing and recovery from end-of-life products, and includes support for overseas mineral asset acquisition, a proposed national stockpile and mineral processing parks.",
+    "text": "The Mission covers exploration, mining, beneficiation, processing and recovery from end-of-life products. It also covers acquiring mineral assets abroad and proposes a stockpile of critical minerals within the country.",
     "sources": [
       "pmindia-ncmm-2025",
       "tribune-ncmm-2025"
@@ -113,11 +217,32 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "tribune-ncmm-2025"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": "Narrowed on review: the earlier text also named mineral processing parks, which the recorded passage does not show.",
+      "passages": [
+        {
+          "source": "tribune-ncmm-2025",
+          "locatedBy": "exploration",
+          "passage": "ved by the union cabinet, will encompass all stages of the value chain, including mineral exploration, mining, beneficiation, processing, and recovery from end-of-life products. the mission w"
+        },
+        {
+          "source": "tribune-ncmm-2025",
+          "locatedBy": "stockpile",
+          "passage": "ts abroad and enhance trade with resource-rich countries. it also proposes development of stockpile of critical minerals within the country. the mission includes provisions for setting up o"
+        }
+      ]
+    }
   },
   {
     "id": "c-india-mmdr-2023",
-    "text": "A 2023 amendment to India's mining law allows the central government to auction concessions for listed critical minerals and creates an exploration licence for critical and deep-seated minerals. Auction revenue accrues to state governments.",
+    "text": "A 2023 amendment to India's mining law provides for the central government to auction mining leases and composite licences for specified critical and strategic minerals, and creates an exploration licence that state governments grant through competitive bidding.",
     "sources": [
       "prs-mmdr-2023",
       "iea-policy-mmdr-2023"
@@ -128,7 +253,28 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "prs-mmdr-2023"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": "Narrowed on review: the earlier text said auction revenue accrues to state governments. The passage its term located says state governments grant exploration licences; it says nothing about revenue.",
+      "passages": [
+        {
+          "source": "prs-mmdr-2023",
+          "locatedBy": "critical",
+          "passage": "ed cases. the bill adds that auction for composite licence and mining lease for specified critical and strategic minerals will be conducted by the central government. these minerals includ"
+        },
+        {
+          "source": "prs-mmdr-2023",
+          "locatedBy": "state government",
+          "passage": "the act. auction for exploration licence : the exploration licence will be granted by the state government through competitive bidding. the central government will prescribe details such as manner"
+        }
+      ]
+    }
   },
   {
     "id": "c-india-first-tranche",
@@ -140,7 +286,17 @@
     "asOf": "November 2023",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-1-initial",
-    "evidenceSources": []
+    "evidenceSources": [],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "not-reviewed",
+      "reviewer": null,
+      "reviewedAt": null,
+      "batch": "2026-11-5-passage-review",
+      "qualification": "No supporting passage was located automatically, so there is nothing yet to review.",
+      "history": null,
+      "passages": []
+    }
   },
   {
     "id": "c-india-dmf-collections",
@@ -155,7 +311,28 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "iwp-dmf-2025"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported-with-qualification",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "Reported by a research outlet, not the Ministry's own figures. That the foundations are funded by levies on leaseholders is how the scheme is designed; this passage does not show it.",
+      "history": null,
+      "passages": [
+        {
+          "source": "iwp-dmf-2025",
+          "locatedBy": "district mineral foundation*",
+          "passage": "ance and policy mining's promise, communities' plight: unearthing the truth about india's district mineral foundations despite holding over rs. 1 lakh crore, are district mineral foundations truly benefiting"
+        },
+        {
+          "source": "iwp-dmf-2025",
+          "locatedBy": "odisha",
+          "passage": ", scarcity on the ground the dmfs have collected an impressive rs. 103242 crores so far . odisha, chhattisgarh, and jharkhand alone account for over 56% of the total. however, only about"
+        }
+      ]
+    }
   },
   {
     "id": "c-india-dmf-unspent",
@@ -167,7 +344,17 @@
     "asOf": "2024–2025",
     "checkedAt": "2026-11-17",
     "batch": "2026-11-1-initial",
-    "evidenceSources": []
+    "evidenceSources": [],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "not-reviewed",
+      "reviewer": null,
+      "reviewedAt": null,
+      "batch": "2026-11-5-passage-review",
+      "qualification": "No supporting passage was located automatically, so there is nothing yet to review.",
+      "history": null,
+      "passages": []
+    }
   },
   {
     "id": "c-india-bwmr-2022",
@@ -184,11 +371,32 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "mondaq-bwmr-2022"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "A law-firm summary, not the gazette text.",
+      "history": null,
+      "passages": [
+        {
+          "source": "mondaq-bwmr-2022",
+          "locatedBy": "battery waste management rules",
+          "passage": "ulatory landscape: the ministry of environment, forest, and climate change introduced the battery waste management rules, 2022 (\" bwmr \"), replacing the batteries (management and handling) rules, 2001 (\"rules 2"
+        },
+        {
+          "source": "mondaq-bwmr-2022",
+          "locatedBy": "extended producer responsibility",
+          "passage": "sible for ensuring the disposal and recycling of waste batteries in compliance with their extended producer responsibility (\" epr\" ) requirements. additionally, importers of batteries or equipment containing batt"
+        }
+      ]
+    }
   },
   {
     "id": "c-indonesia-ore-ban",
-    "text": "Indonesia has prohibited exports of nickel ore since January 2020.",
+    "text": "Indonesia announced a ban on nickel ore exports to take effect in January 2020.",
     "sources": [
       "iea-policy-indonesia-nickel",
       "aljazeera-nickel-2019",
@@ -200,7 +408,23 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "aljazeera-nickel-2019"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported-with-qualification",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "A 2019 report of the announcement. It cannot show whether the ban remains in force today.",
+      "history": "Narrowed on review: the earlier text said exports have been prohibited \"since January 2020\", which a 2019 report cannot establish.",
+      "passages": [
+        {
+          "source": "aljazeera-nickel-2019",
+          "locatedBy": "nickel ore",
+          "passage": "world's biggest nickel ore maker bans exports from january 2020 | joko widodo | al jazeera skip links skip to conten"
+        }
+      ]
+    }
   },
   {
     "id": "c-indonesia-nickel-share",
@@ -218,11 +442,21 @@
     "batch": "2026-11-2-second-pass",
     "evidenceSources": [
       "usgs-mcs-2025-nickel"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "not-reviewed",
+      "reviewer": null,
+      "reviewedAt": null,
+      "batch": "2026-11-5-passage-review",
+      "qualification": "No supporting passage was located automatically, so there is nothing yet to review.",
+      "history": null,
+      "passages": []
+    }
   },
   {
     "id": "c-morowali-2023",
-    "text": "In December 2023 a furnace accident at a nickel smelter in the Indonesia Morowali Industrial Park killed workers and injured dozens. Initial reports gave 13 deaths; police later revised the death toll up from 13 to 18, and the park operator's account of the cause was disputed.",
+    "text": "In December 2023 a furnace explosion at a nickel smelter in the Indonesia Morowali Industrial Park killed workers and injured dozens. Initial reports gave 13 deaths; police later revised the death toll up from 13 to 18.",
     "sources": [
       "jakpost-morowali-2023-12-24",
       "jakpost-morowali-2023-12-27",
@@ -236,7 +470,28 @@
       "jakpost-morowali-2023-12-24",
       "jakpost-morowali-2023-12-27",
       "bhrrc-morowali-2023"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "Later reporting on the same page gives higher totals as further deaths were recorded; the claim states the figures as they were reported.",
+      "history": "Narrowed on review: the earlier text said the park operator's account of the cause was disputed. That may be so, but no recorded passage shows it.",
+      "passages": [
+        {
+          "source": "jakpost-morowali-2023-12-24",
+          "locatedBy": "furnace",
+          "passage": "indonesia nickel smelter furnace blast kills 13 workers, wounds 38 - archipelago - the jakarta post the jakarta post pleas"
+        },
+        {
+          "source": "jakpost-morowali-2023-12-27",
+          "locatedBy": "13",
+          "passage": "li industrial park (imip) said on tuesday. the police also revised the death toll up from 13 to 18. itss operates as one of the tenants at the imip, the world's nickel production epi"
+        }
+      ]
+    }
   },
   {
     "id": "c-drc-cobalt-share",
@@ -252,11 +507,32 @@
     "evidenceSources": [
       "usgs-mcs-2025-cobalt",
       "usgs-mcs-2025"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "\"Roughly three-quarters\" is our arithmetic from the two USGS estimates.",
+      "history": null,
+      "passages": [
+        {
+          "source": "usgs-mcs-2025-cobalt",
+          "locatedBy": "220,000",
+          "passage": "202 3 20 2 4 united states 500 300 70000 australia 5220 3600 10 1700000 canada 4220 4500 220000 congo (kinshasa) 175000 220000 6000000 cuba 3300 3500 500000 indonesia 19000 28000 640000"
+        },
+        {
+          "source": "usgs-mcs-2025-cobalt",
+          "locatedBy": "290,000",
+          "passage": "0000 turkey 2500 2700 91000 other countries 6080 6200 800000 world total (rounded) 238000 290000 11000000 world resources: 9 identified cobalt resources of the united states are estimate"
+        }
+      ]
+    }
   },
   {
     "id": "c-drc-export-2025",
-    "text": "In 2025 the Democratic Republic of the Congo suspended cobalt exports and later replaced the suspension with export quotas.",
+    "text": "In 2025 the Democratic Republic of the Congo introduced quotas on cobalt exports.",
     "sources": [
       "iea-policy-drc-cobalt",
       "kitco-drc-quotas-2025",
@@ -269,11 +545,32 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "kitco-drc-quotas-2025"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": "Narrowed on review: the earlier text also said exports were first suspended. Its locating term (\"ban\") matched a passage about banning exporters who breach quotas, which is not the same thing.",
+      "passages": [
+        {
+          "source": "kitco-drc-quotas-2025",
+          "locatedBy": "cobalt",
+          "passage": "congo to permanently ban cobalt exporters that breach quotas | kitco news buy/sell gold & silver bullion coins and bars p"
+        },
+        {
+          "source": "kitco-drc-quotas-2025",
+          "locatedBy": "2025",
+          "passage": "ongo to permanently ban cobalt exporters that breach quotas by reuters published: oct 06, 2025 - 7:45 pm updated: oct 06, 2025 - 7:47 pm reuters the democratic republic of congo will p"
+        }
+      ]
+    }
   },
   {
     "id": "c-china-graphite-2023",
-    "text": "China introduced export permit requirements for certain graphite products, announced in October 2023 and effective from December 2023.",
+    "text": "China introduced licensing requirements for graphite exports, in effect from December 2023.",
     "sources": [
       "orf-china-controls"
     ],
@@ -283,7 +580,23 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "orf-china-controls"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": "Narrowed on review: the announcement month was not in the recorded passage.",
+      "passages": [
+        {
+          "source": "orf-china-controls",
+          "locatedBy": "december 2023",
+          "passage": "r and purchaser licensing requirements for exports of graphite, which went into effect in december 2023. on august 15, 2024, the prc announced export restrictions on dual-use exports of antimon"
+        }
+      ]
+    }
   },
   {
     "id": "c-china-ree-2025",
@@ -299,11 +612,32 @@
     "evidenceSources": [
       "csis-ree-2025",
       "orf-china-controls"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": null,
+      "passages": [
+        {
+          "source": "csis-ree-2025",
+          "locatedBy": "samarium",
+          "passage": "trump's tariff increases on chinese products. the new restrictions apply to 7 of 17 rees-samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium-and requires companies"
+        },
+        {
+          "source": "csis-ree-2025",
+          "locatedBy": "april",
+          "passage": "ardy/getty images critical questions by gracelin baskaran and meredith schwartz published april 14, 2025 remote visualization on april 4, china's ministry of commerce imposed export res"
+        }
+      ]
+    }
   },
   {
     "id": "c-eu-crma",
-    "text": "The EU Critical Raw Materials Act, adopted in 2024, sets non-binding 2030 benchmarks for EU extraction (10%), processing (40%) and recycling (25%) of annual consumption of strategic raw materials.",
+    "text": "The EU Critical Raw Materials Act, adopted in 2024, sets 2030 benchmarks for the share of the EU's annual consumption of strategic raw materials that comes from EU extraction (10%), EU processing (40%) and recycling (25%).",
     "sources": [
       "council-crma",
       "nrf-crma-2024",
@@ -315,7 +649,23 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "nrf-crma-2024"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported-with-qualification",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "A law-firm summary of the adopted act, not the legal text.",
+      "history": null,
+      "passages": [
+        {
+          "source": "nrf-crma-2024",
+          "locatedBy": "10%",
+          "passage": "ma also sets out three benchmarks for the eu's annual consumption of these raw materials; 10% derived from local extraction; 40% to be processed in the eu; and 25% derived from recycl"
+        }
+      ]
+    }
   },
   {
     "id": "c-eu-strategic-projects",
@@ -332,7 +682,28 @@
     "evidenceSources": [
       "mw-eu-47-projects",
       "nsenergy-eu-13-2025"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": null,
+      "passages": [
+        {
+          "source": "mw-eu-47-projects",
+          "locatedBy": "47 strategic projects | 47 projects",
+          "passage": "er media contract publishing editor font size: - + the european commission has designated 47 strategic projects across 13 member states as part of the critical raw materials act (crma) implementation."
+        },
+        {
+          "source": "nsenergy-eu-13-2025",
+          "locatedBy": "13 strategic projects | 13 overseas | 13 projects | 13 new",
+          "passage": "y. (credit: aliaksandr antanovich/shutterstock) the european commission (ec) has endorsed 13 strategic projects situated outside the european union (eu) to ensure raw material access and augment local"
+        }
+      ]
+    }
   },
   {
     "id": "c-eu-batteries",
@@ -349,11 +720,37 @@
     "evidenceSources": [
       "eurlex-batteries",
       "erp-batteries-2023"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "The passport applies to light means of transport, industrial and electric-vehicle batteries; \"larger batteries\" is our shorthand.",
+      "history": null,
+      "passages": [
+        {
+          "source": "eurlex-batteries",
+          "locatedBy": "50%",
+          "passage": "d of 2028 and 61% by the end of 2031; targets for lithium recovery from waste batteries - 50% by the end of 2027 and 80% by the end of 2031 - which can be amended to take into account"
+        },
+        {
+          "source": "eurlex-batteries",
+          "locatedBy": "16%",
+          "passage": "nt for industrial batteries, starting, lighting and ignition batteries and ev batteries - 16% for cobalt, 85% for lead, 6% for lithium and 6% for nickel from 18 august 2031; recycling"
+        },
+        {
+          "source": "eurlex-batteries",
+          "locatedBy": "passport",
+          "passage": "e required in the form of a qr code and, for lmt, industrial and ev batteries, a 'battery passport'. labelling requirements will apply from 2026 and the qr code from 2027. the regulation a"
+        }
+      ]
+    }
   },
   {
     "id": "c-un-panel-2024",
-    "text": "In 2024 the UN Secretary-General's Panel on Critical Energy Transition Minerals published seven voluntary guiding principles. Its first principle is that human rights must be at the core of all mineral value chains.",
+    "text": "In 2024 the UN Secretary-General's Panel on Critical Energy Transition Minerals published seven guiding principles and five actionable recommendations to embed equity and justice in mineral value chains.",
     "sources": [
       "un-panel-cetm",
       "iisd-un-panel-2024"
@@ -364,7 +761,23 @@
     "batch": "2026-11-4-fourth-pass",
     "evidenceSources": [
       "un-panel-cetm"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": "Narrowed on review: the earlier text quoted the first principle, whose wording is not in the recorded passage.",
+      "passages": [
+        {
+          "source": "un-panel-cetm",
+          "locatedBy": "seven",
+          "passage": "mber 2024, the panel published its report “resourcing the energy transition.” it outlined seven guiding principles and five actionable recommendations to embed equity and justice in the"
+        }
+      ]
+    }
   },
   {
     "id": "c-jetp-indonesia",
@@ -380,7 +793,28 @@
     "evidenceSources": [
       "chn-jetp-2022",
       "eeas-jetp-cipp"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": null,
+      "history": null,
+      "passages": [
+        {
+          "source": "eeas-jetp-cipp",
+          "locatedBy": "20bn | 20 billion",
+          "passage": "er sector, and outlines a just transition plan. it also serves as the basis to drive the $20 billion in jetp financing toward specific projects and priorities for indonesia's energy transiti"
+        },
+        {
+          "source": "eeas-jetp-cipp",
+          "locatedBy": "comprehensive investment and policy plan",
+          "passage": "indonesia just energy transition comprehensive investment and policy plan launched | eeas sorry, you need to enable javascript to visit this website. skip to main"
+        }
+      ]
+    }
   },
   {
     "id": "c-wb-csm-2019",
@@ -396,6 +830,22 @@
     "evidenceSources": [
       "miningcom-csm-2019",
       "wb-csm"
-    ]
+    ],
+    "kind": "reported-fact",
+    "review": {
+      "outcome": "supported-with-qualification",
+      "reviewer": "assisted",
+      "reviewedAt": "2026-11-21",
+      "batch": "2026-11-5-passage-review",
+      "qualification": "A 2019 news report of the launch. The facility's partners may have changed since.",
+      "history": null,
+      "passages": [
+        {
+          "source": "miningcom-csm-2019",
+          "locatedBy": "rio tinto",
+          "passage": "mineral value chain. partners include the german government and private sector companies, rio tinto and anglo american. the facility will also assist governments to build a robust policy, r"
+        }
+      ]
+    }
   }
 ]

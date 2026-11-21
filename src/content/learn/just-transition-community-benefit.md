@@ -18,7 +18,7 @@ unclear:
 
 "Just transition" means moving to a low-carbon economy in a way that is fair to workers and communities, especially those whose lives and livelihoods are most affected. In minerals, that fairness has to hold in places that produce materials, not only in places that consume clean technologies.
 
-The UN Secretary-General's Panel on Critical Energy Transition Minerals, reporting in September 2024, put it plainly: the first of its seven voluntary principles is that human rights must be at the core of all mineral value chains.
+In 2024 the UN Secretary-General's Panel on Critical Energy Transition Minerals published seven guiding principles and five recommendations to embed equity and justice in mineral value chains.
 
 ## Rights first
 

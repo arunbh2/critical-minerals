@@ -204,6 +204,18 @@ const claims = defineCollection({
     checkedAt: date.optional(),
     batch: z.string().optional(),
     evidenceSources: z.array(z.string()).default([]),
+    /** Reported fact, our interpretation, or hypothesis to test. */
+    kind: ids('claimKinds').default('reported-fact'),
+    /** Whether the located passage supports the claim as worded (tools/research-review.js). */
+    review: z.object({
+      outcome: ids('reviewOutcomes'),
+      reviewer: ids('reviewers').nullable(),
+      reviewedAt: date.nullable(),
+      batch: z.string(),
+      qualification: z.string().nullable(),
+      history: z.string().nullable(),
+      passages: z.array(z.object({ source: z.string(), locatedBy: z.string(), passage: z.string() })),
+    }).default({ outcome: 'not-reviewed', reviewer: null, reviewedAt: null, batch: '', qualification: null, history: null, passages: [] }),
   }),
 });
 
