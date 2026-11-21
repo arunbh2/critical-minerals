@@ -924,7 +924,7 @@
     "instruments": [
       "grant"
     ],
-    "accessRoute": "Not described. The programme page refers to working \"with our grantees\" but gives no application route.",
+    "accessRoute": null,
     "careersUrl": "https://www.climateworks.org/careers/",
     "functions": [
       "finance-partnerships",

@@ -1,5 +1,5 @@
 // Plain-text rendering of the for-ai content, shared by /for-ai.txt and /agents.txt.
-import { SITE, OWNERSHIP, STANDARDS, AGENT_DO, AGENT_AVOID, HOST_LIMITS, EVIDENCE_LABELS, EVIDENCE_STEPS, REVIEW_STATUS, CONTENT_SIGNALS, ASSISTANT_WARNING, citation } from '../../tools/site-text.js';
+import { SITE, OWNERSHIP, STANDARDS, AGENT_DO, AGENT_AVOID, HOST_LIMITS, EVIDENCE_LABELS, EVIDENCE_STEPS, REVIEW_STATUS, TASK_EXAMPLES, CONTENT_SIGNALS, ASSISTANT_WARNING, citation } from '../../tools/site-text.js';
 import counts from '../data/site/counts.json';
 import { endpoints } from './ai';
 
@@ -11,7 +11,7 @@ export function forAiText(site: URL | undefined) {
     SITE.description,
     `Coverage: ${SITE.coverage}`,
     `Ownership: ${OWNERSHIP}`,
-    `Published reported facts: ${counts.claimsPublished}. Passage located in official sources for ${counts.claimsOriginalChecked}, in secondary reporting for ${counts.claimsSecondary}; read against the claim with AI assistance for ${counts.claimsReviewedAssisted}, by a named editor for ${counts.claimsReviewedEditor}. Automated checks locate passages; they are not independent verification. Verified open funding opportunities listed: ${counts.openOpportunities}.`,
+    `Published reported facts: ${counts.claimsPublished}. Passage located in official sources for ${counts.claimsOriginalChecked}, in secondary reporting for ${counts.claimsSecondary}; read against the claim with AI assistance for ${counts.claimsReviewedAssisted}, by a named editor for ${counts.claimsReviewedEditor}. Automated checks locate passages; they are not independent verification. Funding opportunities recorded as open at their last check: ${counts.openOpportunities}; jobs, consultancies and tenders: ${counts.openAssignments}. Recompute status from each record's deadline and lastChecked.`,
     '',
     'Authentication: none. Everything is public and read-only.',
     `Content signals: ${Object.entries(CONTENT_SIGNALS).map(([k, v]) => `${k}=${v}`).join(', ')}`,
@@ -24,6 +24,9 @@ export function forAiText(site: URL | undefined) {
     '',
     '## Review status',
     ...REVIEW_STATUS.map((l) => `- ${l.label}: ${l.explain}`),
+    '',
+    '## Task examples',
+    ...TASK_EXAMPLES.map((t) => `- ${t.task}: ${t.how}`),
     '',
     '## Editorial standards',
     ...STANDARDS.map((s) => `- ${s}`),

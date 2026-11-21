@@ -35,7 +35,7 @@ const labels = Object.fromEntries([...EXPERIENCE, ...INTERESTS, ...CONTRIBUTIONS
             {CONTRIBUTIONS.map((e) => <label class="check"><input type="radio" name="c" value={e.id} /> {e.label}</label>)}
           </div>
         </fieldset>
-        <p><button class="btn btn-primary" type="submit">Show matching pathways</button> <a href="?" class="btn btn-quiet" data-reset>Clear</a></p>
+        <p class="actions"><button class="btn btn-primary" type="submit">Show matching pathways</button> <a href="?" class="btn btn-quiet" data-reset>Clear</a></p>
       </form>
       <section aria-labelledby="results-h" data-results-wrap hidden>
         <h2 id="results-h" tabindex="-1">Pathways that match</h2>
@@ -105,5 +105,9 @@ const labels = Object.fromEntries([...EXPERIENCE, ...INTERESTS, ...CONTRIBUTIONS
   .check { display: flex; gap: 8px; align-items: flex-start; font-weight: 400; min-height: 32px; padding: 4px 0; font-family: var(--font-sans); }
   .check input { width: 24px; height: 24px; flex: none; margin: 0; }
   .how { margin-top: 2rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .actions .btn { white-space: normal; max-width: 100%; }
+  .explorer, .explorer fieldset, .checks, .check { min-width: 0; }
+  .check { overflow-wrap: anywhere; }
   @media print { .explorer { display: none; } }
 </style>

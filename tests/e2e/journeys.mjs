@@ -190,6 +190,68 @@ await step('Open data exports and schema load under the base path', async () => 
   assert.ok(fin.records.every((r) => r.accessStatusText && r.verificationStatusText));
 });
 
+// Funding: precedents never pose as opportunities; amounts stay in native currency.
+await step('Funding: hub to award ledger to award to funder, with native currency and no apply link', async () => {
+  await page.goto(U('funding/'));
+  assert.match(await page.locator('h1').innerText(), /Follow the money/);
+  await page.locator('a', { hasText: 'See what has been funded' }).click();
+  assert.match(page.url(), /funding\/awards\/$/);
+  assert.ok(await page.locator('text=£3,258,348').count(), 'GBP amount kept in original currency');
+  await page.locator('a[href$="funding/awards/fcdo-nrgi-emerge/"]').first().click();
+  assert.ok(await page.locator('text=it is not an opportunity to apply').count());
+  assert.equal(await page.locator('a', { hasText: /apply/i }).count(), 0);
+  await page.locator('dd a[href$="organisations/fcdo/"]').first().click();
+  assert.ok(await page.locator('#fund-h').count());
+  assert.ok(await page.locator('#not-h').count(), 'interpretation paired with what is not established');
+});
+
+await step('Funding: filters reset, show an honest empty state and keep state in the URL', async () => {
+  await page.goto(U('funding/funders/?type=foundation&access=route'));
+  assert.ok(await page.locator('[data-filter-empty]').isVisible(), 'empty state shown');
+  await page.locator('[data-filter-empty] [data-filter-reset]').click();
+  assert.ok(!(await page.locator('[data-filter-empty]').isVisible()));
+  assert.equal(new URL(page.url()).search, '');
+  await page.selectOption('#f-relevance', 'adjacent');
+  assert.match(page.url(), /relevance=adjacent/);
+  const shown = await page.locator('[data-filter-item]:visible').count();
+  assert.ok(shown >= 1);
+});
+
+await step('Opportunities: a passed deadline closes in the browser and hides the apply link', async () => {
+  const p2 = await ctx.newPage();
+  await p2.clock.setFixedTime(new Date('2027-01-05T12:00:00Z'));
+  await p2.goto(U('opportunities/eiti-kazakhstan-independent-administrator-2026/'));
+  assert.match(await p2.locator('[data-op-status]').first().innerText(), /Closed: deadline passed/);
+  assert.ok(!(await p2.locator('[data-apply]').isVisible()), 'apply link hidden after the deadline');
+  await p2.goto(U('opportunities/dutch-diamonds-partnerships-2026-27/'));
+  assert.ok(!(await p2.locator('[data-apply]').isVisible()), 'a forecast is never shown with an apply link');
+  await p2.close();
+});
+
+await step('Opportunities: a date-only deadline is shown without invented time', async () => {
+  await page.goto(U('opportunities/eiti-kazakhstan-independent-administrator-2026/'));
+  assert.ok(await page.locator('text=31 December 2026 (closing time not stated)').count());
+  const ops = await (await page.request.get(U('data/opportunities.json'))).json();
+  assert.ok(ops.records.every((r) => r.statusAsOfBuild && r.lastChecked && r.passages.length));
+  const awards = await (await page.request.get(U('data/awards.json'))).json();
+  assert.ok(awards.records.every((r) => r.limitations && r.amount.currency));
+});
+
+await step('Careers: explorer returns reasons, keeps state in the URL and survives reload', async () => {
+  await page.goto(U('careers/explorer/'));
+  await page.locator('input[name="x"][value="community-participation"]').check();
+  await page.locator('button', { hasText: 'Show matching pathways' }).click();
+  assert.match(page.url(), /x=community-participation/);
+  assert.ok(await page.locator('[data-results] li').count() >= 1);
+  assert.ok(await page.locator('text=Why it appears').first().isVisible());
+  await page.reload();
+  assert.ok(await page.locator('input[name="x"][value="community-participation"]').isChecked());
+  assert.ok(await page.locator('[data-results] li').count() >= 1);
+  await page.goto(U('careers/pathways/worker-protection/'));
+  assert.ok(await page.locator('text=Regulated work').count());
+  assert.ok(await page.locator('text=Not vacancies').count());
+});
+
 // Mobile, 360px
 const mob = await browser.newContext({ viewport: { width: 360, height: 780 } });
 const mp = await mob.newPage();
@@ -206,7 +268,7 @@ await step('360px: compact logo, menu opens and Escape returns focus', async () 
   assert.ok(sw <= 360, `horizontal scroll ${sw}`);
 });
 await step('360px: no horizontal scroll on home, finance, worksheet, article', async () => {
-  for (const p of ['', 'finance/', 'tools/community-benefit/', 'learn/the-lifecycle/', 'sources/', 'policies/']) {
+  for (const p of ['', 'finance/', 'tools/community-benefit/', 'learn/the-lifecycle/', 'sources/', 'policies/', 'funding/', 'funding/awards/', 'funding/funders/', 'careers/', 'careers/explorer/', 'careers/pathways/community-rights/', 'opportunities/dutch-diamonds-partnerships-2026-27/', 'organisations/rvo/']) {
     await mp.goto(U(p));
     const sw = await mp.evaluate(() => document.documentElement.scrollWidth);
     assert.ok(sw <= 360, `${p || 'home'} scrollWidth ${sw}`);
@@ -227,14 +289,18 @@ await step('Without JavaScript: dossier, sources, records and navigation remain 
   assert.ok(await np.locator('#ws-place').isVisible());
   assert.ok(await np.locator('fieldset[data-step="questions"]').isVisible(), 'all sections visible without JS');
   await np.goto(U(''));
-  assert.ok(await np.locator('.lc-panel').nth(4).isVisible(), 'lifecycle text equivalent visible');
+  assert.ok(await np.locator('.system figcaption').isVisible(), 'context diagram text equivalent visible');
+  await np.goto(U('funding/opportunities/'));
+  assert.ok(await np.locator('#closed-h').isVisible(), 'closed precedents listed without JS');
+  await np.goto(U('careers/explorer/'));
+  assert.ok(await np.locator('#all-h').isVisible(), 'explorer rules table available without JS');
 });
 
 const axeSource = await readFile(new URL('../../node_modules/axe-core/axe.min.js', import.meta.url), 'utf8');
 for (const [label, ctxp, w] of [['desktop', page, 1280], ['360px', mp, 360]]) {
   await step(`Accessibility scan (axe, WCAG 2.1 AA) at ${label}: home, article, dossier, tracker, worksheet, search`, async () => {
     const problems = [];
-    for (const p of ['', 'learn/what-makes-a-mineral-critical/', 'countries/india/', 'finance/', 'tools/community-benefit/', 'search/', 'policies/', 'landscape/']) {
+    for (const p of ['', 'learn/what-makes-a-mineral-critical/', 'countries/india/', 'finance/', 'tools/community-benefit/', 'search/', 'policies/', 'landscape/', 'funding/', 'funding/funders/', 'funding/awards/', 'funding/opportunities/', 'opportunities/eiti-kazakhstan-independent-administrator-2026/', 'careers/', 'careers/explorer/', 'careers/pathways/circularity/', 'organisations/nrgi/', 'evidence/']) {
       await ctxp.goto(U(p));
       await ctxp.addScriptTag({ content: axeSource });
       const res = await ctxp.evaluate(async () => (await window.axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] } })).violations.map((v) => ({ id: v.id, impact: v.impact, n: v.nodes.length, t: v.nodes[0]?.target?.join(' ') })));

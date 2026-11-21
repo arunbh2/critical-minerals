@@ -1,16 +1,41 @@
 [
   {
+    "id": "2026-11-21-funding-careers",
+    "date": "2026-11-21",
+    "title": "Funding and careers sections, and a truthful evidence workflow",
+    "summary": "Added a Funding section (funder and administrator profiles, programmes, an award ledger and opportunities with honest statuses) and a Careers section (eight pathway guides, a transition guide, employers, vacancies and assignments, and a skills explorer). Automated checks now only locate a claim's supporting passage; a claim is published after the passage is read against it, and each claim shows its label and review status. Reading the published claims this way led to eight being narrowed. Navigation and the homepage were reorganised around reader tasks.",
+    "paths": [
+      "funding/",
+      "careers/",
+      "methodology/",
+      "evidence/",
+      ""
+    ]
+  },
+  {
     "id": "2026-11-17-ai-access",
     "date": "2026-11-17",
     "title": "AI and agent access, evidence gate and change log",
     "summary": "Added Markdown twins of every page, llms.txt and llms-full.txt, a page and files for AI systems, evidence packs, open data descriptions (OpenAPI and CSV), discovery files and a citation page. Claims now reach pages only after an automated check finds every term they rest on in a cited source; each claim carries one of three evidence labels.",
-    "paths": ["for-ai/", "use-with-ai/", "cite/", "growing/", "sources/"]
+    "paths": [
+      "for-ai/",
+      "use-with-ai/",
+      "cite/",
+      "growing/",
+      "sources/"
+    ]
   },
   {
     "id": "2026-11-17-first-release",
     "date": "2026-11-17",
     "title": "First release",
     "summary": "A six-part learning journey, six mineral profiles, India and Indonesia dossiers, six issue explainers, policy, finance and organisation records, three case studies, selected updates, search, filters and the community-benefit worksheet.",
-    "paths": ["", "start-here/", "countries/india/", "countries/indonesia/", "tools/community-benefit/"]
+    "paths": [
+      "",
+      "start-here/",
+      "countries/india/",
+      "countries/indonesia/",
+      "tools/community-benefit/"
+    ]
   }
 ]

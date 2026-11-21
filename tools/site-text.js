@@ -88,6 +88,17 @@ export const AGENT_AVOID = [
   'Stating figures without their date, or presenting older figures as current.',
 ];
 
+/**
+ * Task-oriented examples for agents, using only static files. Shared by /for-ai/,
+ * for-ai.json, for-ai.txt, llms.txt and the OpenAPI description.
+ */
+export const TASK_EXAMPLES = [
+  { task: 'Find community-governance and accountability programmes relevant to Asia', how: 'Read /data/programmes.json. Keep records whose issues include "accountability-remedy" or "community-consent" and whose countries include "india" or "indonesia", or whose geography names Asian countries. Report each programme with its programmeStatus, accessRoute and notEstablished field.' },
+  { task: 'Tell closed precedents apart from open calls', how: 'Read /data/opportunities.json. Use statusAsOfBuild only as a hint: recompute from deadline and lastChecked using statusAsOfBuild.rule. Treat a record as open only if status is open or rolling, the latest deadline instant has not passed, and lastChecked is within the freshness limit. Everything else is a precedent, a forecast or needs re-checking. Awards (/data/awards.json) and programmes are never opportunities.' },
+  { task: 'Find source-backed career pathways in circularity', how: 'Read /data/pathways.json and select the record with id "circularity". Its learning[].source ids resolve in /data/sources.json. Pathways are our interpretation (see limitations); illustrative titles are not vacancies.' },
+  { task: 'Quote a funding amount correctly', how: 'Use amount.value with amount.currency and amount.basis exactly as given. Mention amount.reported conversions only as the recipient\u2019s own figures. Never add amounts across records.' },
+];
+
 /** What this static host can and cannot do. Claim nothing more. */
 export const HOST_LIMITS = [
   'The site is static files on GitHub Pages: no server code, accounts, database or tracking.',
@@ -135,6 +146,16 @@ export const PACKS = [
       'Which of these records, if any, is an open funding call, and how can I tell?',
       'What is the difference between the amounts in these records (pledged, target, committed)?',
       'Which policies are in effect, and which have been amended since they were adopted?',
+    ],
+  },
+  {
+    id: 'funding-and-careers',
+    title: 'Funding and careers: programmes, awards, opportunities and pathways',
+    filter: { types: ['programmes', 'awards', 'opportunities', 'pathways'] },
+    questions: [
+      'Which of these records, if any, is a currently open opportunity, and what would I need to check before applying?',
+      'Who supplied the money in each award, who managed it, and who received it?',
+      'Which career pathway fits someone with community-participation experience, and what would they need to learn?',
     ],
   },
   {

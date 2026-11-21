@@ -8,7 +8,7 @@ import { formatDate } from '../../lib/status.js';
 import { hrefFor } from '../../lib/content';
 import { url } from '../../lib/url';
 import screening from '../../data/screening.json';
-const { orgs, programmes, awards, opportunities, finance, name } = await fundingData();
+const { orgs, programmes, awards, opportunities, finance, name, fullName } = await fundingData();
 const funders = orgs.filter((o) => o.data.roles.some((r) => r === 'funder' || r === 'administrator'));
 const fundingOps = opportunities.filter((o) => audienceOf(o.data.type) === 'funding');
 const g = groupOpportunities(fundingOps);
@@ -52,7 +52,7 @@ const nrgiScreen = screening.find((s) => s.source === 'nrgi-funders')!;
         <li>
           <p class="kicker">A mechanism</p>
           <h3><a href={hrefFor('programmes', mech.id)}>{mech.data.title}: British money, UN administration</a></h3>
-          <p>{mech.data.summary} Applicants deal with {name(mech.data.administrators[0])}, not the donor. Its 2026 call closed on 18 June 2026.</p>
+          <p>{mech.data.summary} Applicants deal with {fullName(mech.data.administrators[0])} (UNIDO), not the donor. Its 2026 call closed on 18 June 2026.</p>
         </li>
         <li>
           <p class="kicker">Open opportunities</p>
@@ -90,7 +90,8 @@ const nrgiScreen = screening.find((s) => s.source === 'nrgi-funders')!;
   </div>
 </Base>
 <style>
-  .entrances { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+  .entrances { list-style: none; padding: 0; margin: 1.5rem 0 2rem; align-items: stretch; }
+  .entrances > li { margin: 0; }
   .entrances h2 { font-size: 1.25rem; margin: 0 0 0.4rem; }
   .entrances p { margin: 0; font-family: var(--font-sans); font-size: 0.95rem; }
   .insights > li { padding: 16px 0; }

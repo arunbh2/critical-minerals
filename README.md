@@ -23,6 +23,8 @@ A public-interest guide to critical minerals. It connects mineral development wi
 | `npm run check:fast` | The subset CI runs on every push: counts, data, claims, voice, unit tests, build output, AI files, structured data, page weight |
 | `npm run check:ui` | Touch targets ≥ 24px, reflow at 320px with 200% text, reduced motion |
 | `npm run test:e2e` | Browser journeys and an axe accessibility scan, served the way GitHub Pages serves a project site |
+| `npm run health` | The editor's review queue: opportunities to re-check, deadlines close at hand, passages not found again, sources changed or unreadable, reviews due, claims held back |
+| `npm run check:passages` | Fetch each source cited by funding, careers and organisation records and find the recorded passages again (needs internet; behind a proxy, prefix `NODE_USE_ENV_PROXY=1`) |
 
 Every check names the file and the fix when it fails. The first time, install a browser with `npx playwright install chromium`.
 
@@ -31,7 +33,7 @@ Every check names the file and the fix when it fails. The first time, install a 
 | Check (`tools/`) | Enforces |
 |---|---|
 | `build-counts.js --check` | Headline counts are computed, never typed (`src/data/site/counts.json`) |
-| `check-data.js` | Schemas, references, controlled vocabularies, finance rules |
+| `check-data.js` | Schemas, references, controlled vocabularies, finance rules; funding and careers relationships resolve; every passage cites a listed source; every opening and deadline date appears in a recorded passage; an open record needs an issuer or official passage and a stated deadline |
 | `check-claims.js` | Every number in a published claim was a checked term; page figures trace to published claims |
 | `check-voice.js` | No blame, ranking or hype words; no em dashes or exclamation marks; missing evidence is never "failed" |
 | `check-output.js` | Built links and assets resolve under the base path; no private material or restricted terms |
@@ -41,17 +43,44 @@ Every check names the file and the fix when it fails. The first time, install a 
 | `check-ui.js` | WCAG 2.2 target size, reflow with 200% text, reduced motion |
 | `tests/unit/contrast.test.mjs` | WCAG contrast for every colour pair in use |
 
-## Evidence: the source verification pipeline
+## Evidence: how a claim is checked
 
-A claim reaches a page only when an automated check finds every term it rests on in a cited source.
+Finding the right words in a source does not show that it supports a claim, so the pipeline separates **locating** a passage (automated) from **reviewing** it (reading the passage against the claim). The gate is `tools/evidence-gate.js`: a reported fact is published only when its passage was located **and** the review outcome is `supported` or `supported-with-qualification`.
 
-1. **Stage**: write candidate claims with their sources and exact terms in `research/<batch>/claims.json`. Batch names are `YYYY-MM-N-label`, so alphabetical order is date order.
-2. **Verify**: the **Verify sources** workflow fetches each page or PDF and records found terms and short excerpts in `data/inbox/<batch>/link-check.json` and `excerpts.json`. Terms match as whole words; `a | b` accepts either spelling; a trailing `*` marks a deliberate prefix match.
-3. **Gate**: `research/<batch>/gate.json` labels each claim **Checked against an original** (all terms found in official, intergovernmental or legal sources), **Reported by secondary sources** (all found, using reporting) or **Not verified** (a term was missing; never "failed").
-4. **Apply**: labels are written into `src/data/claims.json` (`research/<batch>/apply.json` records the changes). Not-verified claims never render.
-5. **Ledger**: `research/<batch>/ledger.md` lists what was used, what was held back and why.
+1. **Stage**: write the claim precisely (scope, date, unit) with its sources and locating terms in `research/<batch>/claims.json`. Batch names are `YYYY-MM-N-label`, so alphabetical order is date order. Every number in a claim must be one of its terms.
+2. **Locate**: the **Verify sources** workflow fetches each page or PDF and records found terms and short excerpts (`data/inbox/<batch>/`). Terms match as whole words; `a | b` accepts either spelling; a trailing `*` marks a prefix match. The result is stored in `verification`: `original-checked` (passage located in an official, intergovernmental, legal or issuing-organisation source), `secondary`, or `not-verified` (not located; never "failed").
+3. **Review**: read each located passage against the claim and record the outcome in `research/<batch>/review.json` (`supported`, `supported-with-qualification`, `partly-supported`, `not-supported`, `not-reviewed`), with the passages read, any qualification, and who reviewed (`assisted` = AI-assisted, not yet checked by a named editor; `editor`). `tools/research-review.js` copies reviews into `src/data/claims.json`. A review applies only to the exact text it read: reword a claim and it falls back to `not-reviewed`. Where a passage supports only part of a claim, narrow the claim in a new batch and record why in `history`.
+4. **Ledger**: `research/<batch>/ledger.md` lists passages located, not located, and how each was judged.
 
-The workflow runs on any working branch whenever a batch's `claims.json` changes, and commits the results back to that branch. It runs monthly on `main` to report only. The **Link check** workflow checks every external link weekly. Both need open internet access, so they run on GitHub, not locally.
+Each claim also has a `kind`: reported fact, our interpretation, or hypothesis to test. The workflow runs on any working branch when a batch, review or the record files change, commits results back to that branch, and runs monthly on `main` to report only. Never hand-edit `verification` or `review` in `src/data/claims.json`.
+
+### Records: funding, careers and organisations
+
+Records do not carry claims; they carry **passages**: short verbatim quotations (`passages: [{ source, quote }]`) behind every amount, date, eligibility rule and status. `tools/check-record-passages.js` fetches each cited source and finds the passages again, records a hash of the page text to detect changes, and reports sources that refuse automated requests. It never changes a record: an unreadable source is never taken as a sign that anything closed.
+
+## Funding and careers
+
+| Route | What it is |
+|---|---|
+| `/funding/` | Hub: funders, administrators, programmes, awards and opportunities kept apart |
+| `/funding/funders/` | Organisations with a `funder` or `administrator` role (profiles live at `/organisations/<id>/`) |
+| `/funding/programmes/`, `/funding/programmes/<id>/` | `src/data/programmes.json` |
+| `/funding/awards/`, `/funding/awards/<id>/` | `src/data/awards.json`: funder, administrator, recipient, activity, period, native amount |
+| `/funding/opportunities/`, `/careers/opportunities/`, `/opportunities/<id>/` | `src/data/opportunities.json`: one model for calls, tenders, consultancies and vacancies |
+| `/careers/`, `/careers/pathways/<id>/`, `/careers/transition/`, `/careers/employers/`, `/careers/explorer/` | `src/content/pathways/*.md` (one per `roleFamilies` id) and organisation employer fields |
+| `/finance/` | First-release finance records, kept at their addresses and linked from Funding |
+
+Rules the code enforces:
+
+- **Amounts** keep native currency, scale and basis (`award`, `envelope`, `per-award-range`, `ceiling-per-recipient`, ...). They are formatted as `US$3 million` and never summed or converted. A recipient's own conversion goes in `amount.reported`.
+- **Deadlines** store only what the source states: `{ date, time, utcOffset, stated }`. A date-only deadline expires at the end of that date in UTC-12, so it never closes early for anyone.
+- **Status** (`announced`, `forecast`, `open`, `rolling`, `paused`, `closed`, `cancelled`, `awarded`, `unknown`) is what the source said at `lastChecked`. Pages recompute it in the reader's browser (`src/lib/opportunity.js`): a passed deadline shows as closed and hides the apply link; a record not re-checked within 14 days (45 for rolling) stops counting as verified open. A future deadline alone never makes a forecast open.
+- **JobPosting** structured data is emitted only for a currently active, individual `employment` record with a stated publication date, deadline and location.
+- **Interpretation** on organisation and programme records (`whyItMatters`) must sit beside `notEstablished`.
+
+## Maintenance
+
+Review cadence is configurable in `tools/review-policy.js`: opportunities weekly (every few days near a deadline), rolling calls monthly, programmes and funders quarterly, explainers and pathways every six months. The **Content health** workflow (`.github/workflows/content-health.yml`) runs weekly: it re-locates recorded passages, builds the review queue (`npm run health`), and opens or updates one `content-health` issue when there is something to do. It never edits records or publishes anything. A build date is not a review date: only the editor changes `reviewed`, `lastChecked` and `reviewDue`.
 
 ## AI and agent access
 
@@ -61,7 +90,7 @@ The workflow runs on any working branch whenever a batch's `claims.json` changes
 | `/llms.txt`, `/llms-full.txt` | Short index; every indexable page as text |
 | `<page>/index.md` | Markdown twin of every page, linked from its head |
 | `/use-with-ai/`, `/packs/*.txt` | Evidence packs per topic, with starter questions and a warning that assistants can be wrong |
-| `/openapi.json`, `/.well-known/api-catalog` | Description of every data endpoint (JSON, CSV, schemas). The build fails if a listed endpoint is missing |
+| `/openapi.json`, `/.well-known/api-catalog` | Description of every static data file (JSON, CSV, schemas), with task examples. Static resources, not a server API. The build fails if a listed endpoint is missing. Version 1.1.0 narrowed `claims.verification` to "where the passage was located"; use `claims.review.outcome` |
 | `/robots.txt` | Names the sitemap; `Content-Signal: search=yes, ai-input=yes, ai-train=yes` |
 | `/sitemap.xml`, `/sitemap.json`, `/feed.xml`, `/changes.json` | Discovery and the dated change log (`src/data/changelog.json`) |
 | `/.well-known/security.txt`, `tdmrep.json`, `ard.json` | Security contact (expiry kept fresh by the monthly rebuild), no TDM reservation, resource inventory |
@@ -117,8 +146,9 @@ References: [Astro: deploy to GitHub Pages](https://docs.astro.build/en/guides/d
 See [`docs/editorial-workflow.md`](docs/editorial-workflow.md) and the templates in [`docs/templates/`](docs/templates/). In short:
 
 - Explainers, minerals, countries, issues, cases and updates are Markdown files in `src/content/<type>/`. The filename is the URL slug.
-- Organisations, finance, policies, sources and claims are JSON in `src/data/`.
-- Every factual claim goes in `src/data/claims.json` with its sources, and pages reference claims by ID.
+- Organisations, finance, policies, programmes, awards, opportunities, sources and claims are JSON in `src/data/`; career pathways are Markdown in `src/content/pathways/`.
+- Every factual claim goes in `src/data/claims.json` with its sources, and pages reference claims by ID. Funding and careers records carry their own source passages instead.
+- Example records of each new type, with the add-record steps, are in [`docs/templates/funding-careers.md`](docs/templates/funding-careers.md). They are documentation only and never reach production exports.
 - Run `npm run validate` before committing. It fails on broken references.
 
 ## Project structure
@@ -133,9 +163,12 @@ src/lib/          URL, status, worksheet, content, export and AI helpers
 src/styles/       design tokens and global styles
 public/brand/     logo kit and icons
 tools/            build-*.js (counts, twins, .well-known), *-text.js (shared words),
-                  research-*.js and verify-sources.js (evidence pipeline), check-*.js and check-all.js
+                  research-*.js, verify-sources.js and evidence-gate.js (claims),
+                  check-record-passages.js (record passages), content-health.js and
+                  review-policy.js (review queue), check-*.js and check-all.js
 research/<batch>/ claims, stage, gate, apply, notes and ledger for each research batch
 data/inbox/<batch>/ sources to fetch, link check results and excerpts
+data/inbox/records/ latest automated check of record passages
 tests/            unit tests, fixtures and browser journeys
 docs/             architecture, editorial workflow, templates, screenshots
 ```

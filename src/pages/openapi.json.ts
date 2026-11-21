@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { EXPORTS } from '../lib/exports';
 import { CSV_EXPORTS } from '../lib/ai';
-import { PACKS, SITE } from '../../tools/site-text.js';
+import { PACKS, SITE, TASK_EXAMPLES } from '../../tools/site-text.js';
 import { absoluteUrl } from '../lib/url';
 
 // Every path listed here must exist in the build; tools/check-ai-files.js fails otherwise.
@@ -33,8 +33,9 @@ export const GET: APIRoute = ({ site }) => {
     openapi: '3.1.0',
     info: {
       title: `${SITE.name} open data`,
-      version: '1.0.0',
-      description: `${SITE.description} Static, read-only files: no authentication, no query parameters, no rate limits. Unknown values are null; amounts carry their stage and must not be summed.`,
+      version: '1.1.0',
+      description: `${SITE.description} These are static data resources, not an interactive server API: read-only files, no authentication, no query parameters, no rate limits. Unknown values are null; "Not stated" and "Not disclosed" mean the source does not say. Amounts carry their basis and native currency and must not be summed. Version 1.1.0 (November 2026) adds programmes, awards, opportunities and pathways, and narrows the meaning of claims.verification to "where the supporting passage was located"; use claims.review.outcome to decide what is supported.`,
+      'x-task-examples': TASK_EXAMPLES,
     },
     servers: [{ url: server }],
     paths,
