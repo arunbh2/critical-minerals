@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-2-second-pass",
-  "checkedAt": "2026-11-17T06:06:08.001Z",
+  "checkedAt": "2026-11-21T19:05:14.442Z",
   "results": [
     {
       "source": "iea-gcmo-2025-es",
@@ -43,10 +43,10 @@
     {
       "source": "miningcom-gcmo-2025",
       "url": "https://www.mining.com/?p=1179474",
-      "finalUrl": "https://www.mining.com/?p=1179474",
+      "finalUrl": "https://www.mining.com/iea-sees-little-progress-in-critical-minerals-supply-diversification-urges-policy-action/",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 9289,
+      "textLength": 9548,
       "error": null,
       "checks": [
         {
@@ -85,7 +85,7 @@
       "finalUrl": "https://www.northernminer.com/subscribe-login/?id=1003878837",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 4953,
+      "textLength": 4983,
       "error": null,
       "checks": [
         {
@@ -107,11 +107,11 @@
         {
           "claim": "c-growth-single-supplier",
           "found": [
-            "indonesia",
             "nickel"
           ],
           "missing": [
             "90%",
+            "indonesia",
             "cobalt",
             "graphite"
           ]
@@ -143,7 +143,7 @@
       "finalUrl": "https://www.globalminingreview.com/mining/17072026/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk/",
       "status": 200,
       "contentType": "text/html; charset=utf-8",
-      "textLength": 9110,
+      "textLength": 9061,
       "error": null,
       "checks": [
         {
@@ -197,10 +197,10 @@
     {
       "source": "nrf-nickel-regulation",
       "url": "https://www.nortonrosefulbright.com/en/knowledge/publications/b571b094/indonesia-amends-regulation-on-nickel-export-to-boost-production-of-value-added-products",
-      "finalUrl": "https://www.nortonrosefulbright.com/en/knowledge/publications",
-      "status": 200,
+      "finalUrl": "https://www.nortonrosefulbright.com/en/knowledge/publications/b571b094/indonesia-amends-regulation-on-nickel-export-to-boost-production-of-value-added-products",
+      "status": 404,
       "contentType": "text/html; charset=utf-8",
-      "textLength": 5993,
+      "textLength": 0,
       "error": null,
       "checks": [
         {
@@ -297,7 +297,7 @@
       "finalUrl": "https://www.kitco.com/news/off-the-wire/2025-10-06/congo-permanently-ban-cobalt-exporters-breach-quotas",
       "status": 200,
       "contentType": "text/html; charset=utf-8",
-      "textLength": 4500,
+      "textLength": 4514,
       "error": null,
       "checks": [
         {
@@ -378,7 +378,7 @@
       "finalUrl": "https://connections.nortonrosefulbright.com/post/102j3ah/the-critical-raw-materials-act-has-been-formally-adopted-what-do-you-need-to-kno",
       "status": 200,
       "contentType": "text/html; charset=utf-8",
-      "textLength": 9195,
+      "textLength": 9231,
       "error": null,
       "checks": [
         {
@@ -421,7 +421,7 @@
       "finalUrl": "https://www.miningweekly.com/article/eu-designates-47-strategic-raw-materials-projects-to-strengthen-supply-chain-2025-03-26",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 17352,
+      "textLength": 17225,
       "error": null,
       "checks": [
         {
@@ -441,7 +441,7 @@
       "finalUrl": "https://www.nsenergybusiness.com/news/eu-endorses-13-overseas-strategic-projects-for-raw-material-access/",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 9906,
+      "textLength": 9862,
       "error": null,
       "checks": [
         {
@@ -525,11 +525,11 @@
     {
       "source": "fieldfisher-batteries",
       "url": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
-      "finalUrl": "https://fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
-      "status": 0,
-      "contentType": "",
+      "finalUrl": "https://www.fieldfisher.com/en/insights/eu-regulation-on-sustainable-batteries-key-highlights-and-how-to-prepare-for-compliance",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
       "textLength": 0,
-      "error": "fetch failed",
+      "error": null,
       "checks": [
         {
           "claim": "c-eu-batteries",
@@ -608,7 +608,7 @@
       "finalUrl": "https://www.legal500.com/intelligence/india/environment/navigating-india%27s-battery-waste-regulation",
       "status": 200,
       "contentType": "text/html; charset=utf-8",
-      "textLength": 17005,
+      "textLength": 16975,
       "error": null,
       "checks": [
         {
@@ -627,7 +627,7 @@
       "finalUrl": "https://www.mining.com/world-bank-germany-rio-anglo-set-climate-smart-mining-fund/",
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
-      "textLength": 6010,
+      "textLength": 6326,
       "error": null,
       "checks": [
         {

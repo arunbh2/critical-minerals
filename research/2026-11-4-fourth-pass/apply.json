@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-4-fourth-pass",
-  "appliedAt": "2026-11-17T06:06:44.175Z",
+  "appliedAt": "2026-11-21T19:05:36.492Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
@@ -80,8 +80,7 @@
       "to": "secondary",
       "evidenceSources": [
         "jakpost-morowali-2023-12-24",
-        "jakpost-morowali-2023-12-27",
-        "bhrrc-morowali-2023"
+        "jakpost-morowali-2023-12-27"
       ]
     },
     {
@@ -157,8 +156,8 @@
       "from": "secondary",
       "to": "original-checked",
       "evidenceSources": [
-        "chn-jetp-2022",
-        "eeas-jetp-cipp"
+        "eeas-jetp-cipp",
+        "chn-jetp-2022"
       ]
     },
     {

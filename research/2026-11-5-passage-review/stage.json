@@ -1,0 +1,212 @@
+{
+  "batch": "2026-11-5-passage-review",
+  "staged": "2026-11-21",
+  "rows": [
+    {
+      "claim": "c-india-ncmm-scope",
+      "source": "pmindia-ncmm-2025",
+      "terms": [
+        "exploration",
+        "beneficiation",
+        "end-of-life",
+        "abroad",
+        "stockpile"
+      ]
+    },
+    {
+      "claim": "c-india-ncmm-scope",
+      "source": "tribune-ncmm-2025",
+      "terms": [
+        "exploration",
+        "beneficiation",
+        "end-of-life",
+        "abroad",
+        "stockpile"
+      ]
+    },
+    {
+      "claim": "c-india-mmdr-2023",
+      "source": "prs-mmdr-2023",
+      "terms": [
+        "critical and strategic minerals",
+        "central government",
+        "exploration licence",
+        "competitive bidding",
+        "2023"
+      ]
+    },
+    {
+      "claim": "c-india-mmdr-2023",
+      "source": "iea-policy-mmdr-2023",
+      "terms": [
+        "critical and strategic minerals",
+        "central government",
+        "exploration licence",
+        "competitive bidding",
+        "2023"
+      ]
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "source": "iea-policy-indonesia-nickel",
+      "terms": [
+        "nickel ore",
+        "bans exports | ban on exports | export ban",
+        "january 2020 | 1 january 2020"
+      ]
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "source": "aljazeera-nickel-2019",
+      "terms": [
+        "nickel ore",
+        "bans exports | ban on exports | export ban",
+        "january 2020 | 1 january 2020"
+      ]
+    },
+    {
+      "claim": "c-indonesia-ore-ban",
+      "source": "nrf-nickel-regulation",
+      "terms": [
+        "nickel ore",
+        "bans exports | ban on exports | export ban",
+        "january 2020 | 1 january 2020"
+      ]
+    },
+    {
+      "claim": "c-morowali-2023",
+      "source": "jakpost-morowali-2023-12-24",
+      "terms": [
+        "morowali",
+        "furnace",
+        "13",
+        "18",
+        "death toll",
+        "2023"
+      ]
+    },
+    {
+      "claim": "c-morowali-2023",
+      "source": "jakpost-morowali-2023-12-27",
+      "terms": [
+        "morowali",
+        "furnace",
+        "13",
+        "18",
+        "death toll",
+        "2023"
+      ]
+    },
+    {
+      "claim": "c-morowali-2023",
+      "source": "bhrrc-morowali-2023",
+      "terms": [
+        "morowali",
+        "furnace",
+        "13",
+        "18",
+        "death toll",
+        "2023"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "source": "iea-policy-drc-cobalt",
+      "terms": [
+        "cobalt",
+        "quota*",
+        "2025"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "source": "kitco-drc-quotas-2025",
+      "terms": [
+        "cobalt",
+        "quota*",
+        "2025"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "source": "mw-drc-quotas-2025",
+      "terms": [
+        "cobalt",
+        "quota*",
+        "2025"
+      ]
+    },
+    {
+      "claim": "c-drc-export-2025",
+      "source": "spg-drc-quotas-2025",
+      "terms": [
+        "cobalt",
+        "quota*",
+        "2025"
+      ]
+    },
+    {
+      "claim": "c-china-graphite-2023",
+      "source": "orf-china-controls",
+      "terms": [
+        "graphite",
+        "december 2023"
+      ]
+    },
+    {
+      "claim": "c-eu-crma",
+      "source": "council-crma",
+      "terms": [
+        "10%",
+        "40%",
+        "25%",
+        "2030",
+        "2024"
+      ]
+    },
+    {
+      "claim": "c-eu-crma",
+      "source": "nrf-crma-2024",
+      "terms": [
+        "10%",
+        "40%",
+        "25%",
+        "2030",
+        "2024"
+      ]
+    },
+    {
+      "claim": "c-eu-crma",
+      "source": "te-crma-2024",
+      "terms": [
+        "10%",
+        "40%",
+        "25%",
+        "2030",
+        "2024"
+      ]
+    },
+    {
+      "claim": "c-un-panel-2024",
+      "source": "un-panel-cetm",
+      "terms": [
+        "seven",
+        "guiding principles",
+        "five actionable recommendations",
+        "equity and justice",
+        "2024"
+      ]
+    },
+    {
+      "claim": "c-un-panel-2024",
+      "source": "iisd-un-panel-2024",
+      "terms": [
+        "seven",
+        "guiding principles",
+        "five actionable recommendations",
+        "equity and justice",
+        "2024"
+      ]
+    }
+  ]
+}

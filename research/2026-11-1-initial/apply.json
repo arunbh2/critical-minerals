@@ -1,6 +1,6 @@
 {
   "batch": "2026-11-1-initial",
-  "appliedAt": "2026-11-17T06:05:09.907Z",
+  "appliedAt": "2026-11-21T19:04:13.965Z",
   "changes": [
     {
       "claim": "c-refining-top3-2024",
@@ -104,8 +104,7 @@
       "to": "secondary",
       "evidenceSources": [
         "jakpost-morowali-2023-12-24",
-        "jakpost-morowali-2023-12-27",
-        "bhrrc-morowali-2023"
+        "jakpost-morowali-2023-12-27"
       ]
     },
     {
@@ -171,8 +170,8 @@
       "from": "original-checked",
       "to": "secondary",
       "evidenceSources": [
-        "chn-jetp-2022",
-        "eeas-jetp-cipp"
+        "eeas-jetp-cipp",
+        "chn-jetp-2022"
       ]
     },
     {
