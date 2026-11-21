@@ -1,0 +1,44 @@
+[
+  {
+    "source": "nrgi-funders",
+    "checked": "2026-11-21",
+    "included": 7,
+    "excluded": 12,
+    "note": "Of 19 funder entries in the \"Current funders\" table, 7 have a purpose naming minerals, mining, a mineral sector or the extractive sector. The other 12 concern oil and gas transitions, methane, national energy pathways or general operating support, and are not mineral finance."
+  },
+  {
+    "source": "nrgi-consultancies",
+    "checked": "2026-11-21",
+    "included": 0,
+    "excluded": 2,
+    "note": "Both listed consultancies concern oil and gas-fired power, not minerals."
+  },
+  {
+    "source": "cw-careers",
+    "checked": "2026-11-21",
+    "included": 0,
+    "excluded": 1,
+    "note": "The one listed role is a senior operations position, not specific to minerals."
+  },
+  {
+    "source": "eiti-consultancies",
+    "checked": "2026-11-21",
+    "included": 1,
+    "excluded": 0,
+    "note": "One current call for proposals; ten past calls listed as closed."
+  },
+  {
+    "source": "eiti-jobs",
+    "checked": "2026-11-21",
+    "included": 0,
+    "excluded": 0,
+    "note": "No staff positions listed (\"No results found\")."
+  },
+  {
+    "source": "irma-jobs",
+    "checked": "2026-11-21",
+    "included": 0,
+    "excluded": 0,
+    "note": "The page says there are no open positions."
+  }
+]

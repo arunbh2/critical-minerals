@@ -32,4 +32,4 @@ export function endpoints(site: URL | undefined) {
 }
 
 /** Flat datasets also published as CSV. */
-export const CSV_EXPORTS = ['finance', 'policies', 'organisations', 'sources', 'claims'] as const;
+export const CSV_EXPORTS = ['finance', 'policies', 'organisations', 'sources', 'claims', 'programmes', 'awards', 'opportunities'] as const;

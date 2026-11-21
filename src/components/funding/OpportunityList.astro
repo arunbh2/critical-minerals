@@ -1,0 +1,74 @@
+---
+// Opportunities grouped honestly: verified open, needs re-check, upcoming, and closed
+// precedents. Groups are built at build time; badges are recomputed in the browser.
+import OpStatus from './OpStatus.astro';
+import { groupOpportunities } from '../../lib/funding';
+import { hrefFor, vocabLabel } from '../../lib/content';
+import { formatMoney, formatMoment } from '../../lib/opportunity.js';
+import { formatDate } from '../../lib/status.js';
+interface Props { ops: any[]; noun: string; emptyNext?: string; name: (id: string) => string }
+const { ops, noun, emptyNext, name } = Astro.props;
+const g = groupOpportunities(ops);
+const asOf = new Date().toISOString().slice(0, 10);
+const Row = (o: any) => o;
+---
+<section aria-labelledby="open-h">
+  <h2 id="open-h">Verified open now</h2>
+  {g.open.length === 0 ? (
+    <div class="notice" role="status">
+      <p><strong>No verified {noun} currently listed</strong> (as of <time datetime={asOf}>{formatDate(asOf)}</time>).</p>
+      <p>We list an opportunity as open only when its own source says so and we have checked it recently. {emptyNext}</p>
+    </div>
+  ) : (
+    <ul class="record-list">{g.open.map(({ o }) => (
+      <li data-op-scope>
+        <h3><a href={hrefFor('opportunities', o.id)}>{o.data.title}</a></h3>
+        <p class="meta">{vocabLabel('opportunityTypes', o.data.type)} · {name(o.data.organisation)} · {vocabLabel('relevance', o.data.relevance)} relevance</p>
+        <p>{o.data.summary}</p>
+        <dl class="facts compact">
+          <dt>Who can apply</dt><dd>{o.data.eligibleApplicants}</dd>
+          <dt>Deadline</dt><dd>{formatMoment(o.data.deadline)}</dd>
+          <dt>{o.data.funding ? 'Funding' : 'Fee or pay'}</dt><dd>{o.data.funding ? formatMoney(o.data.funding) : o.data.fee ?? 'Not disclosed'}</dd>
+        </dl>
+        <OpStatus op={o.data} />
+      </li>
+    ))}</ul>
+  )}
+</section>
+{g.needsCheck.length > 0 && (
+  <section aria-labelledby="check-h">
+    <h2 id="check-h">Needs re-checking</h2>
+    <p class="meta">Last shown as open, but not checked recently enough to count as verified.</p>
+    <ul class="record-list">{g.needsCheck.map(({ o }) => <li data-op-scope><h3><a href={hrefFor('opportunities', o.id)}>{o.data.title}</a></h3><p class="meta">{name(o.data.organisation)}</p><OpStatus op={o.data} /></li>)}</ul>
+  </section>
+)}
+{g.upcoming.length > 0 && (
+  <section aria-labelledby="up-h">
+    <h2 id="up-h">Announced or forecast</h2>
+    <p class="meta">Expected windows. Not open until the source says so.</p>
+    <ul class="record-list">{g.upcoming.map(({ o }) => (
+      <li data-op-scope>
+        <h3><a href={hrefFor('opportunities', o.id)}>{o.data.title}</a></h3>
+        <p class="meta">{vocabLabel('opportunityTypes', o.data.type)} · {name(o.data.organisation)} · {vocabLabel('relevance', o.data.relevance)} relevance</p>
+        <p>{o.data.summary}</p>
+        <p class="meta">Expected to open {formatMoment(o.data.opens)}; expected to close {formatMoment(o.data.deadline)}.</p>
+        <OpStatus op={o.data} />
+      </li>
+    ))}</ul>
+  </section>
+)}
+{g.closed.length > 0 && (
+  <section aria-labelledby="closed-h">
+    <h2 id="closed-h">Closed precedents</h2>
+    <p class="meta">Kept because they show what has been offered, to whom and on what terms. None can be applied for.</p>
+    <ul class="record-list">{g.closed.map(({ o }) => (
+      <li data-op-scope>
+        <h3><a href={hrefFor('opportunities', o.id)}>{o.data.title}</a></h3>
+        <p class="meta">{vocabLabel('opportunityTypes', o.data.type)} · {name(o.data.organisation)}{o.data.deadline && ` · closed ${formatMoment(o.data.deadline)}`}</p>
+        <p>{o.data.summary}</p>
+        <OpStatus op={o.data} />
+      </li>
+    ))}</ul>
+  </section>
+)}
+<style>.compact { font-size: 0.9rem; margin: 6px 0; }</style>

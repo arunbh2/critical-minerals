@@ -21,7 +21,15 @@ const counts = {
   organisations: json('organisations.json').length,
   policies: json('policies.json').length,
   financeRecords: finance.length,
-  openOpportunities: finance.filter((f) => f.recordState === 'open').length,
+  // Opportunities "open as recorded" at their last check. Pages recompute deadlines and
+  // freshness in the reader's browser, so the live number can be lower.
+  openOpportunities: json('opportunities.json').filter((o) => ['open', 'rolling'].includes(o.status) && ['grant', 'challenge-fund', 'technical-assistance-call', 'request-for-proposals'].includes(o.type)).length,
+  openAssignments: json('opportunities.json').filter((o) => ['open', 'rolling'].includes(o.status) && !['grant', 'challenge-fund', 'technical-assistance-call', 'request-for-proposals'].includes(o.type)).length,
+  funders: json('organisations.json').filter((o) => (o.roles ?? []).some((r) => r === 'funder' || r === 'administrator')).length,
+  employers: json('organisations.json').filter((o) => (o.roles ?? []).some((r) => r === 'employer' || r === 'procurer')).length,
+  programmes: json('programmes.json').length,
+  awards: json('awards.json').length,
+  opportunities: json('opportunities.json').length,
   sources: json('sources.json').length,
   claimsPublished: claims.filter((c) => isPublishable(c)).length,
   // Among published claims: where the passage was located, and how it was reviewed.

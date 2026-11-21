@@ -1,0 +1,389 @@
+[
+  {
+    "id": "a2d-facility",
+    "title": "Accelerate-to-Demonstrate (A2D) Facility",
+    "shortTitle": "A2D Facility",
+    "summary": "Grants of US$1–5 million for large-scale demonstration of proven clean-energy and industrial-decarbonisation technologies in developing countries. Its 2026 call included recovery and recycling of critical minerals.",
+    "funders": [
+      "desnz"
+    ],
+    "administrators": [
+      "unido"
+    ],
+    "instruments": [
+      "grant"
+    ],
+    "relevance": "direct",
+    "lifecycle": [
+      "processing-refining",
+      "collection-recycling"
+    ],
+    "themes": [
+      "technology-demonstration",
+      "circularity"
+    ],
+    "geography": "Developing countries",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "circularity-recovery"
+    ],
+    "objectives": "Support projects that demonstrate proven technologies at industrial scale and can be scaled and commercialised.",
+    "mineralScope": "Under the 2026 call's critical-minerals theme: low-carbon recovery and recycling of critical minerals from waste streams, decarbonising processing, refining and transport, and supply-chain optimisation.",
+    "envelope": null,
+    "perAward": {
+      "min": 1000000,
+      "max": 5000000,
+      "currency": "USD",
+      "basis": "per-award-range"
+    },
+    "period": "Activities must be completed by 14 December 2030.",
+    "applicants": "Businesses with innovations that can deliver real-world emissions reductions in developing countries. Full criteria are on UNIDO's procurement portal, which we have not read.",
+    "exclusions": "Projects at the planning stage, research and development, or early-stage pilot testing.",
+    "accessRoute": "Calls run through UNIDO's procurement portal. The 2026 call closed on 18 June 2026.",
+    "programmeStatus": "active",
+    "whyItMatters": "A rare grant source that names critical-mineral recycling and processing, for technology demonstration at industrial scale.",
+    "notEstablished": "It is not a source for community organising, rights work or small projects. We have not seen the list of awarded projects.",
+    "sources": [
+      "govuk-a2d-2026",
+      "a2d-facility"
+    ],
+    "passages": [
+      {
+        "source": "govuk-a2d-2026",
+        "quote": "Low‑carbon solutions to recover and recycle critical minerals from waste streams"
+      },
+      {
+        "source": "govuk-a2d-2026",
+        "quote": "A2D does not support projects at the planning stage, research and development, or early‑stage pilot testing."
+      },
+      {
+        "source": "govuk-a2d-2026",
+        "quote": "All supported activities must be completed no later than 14 December 2030."
+      }
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "published": "2026-11-21"
+  },
+  {
+    "id": "fair-focus-on-trade",
+    "title": "Fair Focus on Trade (FFT)",
+    "shortTitle": "Fair Focus on Trade",
+    "summary": "Dutch subsidy programme for civil-society organisations working on clean and fair trade in value chains important to the Netherlands, including mining and critical raw materials. Closed in August 2026 and will not reopen.",
+    "funders": [
+      "nl-mfa"
+    ],
+    "administrators": [
+      "rvo"
+    ],
+    "instruments": [
+      "grant"
+    ],
+    "relevance": "direct",
+    "lifecycle": [
+      "exploration-extraction",
+      "processing-refining"
+    ],
+    "themes": [
+      "governance",
+      "worker-protection",
+      "community-development"
+    ],
+    "geography": "21 listed countries in Africa and Asia",
+    "countries": [
+      "india",
+      "indonesia"
+    ],
+    "minerals": [],
+    "issues": [
+      "decent-work-safety",
+      "accountability-remedy"
+    ],
+    "objectives": "Strengthen civil-society organisations through capacity strengthening, service provision, dialogue and financing of in-country partners, to make value chains more sustainable.",
+    "mineralScope": "Mining and critical raw materials was one of three eligible sectors, alongside agriculture and agri-food, and garments and textiles.",
+    "envelope": {
+      "value": 83000000,
+      "currency": "EUR",
+      "basis": "envelope"
+    },
+    "perAward": {
+      "min": 10000000,
+      "max": 22000000,
+      "currency": "EUR",
+      "basis": "per-award-range"
+    },
+    "period": "Five-year projects (60 months), with a six-month inception phase.",
+    "applicants": "Civil-society organisations with a legal establishment in the Netherlands or a target country, at least five years of relevant experience in the same country and value chain, and other threshold criteria.",
+    "exclusions": "For-profit organisations; government or majority government-owned organisations; intergovernmental organisations; applications made as or on behalf of a partnership such as an alliance or consortium.",
+    "accessRoute": "None. The source says the programme is closed and will not reopen.",
+    "programmeStatus": "closed",
+    "whyItMatters": "A worked example of how a donor writes eligibility for civil-society mineral work: single applicant, track record in the same country and value chain, and all four activity types combined.",
+    "notEstablished": "Which projects were selected, and whether any concern mining in India or Indonesia, is not recorded here.",
+    "sources": [
+      "rvo-fft"
+    ],
+    "passages": [
+      {
+        "source": "rvo-fft",
+        "quote": "This subsidy is closed. You can no longer apply for this programme. It will not reopen."
+      },
+      {
+        "source": "rvo-fft",
+        "quote": "mining and critical raw materials (CRM)"
+      },
+      {
+        "source": "rvo-fft",
+        "quote": "Each selected project can receive between 10 and 22 million euros. We will select a maximum of 8 projects."
+      }
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-05-21",
+    "published": "2026-11-21"
+  },
+  {
+    "id": "dutch-diamonds-partnerships",
+    "title": "Dutch Diamonds Partnerships (DDP)",
+    "shortTitle": "Dutch Diamonds Partnerships",
+    "summary": "Dutch subsidy programme for public-private partnerships on water security, food security and sustainable market development in low- and middle-income countries. Minerals are not a named theme.",
+    "funders": [
+      "nl-mfa"
+    ],
+    "administrators": [
+      "rvo"
+    ],
+    "instruments": [
+      "grant"
+    ],
+    "relevance": "adjacent",
+    "lifecycle": [],
+    "themes": [
+      "community-development"
+    ],
+    "geography": "Low- and middle-income partner countries",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "water-climate-risk"
+    ],
+    "objectives": "Sustainable, climate-friendly change in water and food sectors and market development in other sectors and value chains.",
+    "mineralScope": "Not a named theme. The sustainable market development theme covers specific sectors and value chains linked to partner countries; whether any mineral chain qualifies is not established.",
+    "envelope": {
+      "value": 51000000,
+      "currency": "EUR",
+      "basis": "envelope"
+    },
+    "perAward": {
+      "min": 500000,
+      "max": 3000000,
+      "currency": "EUR",
+      "basis": "per-award-range"
+    },
+    "period": null,
+    "applicants": "Partnerships of up to six partners led by an organisation with its registered office, or a branch, in the Netherlands; each must include a Dutch business and a local civil-society organisation, knowledge institution or business.",
+    "exclusions": null,
+    "accessRoute": "Application window expected from 7 December 2026 to 15 February 2027, according to the source. The source says it is temporarily closed until then.",
+    "programmeStatus": "active",
+    "whyItMatters": "Included to show a common trap: a large, well-run programme with an upcoming window, but no stated mineral purpose.",
+    "notEstablished": "That a mineral-related project would be eligible.",
+    "sources": [
+      "rvo-ddp"
+    ],
+    "passages": [
+      {
+        "source": "rvo-ddp",
+        "quote": "The minimum subsidy amount that can be applied for is 500,000 euros per application. The maximum is 3 million euros per application."
+      },
+      {
+        "source": "rvo-ddp",
+        "quote": "Temporarily closed for application"
+      }
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2026-12-05",
+    "published": "2026-11-21"
+  },
+  {
+    "id": "eprm",
+    "title": "European Partnership for Responsible Minerals (EPRM)",
+    "shortTitle": "EPRM funding",
+    "summary": "Multi-stakeholder partnership supporting responsible production at artisanal and small-scale mines in conflict-affected and high-risk areas, with project subsidies administered by RVO. Its last application window closed in November 2023.",
+    "funders": [
+      "nl-mfa"
+    ],
+    "administrators": [
+      "rvo"
+    ],
+    "instruments": [
+      "grant"
+    ],
+    "relevance": "direct",
+    "lifecycle": [
+      "exploration-extraction"
+    ],
+    "themes": [
+      "governance",
+      "worker-protection"
+    ],
+    "geography": "Conflict-affected and high-risk areas",
+    "countries": [],
+    "minerals": [
+      "lithium",
+      "graphite",
+      "cobalt",
+      "copper",
+      "nickel"
+    ],
+    "issues": [
+      "decent-work-safety",
+      "accountability-remedy"
+    ],
+    "objectives": "Create better social and economic conditions for mine workers and local mining communities by increasing the number of mines that adopt responsible practices.",
+    "mineralScope": "In 2023: tin, tantalum, tungsten, lithium, natural graphite, cobalt, copper and nickel.",
+    "envelope": null,
+    "perAward": null,
+    "period": "Last application window: 1 September to 30 November 2023.",
+    "applicants": "Members and project applicants subject to RVO's responsible business conduct guidelines; full eligibility is not reproduced here.",
+    "exclusions": "Companies on UN or EU sanctions lists; activities on the FMO exclusion list.",
+    "accessRoute": "None at present. The source says the programme is temporarily closed for application, with no reopening date.",
+    "programmeStatus": "paused",
+    "whyItMatters": "The clearest public funding precedent for artisanal and small-scale mining conditions linked to EU due-diligence rules.",
+    "notEstablished": "Whether or when a new window will open. The page was last checked by RVO on 4 February 2026.",
+    "sources": [
+      "rvo-eprm"
+    ],
+    "passages": [
+      {
+        "source": "rvo-eprm",
+        "quote": "EPRM was established to create better social and economic conditions for mine workers and local mining communities."
+      },
+      {
+        "source": "rvo-eprm",
+        "quote": "In 2023, EPRM focuses on tin, tantalum, tungsten, lithium, natural graphite, cobalt, copper and nickel."
+      }
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "published": "2026-11-21"
+  },
+  {
+    "id": "egps-trust-fund",
+    "title": "Extractives Global Programmatic Support (EGPS) Multi-Donor Trust Fund",
+    "shortTitle": "EGPS trust fund",
+    "summary": "A World Bank multi-donor trust fund for the extractive sector. Recorded here through a disclosed grant for citizen engagement on accountability and transparency.",
+    "funders": [],
+    "administrators": [
+      "world-bank"
+    ],
+    "instruments": [
+      "grant",
+      "technical-assistance"
+    ],
+    "relevance": "adjacent",
+    "lifecycle": [
+      "exploration-extraction"
+    ],
+    "themes": [
+      "governance"
+    ],
+    "geography": "Not established from our sources",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "accountability-remedy"
+    ],
+    "objectives": "Not established from our sources beyond the disclosed award.",
+    "mineralScope": "The extractive sector, which covers mining and also oil and gas.",
+    "envelope": null,
+    "perAward": null,
+    "period": null,
+    "applicants": null,
+    "exclusions": null,
+    "accessRoute": "Not established. The programme site refused automated requests when we checked.",
+    "programmeStatus": "unknown",
+    "whyItMatters": "Trust funds like this are how several donors pool money that the World Bank then directs. The donors behind a grant are often invisible to the recipient's public.",
+    "notEstablished": "The contributing donors, the size of the fund and any route for applicants.",
+    "sources": [
+      "nrgi-funders"
+    ],
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "World Bank - Extractives Global Programmatic Support (EGPS) Multi-Donor Trust Fund"
+      }
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "published": "2026-11-21"
+  },
+  {
+    "id": "india-recycling-incentive",
+    "title": "Incentive Scheme to promote Critical Mineral Recycling (India)",
+    "shortTitle": "India recycling incentive",
+    "summary": "A ₹1,500 crore Government of India scheme of capital and operating subsidies for companies that recover critical minerals from e-waste, lithium-ion battery scrap and other scrap, over six years.",
+    "funders": [
+      "ministry-of-mines-india"
+    ],
+    "administrators": [],
+    "instruments": [
+      "public-budget"
+    ],
+    "relevance": "direct",
+    "lifecycle": [
+      "collection-recycling"
+    ],
+    "themes": [
+      "circularity",
+      "industrial-infrastructure"
+    ],
+    "geography": "India",
+    "countries": [
+      "india"
+    ],
+    "minerals": [
+      "lithium",
+      "cobalt",
+      "nickel"
+    ],
+    "issues": [
+      "circularity-recovery"
+    ],
+    "objectives": "Develop recycling capacity in India for separating and producing critical minerals from secondary sources.",
+    "mineralScope": "Critical minerals recovered from e-waste, lithium-ion battery scrap and other scrap such as catalytic converters.",
+    "envelope": {
+      "value": 15000000000,
+      "currency": "INR",
+      "basis": "envelope",
+      "display": "₹1,500 crore"
+    },
+    "perAward": {
+      "max": 500000000,
+      "currency": "INR",
+      "basis": "ceiling-per-recipient",
+      "display": "₹50 crore for large entities; ₹25 crore for small entities"
+    },
+    "period": "FY 2025-26 to FY 2030-31.",
+    "applicants": "Recycling companies that extract critical minerals, as defined in the scheme guidelines.",
+    "exclusions": null,
+    "accessRoute": "Through the Ministry of Mines scheme guidelines. Whether applications are currently accepted was not established from our sources.",
+    "programmeStatus": "active",
+    "whyItMatters": "Puts public money into domestic recovery, which affects informal collectors and dismantlers upstream of the subsidised recyclers.",
+    "notEstablished": "How the scheme treats informal workers in collection and dismantling, and how much has been disbursed.",
+    "sources": [
+      "pib-recycling-2025"
+    ],
+    "passages": [
+      {
+        "source": "pib-recycling-2025",
+        "quote": "total incentive (Capex plus Opex subsidy) per entity will be subject to an overall ceiling of Rs.50 crore for large entities and Rs.25 crore for small entities"
+      },
+      {
+        "source": "pib-recycling-2025",
+        "quote": "a tenure of six years from FY 2025-26 to FY 2030-31"
+      }
+    ],
+    "lastChecked": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "published": "2026-11-21"
+  }
+]

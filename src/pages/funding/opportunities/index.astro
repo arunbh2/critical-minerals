@@ -1,0 +1,25 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import OpportunityList from '../../../components/funding/OpportunityList.astro';
+import { fundingData, audienceOf } from '../../../lib/funding';
+import { url } from '../../../lib/url';
+const { opportunities, name } = await fundingData();
+const ops = opportunities.filter((o) => audienceOf(o.data.type) === 'funding');
+---
+<Base title="Accessible funding opportunities" shortTitle="Funding opportunities" searchType="Funding" description="Funding calls relevant to critical minerals and affected communities, with verified open calls kept apart from forecast windows and closed precedents.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Funding', href: url('funding/') }, { label: 'Opportunities' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Funding</p>
+      <h1>Accessible opportunities</h1>
+      <p class="standfirst">Calls you could apply to, kept strictly apart from windows that are only expected and from calls that have closed. A future deadline alone does not make a call open.</p>
+    </header>
+    <div class="reading">
+      <OpportunityList ops={ops} noun="funding opportunities" name={name}
+        emptyNext="Meanwhile, the award ledger shows who has funded what, and funder profiles describe any routes in. Consulting tenders and assignments are listed under Careers." />
+      <p class="sans"><a class="link-arrow" href={url('funding/awards/')}>Award ledger</a> &nbsp; <a class="link-arrow" href={url('funding/funders/')}>Funder profiles</a> &nbsp; <a class="link-arrow" href={url('careers/opportunities/')}>Jobs, consultancies and tenders</a></p>
+      <p class="meta">Statuses are recomputed in your browser from each source&rsquo;s stated deadline. Records not checked within 14 days stop counting as verified. Download: <a href={url('data/opportunities.json')}>JSON</a>, <a href={url('data/opportunities.csv')}>CSV</a>.</p>
+    </div>
+  </div>
+</Base>

@@ -59,9 +59,30 @@
       "accountability-remedy",
       "value-sharing"
     ],
-    "sources": [],
+    "sources": [
+      "eiti-jobs",
+      "eiti-consultancies"
+    ],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "roles": [
+      "administrator",
+      "procurer",
+      "employer"
+    ],
+    "careersUrl": "https://eiti.org/jobs",
+    "procurementUrl": "https://eiti.org/consultancy-opportunities",
+    "functions": [
+      "policy-governance",
+      "research-data"
+    ],
+    "employerNote": "Small international secretariat headquartered in Oslo. No staff vacancies were listed at our last check; procurement opportunities are published separately.",
+    "passages": [
+      {
+        "source": "eiti-consultancies",
+        "quote": "The EITI International Secretariat administers entrusted funds on behalf of its donors"
+      }
+    ]
   },
   {
     "id": "nrgi",
@@ -79,9 +100,32 @@
       "value-sharing",
       "accountability-remedy"
     ],
-    "sources": [],
+    "sources": [
+      "nrgi-funders",
+      "nrgi-jobs",
+      "nrgi-consultancies"
+    ],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "roles": [
+      "recipient",
+      "procurer",
+      "employer"
+    ],
+    "careersUrl": "https://resourcegovernance.org/working-nrgi",
+    "procurementUrl": "https://resourcegovernance.org/consultancy-opportunities",
+    "functions": [
+      "policy-governance",
+      "research-data",
+      "finance-partnerships"
+    ],
+    "employerNote": "About 80 team members in 19 countries, by its own account. Consultancy listings cover oil and gas as well as minerals, so each needs screening for relevance.",
+    "passages": [
+      {
+        "source": "nrgi-jobs",
+        "quote": "in total we are approximately 80 team members based in 19 countries"
+      }
+    ]
   },
   {
     "id": "bhrrc",
@@ -165,10 +209,27 @@
       "accountability-remedy",
       "water-climate-risk"
     ],
-    "sources": [],
+    "sources": [
+      "irma-jobs"
+    ],
     "reviewed": "2026-11-17",
     "reviewDue": "2027-02-17",
-    "shortTitle": "Responsible Mining Assurance"
+    "shortTitle": "Responsible Mining Assurance",
+    "roles": [
+      "employer"
+    ],
+    "careersUrl": "https://responsiblemining.net/about/jobs/",
+    "functions": [
+      "responsible-sourcing",
+      "community-rights"
+    ],
+    "employerNote": "No open positions at our last check; the organisation says opportunities arise throughout the year.",
+    "passages": [
+      {
+        "source": "irma-jobs",
+        "quote": "We currently do not have any open positions"
+      }
+    ]
   },
   {
     "id": "world-bank",
@@ -188,10 +249,31 @@
     ],
     "sources": [
       "wb-csm",
-      "miningcom-csm-2019"
+      "miningcom-csm-2019",
+      "nrgi-funders"
     ],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "roles": [
+      "funder",
+      "administrator"
+    ],
+    "mineralRelevance": "direct",
+    "instruments": [
+      "grant",
+      "technical-assistance",
+      "loan"
+    ],
+    "fundsWhere": "Multiple regions, through trust funds and lending.",
+    "accessRoute": "No open application route for civil-society grants found in our sources. Trust funds are typically accessed through World Bank teams and government counterparts.",
+    "whyItMatters": "Administers multi-donor trust funds for the extractive sector, and one of them disclosed a grant for citizen engagement.",
+    "notEstablished": "A trust-fund grant to one organisation does not establish a route that others can apply to.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "Support for Citizen Engagement for Accountability and Transparency in the Extractive Sector"
+      }
+    ]
   },
   {
     "id": "unido",
@@ -209,10 +291,31 @@
       "value-sharing",
       "circularity-recovery"
     ],
-    "sources": [],
+    "sources": [
+      "govuk-a2d-2026",
+      "a2d-facility"
+    ],
     "reviewed": "2026-11-17",
     "reviewDue": "2027-02-17",
-    "shortTitle": "UN Industrial Development"
+    "shortTitle": "UN Industrial Development",
+    "roles": [
+      "administrator",
+      "employer"
+    ],
+    "mineralRelevance": "direct",
+    "instruments": [
+      "grant"
+    ],
+    "fundsWhere": "Developing countries, through the A2D Facility.",
+    "accessRoute": "A2D calls are run through UNIDO's procurement portal when open.",
+    "whyItMatters": "Administers the A2D Facility, whose 2026 call included recovery and recycling of critical minerals.",
+    "notEstablished": "UNIDO is the administrator, not the original donor; the A2D money comes from the UK.",
+    "passages": [
+      {
+        "source": "govuk-a2d-2026",
+        "quote": "The United Nations Industrial Development Organization (UNIDO), with support from the UK Department for Energy Security & Net Zero, has launched a new global call for proposals"
+      }
+    ]
   },
   {
     "id": "icmm",
@@ -255,9 +358,20 @@
     "issues": [
       "circularity-recovery"
     ],
-    "sources": [],
+    "sources": [
+      "gba-home"
+    ],
     "reviewed": "2026-11-17",
-    "reviewDue": "2027-02-17"
+    "reviewDue": "2027-02-17",
+    "roles": [
+      "employer"
+    ],
+    "functions": [
+      "responsible-sourcing",
+      "circularity",
+      "research-data"
+    ],
+    "employerNote": "Its website links to a careers and opportunities page; we have not yet checked listings there."
   },
   {
     "id": "cse",
@@ -356,11 +470,29 @@
     ],
     "sources": [
       "mines-india-cm-2023",
-      "pmindia-ncmm-2025"
+      "pmindia-ncmm-2025",
+      "pib-recycling-2025"
     ],
     "reviewed": "2026-11-17",
     "reviewDue": "2027-02-17",
-    "shortTitle": "India Ministry of Mines"
+    "shortTitle": "India Ministry of Mines",
+    "roles": [
+      "funder"
+    ],
+    "mineralRelevance": "direct",
+    "instruments": [
+      "public-budget"
+    ],
+    "fundsWhere": "India.",
+    "accessRoute": "Through scheme guidelines published by the Ministry. Application status for the recycling incentive was not established from our sources.",
+    "whyItMatters": "Funds domestic recycling capacity directly, through capital and operating subsidies to recyclers.",
+    "notEstablished": "An industrial incentive for recyclers is not a grant route for civil-society or community organisations.",
+    "passages": [
+      {
+        "source": "pib-recycling-2025",
+        "quote": "approved a Rs.1,500 crore Incentive Scheme to develop recycling capacity in the country for the separation and production of critical minerals from secondary sources"
+      }
+    ]
   },
   {
     "id": "esdm-indonesia",
@@ -387,5 +519,425 @@
     "reviewed": "2026-11-17",
     "reviewDue": "2027-02-17",
     "shortTitle": "Indonesia energy ministry"
+  },
+  {
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing"
+    ],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "fcdo",
+    "name": "Foreign, Commonwealth and Development Office (UK)",
+    "shortTitle": "UK FCDO",
+    "type": "development-agency",
+    "role": "UK government department responsible for foreign affairs and development. Recorded here as the funder of a mineral-governance award.",
+    "geography": "United Kingdom (headquarters); finances work internationally",
+    "initiative": "EMERGE (Ensuring Minerals Enable Responsible Growth and Economic Development), as reported by the recipient",
+    "deliveryModel": "Grant to an international governance organisation",
+    "evidenceNote": "Award details come from the recipient's own funder disclosure, not from an FCDO publication.",
+    "url": "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office",
+    "sources": [
+      "nrgi-funders"
+    ],
+    "roles": [
+      "funder"
+    ],
+    "headquarters": "United Kingdom",
+    "mineralRelevance": "direct",
+    "fundsWhere": "Documented here: Africa, with a stated aim of supply-chain resilience.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": null,
+    "whyItMatters": "A UK development budget line framed explicitly around minerals and supply-chain resilience, delivered through an established governance organisation rather than an open call.",
+    "notEstablished": "One disclosed award does not show an open FCDO grant route for mineral work, or support for work in Asia on this theme.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "Ensuring Minerals Enable Responsible Growth and Economic Development (EMERGE): Supporting sustainable economic development in Africa and the resilience of global supply chains."
+      }
+    ]
+  },
+  {
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "circularity-recovery"
+    ],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "desnz",
+    "name": "Department for Energy Security and Net Zero (UK)",
+    "shortTitle": "UK DESNZ",
+    "type": "development-agency",
+    "role": "UK government department. Funds the Accelerate-to-Demonstrate Facility, which UNIDO delivers.",
+    "geography": "United Kingdom (headquarters); the facility it funds supports projects in developing countries",
+    "initiative": "Accelerate-to-Demonstrate (A2D) Facility, through the UK Government's Ayrton Fund",
+    "deliveryModel": "Funds a programme administered by a UN agency",
+    "evidenceNote": "Role taken from a GOV.UK announcement of the 2026 call.",
+    "url": "https://www.gov.uk/government/organisations/department-for-energy-security-and-net-zero",
+    "sources": [
+      "govuk-a2d-2026"
+    ],
+    "roles": [
+      "funder"
+    ],
+    "headquarters": "United Kingdom",
+    "mineralRelevance": "direct",
+    "fundsWhere": "Developing countries, through the A2D Facility.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": "Not directly. Applications go to the A2D Facility through UNIDO's procurement portal when a call is open.",
+    "whyItMatters": "Shows the difference between a donor and an administrator: the money is British, but applicants deal with UNIDO.",
+    "notEstablished": "The facility's 2026 call included critical minerals as one of four themes. That does not make the department a general funder of community or worker programmes.",
+    "passages": [
+      {
+        "source": "govuk-a2d-2026",
+        "quote": "Delivered by UNIDO and funded by the UK Government’s Ayrton Fund, the A2D Facility offers grants from $1–5 million"
+      }
+    ]
+  },
+  {
+    "countries": [
+      "india",
+      "indonesia"
+    ],
+    "minerals": [],
+    "issues": [
+      "decent-work-safety",
+      "accountability-remedy"
+    ],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "nl-mfa",
+    "name": "Ministry of Foreign Affairs of the Netherlands",
+    "shortTitle": "Netherlands MFA",
+    "type": "development-agency",
+    "role": "Commissions Dutch development-cooperation subsidy programmes that the Netherlands Enterprise Agency administers, including programmes open to mining and critical raw materials value chains.",
+    "geography": "Netherlands (headquarters); programmes target listed countries in Africa and Asia",
+    "initiative": "Fair Focus on Trade; Dutch Diamonds Partnerships; European Partnership for Responsible Minerals funding",
+    "deliveryModel": "Subsidy programmes administered by RVO",
+    "evidenceNote": "Roles taken from RVO programme pages, which name the Ministry as commissioning body.",
+    "url": "https://www.government.nl/ministries/ministry-of-foreign-affairs",
+    "sources": [
+      "rvo-fft",
+      "rvo-ddp",
+      "rvo-eprm"
+    ],
+    "roles": [
+      "funder"
+    ],
+    "headquarters": "Netherlands",
+    "mineralRelevance": "direct",
+    "fundsWhere": "Target-country lists differ by programme. Fair Focus on Trade listed 21 countries, including India and Indonesia.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": "Through RVO programme calls, each with its own eligibility, window and target-country list.",
+    "restrictions": "Programme rules differ. Fair Focus on Trade excluded for-profit, government and intergovernmental applicants, and applications made on behalf of a consortium.",
+    "whyItMatters": "One of few public funders whose recent call named mining and critical raw materials as an eligible sector for civil-society capacity in India and Indonesia.",
+    "notEstablished": "A sector being eligible does not mean any mineral project was funded. Award decisions for the 2026 Fair Focus on Trade round are not recorded here.",
+    "passages": [
+      {
+        "source": "rvo-fft",
+        "quote": "Commissioned by: Ministry of Foreign Affairs"
+      }
+    ]
+  },
+  {
+    "countries": [
+      "india",
+      "indonesia"
+    ],
+    "minerals": [],
+    "issues": [],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "rvo",
+    "name": "Netherlands Enterprise Agency (RVO)",
+    "shortTitle": "Netherlands Enterprise Agency",
+    "type": "public-authority",
+    "role": "Administers subsidy programmes on behalf of Dutch ministries. It runs the application windows, eligibility checks and selection.",
+    "geography": "Netherlands (headquarters); programmes fund work in listed partner countries",
+    "initiative": "Fair Focus on Trade; Dutch Diamonds Partnerships; EPRM project funding",
+    "deliveryModel": "Programme administration",
+    "evidenceNote": "Roles taken from RVO's own programme pages.",
+    "url": "https://english.rvo.nl/",
+    "sources": [
+      "rvo-fft",
+      "rvo-ddp",
+      "rvo-eprm"
+    ],
+    "roles": [
+      "administrator"
+    ],
+    "headquarters": "Netherlands",
+    "mineralRelevance": "direct",
+    "fundsWhere": "Varies by programme; see each programme.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": "Applications are made to RVO during each programme's window. Windows open and close; check the programme page.",
+    "whyItMatters": "If you are applying, this is who you deal with, even though the money comes from a ministry.",
+    "notEstablished": "RVO administers many programmes unrelated to minerals. Only the programmes linked here are mineral-relevant.",
+    "passages": [
+      {
+        "source": "rvo-ddp",
+        "quote": "The content of this page has been checked on 19 November 2026"
+      }
+    ]
+  },
+  {
+    "countries": [],
+    "minerals": [],
+    "issues": [],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "quadrature",
+    "name": "Quadrature Charitable Foundation",
+    "shortTitle": "Quadrature Foundation",
+    "type": "foundation",
+    "role": "Philanthropic funder. Recorded here because of a disclosed grant for work on the responsible scale-up of transition mineral production.",
+    "geography": "Not established from our sources",
+    "initiative": "Grant to the Natural Resource Governance Institute, August 2024 to July 2027",
+    "deliveryModel": "Grant",
+    "evidenceNote": "Award details come from the recipient's own disclosure. We have not verified the foundation's own website or its current grant-making rules.",
+    "url": null,
+    "sources": [
+      "nrgi-funders"
+    ],
+    "roles": [
+      "funder"
+    ],
+    "headquarters": null,
+    "mineralRelevance": "direct",
+    "fundsWhere": "Not established from our sources.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": null,
+    "whyItMatters": "A philanthropic award with an explicitly mineral-focused purpose, which is rarer than general climate or governance support.",
+    "notEstablished": "Nothing here shows whether the foundation accepts unsolicited proposals, or what else it funds.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "To advance efforts by citizens and governments to drive systemic change in the responsible scale up of transition mineral production"
+      }
+    ]
+  },
+  {
+    "countries": [],
+    "minerals": [],
+    "issues": [],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "moore-foundation",
+    "name": "Gordon and Betty Moore Foundation",
+    "shortTitle": "Moore Foundation",
+    "type": "foundation",
+    "role": "Philanthropic funder. Recorded here because of a disclosed grant to develop a playbook for nature-positive mining.",
+    "geography": "Not established from our sources",
+    "initiative": "Grant to the Natural Resource Governance Institute, July 2026 to March 2027",
+    "deliveryModel": "Grant",
+    "evidenceNote": "Award details come from the recipient's own disclosure.",
+    "url": "https://www.moore.org/",
+    "sources": [
+      "nrgi-funders"
+    ],
+    "roles": [
+      "funder"
+    ],
+    "headquarters": null,
+    "mineralRelevance": "direct",
+    "fundsWhere": "Not established from our sources.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": null,
+    "whyItMatters": "Links mining governance to nature outcomes, a framing that can open conservation funding to mineral-region work.",
+    "notEstablished": "A design-phase grant to one organisation does not establish a programme or an application route.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "To develop a playbook for nature positive mining - Design Phase: Benefits Realization Planning – Shifting Regulatory Regimes"
+      }
+    ]
+  },
+  {
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing"
+    ],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "rockefeller-foundation",
+    "name": "Rockefeller Foundation",
+    "shortTitle": "Rockefeller Foundation",
+    "type": "foundation",
+    "role": "Philanthropic funder. Recorded here because of a disclosed grant for an educational platform on equitable mineral development in low- and middle-income countries.",
+    "geography": "Not established from our sources",
+    "initiative": "Grant to the Natural Resource Governance Institute, September 2025 to November 2026",
+    "deliveryModel": "Grant",
+    "evidenceNote": "Award details come from the recipient's own disclosure.",
+    "url": "https://www.rockefellerfoundation.org/",
+    "sources": [
+      "nrgi-funders"
+    ],
+    "roles": [
+      "funder"
+    ],
+    "headquarters": null,
+    "mineralRelevance": "direct",
+    "fundsWhere": "The disclosed award concerns low- and middle-income countries.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": null,
+    "whyItMatters": "Funds capacity and knowledge-sharing for researchers and policy stakeholders, the layer that shapes how mineral policy is designed.",
+    "notEstablished": "Nothing here shows an open call or a continuing minerals programme.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "advancing equitable mineral development in low- and middle-income countries"
+      }
+    ]
+  },
+  {
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "value-sharing",
+      "accountability-remedy"
+    ],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "norad",
+    "name": "Norwegian Agency for Development Cooperation (Norad)",
+    "shortTitle": "Norad, Norway",
+    "type": "development-agency",
+    "role": "Norway's development agency. Recorded here because of a disclosed grant for civil-society work on resource revenues and just transitions in Africa.",
+    "geography": "Norway (headquarters); the disclosed award concerns Africa",
+    "initiative": "Resources to Revenues: Civil Society Driving Just Transitions in Africa, as reported by the recipient",
+    "deliveryModel": "Grant",
+    "evidenceNote": "Award details come from the recipient's own disclosure.",
+    "url": "https://www.norad.no/en/",
+    "sources": [
+      "nrgi-funders"
+    ],
+    "roles": [
+      "funder"
+    ],
+    "headquarters": "Norway",
+    "mineralRelevance": "adjacent",
+    "fundsWhere": "Documented here: Africa.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": null,
+    "whyItMatters": "Revenue governance is how mineral wealth reaches public budgets, so this is relevant even where minerals are not named.",
+    "notEstablished": "The disclosed purpose names resources and just transitions, not minerals specifically.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "Resources to Revenues: Civil Society Driving Just Transitions in Africa"
+      }
+    ]
+  },
+  {
+    "countries": [],
+    "minerals": [
+      "copper"
+    ],
+    "issues": [
+      "value-sharing"
+    ],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "ecf",
+    "name": "European Climate Foundation",
+    "shortTitle": "European Climate Foundation",
+    "type": "foundation",
+    "role": "Philanthropic funder. Recorded here because of a small disclosed grant, from its Pool Fund for International Energy, on copper-sector value addition in Mongolia.",
+    "geography": "Not established from our sources",
+    "initiative": "Pool Fund for International Energy (PIE)",
+    "deliveryModel": "Pooled fund grant",
+    "evidenceNote": "Award details come from the recipient's own disclosure. A pooled fund combines money from several donors; they are not named in the disclosure.",
+    "url": "https://europeanclimate.org/",
+    "sources": [
+      "nrgi-funders"
+    ],
+    "roles": [
+      "funder",
+      "administrator"
+    ],
+    "headquarters": null,
+    "mineralRelevance": "direct",
+    "fundsWhere": "Documented here: Mongolia.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": null,
+    "whyItMatters": "Shows small, targeted grants for civil-society capacity on value addition in a mineral sector.",
+    "notEstablished": "The original donors to the pooled fund are not disclosed in our source.",
+    "passages": [
+      {
+        "source": "nrgi-funders",
+        "quote": "monitor Mongolia’s copper sector value addition efforts"
+      }
+    ]
+  },
+  {
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "community-consent",
+      "circularity-recovery",
+      "value-sharing"
+    ],
+    "reviewed": "2026-11-21",
+    "reviewDue": "2027-02-21",
+    "id": "climateworks",
+    "name": "ClimateWorks Foundation",
+    "shortTitle": "ClimateWorks Foundation",
+    "type": "foundation",
+    "role": "Philanthropic organisation with a minerals programme covering responsible mineral development, recovery and recycling, and stakeholder engagement.",
+    "geography": "Not established from our sources",
+    "initiative": "Minerals for the Energy Transition",
+    "deliveryModel": "Grant-making with grantees",
+    "evidenceNote": "Programme aims taken from the programme page. The page does not describe how organisations can seek funding.",
+    "url": "https://www.climateworks.org/",
+    "sources": [
+      "cw-minerals",
+      "cw-careers"
+    ],
+    "roles": [
+      "funder",
+      "employer"
+    ],
+    "headquarters": null,
+    "mineralRelevance": "direct",
+    "fundsWhere": "Not stated on the programme page.",
+    "instruments": [
+      "grant"
+    ],
+    "accessRoute": "Not described. The programme page refers to working \"with our grantees\" but gives no application route.",
+    "careersUrl": "https://www.climateworks.org/careers/",
+    "functions": [
+      "finance-partnerships",
+      "research-data"
+    ],
+    "employerNote": "At our last check the only listed role was a senior operations position not specific to minerals.",
+    "whyItMatters": "One of the few philanthropies with a named minerals strategy that spans community engagement and recycling.",
+    "notEstablished": "A programme strategy does not show that unsolicited proposals are accepted.",
+    "passages": [
+      {
+        "source": "cw-minerals",
+        "quote": "With our grantees, we work to ensure a reliable, responsible, and equitable supply of minerals for clean technologies"
+      }
+    ]
   }
 ]

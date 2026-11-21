@@ -42,6 +42,9 @@ const js = {
   policies: loadJson('src/data/policies.json'),
   sources: loadJson('src/data/sources.json'),
   claims: loadJson('src/data/claims.json'),
+  programmes: loadJson('src/data/programmes.json'),
+  awards: loadJson('src/data/awards.json'),
+  opportunities: loadJson('src/data/opportunities.json'),
 };
 
 const ids = (c) => new Set((md[c] ?? js[c]).map((e) => e.id));
@@ -98,13 +101,63 @@ for (const f of js.finance) {
     err(`finance/${f.id}: a stated amount needs a currency and stage`);
 }
 
+// Funding and careers: relationships resolve, every amount, deadline, eligibility and
+// status rests on a recorded passage from a cited source, and nothing historical can
+// pose as open.
+const orgIds = ids('organisations');
+const progIds = ids('programmes');
+const srcType = new Map(js.sources.map((s) => [s.id, s.data.type]));
+const ORIGINAL = new Set(['official', 'intergovernmental', 'legal', 'issuer']);
+const MONTHS = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+const words = (d) => { const [y, m, dd] = d.split('-'); return `${Number(dd)} ${MONTHS[Number(m) - 1]} ${y}`; };
+const norm = (s) => String(s).toLowerCase().replace(/[\u2010-\u2015\u2212]/g, '-').replace(/[\u2018\u2019]/g, "'").replace(/\s+/g, ' ');
+const checkPassages = (where, d) => {
+  for (const p of d.passages ?? []) {
+    if (!known.sources.has(p.source)) err(`${where}: passage cites unknown source "${p.source}"`);
+    else if (!(d.sources ?? []).includes(p.source)) err(`${where}: passage source "${p.source}" is not in the record's sources. Fix: add it to sources.`);
+  }
+};
+const orgRef = (where, field, id) => { if (id && !orgIds.has(id)) err(`${where}: ${field} "${id}" is not an organisation id. Fix: add it to src/data/organisations.json.`); };
+for (const o of js.organisations) {
+  checkPassages(`organisations/${o.id}`, o.data);
+  if (o.data.whyItMatters && !o.data.notEstablished) err(`organisations/${o.id}: an interpretation (whyItMatters) needs a notEstablished statement`);
+  if ((o.data.roles ?? []).some((r) => r === 'funder' || r === 'administrator') && !(o.data.passages ?? []).length) err(`organisations/${o.id}: funder or administrator profiles need at least one source passage`);
+}
+for (const p of js.programmes) {
+  const w = `programmes/${p.id}`;
+  checkRefs(w, p.data); checkPassages(w, p.data);
+  for (const f of p.data.funders) orgRef(w, 'funder', f);
+  for (const a of p.data.administrators) orgRef(w, 'administrator', a);
+}
+for (const a of js.awards) {
+  const w = `awards/${a.id}`, d = a.data;
+  checkRefs(w, d); checkPassages(w, d);
+  orgRef(w, 'funder', d.funder); orgRef(w, 'administrator', d.administrator); orgRef(w, 'recipient', d.recipient);
+  if (d.programme && !progIds.has(d.programme)) err(`${w}: unknown programme "${d.programme}"`);
+}
+for (const o of js.opportunities) {
+  const w = `opportunities/${o.id}`, d = o.data;
+  checkRefs(w, d); checkPassages(w, d);
+  orgRef(w, 'organisation', d.organisation); orgRef(w, 'administrator', d.administrator);
+  if (d.programme && !progIds.has(d.programme)) err(`${w}: unknown programme "${d.programme}"`);
+  const quotes = (d.passages ?? []).map((p) => norm(p.quote)).join(' | ');
+  for (const k of ['opens', 'deadline']) {
+    const m = d[k];
+    if (m && !quotes.includes(norm(words(m.date))) && !quotes.includes(norm(m.stated))) err(`${w}: the ${k} date (${m.date}) is not in any recorded passage. Fix: add a passage quoting the source's own date.`);
+  }
+  if (['open', 'rolling'].includes(d.status)) {
+    if (!(d.passages ?? []).some((p) => ORIGINAL.has(srcType.get(p.source)))) err(`${w}: an open or rolling record needs a passage from the issuer's own or an official source`);
+    if (!d.deadline && d.status === 'open') err(`${w}: "open" needs a stated deadline; use "rolling" if the source states none`);
+  }
+}
+
 // Every claim used somewhere; every source used somewhere (orphans are a smell).
 const usedClaims = new Set(Object.values(md).flat().flatMap((e) => e.data.claims ?? []));
 for (const c of js.claims) if (isPublishable(c.data) && !usedClaims.has(c.id)) err(`claims/${c.id}: published claim not used on any page. Fix: cite it in a page's claims list, or remove it.`);
 const usedSources = new Set([
   ...Object.values(md).flat().flatMap((e) => e.data.sources ?? []),
   ...js.claims.flatMap((c) => c.data.sources),
-  ...[...js.organisations, ...js.finance, ...js.policies].flatMap((e) => [...(e.data.sources ?? []), e.data.primaryDocument].filter(Boolean)),
+  ...[...js.organisations, ...js.finance, ...js.policies, ...js.programmes, ...js.awards, ...js.opportunities].flatMap((e) => [...(e.data.sources ?? []), e.data.primaryDocument].filter(Boolean)),
 ]);
 for (const s of js.sources) if (!usedSources.has(s.id)) err(`sources/${s.id}: not cited anywhere`);
 

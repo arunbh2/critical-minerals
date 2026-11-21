@@ -206,6 +206,10 @@
       "label": "Legal text"
     },
     {
+      "id": "issuer",
+      "label": "Issuing organisation's own page"
+    },
+    {
       "id": "research",
       "label": "Research or analysis"
     },

@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RecordMeta from '../../components/RecordMeta.astro';
+import Tags from '../../components/Tags.astro';
+import Related from '../../components/Related.astro';
+import SourceList from '../../components/SourceList.astro';
+import Passages from '../../components/funding/Passages.astro';
+import OpStatus from '../../components/funding/OpStatus.astro';
+import { fundingData, audienceOf } from '../../lib/funding';
+import { hrefFor, vocabLabel } from '../../lib/content';
+import { effectiveStatus, formatMoney, formatMoment, latestInstant } from '../../lib/opportunity.js';
+import { url } from '../../lib/url';
+export async function getStaticPaths() {
+  return (await getCollection('opportunities')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { name, fullName, org } = await fundingData();
+const audience = audienceOf(d.type);
+const s = effectiveStatus(d, new Date());
+const official = (await getCollection('sources')).find((x) => x.id === d.sources[0])!.data.url;
+const hub = audience === 'funding' ? { label: 'Funding', href: url('funding/'), list: 'Opportunities', listHref: url('funding/opportunities/') } : { label: 'Careers', href: url('careers/'), list: 'Opportunities', listHref: url('careers/opportunities/') };
+// JobPosting only for a valid, individual, currently active employment record with the
+// required fields stated by the source. Never for tenders, consultancies, directories,
+// illustrative roles or expired vacancies.
+const end = latestInstant(d.deadline);
+const jobPosting = d.type === 'employment' && s.verifiedOpen && d.published && d.deadline && d.location
+  ? [{ '@context': 'https://schema.org', '@type': 'JobPosting', title: d.title, description: d.summary, datePosted: d.published, validThrough: new Date(end!.ms).toISOString(), hiringOrganization: { '@type': 'Organization', name: fullName(d.organisation), sameAs: org.get(d.organisation)?.data.url ?? undefined }, jobLocation: { '@type': 'Place', address: d.location }, directApply: false }]
+  : [];
+---
+<Base title={d.title} shortTitle={d.shortTitle} description={d.summary} type="article" searchType="Opportunity" jsonld={jobPosting}>
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: hub.label, href: hub.href }, { label: hub.list, href: hub.listHref }, { label: d.shortTitle ?? d.title }]} />
+    <article class="reading" data-op-scope>
+      <p class="kicker red-rule">{vocabLabel('opportunityTypes', d.type)} · {vocabLabel('relevance', d.relevance)} mineral relevance</p>
+      <h1>{d.title}</h1>
+      <p class="standfirst">{d.summary}</p>
+      <p><OpStatus op={d} /></p>
+      <p class="meta">{vocabLabel('opportunityStatus', d.status)} at our last check: {d.statusBasis}</p>
+      {!s.canApply && <p class="notice" data-apply-closed><strong>Not open for applications.</strong> {s.key === 'forecast' || s.key === 'forecast-window' ? 'The window is expected but not confirmed open. Check the official page before preparing anything.' : s.stale ? s.staleNote : 'Kept as a precedent: it shows what was offered, to whom and on what terms.'}</p>}
+      <p data-apply hidden={!s.canApply}><a class="btn btn-primary" href={official} rel="noopener">Read the official call and apply there</a> <span class="meta">Applications go to the issuer. This site collects nothing.</span></p>
+      <RecordMeta reviewed={d.lastChecked} reviewDue={d.reviewDue} checkedLabel="Checked against the source" />
+      <Tags countries={d.countries} minerals={d.minerals} issues={d.issues} />
+      <div class="panel-data">
+        <dl class="facts">
+          <dt>Issued by</dt><dd><a href={hrefFor('organisations', d.organisation)}>{fullName(d.organisation)}</a>{d.programme && <> under <a href={hrefFor('programmes', d.programme)}>this programme</a></>}</dd>
+          {d.administrator && <><dt>Administrator</dt><dd>{name(d.administrator)}</dd></>}
+          <dt>Type</dt><dd>{vocabLabel('opportunityTypes', d.type)}{d.instrument && ` · ${vocabLabel('instruments', d.instrument)}`}</dd>
+          <dt>Who can apply</dt><dd>{d.eligibleApplicants}</dd>
+          <dt>Applicant location</dt><dd>{d.applicantLocation}</dd>
+          <dt>Benefits</dt><dd>{d.beneficiaryGeography}</dd>
+          <dt>Exclusions</dt><dd>{d.exclusions ?? 'None stated'}</dd>
+          {d.funding && <><dt>Funding</dt><dd>{formatMoney(d.funding)} ({vocabLabel('amountBases', d.funding.basis).toLowerCase()})</dd></>}
+          {audience === 'careers' && <><dt>Pay or fee</dt><dd>{d.fee ?? 'Not disclosed'}</dd></>}
+          {d.partnership && <><dt>Partnership</dt><dd>{d.partnership}</dd></>}
+          {d.coFinancing && <><dt>Co-financing</dt><dd>{d.coFinancing}</dd></>}
+          {d.opens && <><dt>Opens</dt><dd>{formatMoment(d.opens)}<br /><span class="meta">As stated: &ldquo;{d.opens.stated}&rdquo;</span></dd></>}
+          <dt>Deadline</dt><dd>{formatMoment(d.deadline)}{d.deadline && <><br /><span class="meta">As stated: &ldquo;{d.deadline.stated}&rdquo;</span></>}</dd>
+          {audience === 'careers' && <>
+            <dt>Location</dt><dd>{d.location ?? 'Not stated'}</dd>
+            <dt>Remote working</dt><dd>{d.remote ?? 'Not stated'}</dd>
+            <dt>Duration</dt><dd>{d.duration ?? 'Not stated'}</dd>
+            <dt>Seniority</dt><dd>{d.seniority ?? 'Not stated'}</dd>
+            <dt>Work authorisation</dt><dd>{d.workAuthorisation ?? 'Not stated'}</dd>
+          </>}
+          {d.roleFamilies.length > 0 && <><dt>Role family</dt><dd>{d.roleFamilies.map((r, i) => <>{i > 0 && ', '}<a href={url(`careers/pathways/${r}/`)}>{vocabLabel('roleFamilies', r)}</a></>)}</dd></>}
+          {d.applicationSteps && <><dt>How to apply</dt><dd>{d.applicationSteps}</dd></>}
+          {d.documents && <><dt>Documents</dt><dd>{d.documents}</dd></>}
+        </dl>
+      </div>
+      {d.questions.length > 0 && (
+        <section class="evidence evidence-unclear" aria-labelledby="q-h">
+          <h2 id="q-h">Unresolved questions</h2>
+          <ul>{d.questions.map((q) => <li>{q}</li>)}</ul>
+        </section>
+      )}
+      <p class="meta">We summarise and link; we do not copy full calls or job descriptions. Nothing here infers a salary, visa sponsorship, remote access or deadline that the source does not state.</p>
+      <Passages passages={d.passages} />
+      <SourceList ids={d.sources} />
+    </article>
+    <Related type="opportunities" id={entry.id} refs={{ countries: d.countries, minerals: d.minerals, issues: d.issues }} />
+  </div>
+</Base>

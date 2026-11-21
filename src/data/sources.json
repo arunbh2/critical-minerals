@@ -606,5 +606,192 @@
     "retrieved": "2026-11-17",
     "reuse": "Link and short attributed quotation only.",
     "note": "Fetched and term-checked by the source verification workflow; see research/<batch>/gate.json."
+  },
+  {
+    "id": "nrgi-funders",
+    "title": "Funders",
+    "publisher": "Natural Resource Governance Institute",
+    "url": "https://resourcegovernance.org/funders",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Recipient-reported funder disclosure: \"Current funders\" table (funder, amount in USD and original currency, period, purpose)."
+  },
+  {
+    "id": "rvo-fft",
+    "title": "Fair Focus on Trade (FFT)",
+    "publisher": "Netherlands Enterprise Agency (RVO)",
+    "url": "https://english.rvo.nl/subsidies-financing/fair-focus-trade",
+    "type": "official",
+    "published": "2026-08-11",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Page states \"The content of this page has been checked on 11 August 2026\"."
+  },
+  {
+    "id": "rvo-ddp",
+    "title": "Dutch Diamonds Partnerships (DDP)",
+    "publisher": "Netherlands Enterprise Agency (RVO)",
+    "url": "https://english.rvo.nl/subsidies-financing/ddp",
+    "type": "official",
+    "published": "2026-11-19",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Page states \"The content of this page has been checked on 19 November 2026\"."
+  },
+  {
+    "id": "rvo-eprm",
+    "title": "European Partnership for Responsible Minerals (EPRM)",
+    "publisher": "Netherlands Enterprise Agency (RVO)",
+    "url": "https://english.rvo.nl/subsidies-financing/eprm",
+    "type": "official",
+    "published": "2026-02-04",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Page states \"The content of this page has been checked on 4 February 2026\"."
+  },
+  {
+    "id": "govuk-a2d-2026",
+    "title": "UN funding available for clean energy and decarbonisation projects in developing countries",
+    "publisher": "UK Mission to the UN in Vienna (GOV.UK)",
+    "url": "https://www.gov.uk/government/news/un-funding-available-for-clean-energy-and-decarbonisation-projects-in-developing-countries",
+    "type": "official",
+    "published": "2026-05-08",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Read for the funding and careers release; passages recorded on the records that cite it."
+  },
+  {
+    "id": "a2d-facility",
+    "title": "Accelerate-to-Demonstrate (A2D) Facility",
+    "publisher": "United Nations Industrial Development Organization",
+    "url": "https://a2dfacility.unido.org/",
+    "type": "intergovernmental",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Official programme site. It refused automated requests (HTTP 403) when checked; facts on this site come from the GOV.UK announcement."
+  },
+  {
+    "id": "pib-recycling-2025",
+    "title": "Cabinet approves Rs.1,500 crore Incentive Scheme to promote Critical Mineral Recycling in the country",
+    "publisher": "Press Information Bureau, Government of India",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2163454",
+    "type": "official",
+    "published": "2025-09-03",
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Passages were recorded from the published release text as indexed by a search engine; the automated check fetches the release itself."
+  },
+  {
+    "id": "cw-minerals",
+    "title": "Minerals for the Energy Transition",
+    "publisher": "ClimateWorks Foundation",
+    "url": "https://www.climateworks.org/programs/transportation/road-transportation/minerals-for-the-energy-transition/",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Programme strategy page."
+  },
+  {
+    "id": "cw-careers",
+    "title": "Careers",
+    "publisher": "ClimateWorks Foundation",
+    "url": "https://www.climateworks.org/careers/",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Official recruitment page."
+  },
+  {
+    "id": "jetp-id",
+    "title": "JETP Indonesia",
+    "publisher": "JETP Indonesia Secretariat",
+    "url": "https://jetp-id.org/",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Secretariat website."
+  },
+  {
+    "id": "gba-home",
+    "title": "Global Battery Alliance",
+    "publisher": "Global Battery Alliance",
+    "url": "https://www.globalbattery.org/",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Multistakeholder platform website."
+  },
+  {
+    "id": "nrgi-jobs",
+    "title": "Working at NRGI",
+    "publisher": "Natural Resource Governance Institute",
+    "url": "https://resourcegovernance.org/working-nrgi",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Official recruitment route."
+  },
+  {
+    "id": "nrgi-consultancies",
+    "title": "Consultancy opportunities with NRGI",
+    "publisher": "Natural Resource Governance Institute",
+    "url": "https://resourcegovernance.org/consultancy-opportunities",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Official consultancy listings."
+  },
+  {
+    "id": "irma-jobs",
+    "title": "Jobs and opportunities",
+    "publisher": "Initiative for Responsible Mining Assurance",
+    "url": "https://responsiblemining.net/about/jobs/",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Official recruitment page."
+  },
+  {
+    "id": "eiti-jobs",
+    "title": "Jobs",
+    "publisher": "Extractive Industries Transparency Initiative",
+    "url": "https://eiti.org/jobs",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Official recruitment page of the EITI International Secretariat."
+  },
+  {
+    "id": "eiti-consultancies",
+    "title": "Consultancy opportunities",
+    "publisher": "Extractive Industries Transparency Initiative",
+    "url": "https://eiti.org/consultancy-opportunities",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Official procurement page of the EITI International Secretariat."
+  },
+  {
+    "id": "eiti-kz-ia-2026",
+    "title": "Consultancy opportunity: Independent Administrator for Kazakhstan EITI reporting for financial years 2025 and 2026",
+    "publisher": "Extractive Industries Transparency Initiative",
+    "url": "https://eiti.org/call-for-proposals/consultancy-opportunity-independent-administrator-kazakhstan-eiti-reporting",
+    "type": "issuer",
+    "published": null,
+    "retrieved": "2026-11-21",
+    "reuse": "Link and short attributed quotation only.",
+    "note": "Official call for proposals. Contact details on the source are not reproduced here."
   }
 ]

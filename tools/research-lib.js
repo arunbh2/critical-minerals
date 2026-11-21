@@ -1,10 +1,10 @@
 // Shared helpers for the source verification pipeline.
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
+import { join, dirname } from 'node:path';
 
 export const ROOT = new URL('..', import.meta.url).pathname;
 export const readJson = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
-export const writeJson = (p, v) => writeFileSync(join(ROOT, p), JSON.stringify(v, null, 2) + '\n');
+export const writeJson = (p, v) => { mkdirSync(dirname(join(ROOT, p)), { recursive: true }); writeFileSync(join(ROOT, p), JSON.stringify(v, null, 2) + '\n'); };
 export const exists = (p) => existsSync(join(ROOT, p));
 
 /** Batch folders sort alphabetically in the order they were created. */
@@ -37,4 +37,4 @@ export function normalise(s) {
 }
 
 /** Original sources are the issuing body's own record; the rest are secondary. */
-export const ORIGINAL_TYPES = new Set(['official', 'intergovernmental', 'legal']);
+export const ORIGINAL_TYPES = new Set(['official', 'intergovernmental', 'legal', 'issuer']);

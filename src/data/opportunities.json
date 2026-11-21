@@ -1,0 +1,354 @@
+[
+  {
+    "programme": null,
+    "administrator": null,
+    "instrument": "contract",
+    "relevance": "adjacent",
+    "opens": null,
+    "deadline": {
+      "date": "2026-12-31",
+      "time": null,
+      "utcOffset": null,
+      "stated": "by the close of 31 December 2026"
+    },
+    "funding": null,
+    "fee": "Not disclosed. Bidders propose a lump sum in US dollars, with days and daily rate.",
+    "partnership": null,
+    "coFinancing": null,
+    "applicationSteps": "Submit a technical proposal and a separately password-protected financial proposal by email, as set out on the source page. Material use of generative AI in preparing a proposal must be disclosed.",
+    "documents": "Technical proposal (experience, methodology and work plan, key experts, conflict-of-interest statement); financial proposal in USD.",
+    "exclusions": null,
+    "questions": [
+      "The closing time and timezone are not stated; we show the date only.",
+      "The question deadline (16 November 2026) has passed.",
+      "Relevance to minerals: EITI reporting covers the whole extractive sector, which in Kazakhstan includes oil and gas as well as mining."
+    ],
+    "roleFamilies": [
+      "policy-governance",
+      "research-data"
+    ],
+    "seniority": "Firm",
+    "location": "Kazakhstan (assignment subject)",
+    "remote": "Not stated",
+    "duration": "Not stated on the page; see the Terms of Reference (in Russian).",
+    "workAuthorisation": "Not stated",
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "accountability-remedy"
+    ],
+    "lastChecked": "2026-11-21",
+    "id": "eiti-kazakhstan-independent-administrator-2026",
+    "title": "Independent Administrator for Kazakhstan EITI reporting, financial years 2025 and 2026",
+    "shortTitle": "EITI Kazakhstan administrator",
+    "type": "firm-tender",
+    "organisation": "eiti",
+    "summary": "The EITI International Secretariat is seeking an auditing company to produce the EITI reporting package for Kazakhstan covering financial years 2025 and 2026.",
+    "status": "open",
+    "statusBasis": "Listed under \"Current opportunities\", which the page describes as \"currently open for applications or bids\".",
+    "eligibleApplicants": "An independent, credible and technically qualified auditing company. Selection uses Quality and Cost-Based Selection.",
+    "applicantLocation": "Not stated",
+    "beneficiaryGeography": "Kazakhstan",
+    "sources": [
+      "eiti-kz-ia-2026",
+      "eiti-consultancies"
+    ],
+    "passages": [
+      {
+        "source": "eiti-kz-ia-2026",
+        "quote": "seeking an independent, credible and technically qualified auditing company to serve as Independent Administrator"
+      },
+      {
+        "source": "eiti-kz-ia-2026",
+        "quote": "by the close of 31 December 2026"
+      },
+      {
+        "source": "eiti-consultancies",
+        "quote": "The following opportunities are currently open for applications or bids."
+      }
+    ],
+    "reviewDue": "2026-11-28"
+  },
+  {
+    "programme": "dutch-diamonds-partnerships",
+    "administrator": null,
+    "instrument": "grant",
+    "relevance": "adjacent",
+    "opens": {
+      "date": "2026-12-07",
+      "time": "09:00",
+      "utcOffset": "+02:00",
+      "stated": "Monday 7 December 2026, 09:00 (CEST)"
+    },
+    "deadline": {
+      "date": "2027-02-15",
+      "time": "17:00",
+      "utcOffset": "+02:00",
+      "stated": "Monday 15 February 2027, 17:00 (CEST)"
+    },
+    "funding": {
+      "min": 500000,
+      "max": 3000000,
+      "currency": "EUR",
+      "basis": "per-award-range"
+    },
+    "fee": null,
+    "partnership": "Required: up to six partners, including a Dutch business and a local civil-society organisation, knowledge institution or business.",
+    "coFinancing": null,
+    "applicationSteps": null,
+    "documents": null,
+    "exclusions": null,
+    "questions": [
+      "The source labels these winter times CEST (UTC+02:00); Dutch winter time is normally CET (UTC+01:00). We show the times as stated.",
+      "The source says dates moved later than planned and may change again.",
+      "Whether a mineral-related project would qualify is not established."
+    ],
+    "roleFamilies": [],
+    "seniority": null,
+    "location": null,
+    "remote": null,
+    "duration": null,
+    "workAuthorisation": null,
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "water-climate-risk"
+    ],
+    "lastChecked": "2026-11-21",
+    "id": "dutch-diamonds-partnerships-2026-27",
+    "title": "Dutch Diamonds Partnerships: application round 2026–27",
+    "shortTitle": "DDP application round",
+    "type": "grant",
+    "organisation": "rvo",
+    "summary": "An expected application window for partnership subsidies of €500,000 to €3 million on water security, food security and sustainable market development. Minerals are not a named theme.",
+    "status": "forecast",
+    "statusBasis": "The page says \"Temporarily closed for application\" and gives start and end dates for the window.",
+    "eligibleApplicants": "Partnerships led by an organisation registered, or with a branch, in the Netherlands, including at least one Dutch business and one local partner.",
+    "applicantLocation": "Lead applicant in the Netherlands",
+    "beneficiaryGeography": "Low- and middle-income partner countries",
+    "sources": [
+      "rvo-ddp"
+    ],
+    "passages": [
+      {
+        "source": "rvo-ddp",
+        "quote": "The application period for DDP subsidies will open and close a few weeks later than planned."
+      },
+      {
+        "source": "rvo-ddp",
+        "quote": "Monday 7 December 2026"
+      },
+      {
+        "source": "rvo-ddp",
+        "quote": "Monday 15 February 2027"
+      }
+    ],
+    "reviewDue": "2026-12-01"
+  },
+  {
+    "programme": "a2d-facility",
+    "administrator": null,
+    "instrument": "grant",
+    "relevance": "direct",
+    "opens": null,
+    "deadline": {
+      "date": "2026-06-18",
+      "time": "15:00",
+      "utcOffset": "+01:00",
+      "stated": "3pm UK time on 18 June 2026"
+    },
+    "funding": {
+      "min": 1000000,
+      "max": 5000000,
+      "currency": "USD",
+      "basis": "per-award-range"
+    },
+    "fee": null,
+    "partnership": null,
+    "coFinancing": null,
+    "applicationSteps": null,
+    "documents": null,
+    "exclusions": "Planning-stage projects, research and development, early-stage pilots.",
+    "questions": [
+      "Whether a further call will follow is not stated in our source."
+    ],
+    "roleFamilies": [],
+    "seniority": null,
+    "location": null,
+    "remote": null,
+    "duration": null,
+    "workAuthorisation": null,
+    "countries": [],
+    "minerals": [],
+    "issues": [
+      "circularity-recovery"
+    ],
+    "lastChecked": "2026-11-21",
+    "id": "a2d-call-2026",
+    "title": "A2D Facility call for proposals, 2026",
+    "shortTitle": "A2D call 2026",
+    "type": "grant",
+    "organisation": "unido",
+    "summary": "Global call for full grant proposals for large-scale demonstration projects, with critical minerals as one of four themes. Closed on 18 June 2026.",
+    "status": "closed",
+    "statusBasis": "The announced deadline has passed.",
+    "eligibleApplicants": "Businesses with proven technologies ready for industrial-scale demonstration in developing countries; full criteria on UNIDO's procurement portal.",
+    "applicantLocation": "Not stated in our source",
+    "beneficiaryGeography": "Developing countries",
+    "lifecycle": [
+      "collection-recycling"
+    ],
+    "sources": [
+      "govuk-a2d-2026"
+    ],
+    "passages": [
+      {
+        "source": "govuk-a2d-2026",
+        "quote": "The deadline for submissions is 3pm UK time on 18 June 2026."
+      }
+    ],
+    "reviewDue": "2027-02-21"
+  },
+  {
+    "programme": "fair-focus-on-trade",
+    "administrator": null,
+    "instrument": "grant",
+    "relevance": "direct",
+    "opens": {
+      "date": "2026-06-30",
+      "time": "12:00",
+      "utcOffset": "+02:00",
+      "stated": "30 June 2026, 12:00 CEST"
+    },
+    "deadline": {
+      "date": "2026-08-11",
+      "time": "12:00",
+      "utcOffset": "+02:00",
+      "stated": "11 August 2026 at 12:00 CEST"
+    },
+    "funding": {
+      "min": 10000000,
+      "max": 22000000,
+      "currency": "EUR",
+      "basis": "per-award-range"
+    },
+    "fee": null,
+    "partnership": null,
+    "coFinancing": null,
+    "applicationSteps": null,
+    "documents": null,
+    "exclusions": "For-profit, government and intergovernmental applicants; consortium applications.",
+    "questions": [],
+    "roleFamilies": [],
+    "seniority": null,
+    "location": null,
+    "remote": null,
+    "duration": null,
+    "workAuthorisation": null,
+    "countries": [
+      "india",
+      "indonesia"
+    ],
+    "minerals": [],
+    "issues": [
+      "decent-work-safety"
+    ],
+    "lastChecked": "2026-11-21",
+    "id": "fair-focus-on-trade-2026",
+    "title": "Fair Focus on Trade application round, 2026",
+    "shortTitle": "FFT round 2026",
+    "type": "grant",
+    "organisation": "rvo",
+    "summary": "Subsidy round for civil-society organisations working on clean and fair trade, with mining and critical raw materials as an eligible sector. Closed on 11 August 2026; the programme will not reopen.",
+    "status": "closed",
+    "statusBasis": "The page says \"This subsidy is closed ... It will not reopen.\"",
+    "eligibleApplicants": "Civil-society organisations established in the Netherlands or a target country, meeting threshold criteria.",
+    "applicantLocation": "Netherlands or one of 21 target countries",
+    "beneficiaryGeography": "21 listed countries in Africa and Asia, including India and Indonesia",
+    "sources": [
+      "rvo-fft"
+    ],
+    "passages": [
+      {
+        "source": "rvo-fft",
+        "quote": "The application period was from 30 June 2026, 12:00 CEST until 11 August 2026, 12:00 CEST."
+      }
+    ],
+    "reviewDue": "2027-05-21"
+  },
+  {
+    "programme": "eprm",
+    "administrator": null,
+    "instrument": "grant",
+    "relevance": "direct",
+    "opens": {
+      "date": "2023-09-01",
+      "time": "12:00",
+      "utcOffset": "+02:00",
+      "stated": "Friday 1 September 2023, 12:00 (CEST)"
+    },
+    "deadline": {
+      "date": "2023-11-30",
+      "time": "14:00",
+      "utcOffset": "+02:00",
+      "stated": "Thursday 30 November 2023, 14:00 (CEST)"
+    },
+    "funding": null,
+    "fee": null,
+    "partnership": null,
+    "coFinancing": null,
+    "applicationSteps": null,
+    "documents": null,
+    "exclusions": null,
+    "questions": [
+      "The source labels a November time CEST; Dutch time in late November is normally CET. Shown as stated."
+    ],
+    "roleFamilies": [],
+    "seniority": null,
+    "location": null,
+    "remote": null,
+    "duration": null,
+    "workAuthorisation": null,
+    "countries": [],
+    "minerals": [
+      "lithium",
+      "graphite",
+      "cobalt",
+      "copper",
+      "nickel"
+    ],
+    "issues": [
+      "decent-work-safety"
+    ],
+    "lastChecked": "2026-11-21",
+    "id": "eprm-call-2023",
+    "title": "EPRM application window, 2023",
+    "shortTitle": "EPRM window 2023",
+    "type": "grant",
+    "organisation": "rvo",
+    "summary": "The last application window for EPRM membership and project funding, which supports responsible practice at artisanal and small-scale mines. Closed in November 2023; the programme is temporarily closed.",
+    "status": "closed",
+    "statusBasis": "The window ended on 30 November 2023; the page says the programme is temporarily closed for application.",
+    "eligibleApplicants": "Not reproduced here; see the source.",
+    "applicantLocation": "Not stated in our summary",
+    "beneficiaryGeography": "Conflict-affected and high-risk areas",
+    "sources": [
+      "rvo-eprm"
+    ],
+    "passages": [
+      {
+        "source": "rvo-eprm",
+        "quote": "Temporarily closed for application"
+      },
+      {
+        "source": "rvo-eprm",
+        "quote": "Friday 1 September 2023"
+      },
+      {
+        "source": "rvo-eprm",
+        "quote": "Thursday 30 November 2023"
+      }
+    ],
+    "reviewDue": "2027-02-21"
+  }
+]

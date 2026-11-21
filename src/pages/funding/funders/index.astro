@@ -1,0 +1,69 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FilterShell from '../../../components/FilterShell.astro';
+import { fundingData } from '../../../lib/funding';
+import { hrefFor, vocabLabel } from '../../../lib/content';
+import { formatDate } from '../../../lib/status.js';
+import { url } from '../../../lib/url';
+import vocab from '../../../data/vocab.json';
+const { orgs, programmes, awards } = await fundingData();
+const funders = orgs.filter((o) => o.data.roles.some((r) => r === 'funder' || r === 'administrator')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+const linked = (id: string) => ({
+  programmes: programmes.filter((p) => p.data.funders.includes(id) || p.data.administrators.includes(id)).length,
+  awards: awards.filter((a) => a.data.funder === id || a.data.administrator === id).length,
+});
+const access = (o: any) => (o.accessRoute ? 'route' : 'none');
+const filters = [
+  { name: 'role', label: 'Role', options: vocab.fundingRoles.filter((r) => ['funder', 'administrator'].includes(r.id)).map((r) => ({ value: r.id, label: r.label })) },
+  { name: 'relevance', label: 'Mineral relevance', options: vocab.relevance.map((r) => ({ value: r.id, label: r.label })) },
+  { name: 'instrument', label: 'Instrument', options: vocab.instruments.filter((i) => funders.some((f) => f.data.instruments.includes(i.id))).map((i) => ({ value: i.id, label: i.label })) },
+  { name: 'type', label: 'Kind of organisation', options: vocab.orgTypes.filter((t) => funders.some((f) => f.data.type === t.id)).map((t) => ({ value: t.id, label: t.label })) },
+  { name: 'access', label: 'Access route', options: [{ value: 'route', label: 'A route is described' }, { value: 'none', label: 'No route found' }] },
+  { name: 'country', label: 'Finances work in', options: [{ value: 'india', label: 'India' }, { value: 'indonesia', label: 'Indonesia' }] },
+];
+---
+<Base title="Funders and administrators" shortTitle="Funders and administrators" searchType="Funding" description="Profiles of organisations that fund or administer money relevant to critical minerals: what they finance, where, through which instruments, and whether there is a route in.">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Funding', href: url('funding/') }, { label: 'Funders' }]} />
+    <header class="reading">
+      <p class="kicker red-rule">Funding</p>
+      <h1>Funders and administrators</h1>
+      <p class="standfirst">Who supplies or manages money relevant to minerals and the people affected by them. A profile is not an endorsement, and it does not mean the organisation accepts applications.</p>
+    </header>
+    <p class="notice reading">Headquarters is not where an organisation finances work. Each profile states both where we know them. &ldquo;No route found&rdquo; means our sources describe no way to apply; it does not mean none exists.</p>
+    <FilterShell filters={filters} noun="profiles">
+      <ul class="record-list">
+        {funders.map((o) => { const d = o.data; const n = linked(o.id); return (
+          <li data-filter-item data-role={d.roles.join(' ')} data-relevance={d.mineralRelevance ?? ''} data-instrument={d.instruments.join(' ')} data-type={d.type} data-access={access(d)} data-country={d.countries.join(' ')}>
+            <h3><a href={hrefFor('organisations', o.id)}>{d.name}</a></h3>
+            <p class="meta">{d.roles.map((r) => vocabLabel('fundingRoles', r)).join(', ')} · {vocabLabel('orgTypes', d.type)} · Mineral relevance: {d.mineralRelevance ? vocabLabel('relevance', d.mineralRelevance) : 'not assessed'}</p>
+            <p>{d.role}</p>
+            <dl class="facts compact">
+              <dt>Finances</dt><dd>{d.fundsWhere ?? 'Not established'}</dd>
+              <dt>Headquarters</dt><dd>{d.headquarters ?? 'Not established'}</dd>
+              <dt>Instruments</dt><dd>{d.instruments.length ? d.instruments.map((i) => vocabLabel('instruments', i)).join(', ') : 'Not established'}</dd>
+              <dt>Route in</dt><dd>{d.accessRoute ?? 'No route found in our sources'}</dd>
+              <dt>On this site</dt><dd>{n.programmes} programme{n.programmes === 1 ? '' : 's'}, {n.awards} award{n.awards === 1 ? '' : 's'} · checked {formatDate(d.reviewed)}</dd>
+            </dl>
+          </li>
+        ); })}
+      </ul>
+    </FilterShell>
+    <details class="compare">
+      <summary>Compare all profiles in a table</summary>
+      <div class="table-wrap">
+        <table>
+          <caption>Funders and administrators ({funders.length})</caption>
+          <thead><tr><th scope="col">Organisation</th><th scope="col">Role</th><th scope="col">Relevance</th><th scope="col">Instruments</th><th scope="col">Route in</th></tr></thead>
+          <tbody>{funders.map((o) => <tr><th scope="row"><a href={hrefFor('organisations', o.id)}>{o.data.shortTitle ?? o.data.name}</a></th><td>{o.data.roles.map((r) => vocabLabel('fundingRoles', r)).join(', ')}</td><td>{o.data.mineralRelevance ? vocabLabel('relevance', o.data.mineralRelevance) : 'Not assessed'}</td><td>{o.data.instruments.map((i) => vocabLabel('instruments', i)).join(', ') || 'Not established'}</td><td>{o.data.accessRoute ? 'Described' : 'None found'}</td></tr>)}</tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+</Base>
+<style>
+  .compact { font-size: 0.9rem; margin-top: 6px; }
+  .compare { margin: 2rem 0; }
+  .compare summary { cursor: pointer; font-family: var(--font-sans); font-weight: 600; min-height: 24px; }
+</style>

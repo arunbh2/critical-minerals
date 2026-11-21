@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import RecordMeta from '../../../components/RecordMeta.astro';
+import Tags from '../../../components/Tags.astro';
+import Related from '../../../components/Related.astro';
+import SourceList from '../../../components/SourceList.astro';
+import Passages from '../../../components/funding/Passages.astro';
+import { fundingData } from '../../../lib/funding';
+import { hrefFor, vocabLabel } from '../../../lib/content';
+import { formatMoney, formatPeriod } from '../../../lib/opportunity.js';
+import { url } from '../../../lib/url';
+export async function getStaticPaths() {
+  return (await getCollection('awards')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { name } = await fundingData();
+const desc = `${formatMoney(d.amount)} from ${name(d.funder)} to ${name(d.recipient)}, ${formatPeriod(d.period)}: ${d.activity}`.slice(0, 300);
+---
+<Base title={d.title} shortTitle={d.shortTitle} description={desc} type="article" searchType="Award">
+  <div class="wrap">
+    <Breadcrumbs items={[{ label: 'Funding', href: url('funding/') }, { label: 'Award ledger', href: url('funding/awards/') }, { label: d.title }]} />
+    <article class="reading">
+      <p class="kicker red-rule">Award · {vocabLabel('relevance', d.relevance)} mineral relevance</p>
+      <h1>{d.title}</h1>
+      <p class="standfirst">{d.activity}</p>
+      <RecordMeta reviewed={d.lastChecked} reviewDue={d.reviewDue} checkedLabel="Source checked" />
+      <Tags countries={d.countries} minerals={d.minerals} issues={d.issues} />
+      <p class="notice">A past or running award. It shows what has been funded; it is not an opportunity to apply.</p>
+      <div class="panel-data">
+        <dl class="facts">
+          <dt>Funder</dt><dd><a href={hrefFor('organisations', d.funder)}>{name(d.funder)}</a></dd>
+          <dt>Administrator</dt><dd>{d.administrator ? <a href={hrefFor('organisations', d.administrator)}>{name(d.administrator)}</a> : 'None separate, or not established'}{d.programme && <> through <a href={hrefFor('programmes', d.programme)}>this programme</a></>}</dd>
+          <dt>Recipient</dt><dd><a href={hrefFor('organisations', d.recipient)}>{name(d.recipient)}</a></dd>
+          <dt>Activity</dt><dd>{d.activity}</dd>
+          <dt>Geography</dt><dd>{d.geography}</dd>
+          <dt>Period</dt><dd>{formatPeriod(d.period)}</dd>
+          <dt>Amount</dt><dd>{formatMoney(d.amount)} ({vocabLabel('amountBases', d.amount.basis).toLowerCase()}){d.amount.reported.map((r) => <><br /><span class="meta">Also reported as {formatMoney({ value: r.value, currency: r.currency })}. {r.note}.</span></>)}</dd>
+          <dt>Instrument</dt><dd>{vocabLabel('instruments', d.instrument)}</dd>
+          <dt>Intended outcomes</dt><dd>{d.intendedOutcomes}</dd>
+          <dt>Evidence of results</dt><dd>{d.resultsEvidence ?? 'None located. Absence of an evaluation is not evidence of failure.'}</dd>
+        </dl>
+      </div>
+      <Passages passages={d.passages} />
+      <SourceList ids={d.sources} />
+    </article>
+    <Related type="awards" id={entry.id} refs={{ countries: d.countries, minerals: d.minerals, issues: d.issues }} />
+  </div>
+</Base>

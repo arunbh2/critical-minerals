@@ -1,0 +1,28 @@
+---
+import Page from '../../../layouts/Page.astro';
+import { url } from '../../../lib/url';
+---
+<Page title="How funding works: instruments and amounts" shortTitle="Funding guide" kicker="Funding" description="A short guide to grants, technical assistance, loans, guarantees, equity, procurement, statutory funds and corporate spending, and how to read amounts without double-counting."
+  standfirst="What each kind of money can and cannot do, and how to read an amount without mistaking a promise for money in hand.">
+  <h2>Instruments</h2>
+  <dl class="facts">
+    <dt>Grant</dt><dd>Money that does not have to be repaid, given for an agreed purpose. The usual route for civil-society work, research and capacity building. Almost always competitive or by invitation.</dd>
+    <dt>Technical assistance</dt><dd>Expertise rather than cash: advisers, studies, training. Often delivered to governments; organisations may take part as contractors.</dd>
+    <dt>Loan</dt><dd>Money that must be repaid, usually to governments or companies. Development banks lend on better terms than markets. Not a route for most civil-society organisations.</dd>
+    <dt>Guarantee</dt><dd>A promise to cover losses if a borrower defaults, used to draw in private lenders. Changes who bears risk; no cash changes hands unless something goes wrong.</dd>
+    <dt>Equity</dt><dd>Buying a share of a company. Development finance institutions invest this way in mines, processors and recyclers.</dd>
+    <dt>Procurement</dt><dd>Buying services through tenders and consultancies. Distinguish tenders open only to firms from assignments for individuals. Listed under <a href={url('careers/opportunities/')}>Careers</a>.</dd>
+    <dt>Statutory fund</dt><dd>Money that a law requires to be collected and spent, such as India&rsquo;s <a href={url('finance/india-district-mineral-foundations/')}>District Mineral Foundations</a>. Access runs through public governance, not applications.</dd>
+    <dt>Corporate expenditure</dt><dd>Company spending on communities, workers or the environment, voluntary or required. It can be large, but it is often not published in a form that allows checking.</dd>
+  </dl>
+  <h2>Reading an amount</h2>
+  <ul>
+    <li><strong>Stage.</strong> A pledge or commitment is a promise. An award names a recipient. A disbursement has been paid. Spending has been used. Results are what changed. We label every amount with its stage and never add stages together.</li>
+    <li><strong>Basis.</strong> A total envelope for a programme is not the amount one applicant can receive. A range per award is not a guarantee. A ceiling per recipient is a maximum, not a typical figure.</li>
+    <li><strong>Currency.</strong> Amounts stay in the currency the source uses. Where a recipient also reports a converted figure, we show both and say which is which. We do not convert silently.</li>
+    <li><strong>Double counting.</strong> Money passes through layers: a government contributes to a trust fund, the fund makes an award, the recipient makes sub-grants. Adding these up counts the same money several times.</li>
+  </ul>
+  <h2>Statuses</h2>
+  <p>An opportunity can be announced, forecast, open, rolling, paused, closed, cancelled or awarded, or its status can be unknown. How recently we checked is shown separately from the status. Records that have not been checked within 14 days stop counting as verified open. A source that refuses automated requests is reported as unavailable; that never turns a record into &ldquo;closed&rdquo;.</p>
+  <p class="sans"><a class="link-arrow" href={url('funding/')}>Back to Funding</a></p>
+</Page>

@@ -657,7 +657,7 @@
       "reviewedAt": "2026-11-21",
       "batch": "2026-11-5-passage-review",
       "qualification": "A law-firm summary of the adopted act, not the legal text.",
-      "history": null,
+      "history": "Narrowed on review: the earlier text called the benchmarks non-binding, which the recorded passage does not say.",
       "passages": [
         {
           "source": "nrf-crma-2024",

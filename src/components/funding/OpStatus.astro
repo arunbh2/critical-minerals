@@ -1,0 +1,17 @@
+---
+// Application status, recomputed in the browser so an elapsed deadline never shows as
+// open between builds. The static text is the status as of the build.
+import { effectiveStatus } from '../../lib/opportunity.js';
+import { formatDate } from '../../lib/status.js';
+interface Props { op: { status: string; deadline: any; opens: any; lastChecked: string }; showChecked?: boolean }
+const { op, showChecked = true } = Astro.props;
+const s = effectiveStatus(op, new Date());
+const payload = JSON.stringify({ status: op.status, deadline: op.deadline, opens: op.opens, lastChecked: op.lastChecked });
+---
+<span class="status-pair" data-op-card>
+  <span class={`status status-${s.tone}`} data-op-status data-op={payload}>{s.label}</span>
+  {showChecked && <span class="status">Checked <time datetime={op.lastChecked}>{formatDate(op.lastChecked)}</time></span>}
+  <span class="status status-review" data-op-stale hidden={!s.stale}>Needs re-check</span>
+</span>
+<script>import '../../scripts/opportunity-status.ts';</script>
+<style>.status-pair { display: inline-flex; flex-wrap: wrap; gap: 6px; }</style>
